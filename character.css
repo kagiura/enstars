@@ -86,3 +86,9 @@
 .unit-chars2 img:active {
     transform: scale(1.02);
 }
+
+div[style="border-left-color:#e33824;background-color:#FFFFFF"]{
+    visibility: hidden;
+    height: 0px !important;
+    display: none;
+}
