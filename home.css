@@ -187,6 +187,7 @@ span.line {
 }
 
 .home-right{
+    background-color:blue;
     animation: 1s cubic-bezier(.03,.66,.09,.99) 0.8s 1 forwards flyLeftwards;
     opacity:0;
     flex: 1 0 33.3%;
