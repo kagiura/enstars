@@ -324,3 +324,9 @@ span.line {
 .db-banner {
     transform: none !important;
 }
+
+div[style="border-left-color:#e33825;background-color:#FFFFFF"]{
+    visibility: hidden;
+    height: 0px !important;
+    display: none;
+}
