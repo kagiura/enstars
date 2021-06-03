@@ -59,6 +59,16 @@
     }
 }
 
+@keyframes peek {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(90%);
+    }
+}
+
 .home-title {
     animation: 1s cubic-bezier(.03, .66, .09, .99) 0s 1 forwards flyUpwards;
     font-family: 'Montserrat', sans-serif;
@@ -85,18 +95,19 @@ span.line {
     margin: 13px 0px !important;
 }
 
-.home-navi {
+.home-navi-wrapper {
     margin: 20px 0px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap-reverse;
     flex-direction: row-reverse;
+    gap: 12px;
     overflow: hidden;
 }
 
 .home-navi-button,
 .home-navi-button a {
-    font-family: 800 12pt 'Montserrat', sans-serif !important;
+    font: 800 11pt 'Montserrat', sans-serif !important;
     letter-spacing: 3px;
     color: white !important;
     transition: letter-spacing .2s ease;
@@ -105,7 +116,7 @@ span.line {
 .home-navi-button {
     transform: translateY(300%);
     display: inline-block;
-    padding: 8px 25px;
+    padding: 8px 30px;
     flex-grow: 1;
     width: 30%;
     position: relative;
@@ -145,17 +156,14 @@ span.line {
     top: 0;
     left: 0;
     width: 100%;
-    /*visibility: hidden;*/
+    transform: translateY(90%);
+    animation: 1s cubic-bezier(.03, .66, .09, .99) 1s 1 backwards peek;
+    transition: transform 0.6s cubic-bezier(.03, .66, .09, .99);
 }
 
 .home-gameplay-option-wrapper a {
     opacity: 0.6;
     transition: all 1s cubic-bezier(.03, .66, .09, .99);
-}
-
-.home-gameplay-option-wrapper {
-    transform: translateY(100%);
-    transition: transform 1s cubic-bezier(.03, .66, .09, .99);
 }
 
 #home-navi-button1 {
@@ -178,6 +186,7 @@ span.line {
 
 .home-gameplay-option:hover a {
     opacity: 1;
+    letter-spacing: 7px;
     text-decoration: none;
 }
 
@@ -190,13 +199,128 @@ span.line {
 .home-left {
     animation: 1s cubic-bezier(.03, .66, .09, .99) 0.8s 1 forwards flyUpwards;
     opacity: 0;
-    flex: 200 0 60%;
+    flex: 2 0 60%;
 }
 
 .home-right {
-    background-color: green;
     animation: 1s cubic-bezier(.03, .66, .09, .99) 0.8s 1 forwards flyLeftwards;
     opacity: 0;
-    flex: 1 0 33.3%;
+    flex: 1 0 30%;
     min-width: 260px;
+}
+
+.home-widget-title {
+    font: 800 10pt 'Montserrat', sans-serif !important;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 22px !important;
+}
+
+.home-widget-title::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: var(--theme-page-text-color);
+    margin-top: 7px;
+    width: 50px;
+    height: 3px;
+}
+
+#home-start span::after {
+    background-color: #FF9543;
+}
+
+#home-featured span::after {
+    background-color: #FF4C55;
+}
+
+#home-contribute span::after {
+    background-color: #343682;
+}
+
+#home-start {
+    flex: 3 1 30%;
+    min-width: 240px;
+}
+
+#home-featured {
+    flex: 4 1 40%;
+    min-width: 320px;
+}
+
+#home-contribute {
+    flex: 4 1 40%;
+    min-width: 320px;
+}
+
+.home-widget,
+.home-widget-sidebar {
+    margin-bottom: 30px;
+}
+
+.home-birthday-char {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.home-birthday-icon {
+    flex-grow: 0;
+}
+
+.home-birthday-text {
+    margin-left: 15px;
+    line-height: 1.4;
+}
+
+.home-birthday-name {
+    font: 700 13pt 'Rubik', sans-serif !important;
+}
+
+.home-birthday-date {
+    font: 500 11pt 'Rubik', sans-serif !important;
+}
+
+.home-widget ul,
+.home-widget-sidebar ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+.home-widget ul li,
+.home-widget-sidebar ul li,
+.home-birthday-char {
+    transition: margin 1s cubic-bezier(.03, .66, .09, .99);
+}
+
+.home-widget ul li::before,
+.home-widget-sidebar ul li::before {
+    content: '>';
+    font: 700 14px 'Montserrat', sans-serif !important;
+    margin-right: 10px;
+}
+
+.home-widget ul li:hover,
+.home-widget-sidebar ul li:hover,
+.home-birthday-char:hover {
+    margin-left: 15px;
+}
+
+.home-widget ul li a,
+.home-widget-sidebar ul li a {
+    text-decoration: none !important;
+}
+
+.home-widget-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home-widget-wrapper div {
+    flex: 1 1 30%;
+    min-width: 260px;
+}
+
+.db-banner {
+    transform: none !important;
 }
