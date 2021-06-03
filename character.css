@@ -1,0 +1,88 @@
+.char-page-wrapper {
+    margin: auto;
+    max-width: 1284px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: start;
+}
+
+.agency-wrapper {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    max-width: 636px;
+    width: 100%;
+}
+
+.unit-header {
+    border: solid 2px var(--theme-page-text-color);
+    padding: 10px;
+    height: 60px;
+}
+
+.unit-wrapper {
+    margin: auto;
+    max-width: 636px;
+    display: block;
+}
+
+.unit-card {
+    display: inline-block;
+    float: left;
+    position: relative;
+}
+
+.unit-card::after {
+    box-shadow: inherit;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.unit-chars1 {
+    overflow: auto;
+    margin-left: 108px;
+}
+
+.unit-chars2 {
+    display: flex;
+    width: 528px;
+    justify-content: space-between;
+}
+
+.unit-chars2>div {
+    display: inline-block;
+}
+
+.unit-chars2>div>a>img,
+.unit-card>a>img {
+    height: 162px;
+    width: auto;
+}
+
+.unit-chars2>div,
+.unit-card {
+    overflow: hidden;
+}
+
+/*fancy animation*/
+.unit-card>a>img,
+.unit-chars2 img {
+    transition: transform .2s ease;
+}
+
+.unit-card>a>img:hover,
+.unit-chars2 img:hover {
+    transform: scale(1.04);
+}
+
+.unit-card>a>img:active,
+.unit-chars2 img:active {
+    transform: scale(1.02);
+}
