@@ -3,9 +3,10 @@
 /*this thing looks really prone to breaking the wiki, but so far i've tested nothing has broken yet
 if the wiki page gets cut off try removing this line*/
 
-.mw-parser-output{
+.mw-parser-output {
 	overflow: hidden;
 }
+
 
 .background-cover {
     display: flex;
