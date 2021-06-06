@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap');
+
+/*tabber*/
+
+/* .wds-tabs__tab.wds-is-current {
+    
+} */
+
+.portable-infobox .wds-tabs__wrapper{
+    padding: 0px 15px;
+}
+
+
+/*main frame*/
+.portable-infobox {
+    border-radius: 15px 5px;
+    margin-right: 10px;
+    position:relative;
+}
+
+/*side stripe*/
+.portable-infobox {
+    padding-left: 10px;
+    overflow: visible !important;
+}
+.portable-infobox::before {
+    clip-path: inset(0px 0px 0px 0px round 15px 5px);
+    background: none;
+    border-left: solid 10px #FCF000;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    pointer-events: none;
+}
+
+/*spacing*/
+.portable-infobox .pi-item-spacing {
+    padding: 6px 15px;
+}
+
+/*title*/
+.portable-infobox .pi-title {
+    background: none;
+    font: 900 italic 20px/130% Montserrat, 'Noto Sans JP', sans-serif !important;
+    padding:0.8em 15px;
+    position: relative;
+    text-align: left !important;
+}
+
+/*name underline*/
+.infobox-char-name{
+  position: relative;
+  text-decoration: none;
+}
+
+/*headers*/
+.portable-infobox .pi-header {
+    font: 700 italic 14px/130% Montserrat, 'Noto Sans JP', sans-serif !important;
+    text-align: left !important;
+    
+}
+
+/*horizontal group*/
+.pi-horizontal-group-item {
+    padding: 2px !important;
+    
+}
+.pi-horizontal-group {
+    
+}
+
+/*-----!&!! selection options-----*/
+aside[data-item-name="Infobox Character"] > section:first-child {
+    overflow:visible;
+}
+aside[data-item-name="Infobox Character"] > section:first-child > div:first-child{
+    margin-top: -1px;
+    margin-bottom: 5px;
+    padding-right: 9px;
+    z-index: 90;
+}
+
+/* aside[data-item-name="Infobox Character"] > section:first-child > div:first-child > ul li.wds-tabs__tab.wds-is-current div{
+    
+} */
+
+aside[data-item-name="Infobox Character"] > section:first-child > div:first-child > ul li div{
+    width:30px !important;
+    height:25px !important;
+    margin: 10px 0px 0px 0px;
+    border-radius: 5px;
+    text-align: center;
+    display:inline-block;
+    font: 900 italic 12pt/1.32em Montserrat, sans-serif;
+    border-radius: 5px;
+}
+
+aside[data-item-name="Infobox Character"] > section:first-child > div:first-child > ul li{
+    box-shadow: none !important;
+}
+
+aside[data-item-name="Infobox Character"] > section:first-child > div:first-child > ul li:first-child{
+    margin-right:0.4em;
+    margin-left: auto;
+}
+
+aside[data-item-name="Infobox Character"] > section:first-child > div:first-child > ul li:first-child::before{
+    position: relative;
+    content:'View profile from ';
+    font: 700 italic 10pt/1.32em Montserrat, sans-serif;
+    margin-right: 0.3em;
+    
+    top: -3px;
+}
+/*light mode*/
+.wds-tabs__tab.wds-is-current {
+    box-shadow: inset 0 -5px 0 0 #FCF000;
+}
+.theme-fandomdesktop-light .portable-infobox {
+    background: white;
+    /* color: var(--theme-body-text-color); */
+    border: solid 2px #0C195C;
+    filter: drop-shadow(6px 6px 0px #0C195C50);
+}
+.theme-fandomdesktop-light .portable-infobox::before {
+    opacity: 1;
+}
+.theme-fandomdesktop-light .infobox-char-name{
+    background:linear-gradient(#FCF000,#FCF000) left bottom no-repeat;
+    background-size:100% 0.45em;
+}
+.theme-fandomdesktop-light .portable-infobox .pi-header {
+    background-color: #0C195C11 !important;
+}
+.theme-fandomdesktop-light .pi-horizontal-group-item {
+    border: solid 2px rgba(126, 141, 219, 0.1) !important;
+}
+.theme-fandomdesktop-light .pi-horizontal-group {
+    border-bottom: solid 2px rgba(126, 141, 219, 0.1) !important;
+}
+.theme-fandomdesktop-light aside[data-item-name="Infobox Character"] > section:first-child > div:first-child > ul li.wds-tabs__tab.wds-is-current div{
+    background-color:#0C195C;
+    color: #FFF;
+}
+.theme-fandomdesktop-light aside[data-item-name="Infobox Character"] > section:first-child > div:first-child > ul li div{
+    background-color: #EFF0F4;
+    border: solid 2px #0C195C;
+}
+.theme-fandomdesktop-light aside[data-item-name="Infobox Character"] > section:first-child > div:first-child > ul li:first-child::before{
+    color: #0C195C;
+}
+/*----------*/
+
+
+/*dark mode*/
+.wds-tabs__tab.wds-is-current {
+    box-shadow: inset 0 -5px 0 0 #FCF00077;
+}
+.theme-fandomdesktop-dark .portable-infobox {
+    background: #000;
+    color: var(--theme-body-text-color);
+    border: solid 2px #555;
+    filter: drop-shadow(6px 6px 0px #55555555);
+}
+.theme-fandomdesktop-dark .portable-infobox::before {
+    opacity: 0.4;
+}
+.theme-fandomdesktop-dark .infobox-char-name{
+  background:linear-gradient(#FCF00077,#FCF00077) left bottom no-repeat;
+    background-size:100% 0.45em;
+}
+.theme-fandomdesktop-dark .portable-infobox .pi-header {
+    background-color: #333 !important;
+}
+.theme-fandomdesktop-dark .pi-horizontal-group-item {
+    border: solid 2px #333 !important;
+}
+.theme-fandomdesktop-dark .pi-horizontal-group {
+    border-bottom: solid 2px #333 !important;
+}
+.theme-fandomdesktop-dark aside[data-item-name="Infobox Character"] > section:first-child > div:first-child > ul li.wds-tabs__tab.wds-is-current div{
+    background-color:#555;
+    color: #FFF;
+}
+.theme-fandomdesktop-dark aside[data-item-name="Infobox Character"] > section:first-child > div:first-child > ul li div{
+    background-color: #333;
+    border: solid 2px #555;
+    
+}
+.theme-fandomdesktop-dark aside[data-item-name="Infobox Character"] > section:first-child > div:first-child > ul li:first-child::before{
+    color: #555;
+}
+/*----------*/
+
+
+/* infobox audio button */
+.portable-infobox .audio-button {
+	border-radius: 15px;
+	padding: 10px;
+	background-color: #1e3ec8;
+	margin: auto;
+	display: block;
+	margin-bottom: 5px;
+}
+
+
+/* character colors */
+.portable-infobox.pi-theme-eichi-color::before  { border-left-color: #FFF3B7; }
+.portable-infobox.pi-theme-wataru-color::before { border-left-color: #A0D7E2; }
+.portable-infobox.pi-theme-tori-color::before   { border-left-color: #F4B2B2; }
+.portable-infobox.pi-theme-yuzuru-color::before { border-left-color: #3E62AC; }
+.portable-infobox.pi-theme-hokuto-color::before { border-left-color: #0067B6; }
+.portable-infobox.pi-theme-subaru-color::before { border-left-color: #F4981C; }
+.portable-infobox.pi-theme-makoto-color::before { border-left-color: #65AB31; }
+.portable-infobox.pi-theme-mao-color::before    { border-left-color: #951E56; }
+.portable-infobox.pi-theme-chiaki-color::before { border-left-color: #E70032; }
+.portable-infobox.pi-theme-kanata-color::before { border-left-color: #008DB6; }
+.portable-infobox.pi-theme-tetora-color::before { border-left-color: #312834; }
+.portable-infobox.pi-theme-midori-color::before { border-left-color: #005340; }
+.portable-infobox.pi-theme-shinobu-color::before{ border-left-color: #FEDC00; }
+.portable-infobox.pi-theme-hiiro-color::before  { border-left-color: #BA2634; }
+.portable-infobox.pi-theme-aira-color::before   { border-left-color: #F1D796; }
+.portable-infobox.pi-theme-mayoi-color::before  { border-left-color: #522F5F; }
+.portable-infobox.pi-theme-tatsumi-color::before{ border-left-color: #7EBDA6; }
+.portable-infobox.pi-theme-nagisa-color::before { border-left-color: #A83638; }
+.portable-infobox.pi-theme-hiyori-color::before { border-left-color: #B7D201; }
+.portable-infobox.pi-theme-ibara-color::before  { border-left-color: #74325D; }
+.portable-infobox.pi-theme-jun-color::before    { border-left-color: #1A2F61; }
+.portable-infobox.pi-theme-shu-color::before    { border-left-color: #E5ABAF; }
+.portable-infobox.pi-theme-mika-color::before   { border-left-color: #006A6D; }
+.portable-infobox.pi-theme-hinata-color::before { border-left-color: #EB6FA2; }
+.portable-infobox.pi-theme-yuta-color::before   { border-left-color: #00A1E8; }
+.portable-infobox.pi-theme-rinne-color::before  { border-left-color: #BA2636; }
+.portable-infobox.pi-theme-himeru-color::before { border-left-color: #8AC3EB; }
+.portable-infobox.pi-theme-kohaku-color::before { border-left-color: #F3B3C2; }
+.portable-infobox.pi-theme-niki-color::before   { border-left-color: #507EA5; }
+.portable-infobox.pi-theme-rei-color::before    { border-left-color: #46266E; }
+.portable-infobox.pi-theme-kaoru-color::before  { border-left-color: #FDD25D; }
+.portable-infobox.pi-theme-koga-color::before   { border-left-color: #C9C9C9; }
+.portable-infobox.pi-theme-adonis-color::before { border-left-color: #915DA3; }
+.portable-infobox.pi-theme-tomoya-color::before { border-left-color: #EDDDB3; }
+.portable-infobox.pi-theme-nazuna-color::before { border-left-color: #FFED48; }
+.portable-infobox.pi-theme-mitsuru-color::before{ border-left-color: #ED6D34; }
+.portable-infobox.pi-theme-hajime-color::before { border-left-color: #CBB8D9; }
+.portable-infobox.pi-theme-keito-color::before  { border-left-color: #316645; }
+.portable-infobox.pi-theme-kuro-color::before   { border-left-color: #E83929; }
+.portable-infobox.pi-theme-souma-color::before  { border-left-color: #5554A2; }
+.portable-infobox.pi-theme-tsukasa-color::before{ border-left-color: #952242; }
+.portable-infobox.pi-theme-leo-color::before    { border-left-color: #ED6D52; }
+.portable-infobox.pi-theme-izumi-color::before  { border-left-color: #BADBF2; }
+.portable-infobox.pi-theme-ritsu-color::before  { border-left-color: #001E44; }
+.portable-infobox.pi-theme-arashi-color::before { border-left-color: #ECDF7B; }
+.portable-infobox.pi-theme-natsume-color::before{ border-left-color: #D60132; }
+.portable-infobox.pi-theme-tsumugi-color::before{ border-left-color: #00608D; }
+.portable-infobox.pi-theme-sora-color::before   { border-left-color: #FFF353; }
+.portable-infobox.pi-theme-madara-color::before { border-left-color: #622D18; }
+.portable-infobox.pi-theme-jin-color::before    { border-left-color: #8DA0B6; }
+.portable-infobox.pi-theme-akiomi-color::before { border-left-color: #915C8B; }
+.portable-infobox.pi-theme-anzu-color::before   { border-left-color: #FFB6DA; }
+.portable-infobox.pi-theme-seiya-color::before  { border-left-color: #292b3c; }
+.portable-infobox.pi-theme-gatekeeper-color::before { border-left-color: #5f2222; }
+/*** end of Template:Infobox Character ***/
+
+/*** start of Template:Lyrics ***/
+.pi-theme-lyrics.portable-infobox {
+    width: auto;
+    float: none;
+    background: transparent;
+    border: none;
+}
+.pi-theme-lyrics .pi-data {
+    width: 90%;
+    margin: 0 auto;
+}
+.pi-theme-lyrics .pi-section-navigation {
+    margin-bottom: 1em;
+}
+.pi-theme-lyrics .pi-section-label {
+    font-size: 16px;
+}
+.pi-theme-lyrics.portable-infobox .pi-header {
+    display: none;
+}
+.pi-theme-lyrics .pi-data-value {
+    font-size: 16px;
+    line-height: 1.5;
+	width: 100%;
+	text-align: center;
+}
+/*** end of Template:Lyrics ***/
+
+
+
+
+
