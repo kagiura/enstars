@@ -1,0 +1,558 @@
+/*
+
+THIS CSS IS HORRIBLE AND HAS NOT BEEN CLEANED IN ANY WAY
+
+DEAL WITH IT
+
+(use this along with infobox.css too)
+
+
+*/
+
+/* */
+
+
+/* CARD PAGE */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,700&display=swap');
+
+.wds-tabs__wrapper .wds-tabs {
+    overflow-y: hidden;
+}
+
+section[data-item-name="card-title-wrapper"]{
+    overflow: hidden;
+    position: relative;
+}
+
+h2[data-item-name="card-rarity"]{
+    position: absolute;
+    bottom: -30px;
+    font: 700 italic 6vw 'Noto Sans', sans-serif !important;
+    padding: 0 !important;
+    /* width: 100%; */
+    right: -5px;
+    z-index: -1;
+    color: #FCF00050 !important;
+    background: none !important;
+    border-top: none !important;
+}
+
+section[data-item-name="card-skills-basic"]{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+section[data-item-name="card-skills-basic"] > h2{
+    flex: 1 0 100%;
+}
+
+section[data-item-name="card-skills-basic"] > div{
+    flex: 1 1 50%;
+    min-width: 200px;
+}
+
+.card-skills-label {
+    display: inline-block;
+    width: 70px;
+    margin-right: 10px;
+    position:relative;
+    top: 5px;
+    margin-bottom: -5px;
+    text-align: center;
+    color: white;
+    background-color: #0C195C;
+    font: 700 7pt Montserrat;
+    letter-spacing: 1px;
+    padding: 4px 0px;
+    
+}
+
+
+
+section[data-item-name|="card-skills"] > div > h3 {
+    padding-left:80px;
+    overflow: visible;
+    
+}
+
+
+
+section[data-item-name|="card-stats"] .pi-horizontal-group-item{
+    text-align: left !important;
+    padding: 2px 15px;
+}
+
+section[data-item-name|="card-stats"] tr{
+    
+}
+
+section[data-item-name|="card-stats"] td:nth-child(1){
+    text-align: left !important;
+    width: 60px;
+    font: 700 12px Rubik;
+}
+
+section[data-item-name|="card-stats"] td{
+    border-width: 0px !important;
+}
+
+
+
+.card-stats-label {
+    display: inline-block;
+    width: 20px;
+    padding: 0px 0px;
+    font: 700 12px Montserrat, sans-serif;
+    color: white;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.card-stats-Da {
+    background-color: #EA4362;
+}
+
+.card-stats-Vo {
+    background-color: #59C7F8;
+}
+
+.card-stats-Pf {
+    background-color: #F9D548;
+}
+
+section[data-item-name|="card-skills"] > div > h3::before {
+    text-align: center;
+    content: "SKILL";
+    display: block;
+    position: relative;
+    top: 25px;
+    left: -80px;
+    width: 70px;
+    pointer-events: none;
+    margin-top: -20px;
+    color: white;
+    background-color: #0C195C;
+    font: 700 7pt Montserrat;
+    letter-spacing: 1px;
+    padding: 4px 0px;
+}
+/*
+section[data-item-name|="card-skills"] > div:nth-child(1){
+    background-color: red;
+}*/
+
+
+
+section[data-item-name="card-skills-basic"] > div {
+    border-top: solid 2px #0C195C11 !important;
+}
+
+section[data-item-name="card-skills-basic"] > div:nth-child(2) > h3::before {
+    content: "LESSON";
+    border-bottom: solid 4px #4dab3d;
+}
+
+section[data-item-name="card-skills-basic"] > div:nth-child(3) > h3::before {
+    content: "LIVE";
+    border-bottom: solid 4px #3476d8;
+}
+
+section[data-item-name="card-skills-basic"] > h2:nth-child(4) {
+    background: none !important;
+    color: #0C195C55 !important;
+    font: 700 italic 12px/130% Montserrat, 'Noto Sans JP', sans-serif;
+    padding: 3px 15px;
+}
+
+section[data-item-name="card-skills-basic"] > div:nth-child(5) > h3::before {
+    content: "LESSON";
+    border-bottom: solid 4px #4dab3d;
+}
+
+section[data-item-name="card-skills-basic"] > div:nth-child(6) > h3::before {
+    content: "LIVE";
+    border-bottom: solid 4px #3476d8;
+}
+
+
+
+section[data-item-name="card-skills-music"] > div:nth-child(2) > h3::before {
+    content: "CENTER";
+    padding: 6px 0px;
+}
+
+section[data-item-name="card-skills-music"] > div:nth-child(3) > h3::before {
+    content: "LIVE";
+    border-bottom: solid 4px #3476d8;
+}
+
+section[data-item-name="card-skills-music"] > div:nth-child(5) > h3::before {
+    content: "SUPPORT";
+    border-bottom: solid 4px #4dab3d;
+}
+
+section[data-item-name="card-skills-music"] > div:nth-child(6) > h3::before {
+    content: "SPP";
+    border-bottom: solid 4px #FF2790;
+}
+
+
+.card-skills-live{
+    
+}
+
+.card-skills-support{
+    
+}
+
+
+section[data-item-name|="card-skills-basic"] > div > div,section[data-item-name|="card-skills-music"] > div > div  {
+    padding-left: 80px !important;
+}
+
+section[data-item-name|="card-skills"] > div {
+    overflow: visible;
+}
+
+section[data-item-name|="card-skills"] > div > h3 {
+    /*padding-left: 80px;
+    text-indent:-80px;*/
+    overflow: visible;
+}
+
+section[data-item-name="card-skills-live"]{
+    padding-left: 80px !important;
+}
+
+section[data-item-name="card-skills-live"] .wds-tabs__tab-label{
+    font: 8pt Montserrat;
+    height: auto;
+    padding: 0px 0px 6px 0px;
+    margin: 0px 8px -5px 8px;
+    
+}
+
+section[data-item-name="card-skills-live"] .wds-tab__content div{
+    border-top: none;
+}
+
+
+section[data-item-name|="card-gallery"] h2:not(:first-child) {
+    background: none !important;
+    color: #0C195C55 !important;
+    font: 700 italic 14px/130% Montserrat, 'Noto Sans JP', sans-serif;
+    padding: 3px 15px;
+    border-bottom: solid 2px #0C195C11;
+}
+
+
+.card-infobox-wrapper{
+    min-height: calc(35vw * 1.198);
+}
+
+aside[data-item-name="card-infobox"] .pi-title{
+    border: none;
+}
+
+
+aside[data-item-name="card-infobox"] > section > div.wds-tab__content.wds-is-current::before{
+    clip-path: inset(0px 0px 0px 0px round 13px 3px);
+    background: none;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    pointer-events: none;
+}
+
+.pi-theme-vo-fl .wds-tab__content.wds-is-current[data-item-name="card-basic"]::before{
+    border-left: solid 10px blue;
+}
+
+.pi-theme-vo-fl .wds-tab__content.wds-is-current[data-item-name="card-music"]::before{
+    border-left: solid 10px yellow;
+}
+
+/*card switches*/
+
+.card-quote-wrapper{
+    position:relative;
+    text-align: center;
+    height: 60px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.card-quote-pair{
+    position:absolute;
+    top: 0px;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.card-pair-wrapper:hover .card-quote-pair{
+    top: -60px;
+}
+
+.card-quote{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+aside[data-item-name="card-infobox"]{
+    width: auto;
+    display: block;
+    margin: 0px 6px 6px 35vw;
+    float: none;
+}
+
+.card-pair-wrapper{
+    white-space: nowrap;
+    display: inline-block;
+    margin: 10px;
+    overflow: visible;
+    position: absolute;
+    left:-35vw;
+    top: -10px;
+}
+
+.card-pair-wrapper div{
+    transition: all 0.2s ease;
+}
+
+.card-single {
+    position:relative;
+    display: inline-block;
+    box-shadow: 0px 0px 8px 0px #00000099;
+    border-radius: 1vw;
+}
+
+.card-single img{
+    width: 30vw;
+    height: auto;
+    pointer-events:none;
+}
+.card-unbloomed{
+    z-index: 2;
+    transform: scale(1.0);
+}
+.card-bloomed{
+    z-index: 1;
+    margin-left: -28vw;
+    transform: scale(0.9) rotate(2deg);
+    filter: brightness(70%);
+    
+}
+
+.card-pair-wrapper:hover .card-bloomed{
+    z-index: 2;
+    transform: scale(1.0);
+    filter: brightness(100%);
+}
+.card-pair-wrapper:hover .card-unbloomed{
+    z-index:1;
+    transform: scale(0.9) rotate(-2deg);
+    filter: brightness(70%);
+    
+}
+
+h2[data-item-name="card-images"]{
+    height: 0px;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+/* basic - music switch */
+
+aside[data-item-name="card-infobox"] > section:first-child {
+    overflow:visible;
+}
+aside[data-item-name="card-infobox"] > section:first-child > div:first-child{
+    margin-top: -1px;
+    margin-bottom: 5px;
+    padding-right: 9px;
+    z-index: 90;
+}
+
+/* aside[data-item-name="Infobox Character"] > section:first-child > div:first-child > ul li.wds-tabs__tab.wds-is-current div{
+    
+} */
+
+aside[data-item-name="card-infobox"] > section:first-child > div:first-child > ul li div{
+    width:60px;
+    height:25px;
+    margin: 10px 0px 0px 0px;
+    border-radius: 5px;
+    text-align: center;
+    display:inline-block;
+    font: 700 italic 0.8em/1.32em Montserrat, sans-serif;
+    letter-spacing: 1px;
+    padding: 6px 0px;
+    border-radius: 5px;
+}
+
+aside[data-item-name="card-infobox"] > section:first-child > div:first-child > ul li{
+    box-shadow: none !important;
+}
+
+aside[data-item-name="card-infobox"] > section:first-child > div:first-child > ul li:first-child{
+    margin-right:0.4em;
+    margin-left: auto;
+}
+
+
+.theme-fandomdesktop-light aside[data-item-name="card-infobox"] > section:first-child > div:first-child > ul li.wds-tabs__tab.wds-is-current div{
+    background-color:#0C195C;
+    color: #FFF;
+}
+.theme-fandomdesktop-light aside[data-item-name="card-infobox"] > section:first-child > div:first-child > ul li div{
+    background-color: #EFF0F4;
+    /*border: solid 2px #0C195C;*/
+}
+
+
+
+
+/* IDOL ROAD */
+
+/* ==UserStyle==
+@name        NewStyle-tal97sn5
+@description Idol Road
+@match       *://*.*
+==/UserStyle== */
+
+.card-ir-wrapper{
+    overflow: auto;
+    
+}
+
+.card-ir{
+    position:relative;
+    height: 350px;
+    padding: 10px;
+    width: 2240px;
+    background-image: url('https://static.wikia.nocookie.net/ensemble-stars/images/7/76/IdolRoad_Node_Map_5.svg/revision/latest?cb=20210609181613');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-ir-node{
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #0C195C;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border-radius: 5px;
+    border: solid 0.5px #FFF;
+    box-shadow: 0px 0px 3px 0px #00000040, 0px 0px 0px 2px #0C195C;
+    color: white;
+    white-space:nowrap;
+    
+}
+
+.card-ir-node:hover{
+    width: 200px;
+    height: auto;
+    z-index: 20;
+    transform: scale(1.05);
+}
+
+.card-ir-node-check-{
+    visibility: hidden;
+}
+
+.card-ir-node [style*="Vocal"]{
+    background: url('https://static.wikia.nocookie.net/ensemble-stars/images/a/ab/IdolRoad_Node_Vo.svg/revision/latest?cb=20210609104027');
+}
+.card-ir-node [style*="Dance"]{
+    background: url('https://static.wikia.nocookie.net/ensemble-stars/images/0/07/IdolRoad_Node_Da.svg/revision/latest?cb=20210609104025');
+}
+.card-ir-node [style*="Performance"]{
+    background: url('https://static.wikia.nocookie.net/ensemble-stars/images/9/92/IdolRoad_Node_Pf.svg/revision/latest?cb=20210609104024');
+}
+
+.card-ir-node [style*="Lesson_Skill"]{
+    background: url('https://static.wikia.nocookie.net/ensemble-stars/images/3/3a/IdolRoad_Node_B_Lesson.svg/revision/latest?cb=20210609112440');
+}
+.card-ir-node [style*="Live_Skill"]{
+    background: url('https://static.wikia.nocookie.net/ensemble-stars/images/3/36/IdolRoad_Node_B_Live.svg/revision/latest?cb=20210609112437');
+}
+.card-ir-node [style*="Support_Skill"]{
+    background: url('https://static.wikia.nocookie.net/ensemble-stars/images/7/7d/IdolRoad_Node_M_Support.svg/revision/latest?cb=20210609112432');
+}
+
+.card-ir-node [style*="SPP"]{
+    background: url('https://static.wikia.nocookie.net/ensemble-stars/images/9/9b/IdolRoad_Node_SPP.svg/revision/latest?cb=20210609104023');
+}
+.card-ir-node [style*="Outfit"]{
+    background: url('https://static.wikia.nocookie.net/ensemble-stars/images/f/fe/IdolRoad_Node_Outfit.svg/revision/latest?cb=20210609112729');
+}
+.card-ir-node [style*="Background"]{
+    background: url('https://static.wikia.nocookie.net/ensemble-stars/images/b/bf/IdolRoad_Node_Background.svg/revision/latest?cb=20210609104021');
+}
+
+.card-ir-node [style*="Bloom"]{
+    background: url('https://static.wikia.nocookie.net/ensemble-stars/images/a/a4/IdolRoad_Node_Bloomed.svg/revision/latest?cb=20210609101834');
+}
+
+.card-ir-node-left{
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    width: 49px;
+    height: 49px;
+    white-space:normal;
+    vertical-align: top;
+    line-height: 7px;
+    text-align: center;
+    padding-bottom: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+    
+.card-ir-node-left > span{
+    position: absolute;
+    bottom: 3px;
+    left: 0px;
+    width: 100%;
+    margin-bottom: 0px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 7px;
+    text-transform: uppercase; 
+    
+    
+}
+.card-ir-node-right{
+    display: inline-block;
+    width: 150px;
+    height: auto;
+    line-height: 14px;
+    margin: 0px !important;
+    white-space: normal;
+    padding: 8px;
+}
+
+.card-ir-node-right > span {
+    
+}
+
+.card-ir-node-desc{
+    font: 700 10pt Montserrat;
+    line-height: 11px;
+}
+
+.card-ir-node-requirements{
+    font: 500 10px Rubik;
+}
+
+
