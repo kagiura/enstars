@@ -25,6 +25,8 @@ if the wiki page gets cut off try removing this line*/
     flex-shrink: 0;
     min-width: 100%;
     min-height: 550px;
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 
 .home-wrapper {
