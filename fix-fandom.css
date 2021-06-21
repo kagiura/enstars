@@ -1,0 +1,64 @@
+.page-content p,
+.page-content section {
+    margin: unset;
+}
+.main-container {
+    margin-left: unset;
+    width: unset;
+}
+.page-header__bottom,
+.page-header__top {
+    flex-direction: column-reverse;
+}
+.page-header__actions {
+    justify-content: flex-end;
+}
+.page-header__title {
+    font-size: 25px;
+}
+.fandom-sticky-header {
+    width: 100vw;
+    left: 0px;
+    padding-left: 50px;
+    z-index: 10;
+}
+.page-header__categories body {
+    font-size: 10px;
+}
+.page-header__actions {
+    padding-top: unset;
+}
+.resizable-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.global-navigation {
+    background: none !important;
+    box-shadow: none !important;
+}
+.global-navigation__top {
+    display: none;
+}
+.notifications {
+    display: none;
+}
+.notifications + div {
+    position: absolute;
+    top: 0px;
+    right: 0px
+}
+.global-navigation__bottom {
+    z-index: 10000;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+}
+.wds-avatar img {
+    border-color: #1d3dc7 !important;
+}
+.notifications + div > .wds-dropdown__content {
+    position: absolute !important;
+    top: 0px !important;
+    left: 50px !important;
+    height: 196px !important;
+}
