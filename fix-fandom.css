@@ -35,6 +35,7 @@
 .global-navigation {
     background: none !important;
     box-shadow: none !important;
+    height: 50px !important;
 }
 .global-navigation__top {
     display: none;
