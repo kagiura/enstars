@@ -20,7 +20,7 @@
     width: 100vw;
     left: 0px;
     padding-left: 50px;
-    z-index: 10;
+    z-index: 9999;
 }
 .page-header__categories body {
     font-size: 10px;
