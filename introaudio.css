@@ -1,47 +1,48 @@
-.audio-box > table > tbody > tr:nth-child(2) > td{
-    text-align:right;
+.audio-box > table > tbody > tr:nth-child(2) > td {
+    text-align: right;
 }
 .audio-box > table > tbody > tr:nth-child(2) > td > div {
     border: solid 0px #0C195C;
     border-radius: 5px 5px;
-    background-color:#0C195C;
-    margin:auto;
-    display:inline-block;
-    color:#FFF;
-    overflow:hidden;
-    margin-right:6px;
+    background-color: #0C195C;
+    margin: auto;
+    display: inline-block;
+    color: #FFF;
+    overflow: hidden;
+    margin-right: 6px;
     margin-bottom: 6px;
     height: 25px;
-    position:relative;
+    position: relative;
 }
 .audio-box > table > tbody > tr:nth-child(2) > td > div > cite {
     display: inline-block;
-    height:40px;
+    height: 40px;
 }
 .audio-self > table > tbody > tr:nth-child(2) > td > div > cite {
     margin-top: 3px;
 }
 .audio-button {
-    background-color:unset !important;
-    background-image:url('https://static.wikia.nocookie.net/ensemble-stars/images/2/25/Icon_voice.svg/revision/latest?cb=20210606141725&format=original');
+    background-color: unset !important;
+    background-image: url('https://static.wikia.nocookie.net/ensemble-stars/images/2/25/Icon_voice.svg/revision/latest?cb=20210606141725&format=original');
     background-size: 20px;
-    width:40px;
-    height:19px;
+    width: 40px;
+    height: 19px;
 }
 .audio-button:hover {
-    background-color:unset;
+    background-color: unset;
 }
 .audio-from a {
-    color:#FFF !important;
+    color: #FFF !important;
 }
 .audio-from a:hover {
-    text-decoration:none;
+    text-decoration: none;
 }
-.audio-box > table > tbody > tr:nth-child(2) > td > div > cite > a{
+.audio-box > table > tbody > tr:nth-child(2) > td > div > cite > a {
     margin-left: 12px;
-    margin-right: -5px;  
+    margin-right: -5px;
+    display: inline-block;
 }
-.audio-box > table > tbody > tr:nth-child(2) > td > div > cite > sup{
+.audio-box > table > tbody > tr:nth-child(2) > td > div > cite > sup {
     position: absolute;
     display: none;
 }
