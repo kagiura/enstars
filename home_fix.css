@@ -2,12 +2,12 @@
 .home-wrap {
     display: flex;
     /*gap: 24px;*/
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow:auto;
 }
 .home-left-wrap {
     display: inline-block;
     flex: 100 1 60%;
-    min-width: 800px;
 }
 .home-right-wrap {
     /*display: inline-block;*/
@@ -26,6 +26,9 @@
     object-fit: cover;
     object-position: center;
     width: 100%;
+}
+.mw-parser-output {
+    overflow: hidden
 }
 .home-wrapper {
     max-width: 1280px;
@@ -278,8 +281,7 @@ span.line {
 }
 .home-widget-wrapper, .home-right {
     display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
+    flex-wrap: wrap
 }
 .home-widget-wrapper > div, .home-right > div {
     flex: 1 1 30%;
@@ -342,9 +344,16 @@ div[style="border-left-color:#e33825;background-color:#FFFFFF"] {
 }
 
 
+
+
 /*============*/
 
 .campaigns-wrapper img{
     width: 100%;
+    max-width: 300px;
     height:auto;
+}
+
+.campaigns-wrapper span.campaigns-countdown {
+    /*display:none;*/
 }
