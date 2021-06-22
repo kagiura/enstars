@@ -22,14 +22,14 @@
     margin-top: 3px;
 }
 .audio-button.character-audio {
-    background-color: unset !important;
+    background-color: #0C195C !important;
     background-image: url('https://static.wikia.nocookie.net/ensemble-stars/images/2/25/Icon_voice.svg/revision/latest?cb=20210606141725&format=original');
     background-size: 20px;
     width: 40px;
     height: 19px;
 }
 .audio-button.character-audio:hover {
-    background-color: unset;
+    background-color: #0C195C;
 }
 .audio-from a {
     color: #FFF !important;
