@@ -21,14 +21,14 @@
 .audio-self > table > tbody > tr:nth-child(2) > td > div > cite {
     margin-top: 3px;
 }
-.audio-button {
+.audio-button.character-audio {
     background-color: unset !important;
     background-image: url('https://static.wikia.nocookie.net/ensemble-stars/images/2/25/Icon_voice.svg/revision/latest?cb=20210606141725&format=original');
     background-size: 20px;
     width: 40px;
     height: 19px;
 }
-.audio-button:hover {
+.audio-button.character-audio:hover {
     background-color: unset;
 }
 .audio-from a {
