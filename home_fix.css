@@ -27,9 +27,6 @@
     object-position: center;
     width: 100%;
 }
-.mw-parser-output {
-    overflow: hidden
-}
 .home-wrapper {
     max-width: 1280px;
     padding: 0px 40px;
@@ -281,7 +278,8 @@ span.line {
 }
 .home-widget-wrapper, .home-right {
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    gap: 24px;
 }
 .home-widget-wrapper > div, .home-right > div {
     flex: 1 1 30%;
