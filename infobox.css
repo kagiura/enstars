@@ -15,6 +15,61 @@
     --theme-infobox-background-color: #101010;
 }
 
+.portable-infobox.pi-theme-eichi-color::before  { --theme-color-character-color: #FFF3B7; }
+.portable-infobox.pi-theme-wataru-color::before { --theme-color-character-color: #A0D7E2; }
+.portable-infobox.pi-theme-tori-color::before   { --theme-color-character-color: #F4B2B2; }
+.portable-infobox.pi-theme-yuzuru-color::before { --theme-color-character-color: #3E62AC; }
+.portable-infobox.pi-theme-hokuto-color::before { --theme-color-character-color: #0067B6; }
+.portable-infobox.pi-theme-subaru-color::before { --theme-color-character-color: #F4981C; }
+.portable-infobox.pi-theme-makoto-color::before { --theme-color-character-color: #65AB31; }
+.portable-infobox.pi-theme-mao-color::before    { --theme-color-character-color: #951E56; }
+.portable-infobox.pi-theme-chiaki-color::before { --theme-color-character-color: #E70032; }
+.portable-infobox.pi-theme-kanata-color::before { --theme-color-character-color: #008DB6; }
+.portable-infobox.pi-theme-tetora-color::before { --theme-color-character-color: #312834; }
+.portable-infobox.pi-theme-midori-color::before { --theme-color-character-color: #005340; }
+.portable-infobox.pi-theme-shinobu-color::before{ --theme-color-character-color: #FEDC00; }
+.portable-infobox.pi-theme-hiiro-color::before  { --theme-color-character-color: #BA2634; }
+.portable-infobox.pi-theme-aira-color::before   { --theme-color-character-color: #F1D796; }
+.portable-infobox.pi-theme-mayoi-color::before  { --theme-color-character-color: #522F5F; }
+.portable-infobox.pi-theme-tatsumi-color::before{ --theme-color-character-color: #7EBDA6; }
+.portable-infobox.pi-theme-nagisa-color::before { --theme-color-character-color: #A83638; }
+.portable-infobox.pi-theme-hiyori-color::before { --theme-color-character-color: #B7D201; }
+.portable-infobox.pi-theme-ibara-color::before  { --theme-color-character-color: #74325D; }
+.portable-infobox.pi-theme-jun-color::before    { --theme-color-character-color: #1A2F61; }
+.portable-infobox.pi-theme-shu-color::before    { --theme-color-character-color: #E5ABAF; }
+.portable-infobox.pi-theme-mika-color::before   { --theme-color-character-color: #006A6D; }
+.portable-infobox.pi-theme-hinata-color::before { --theme-color-character-color: #EB6FA2; }
+.portable-infobox.pi-theme-yuta-color::before   { --theme-color-character-color: #00A1E8; }
+.portable-infobox.pi-theme-rinne-color::before  { --theme-color-character-color: #BA2636; }
+.portable-infobox.pi-theme-himeru-color::before { --theme-color-character-color: #8AC3EB; }
+.portable-infobox.pi-theme-kohaku-color::before { --theme-color-character-color: #F3B3C2; }
+.portable-infobox.pi-theme-niki-color::before   { --theme-color-character-color: #507EA5; }
+.portable-infobox.pi-theme-rei-color::before    { --theme-color-character-color: #46266E; }
+.portable-infobox.pi-theme-kaoru-color::before  { --theme-color-character-color: #FDD25D; }
+.portable-infobox.pi-theme-koga-color::before   { --theme-color-character-color: #C9C9C9; }
+.portable-infobox.pi-theme-adonis-color::before { --theme-color-character-color: #915DA3; }
+.portable-infobox.pi-theme-tomoya-color::before { --theme-color-character-color: #EDDDB3; }
+.portable-infobox.pi-theme-nazuna-color::before { --theme-color-character-color: #FFED48; }
+.portable-infobox.pi-theme-mitsuru-color::before{ --theme-color-character-color: #ED6D34; }
+.portable-infobox.pi-theme-hajime-color::before { --theme-color-character-color: #CBB8D9; }
+.portable-infobox.pi-theme-keito-color::before  { --theme-color-character-color: #316645; }
+.portable-infobox.pi-theme-kuro-color::before   { --theme-color-character-color: #E83929; }
+.portable-infobox.pi-theme-souma-color::before  { --theme-color-character-color: #5554A2; }
+.portable-infobox.pi-theme-tsukasa-color::before{ --theme-color-character-color: #952242; }
+.portable-infobox.pi-theme-leo-color::before    { --theme-color-character-color: #ED6D52; }
+.portable-infobox.pi-theme-izumi-color::before  { --theme-color-character-color: #BADBF2; }
+.portable-infobox.pi-theme-ritsu-color::before  { --theme-color-character-color: #001E44; }
+.portable-infobox.pi-theme-arashi-color::before { --theme-color-character-color: #ECDF7B; }
+.portable-infobox.pi-theme-natsume-color::before{ --theme-color-character-color: #D60132; }
+.portable-infobox.pi-theme-tsumugi-color::before{ --theme-color-character-color: #00608D; }
+.portable-infobox.pi-theme-sora-color::before   { --theme-color-character-color: #FFF353; }
+.portable-infobox.pi-theme-madara-color::before { --theme-color-character-color: #622D18; }
+.portable-infobox.pi-theme-jin-color::before    { --theme-color-character-color: #8DA0B6; }
+.portable-infobox.pi-theme-akiomi-color::before { --theme-color-character-color: #915C8B; }
+.portable-infobox.pi-theme-anzu-color::before   { --theme-color-character-color: #FFB6DA; }
+.portable-infobox.pi-theme-seiya-color::before  { --theme-color-character-color: #292b3c; }
+.portable-infobox.pi-theme-gatekeeper-color::before { --theme-color-character-color: #5f2222; }
+
 /* Infobox */
 .portable-infobox.pi-background:not(.pi-theme-lyrics) {
     border-radius: 15px 5px;
@@ -29,7 +84,7 @@
 
 .portable-infobox.pi-background:not(.pi-theme-lyrics)::before {
     clip-path: inset(0px 0px 0px 0px round 13px 3px);
-    border-left: solid 10px var(--theme-infobox-accent-color);
+    border-left: solid 10px var(--theme-color-character-color);
     content: "";
     position: absolute;
     width: 100%;
@@ -165,61 +220,6 @@
     color: var(--theme-infobox-main-color);
     vertical-align: middle;
 }
-
-.portable-infobox.pi-theme-eichi-color::before  { border-left-color: #FFF3B7; }
-.portable-infobox.pi-theme-wataru-color::before { border-left-color: #A0D7E2; }
-.portable-infobox.pi-theme-tori-color::before   { border-left-color: #F4B2B2; }
-.portable-infobox.pi-theme-yuzuru-color::before { border-left-color: #3E62AC; }
-.portable-infobox.pi-theme-hokuto-color::before { border-left-color: #0067B6; }
-.portable-infobox.pi-theme-subaru-color::before { border-left-color: #F4981C; }
-.portable-infobox.pi-theme-makoto-color::before { border-left-color: #65AB31; }
-.portable-infobox.pi-theme-mao-color::before    { border-left-color: #951E56; }
-.portable-infobox.pi-theme-chiaki-color::before { border-left-color: #E70032; }
-.portable-infobox.pi-theme-kanata-color::before { border-left-color: #008DB6; }
-.portable-infobox.pi-theme-tetora-color::before { border-left-color: #312834; }
-.portable-infobox.pi-theme-midori-color::before { border-left-color: #005340; }
-.portable-infobox.pi-theme-shinobu-color::before{ border-left-color: #FEDC00; }
-.portable-infobox.pi-theme-hiiro-color::before  { border-left-color: #BA2634; }
-.portable-infobox.pi-theme-aira-color::before   { border-left-color: #F1D796; }
-.portable-infobox.pi-theme-mayoi-color::before  { border-left-color: #522F5F; }
-.portable-infobox.pi-theme-tatsumi-color::before{ border-left-color: #7EBDA6; }
-.portable-infobox.pi-theme-nagisa-color::before { border-left-color: #A83638; }
-.portable-infobox.pi-theme-hiyori-color::before { border-left-color: #B7D201; }
-.portable-infobox.pi-theme-ibara-color::before  { border-left-color: #74325D; }
-.portable-infobox.pi-theme-jun-color::before    { border-left-color: #1A2F61; }
-.portable-infobox.pi-theme-shu-color::before    { border-left-color: #E5ABAF; }
-.portable-infobox.pi-theme-mika-color::before   { border-left-color: #006A6D; }
-.portable-infobox.pi-theme-hinata-color::before { border-left-color: #EB6FA2; }
-.portable-infobox.pi-theme-yuta-color::before   { border-left-color: #00A1E8; }
-.portable-infobox.pi-theme-rinne-color::before  { border-left-color: #BA2636; }
-.portable-infobox.pi-theme-himeru-color::before { border-left-color: #8AC3EB; }
-.portable-infobox.pi-theme-kohaku-color::before { border-left-color: #F3B3C2; }
-.portable-infobox.pi-theme-niki-color::before   { border-left-color: #507EA5; }
-.portable-infobox.pi-theme-rei-color::before    { border-left-color: #46266E; }
-.portable-infobox.pi-theme-kaoru-color::before  { border-left-color: #FDD25D; }
-.portable-infobox.pi-theme-koga-color::before   { border-left-color: #C9C9C9; }
-.portable-infobox.pi-theme-adonis-color::before { border-left-color: #915DA3; }
-.portable-infobox.pi-theme-tomoya-color::before { border-left-color: #EDDDB3; }
-.portable-infobox.pi-theme-nazuna-color::before { border-left-color: #FFED48; }
-.portable-infobox.pi-theme-mitsuru-color::before{ border-left-color: #ED6D34; }
-.portable-infobox.pi-theme-hajime-color::before { border-left-color: #CBB8D9; }
-.portable-infobox.pi-theme-keito-color::before  { border-left-color: #316645; }
-.portable-infobox.pi-theme-kuro-color::before   { border-left-color: #E83929; }
-.portable-infobox.pi-theme-souma-color::before  { border-left-color: #5554A2; }
-.portable-infobox.pi-theme-tsukasa-color::before{ border-left-color: #952242; }
-.portable-infobox.pi-theme-leo-color::before    { border-left-color: #ED6D52; }
-.portable-infobox.pi-theme-izumi-color::before  { border-left-color: #BADBF2; }
-.portable-infobox.pi-theme-ritsu-color::before  { border-left-color: #001E44; }
-.portable-infobox.pi-theme-arashi-color::before { border-left-color: #ECDF7B; }
-.portable-infobox.pi-theme-natsume-color::before{ border-left-color: #D60132; }
-.portable-infobox.pi-theme-tsumugi-color::before{ border-left-color: #00608D; }
-.portable-infobox.pi-theme-sora-color::before   { border-left-color: #FFF353; }
-.portable-infobox.pi-theme-madara-color::before { border-left-color: #622D18; }
-.portable-infobox.pi-theme-jin-color::before    { border-left-color: #8DA0B6; }
-.portable-infobox.pi-theme-akiomi-color::before { border-left-color: #915C8B; }
-.portable-infobox.pi-theme-anzu-color::before   { border-left-color: #FFB6DA; }
-.portable-infobox.pi-theme-seiya-color::before  { border-left-color: #292b3c; }
-.portable-infobox.pi-theme-gatekeeper-color::before { border-left-color: #5f2222; }
 
 /*** start of Template:Infobox Character ***/
 .portable-infobox [data-item-name="character-era-select"] .wds-tab__content h2:nth-child(2),
