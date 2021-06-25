@@ -162,6 +162,7 @@
     text-align: left;
     background-color: var(--theme-infobox-main-light-color);
     color: var(--theme-infobox-main-color);
+    border: none;
 }
 
 /* Navigation */
@@ -231,6 +232,17 @@
     max-width: 100%;
     height: auto;
 }
+
+.portable-infobox[data-item-name="Infobox Character !!"] h2:nth-child(2),
+.portable-infobox[data-item-name="Infobox Character !!"] h2:nth-child(4) {
+    background: transparent;
+}
+
+.portable-infobox[data-item-name="Infobox Character !!"] .pi-horizontal-group img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /*** end of Template:Infobox Character ***/
 /*** start of Template:Lyrics ***/
