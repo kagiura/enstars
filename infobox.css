@@ -16,6 +16,7 @@
     --theme-infobox-background-color: #101010;
 }
 
+.portable-infobox  { --theme-color-character-color: #FCF000; }
 .portable-infobox.pi-theme-eichi-color  { --theme-color-character-color: #FFF3B7; }
 .portable-infobox.pi-theme-wataru-color { --theme-color-character-color: #A0D7E2; }
 .portable-infobox.pi-theme-tori-color   { --theme-color-character-color: #F4B2B2; }
