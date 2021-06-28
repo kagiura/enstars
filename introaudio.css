@@ -1,48 +1,100 @@
-.audio-box > table > tbody > tr:nth-child(2) > td {
-    text-align: right;
-}
-.audio-box > table > tbody > tr:nth-child(2) > td > div {
-    border: solid 0px #0C195C;
-    border-radius: 5px 5px;
-    background-color: #0C195C;
-    margin: auto;
-    display: inline-block;
-    color: #FFF;
-    overflow: hidden;
-    margin-right: 6px;
-    margin-bottom: 6px;
-    height: 25px;
-    position: relative;
-}
-.audio-box > table > tbody > tr:nth-child(2) > td > div > cite {
-    display: inline-block;
-    height: 40px;
-}
-.audio-self > table > tbody > tr:nth-child(2) > td > div > cite {
-    margin-top: 3px;
-}
-.audio-button.character-audio {
+/* audio player */
+.audio-button {
     background-color: #0C195C !important;
-    background-image: url('https://static.wikia.nocookie.net/ensemble-stars/images/2/25/Icon_voice.svg/revision/latest?cb=20210606141725&format=original');
-    background-size: 20px;
+    background-image: url('https://static.wikia.nocookie.net/ensemble-stars/images/f/f0/Icon_audioplayer.svg/revision/latest?cb=20210624070950&format=original');
+    background-size: 10px;
     width: 40px;
     height: 19px;
 }
-.audio-button.character-audio:hover {
-    background-color: #0C195C;
+
+.audio-button.character-audio {
+    background-image: url('https://static.wikia.nocookie.net/ensemble-stars/images/2/25/Icon_voice.svg/revision/latest?cb=20210606141725&format=original');
+    background-size: 20px;
+    background-position:center 4px;
 }
-.audio-from a {
-    color: #FFF !important;
+
+.audio-button.now-playing {
+    background-image: url('https://vignette.wikia.nocookie.net/dev/images/a/a9/OggPlayer_stop.svg');
+    background-size: 16px;
+    background-position:center 1.5px;
 }
-.audio-from a:hover {
-    text-decoration: none;
+
+.audio-button:hover {
+    background-color: unset;
 }
-.audio-box > table > tbody > tr:nth-child(2) > td > div > cite > a {
-    margin-left: 12px;
-    margin-right: -5px;
-    display: inline-block;
+/****/
+
+
+/*** start of Template:Character Quote Intro ***/
+.character-quote-wrapper {
+    position: relative;
+    text-align: right;
+    overflow: hidden;
 }
-.audio-box > table > tbody > tr:nth-child(2) > td > div > cite > sup {
+
+.character-quote-wrapper p {
+    margin: 0px 15px 15px;
+    padding:15px 30px;
+    border-radius: 5px 15px;
+    text-align: left;
+    border: solid 2px var(--theme-page-text-color);
+}
+
+.character-quote-wrapper:before {
+    content: '\201c';
+    font: 700 40px/20px Montserrat, serif; 
+    padding: 15px 5px -0px;
     position: absolute;
-    display: none;
+    left:0px;
+    top: calc( 0px + 10px);
+    background-color:var(--theme-page-background-color);
 }
+
+.character-quote-wrapper:after {
+    content: '\201d';
+    font: 700 40px/20px Montserrat, serif; 
+    padding: 15px 5px -0px;
+    position: absolute;
+    right:0px;
+    bottom: calc( 0px + 60px);
+    background-color:var(--theme-page-background-color);
+}
+
+.character-quote-audio {
+    top:-30px;
+    right:40px;
+    text-align:right;
+    border-radius: 5px;
+    background-color: #0C195C;
+    display: inline-block;
+    overflow:hidden;
+    color: #FFF;
+    height: 25px;
+    position: relative;
+}
+
+.character-quote-audio.character-quote-audio-friend{
+    padding-right:25px;
+}
+
+.character-quote-audio .character-audio-name {
+    margin: 0px 11px 0px 0px;
+}
+
+.character-quote-audio .character-audio-name a{
+    color: #FFFFFF;
+}
+
+.character-quote-audio > a{
+    display: block;
+    top: -3px; 
+    right: -1px;
+    position: absolute;
+}
+
+.character-quote-audio > a img {
+    border-radius: 0px 5px 5px 0px;
+    height:26px;
+    width: 26px;
+}
+/*** end of Template:Character Quote Intro ***/
