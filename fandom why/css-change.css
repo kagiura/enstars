@@ -78,67 +78,6 @@
    .wds-global-navigation__logo-image--gamepedia-desktop {
     width:100%
    }
-   .wikia-paginator {
-    height:30px
-   }
-   .wikia-paginator ul {
-    list-style:none;
-    margin:0 auto 10px;
-    padding:0;
-    text-align:left
-   }
-   .wikia-paginator ul li {
-    display:inline;
-    margin:0;
-    padding:0
-   }
-   .wikia-paginator ul .paginator-page {
-    color:var(--theme-link-color);
-    display:inline-block;
-    height:16px;
-    line-height:16px;
-    margin:0;
-    min-width:20px;
-    padding:2px
-   }
-   .wikia-paginator ul .paginator-page.active {
-    border:none;
-    color:var(--theme-page-text-color);
-    font-size:15px;
-    font-weight:700;
-    position:relative;
-    text-decoration:none;
-    top:1px
-   }
-   .wikia-paginator ul .paginator-spacer {
-    color:var(--theme-link-color);
-    display:inline-block;
-    height:16px;
-    line-height:16px;
-    margin:0;
-    min-width:20px;
-    padding:2px;
-    text-align:center
-   }
-   .wikia-paginator ul .special {
-    padding:2px 5px
-   }
-   .wikia-paginator ul .no-border {
-    border:none
-   }
-   .wikia-paginator ul .paginator-next {
-    padding:0 6px 0 8px
-   }
-   .wikia-paginator ul .paginator-next .wds-icon {
-    transform:rotate(270deg)
-   }
-   .wikia-paginator ul .paginator-prev {
-    margin-right:10px;
-    padding:0 8px 0 6px
-   }
-   .wikia-paginator ul .paginator-prev .wds-icon {
-    transform:rotate(90deg)
-   }
    img.lazyload,
    img.lazyloading {
     opacity:0
@@ -178,397 +117,6 @@
    }
    .thumb .thumbcaption p.title {
     font-weight:700
-   }
-   .unified-search__layout {
-    grid-gap:10px;
-    display:grid;
-    grid-template-areas:"left left main main main main main main main right right right";
-    grid-template-columns:repeat(12,1fr)
-   }
-   .unified-search__layout__wrapper {
-    box-sizing:border-box
-   }
-   @media only screen and (max-width:767px) {
-    .unified-search__layout__wrapper {
-     margin:0 18px
-    }
-   }
-   @media only screen and (min-width:768px) {
-    .unified-search__layout__wrapper {
-     margin:0 auto
-    }
-   }
-   @media only screen and (min-width:768px) and (max-width:1023px) {
-    .unified-search__layout__wrapper {
-     width:732px
-    }
-   }
-   @media only screen and (min-width:1024px) and (max-width:1279px) {
-    .unified-search__layout__wrapper {
-     width:988px
-    }
-   }
-   @media only screen and (min-width:1280px) and (max-width:1499px) {
-    .unified-search__layout__wrapper {
-     width:1244px
-    }
-   }
-   @media only screen and (min-width:1500px) {
-    .unified-search__layout__wrapper {
-     width:1464px
-    }
-   }
-   .unified-search__layout__main {
-    grid-area:main;
-    min-width:0
-   }
-   .unified-search__layout__left-rail {
-    grid-area:left
-   }
-   .unified-search__layout__right-rail {
-    grid-area:right
-   }
-   .unified-search__input {
-    background:var(--theme-page-background-color--secondary);
-    border-bottom:1px solid var(--theme-border-color);
-    border-top:1px solid var(--theme-border-color);
-    margin-bottom:18px;
-    padding:9px 10px
-   }
-   .unified-search__input__wrapper {
-    border:1px solid var(--theme-border-color);
-    display:inline-flex;
-    margin-right:10px
-   }
-   .unified-search__input__query {
-    background:var(--theme-page-background-color);
-    border:none;
-    color:var(--theme-page-text-color);
-    display:inline-flex;
-    font-size:15px;
-    padding:3px 10px;
-    width:389px
-   }
-   .unified-search__input__scope__link {
-    list-style:none
-   }
-   .unified-search__input .wds-dropdown__toggle {
-    border-right:1px solid var(--theme-border-color);
-    font-weight:700;
-    padding:6px 12px
-   }
-   .unified-search__input .wds-dropdown .wds-list {
-    margin:3px 0
-   }
-   .unified-search__community__view-more-wikis .wds-icon {
-    margin-left:6px;
-    transform:rotate(180deg);
-    vertical-align:text-top
-   }
-   .unified-search .unified-search__community__header {
-    font-size:14px;
-    font-weight:700;
-    padding:15px 0
-   }
-   .unified-search .unified-search__community__image {
-    width:100%
-   }
-   .unified-search .unified-search__community__content {
-    background-color:var(--theme-page-background-color);
-    border:1px solid var(--theme-border-color);
-    border-top:none;
-    color:rgba(var(--theme-page-text-color--rgb),.9);
-    margin-bottom:30px;
-    padding:5px 25px 15px
-   }
-   .unified-search .unified-search__community__content__name {
-    font-size:20px;
-    line-height:2rem
-   }
-   .unified-search .unified-search__community__content__hub {
-    color:rgba(var(--theme-page-text-color--rgb),.4);
-    font-size:14px
-   }
-   .unified-search .unified-search__community__content__statistics {
-    display:flex;
-    font-size:12px;
-    line-height:1rem;
-    list-style:none;
-    margin:0;
-    padding:15px 0;
-    text-transform:uppercase
-   }
-   .unified-search .unified-search__community__content__statistics li {
-    flex:1
-   }
-   .unified-search .unified-search__community__content__description {
-    line-height:1.7rem
-   }
-   .unified-search__profiles,
-   .unified-search__profiles__profile__filters {
-    list-style:none;
-    overflow:hidden;
-    padding-right:10px
-   }
-   .unified-search__profiles {
-    margin-top:18px
-   }
-   .unified-search__profiles__profile__filters {
-    margin-left:20px
-   }
-   .unified-search__profiles__profile,
-   .unified-search__profiles__profile__filters__filter {
-    border-radius:3px;
-    color:inherit;
-    display:block;
-    font-weight:700;
-    line-height:1;
-    list-style:none;
-    margin-bottom:2px;
-    padding:9px 0 8px 10px;
-    text-decoration:none
-   }
-   .unified-search__profiles__profile:hover,
-   .unified-search__profiles__profile__filters__filter:hover {
-    background-color:var(--theme-page-background-color--secondary);
-    color:inherit
-   }
-   .unified-search__profiles__profile--selected,
-   .unified-search__profiles__profile__filters__filter--selected {
-    background-color:rgba(var(--theme-link-color--rgb),.15);
-    cursor:default
-   }
-   .unified-search__profiles__profile:focus,
-   .unified-search__profiles__profile__filters__filter:focus {
-    color:inherit
-   }
-   .unified-search__profiles__profile {
-    font-size:14px
-   }
-   .unified-search__profiles__profile .new-feature-dot {
-    background-color:var(--theme-link-color);
-    border-radius:50%;
-    display:inline-block;
-    height:8px;
-    margin:-2px 0 0 4px;
-    position:absolute;
-    width:8px
-   }
-   .unified-search__profiles__profile__filters__filter {
-    font-size:12px
-   }
-   .unified-search__advanced__link {
-    display:flex;
-    float:right
-   }
-   .unified-search__advanced__box {
-    display:none;
-    margin-top:18px;
-    width:100%
-   }
-   .unified-search__advanced__checkbox--namespace {
-    display:inline-block;
-    line-height:23px;
-    width:24%
-   }
-   .unified-search__advanced__checkbox--select-all {
-    margin:10px 0 15px
-   }
-   .unified-search__advanced.hidden {
-    display:none
-   }
-   .unified-search .unified-search__results {
-    list-style:none;
-    margin:0;
-    padding:0
-   }
-   .unified-search .unified-search__results__count {
-    color:var(--theme-page-text-color);
-    overflow:hidden;
-    padding-top:7px;
-    text-align:left;
-    text-overflow:ellipsis;
-    white-space:nowrap
-   }
-   .unified-search__result {
-    word-wrap:break-word;
-    line-height:19px
-   }
-   .unified-search__result__community {
-    grid-gap:16px;
-    display:grid;
-    grid-template-areas:"thumbnail content";
-    grid-template-columns:180px 1fr;
-    margin-bottom:12px
-   }
-   .unified-search__result__community__thumbnail {
-    align-items:center;
-    display:flex;
-    grid-area:thumbnail
-   }
-   .unified-search__result__community__thumbnail img {
-    height:auto;
-    width:180px
-   }
-   .unified-search__result__community__content {
-    grid-area:content
-   }
-   .unified-search__result__community__content__hub,
-   .unified-search__result__community__content__statistics {
-    color:gray;
-    font-size:11px;
-    margin-bottom:6px;
-    margin-top:0;
-    text-transform:uppercase
-   }
-   .unified-search__result__community__content__statistics ul {
-    list-style-type:none;
-    margin-left:0
-   }
-   .unified-search__result__community__content__statistics ul li {
-    display:inline;
-    padding-right:12px
-   }
-   .unified-search__result__title {
-    font-size:14px;
-    font-weight:700
-   }
-   .unified-search__result__title:hover {
-    text-decoration:underline
-   }
-   .unified-search__result__link {
-    color:rgba(var(--theme-page-text-color--rgb),.4);
-    display:block;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap
-   }
-   .unified-search__result__link:hover {
-    text-decoration:underline
-   }
-   .unified-search__result__thumbnail img {
-    max-height:200px;
-    max-width:200px
-   }
-   .unified-search__result.marketplace {
-    background:hsla(0,0%,50%,.3);
-    padding:1.5em
-   }
-   .unified-search__result.marketplace div.info {
-    position:relative
-   }
-   .unified-search__result.marketplace p.sponsored {
-    color:var(--theme-page-text-color--hover);
-    font-size:15px;
-    font-weight:500
-   }
-   .unified-search__result.marketplace p.provider {
-    font-size:11px;
-    position:absolute;
-    right:0;
-    top:0
-   }
-   .unified-search__result.marketplace h1 {
-    margin-top:.1em
-   }
-   .unified-search__result.marketplace h1 a {
-    color:var(--theme-page-text-color)
-   }
-   .unified-search__result.marketplace img {
-    display:none
-   }
-   .unified-search__pagination {
-    padding-top:25px
-   }
-   .unified-search__pagination__button {
-    transform:rotate(90deg)
-   }
-   .unified-search .searchmatch {
-    font-weight:700
-   }
-   .unified-search__community .unified-search__input__query {
-    height:26px
-   }
-   .unified-search-pagination {
-    height:30px;
-    margin-top:20px
-   }
-   .unified-search-pagination ul {
-    display:flex;
-    height:30px;
-    justify-content:center;
-    list-style:none!important;
-    margin:0 auto 10px!important;
-    padding:0;
-    text-align:left
-   }
-   .unified-search-pagination ul li {
-    float:left;
-    margin:0;
-    padding:0;
-    text-align:center
-   }
-   .unified-search-pagination ul .paginator-page {
-    align-items:center;
-    border-radius:3px;
-    color:var(--theme-page-text-color);
-    display:inline-block;
-    font-size:16px;
-    font-weight:700;
-    height:30px;
-    justify-content:center;
-    line-height:30px;
-    margin:0 10px;
-    min-width:30px;
-    text-decoration:none
-   }
-   .unified-search-pagination ul .paginator-page.active {
-    background-color:var(--theme-accent-color);
-    color:var(--theme-accent-label-color);
-    position:relative
-   }
-   .unified-search-pagination ul .paginator-spacer {
-    display:inline-block;
-    height:16px;
-    line-height:16px;
-    margin:0;
-    min-width:20px;
-    padding:2px;
-    text-align:center
-   }
-   .unified-search-pagination ul .special {
-    padding:2px 5px
-   }
-   .unified-search-pagination ul .no-border {
-    border:none
-   }
-   .unified-search-pagination ul .paginator-next,
-   .unified-search-pagination ul .paginator-prev {
-    box-sizing:border-box;
-    color:var(--theme-accent-color);
-    height:30px;
-    padding:0;
-    width:30px
-   }
-   .unified-search-pagination ul .paginator-next:active,
-   .unified-search-pagination ul .paginator-next:focus,
-   .unified-search-pagination ul .paginator-next:hover,
-   .unified-search-pagination ul .paginator-prev:active,
-   .unified-search-pagination ul .paginator-prev:focus,
-   .unified-search-pagination ul .paginator-prev:hover {
-    color:var(--theme-accent-color--hover)
-   }
-   .unified-search-pagination ul .paginator-next {
-    margin-left:10px
-   }
-   .unified-search-pagination ul .paginator-next .wds-icon {
-    transform:rotate(180deg)
-   }
-   .unified-search-pagination ul .paginator-prev {
-    margin-right:10px
-   }
-   .unified-search-pagination ul .paginator-prev .wds-icon {
-    transform:rotate(1turn)
    }
    .mw-special-Preferences .page-content {
     overflow:initial
@@ -913,15 +461,6 @@
     height:14px;
     vertical-align:middle;
     width:64px
-   }
-   .mediaContainer,
-   .PopUpMediaTransform {
-    position:relative;
-    display:block
-   }
-   .thumb .mediaContainer,
-   .thumb .PopUpMediaTransform {
-    margin:0 auto
    }
    .client-nojs #ca-ve-edit,
    .client-nojs .mw-editsection-divider,
@@ -1811,34 +1350,575 @@
      line-height:1
     }
    }
-   .mw-specialpages-list {
-    margin:1em 0
+   #mixed-content-footer {
+    background-color:var(--theme-page-background-color);
+    border-bottom-left-radius:3px;
+    border-bottom-right-radius:3px;
+    margin:-2px 0 0;
+    width:100%
    }
-   .mw-specialpages-list ol,
-   .mw-specialpages-list ul {
-    margin-left:2.5em
+   .mcf-wrapper {
+    background-color:rgba(var(--theme-page-text-color--rgb),.1);
+    padding:24px 36px
    }
-   .mw-specialpages-list ul {
-    list-style:square
+   .mcf-content {
+    display:none
    }
-   .mw-specialpages-list ol {
-    list-style:decimal
+   .mcf-mosaic {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between
    }
-   .mw-special-Gadgets #mw-content-text ul {
-    list-style:unset;
-    padding-left:1em
+   h1.mcf-header {
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    font-size:24px;
+    font-weight:700;
+    line-height:20px;
+    margin-bottom:18px
    }
-   #mw-whatlinkshere-list,
-   #mw-whatlinkshere-list ul,
-   .community-page-todo-list-module-content ul,
-   .mw-listgrouprights-table ul {
-    list-style:square;
-    margin-left:2.5em
+   .mcf-column {
+    display:flex;
+    flex-basis:32%;
+    flex-direction:column
    }
-   #uploadtext ol,
-   .community-page-todo-list-module-content ol {
-    list-style:decimal;
-    margin-left:2.5em
+   .mcf-column>div {
+    margin-bottom:12px
+   }
+   .mcf-column>div:last-child {
+    margin-bottom:0
+   }
+   .mcf-card {
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    border:1px solid var(--theme-border-color);
+    border-radius:3px;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    height:283.25749px
+   }
+   .mcf-card,
+   .mcf-card:hover {
+    text-decoration:none
+   }
+   .mcf-card .wds-button.wds-is-secondary {
+    cursor:pointer
+   }
+   .mcf-card .wds-button.wds-is-secondary:hover {
+    border-color:#088488;
+    color:#088488
+   }
+   @media only screen and (min-width:1500px) {
+    .mcf-card {
+     height:333.96407px
+    }
+   }
+   @media only screen and (min-width:1024px) and (max-width:1279px) {
+    .mcf-card {
+     height:265.77246px
+    }
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card {
+     height:196.998px
+    }
+   }
+   .mcf-card-tall {
+    height:324px
+   }
+   @media only screen and (min-width:1500px) {
+    .mcf-card-tall {
+     height:382px
+    }
+   }
+   @media only screen and (min-width:1024px) and (max-width:1279px) {
+    .mcf-card-tall {
+     height:304px
+    }
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card-tall {
+     height:225.33333px
+    }
+   }
+   .mcf-en .mcf-card-related-wikis {
+    height:364.74251px
+   }
+   @media only screen and (min-width:1500px) {
+    .mcf-en .mcf-card-related-wikis {
+     height:430.03593px
+    }
+   }
+   @media only screen and (min-width:1024px) and (max-width:1279px) {
+    .mcf-en .mcf-card-related-wikis {
+     height:342.22754px
+    }
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-en .mcf-card-related-wikis {
+     height:253.66866px
+    }
+   }
+   .mcf-card-ns-stream {
+    align-items:center;
+    background-position:50%;
+    background-size:cover;
+    justify-content:flex-end;
+    padding:0 10px
+   }
+   .mcf-card-ns-stream__title {
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+    line-height:20px;
+    margin-bottom:12px;
+    text-align:center
+   }
+   .mcf-card-ns-stream .wds-button {
+    margin-bottom:40px
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card-ns-stream .wds-button {
+     margin-bottom:20px
+    }
+   }
+   .mcf-card-topic {
+    background-position:50%;
+    background-size:cover;
+    justify-content:flex-end
+   }
+   .mcf-card-topic__overlay {
+    align-items:center;
+    background-color:rgba(26,26,26,.75);
+    display:flex;
+    flex-direction:column;
+    padding:0 10px
+   }
+   .mcf-card-topic__title {
+    color:#fff;
+    font-size:30px;
+    font-weight:700;
+    margin:14px 0 18px;
+    text-align:center
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card-topic__title {
+     font-size:24px;
+     margin:12px 0 8px
+    }
+   }
+   .mcf-card-topic .wds-button {
+    margin-bottom:30px
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card-topic .wds-button {
+     margin-bottom:20px
+    }
+   }
+   .mcf-card-article {
+    background-color:#002a32;
+    background-position:50%;
+    background-size:cover;
+    justify-content:flex-end;
+    position:relative
+   }
+   .mcf-card-article__thumbnail-container {
+    position:absolute;
+    text-align:center;
+    top:25%;
+    width:100%
+   }
+   .mcf-card-article__thumbnail-container>svg {
+    fill:#00d6d6;
+    height:34.5%;
+    opacity:.2;
+    width:34.5%
+   }
+   .mcf-card-article__title {
+    color:#fff;
+    font-size:16px;
+    font-weight:700;
+    line-height:20px;
+    margin-bottom:6px;
+    padding:0 18px
+   }
+   .mcf-card-article__subtitle {
+    color:#fff;
+    font-size:14px;
+    font-weight:700;
+    line-height:20px;
+    margin-bottom:13px;
+    opacity:.5;
+    padding-left:18px
+   }
+   .mcf-card-article__video-container {
+    align-items:center;
+    display:flex;
+    flex:1;
+    justify-content:center
+   }
+   .mcf-card-article__video-icon {
+    height:108px;
+    min-width:108px;
+    width:108px
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card-article__video-icon {
+     height:72px;
+     min-width:72px;
+     width:72px
+    }
+   }
+   .mcf-card-article__sponsored-bagde {
+    align-items:center;
+    background-color:rgba(26,26,26,.7);
+    border-radius:2px;
+    display:flex;
+    height:30px;
+    left:12px;
+    padding:0 10px;
+    position:absolute;
+    top:12px
+   }
+   .mcf-card-article__sponsored-text {
+    color:#fff;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.3px;
+    line-height:1.17
+   }
+   .mcf-card-article__link {
+    position:relative
+   }
+   .mcf-card-article__personalization {
+    color:#00cdd0;
+    font-size:10px;
+    font-weight:700;
+    margin-bottom:10px;
+    padding-left:18px
+   }
+   .mcf-card-wiki-articles {
+    background-color:#fff
+   }
+   .mcf-card-wiki-articles__header {
+    background-color:var(--theme-header-background-color);
+    background-position:100%;
+    background-repeat:no-repeat;
+    background-size:contain;
+    color:var(--theme-header-text-color);
+    font-size:18px;
+    font-weight:700;
+    padding:16px;
+    position:relative
+   }
+   .mcf-card-wiki-articles__header:before {
+    background:linear-gradient(to right,rgba(var(--theme-header-background-color--rgb),.5),rgba(var(--theme-header-background-color--rgb),.5)),linear-gradient(to left,transparent 50px,var(--theme-header-background-color) 220px);
+    content:"";
+    display:block;
+    height:100%;
+    left:0;
+    position:absolute;
+    top:0;
+    width:100%
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card-wiki-articles__header {
+     font-size:14px;
+     padding:12px 16px 16px
+    }
+   }
+   .mcf-card-wiki-articles__header-text {
+    word-wrap:break-word;
+    position:relative
+   }
+   .mcf-card-wiki-articles__list {
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    margin:0 18px
+   }
+   .mcf-card-wiki-articles__item {
+    border-bottom:1px solid #ccc;
+    display:flex;
+    flex:0 1 33.33333%
+   }
+   .mcf-card-wiki-articles__item:last-child {
+    border-bottom:0
+   }
+   .mcf-card-wiki-articles__item-link {
+    align-items:center;
+    color:#1a1a1a;
+    display:flex;
+    text-decoration:none;
+    width:100%
+   }
+   .mcf-card-wiki-articles__item-link:hover {
+    text-decoration:none
+   }
+   .mcf-card-wiki-articles__circle {
+    align-items:center;
+    background-color:#999;
+    border-radius:50%;
+    color:#fff;
+    display:flex;
+    flex:0 0 36px;
+    font-size:18px;
+    font-weight:700;
+    height:36px;
+    justify-content:center;
+    line-height:1;
+    width:36px
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card-wiki-articles__circle {
+     flex:0 0 24px;
+     font-size:14px;
+     height:24px;
+     width:24px
+    }
+   }
+   .mcf-card-wiki-articles__title {
+    font-size:14px;
+    margin-left:12px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card-wiki-articles__title {
+     font-size:12px
+    }
+   }
+   .mcf-card-related-wikis {
+    background-color:#fff
+   }
+   .mcf-card-related-wikis__header {
+    word-wrap:break-word;
+    border-bottom:1px solid #ccc;
+    color:#1a1a1a;
+    font-size:18px;
+    font-weight:700;
+    padding:16px
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card-related-wikis__header {
+     font-size:14px;
+     padding:12px 16px 16px
+    }
+   }
+   .mcf-card-related-wikis__list {
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    margin:0 16px
+   }
+   .mcf-card-related-wikis__item {
+    align-items:stretch;
+    border-bottom:1px solid #ccc;
+    display:flex;
+    flex:1
+   }
+   .mcf-card-related-wikis__item:last-child {
+    border-bottom:0
+   }
+   .mcf-card-related-wikis__item-link {
+    align-items:center;
+    color:#1a1a1a;
+    display:flex;
+    text-decoration:none;
+    width:100%
+   }
+   .mcf-card-related-wikis__item-link:hover {
+    text-decoration:none
+   }
+   .mcf-card-related-wikis__item-image {
+    max-height:56px
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card-related-wikis__item-image {
+     max-height:36px
+    }
+   }
+   .mcf-card-related-wikis__title {
+    color:#1a1a1a;
+    display:block;
+    font-size:16px;
+    font-weight:700;
+    margin-left:12px
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card-related-wikis__title {
+     font-size:14px
+    }
+   }
+   .mcf-card-discussions {
+    background-color:#fff;
+    height:578.51497px
+   }
+   @media only screen and (min-width:1500px) {
+    .mcf-card-discussions {
+     height:679.92814px
+    }
+   }
+   @media only screen and (min-width:1024px) and (max-width:1279px) {
+    .mcf-card-discussions {
+     height:543.54491px
+    }
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card-discussions {
+     height:405.99601px
+    }
+   }
+   .mcf-card-discussions__header {
+    word-wrap:break-word;
+    border-bottom:1px solid #ccc;
+    color:#1a1a1a;
+    display:flex;
+    font-size:18px;
+    font-weight:600;
+    justify-content:space-between;
+    padding:16px
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card-discussions__header {
+     font-size:14px
+    }
+   }
+   .mcf-card-discussions__link {
+    align-items:center;
+    color:#1a5eb8;
+    display:flex;
+    font-size:12px;
+    font-weight:700;
+    text-align:right;
+    text-decoration:none
+   }
+   .mcf-card-discussions__link-icon {
+    margin-left:6px;
+    transform:rotate(180deg)
+   }
+   .mcf-card-discussions__list {
+    background-image:radial-gradient(farthest-side at 50% 0,rgba(26,26,26,.12),transparent),radial-gradient(farthest-side at 50% 100%,rgba(26,26,26,.12),transparent);
+    background-position:0 0,0 100%;
+    background-repeat:no-repeat;
+    background-size:100% 9px;
+    max-height:100%;
+    overflow-y:auto;
+    position:relative;
+    z-index:1
+   }
+   .mcf-card-discussions__list:after,
+   .mcf-card-discussions__list:before {
+    background-color:#fff;
+    content:"";
+    display:block;
+    height:10px;
+    margin:0 0 -10px;
+    position:relative;
+    z-index:-1
+   }
+   .mcf-card-discussions__list:after {
+    margin:-10px 0 0
+   }
+   .mcf-card-discussions__item {
+    align-items:flex-start;
+    border-bottom:1px solid #ccc;
+    display:flex;
+    flex-direction:column;
+    margin:0 16px
+   }
+   .mcf-card-discussions__item:last-child {
+    border-bottom:0
+   }
+   .mcf-card-discussions__item a {
+    color:#ccc;
+    text-decoration:none;
+    width:100%
+   }
+   .mcf-card-discussions__user-info {
+    align-items:center;
+    color:#ccc;
+    display:flex;
+    margin-top:12px
+   }
+   .mcf-card-discussions__user-info .wds-avatar {
+    --wds-avatar-size:26px;
+    --wds-avatar-badge-size:15px;
+    --wds-avatar-border-width:2px;
+    --wds-avatar-badge-left:-4px;
+    --wds-avatar-badge-top:-6px;
+    --wds-avatar-border-color:#ccc;
+    --wds-avatar-border-color--hover:#ccc;
+    --wds-avatar-background-color:transparent
+   }
+   .mcf-card-discussions__user-subtitle {
+    color:#1a1a1a;
+    font-size:14px;
+    font-weight:700;
+    margin-left:6px;
+    opacity:.5
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card-discussions__user-subtitle {
+     font-size:12px
+    }
+   }
+   .mcf-card-discussions__content {
+    word-wrap:break-word;
+    color:#1a1a1a;
+    font-size:18px;
+    margin:6px 0 10px
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card-discussions__content {
+     font-size:14px
+    }
+   }
+   .mcf-card-discussions__meta {
+    display:flex;
+    font-size:14px;
+    justify-content:space-between;
+    padding-bottom:12px
+   }
+   @media only screen and (max-width:1023px) {
+    .mcf-card-discussions__meta {
+     font-size:12px
+    }
+   }
+   .mcf-card-discussions__in {
+    color:#999
+   }
+   .mcf-card-discussions__counters {
+    align-items:center;
+    color:#999;
+    display:flex
+   }
+   .mcf-card-discussions__counters svg {
+    color:#ccc;
+    margin:0 3px 0 6px
+   }
+   .mcf-card-discussions__zero-state {
+    border:1px dashed #ccc;
+    display:flex;
+    flex-direction:column;
+    height:163px;
+    margin:18px auto
+   }
+   .mcf-card-discussions__zero-state:hover {
+    text-decoration:none
+   }
+   .mcf-card-discussions__zero-state-icon {
+    fill:#ccc;
+    margin:36px auto 6px
+   }
+   .mcf-card-discussions__zero-state-text {
+    color:#333;
+    font-size:16px;
+    line-height:1.38;
+    padding:0 24px;
+    text-align:center
    }
    @keyframes fandom-spinner-rotator {
     0% {
@@ -2200,7 +2280,7 @@
     width:18px
    }
    @charset "UTF-8";
-   a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
+   a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,time,tt,u,ul,var,video {
     border:0;
     font:normal normal normal 100% inherit;
     margin:0;
@@ -2855,7 +2935,7 @@
    .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2.wds-is-sticked-to-parent {
     position:relative
    }
-   .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2.wds-is-sticked-to-parent .wds-dropdown-level-2__content {
+   .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2.wds-is-sticked-to-parent>.wds-dropdown-level-2__content {
     bottom:-8px;
     top:auto
    }
@@ -5833,6 +5913,61 @@
     U+feff,
     U+fffd
    }
+   .ooui-theme-fandomooui .article-table.jquery-tablesorter .headerSort,
+   .ooui-theme-fandomooui .WikiaTable.jquery-tablesorter .headerSort,
+   .ooui-theme-fandomooui .wikitable.jquery-tablesorter .headerSort {
+    background-image:none;
+    padding-right:21px;
+    position:relative
+   }
+   .ooui-theme-fandomooui .article-table.jquery-tablesorter .headerSort:after,
+   .ooui-theme-fandomooui .article-table.jquery-tablesorter .headerSort:before,
+   .ooui-theme-fandomooui .WikiaTable.jquery-tablesorter .headerSort:after,
+   .ooui-theme-fandomooui .WikiaTable.jquery-tablesorter .headerSort:before,
+   .ooui-theme-fandomooui .wikitable.jquery-tablesorter .headerSort:after,
+   .ooui-theme-fandomooui .wikitable.jquery-tablesorter .headerSort:before {
+    background-color:currentColor;
+    content:"";
+    display:block;
+    height:4px;
+    margin:0 7px;
+    position:absolute;
+    right:0;
+    width:7px
+   }
+   .ooui-theme-fandomooui .article-table.jquery-tablesorter .headerSort:before,
+   .ooui-theme-fandomooui .WikiaTable.jquery-tablesorter .headerSort:before,
+   .ooui-theme-fandomooui .wikitable.jquery-tablesorter .headerSort:before {
+    bottom:50%;
+    -webkit-clip-path:polygon(0 100%,100% 100%,50% 0);
+    clip-path:polygon(0 100%,100% 100%,50% 0);
+    margin-bottom:2px
+   }
+   .ooui-theme-fandomooui .article-table.jquery-tablesorter .headerSort:after,
+   .ooui-theme-fandomooui .WikiaTable.jquery-tablesorter .headerSort:after,
+   .ooui-theme-fandomooui .wikitable.jquery-tablesorter .headerSort:after {
+    -webkit-clip-path:polygon(0 0,100% 0,50% 100%);
+    clip-path:polygon(0 0,100% 0,50% 100%);
+    top:50%
+   }
+   .ooui-theme-fandomooui .article-table.jquery-tablesorter .headerSort.headerSortUp:before,
+   .ooui-theme-fandomooui .WikiaTable.jquery-tablesorter .headerSort.headerSortUp:before,
+   .ooui-theme-fandomooui .wikitable.jquery-tablesorter .headerSort.headerSortUp:before {
+    margin-bottom:0
+   }
+   .ooui-theme-fandomooui .article-table.jquery-tablesorter .headerSort.headerSortDown:before,
+   .ooui-theme-fandomooui .article-table.jquery-tablesorter .headerSort.headerSortUp:after,
+   .ooui-theme-fandomooui .WikiaTable.jquery-tablesorter .headerSort.headerSortDown:before,
+   .ooui-theme-fandomooui .WikiaTable.jquery-tablesorter .headerSort.headerSortUp:after,
+   .ooui-theme-fandomooui .wikitable.jquery-tablesorter .headerSort.headerSortDown:before,
+   .ooui-theme-fandomooui .wikitable.jquery-tablesorter .headerSort.headerSortUp:after {
+    display:none
+   }
+   .ooui-theme-fandomooui .article-table.jquery-tablesorter .headerSort.headerSortDown:after,
+   .ooui-theme-fandomooui .WikiaTable.jquery-tablesorter .headerSort.headerSortDown:after,
+   .ooui-theme-fandomooui .wikitable.jquery-tablesorter .headerSort.headerSortDown:after {
+    margin-top:-4px
+   }
    .mw-references-columns {
     column-width:unset
    }
@@ -5952,6 +6087,53 @@
    .mw-highlight {
     background:none
    }
+   .ooui-theme-fandomooui .mw-datatable,
+   .ooui-theme-fandomooui .mw-json,
+   .ooui-theme-fandomooui .wikitable {
+    background-color:var(--theme-page-background-color);
+    border-color:var(--theme-border-color);
+    color:inherit;
+    text-align:left
+   }
+   .ooui-theme-fandomooui .mw-datatable>*>tr>th,
+   .ooui-theme-fandomooui .mw-datatable>tr>th,
+   .ooui-theme-fandomooui .mw-json>*>tr>th,
+   .ooui-theme-fandomooui .mw-json>tr>th,
+   .ooui-theme-fandomooui .wikitable>*>tr>th,
+   .ooui-theme-fandomooui .wikitable>tr>th {
+    background-color:var(--theme-page-background-color--secondary);
+    border-color:var(--theme-border-color);
+    padding-bottom:9px;
+    padding-top:9px
+   }
+   .ooui-theme-fandomooui .mw-datatable>*>tr>td,
+   .ooui-theme-fandomooui .mw-datatable>tr>td,
+   .ooui-theme-fandomooui .mw-json>*>tr>td,
+   .ooui-theme-fandomooui .mw-json>tr>td,
+   .ooui-theme-fandomooui .wikitable>*>tr>td,
+   .ooui-theme-fandomooui .wikitable>tr>td {
+    background-color:inherit;
+    border-color:var(--theme-border-color)
+   }
+   .ooui-theme-fandomooui .mw-json tr {
+    background-color:inherit
+   }
+   .ooui-theme-fandomooui .article-table,
+   .ooui-theme-fandomooui .WikiaTable,
+   .ooui-theme-fandomooui .wikitable {
+    box-sizing:content-box
+   }
+   .ooui-theme-fandomooui .article-table *,
+   .ooui-theme-fandomooui .article-table :after,
+   .ooui-theme-fandomooui .article-table :before,
+   .ooui-theme-fandomooui .WikiaTable *,
+   .ooui-theme-fandomooui .WikiaTable :after,
+   .ooui-theme-fandomooui .WikiaTable :before,
+   .ooui-theme-fandomooui .wikitable *,
+   .ooui-theme-fandomooui .wikitable :after,
+   .ooui-theme-fandomooui .wikitable :before {
+    box-sizing:inherit
+   }
    .oo-ui-windowManager-modal {
     z-index:800
    }
@@ -6022,12 +6204,13 @@
     display:flex;
     flex-direction:column;
     margin-left:66px;
+    min-width:702px;
     width:calc(100% - 66px)
    }
    .resizable-container {
     display:flex;
     flex-direction:column;
-    margin:30px auto;
+    margin:0 auto 48px;
     max-width:1236px;
     transition:width .3s,max-width .3s;
     width:85%
@@ -6293,7 +6476,7 @@
    ul.mw-gallery-packed-overlay li.gallerybox,
    ul.mw-gallery-packed li.gallerybox,
    ul.mw-gallery-traditional li.gallerybox {
-    margin:6px
+    margin-top:6px
    }
    ul.mw-gallery-nolines li.gallerybox div.thumb,
    ul.mw-gallery-packed-hover li.gallerybox div.thumb,
@@ -6348,25 +6531,35 @@
    }
    ul.mw-gallery-nolines li.gallerybox div.gallerytext,
    ul.mw-gallery-packed li.gallerybox div.gallerytext {
-    margin-top:6px
+    margin:6px 6px 0 0
    }
-   table td,
-   table th {
-    vertical-align:middle
+   .wikia-gallery-item .thumb .lightbox-caption {
+    background-color:rgba(var(--theme-page-background-color--rgb),.8)
    }
    .page {
     --fixed-table-header-offset:0
    }
+   .table-is-wide {
+    position:relative
+   }
+   .table-is-wide:before {
+    box-shadow:inset -15px 0 20px -15px var(--theme-page-text-mix-color);
+    content:"";
+    height:100%;
+    pointer-events:none;
+    position:absolute;
+    right:0;
+    width:20px;
+    z-index:2
+   }
    .table-scrollable {
-    background:linear-gradient(to right,var(--theme-page-background-color) 33%,rgba(var(--theme-page-background-color--rgb),0)),linear-gradient(to left,var(--theme-page-background-color) 66%,rgba(var(--theme-page-background-color--rgb),0)) 100% 0,linear-gradient(to right,rgba(var(--theme-page-text-color--rgb),.1),rgba(var(--theme-page-text-color--rgb),0)),linear-gradient(to left,rgba(var(--theme-page-text-color--rgb),.1),rgba(var(--theme-page-text-color--rgb),0)) 100% 0;
-    background-attachment:local,local,scroll,scroll;
-    background-color:var(--theme-page-background-color);
-    background-repeat:no-repeat;
-    background-size:48px 100%,48px 100%,8px 100%,8px 100%;
+    margin:1em 0;
     overflow-x:auto
    }
-   .article-table,
-   .wikitable {
+   .table-scrollable>table {
+    margin:0
+   }
+   .fandom-table {
     background:none;
     border:1px solid var(--theme-border-color);
     border-collapse:collapse;
@@ -6374,8 +6567,7 @@
     border-spacing:0;
     color:var(--theme-page-text-color)
    }
-   .article-table>caption,
-   .wikitable>caption {
+   .fandom-table>caption {
     border:solid var(--theme-border-color);
     border-width:1px 1px 0;
     font-size:16px;
@@ -6384,24 +6576,16 @@
     padding:8px 12px;
     text-align:left
    }
-   .article-table tr th,
-   .wikitable tr th {
+   .fandom-table tr th {
     background-color:var(--theme-page-background-color--secondary)
    }
-   .article-table tr td,
-   .wikitable tr td {
-    background-color:transparent
-   }
-   .article-table tr td,
-   .article-table tr th,
-   .wikitable tr td,
-   .wikitable tr th {
+   .fandom-table tr td,
+   .fandom-table tr th {
     border:1px solid var(--theme-border-color);
     padding:12px;
-    text-align:left
+    vertical-align:middle
    }
-   .article-table .fixed-header,
-   .wikitable .fixed-header {
+   .fandom-table .fixed-header {
     box-shadow:0 0 10px 0 rgba(14,25,26,.2);
     outline:1px solid var(--theme-border-color);
     position:relative;
@@ -6409,15 +6593,14 @@
     transition:all .3s;
     z-index:1
    }
-   .article-table .fixed-header th,
-   .wikitable .fixed-header th {
+   .fandom-table .fixed-header th {
     position:relative
    }
-   .skin-fandomdesktop .jquery-tablesorter th.headerSort {
+   .skin-fandomdesktop .fandom-table.jquery-tablesorter th.headerSort {
     background-image:none;
     position:relative
    }
-   .skin-fandomdesktop .jquery-tablesorter th.headerSort:after {
+   .skin-fandomdesktop .fandom-table.jquery-tablesorter th.headerSort:after {
     align-items:center;
     background-color:var(--theme-page-text-color);
     content:"";
@@ -6431,11 +6614,11 @@
     top:calc(50% - 5px);
     width:10px
    }
-   .skin-fandomdesktop .jquery-tablesorter th.headerSortUp:after {
+   .skin-fandomdesktop .fandom-table.jquery-tablesorter th.headerSortUp:after {
     transform:rotate(180deg)
    }
-   .skin-fandomdesktop .jquery-tablesorter th.headerSortDown:after,
-   .skin-fandomdesktop .jquery-tablesorter th.headerSortUp:after {
+   .skin-fandomdesktop .fandom-table.jquery-tablesorter th.headerSortDown:after,
+   .skin-fandomdesktop .fandom-table.jquery-tablesorter th.headerSortUp:after {
     -webkit-mask-image:url(https://ensemble-stars.fandom.com/resources-ucp/dist/svg/wds-icons-dropdown-tiny.svg);
     mask-image:url(https://ensemble-stars.fandom.com/resources-ucp/dist/svg/wds-icons-dropdown-tiny.svg)
    }
@@ -6448,11 +6631,34 @@
    .mw-datatable tr:hover>td {
     background-color:var(--theme-page-background-color--secondary)
    }
+   .article-table,
+   .WikiaTable {
+    background:rgba(var(--theme-page-dynamic-color-1--rgb),.02);
+    border:0 var(--theme-border-color);
+    border-collapse:collapse;
+    margin:1em 1em 1em 0
+   }
+   .article-table td,
+   .article-table th,
+   .WikiaTable td,
+   .WikiaTable th {
+    border-bottom:1px solid var(--theme-border-color);
+    padding:6px 12px
+   }
+   .article-table th,
+   .WikiaTable th {
+    background:rgba(var(--theme-page-dynamic-color-1--rgb),.05);
+    text-align:left
+   }
+   .article-table caption,
+   .WikiaTable caption {
+    font-weight:700
+   }
+   .mw-parser-output {
+    overflow-x:hidden
+   }
    .mw-parser-output a {
     font-weight:500
-   }
-   .page-content {
-    overflow-x:hidden
    }
    .page-content ul.wds-tabs {
     list-style:none;
@@ -6476,16 +6682,15 @@
    .page-content dd {
     margin-left:24px
    }
-   .page-content p,
    .page-content section {
     margin:0 0 24px
+   }
+   .page-content p {
+    margin:1em 0
    }
    .page-content section>p:last-child,
    .page-content td>p:last-child {
     margin-bottom:0
-   }
-   .page-content p+p {
-    margin:1em 0
    }
    .page-content pre {
     word-wrap:normal;
@@ -6513,7 +6718,8 @@
    .page-content h6 {
     align-items:flex-end;
     display:flex;
-    font-family:var(--theme-page-headings-font),rubik,helvetica,arial,sans-serif
+    font-family:var(--theme-page-headings-font),rubik,helvetica,arial,sans-serif;
+    margin:18px 0 9px
    }
    .page-content .mw-parser-output .pull-quote {
     font-style:italic;
@@ -6590,7 +6796,6 @@
    .page-content h5,
    .page-content h6 {
     word-wrap:break-word;
-    margin-bottom:6px;
     overflow-wrap:break-word
    }
    .page-content h1 {
@@ -6731,7 +6936,7 @@
    }
    .page {
     color:var(--theme-page-text-color);
-    margin-top:18px;
+    margin-top:12px;
     position:relative
    }
    html:not(.ve-activated) .page.has-right-rail {
@@ -6812,7 +7017,6 @@
    .page__right-rail h5,
    .page__right-rail h6 {
     word-wrap:break-word;
-    margin-bottom:6px;
     overflow-wrap:break-word
    }
    .page__right-rail h1 {
@@ -7054,11 +7258,18 @@
      display:none
     }
    }
+   .community-header-wrapper {
+    display:flex;
+    flex-direction:column;
+    height:148px;
+    justify-content:flex-end
+   }
    .fandom-community-header {
     color:var(--theme-body-text-color);
     display:grid;
     grid-template-columns:min-content 1fr;
-    grid-template-rows:1fr min-content
+    grid-template-rows:1fr min-content;
+    width:100%
    }
    .fandom-community-header.has-no-logo {
     grid-template-columns:1fr
@@ -7233,7 +7444,7 @@
     z-index:400
    }
    .fandom-community-header__local-navigation .navigation-item-icon {
-    margin-right:3px
+    margin-right:6px
    }
    .fandom-community-header__local-navigation .wds-tabs__tab-label {
     font-size:12px;
@@ -7259,9 +7470,15 @@
    .fandom-community-header__local-navigation .more-menu .wds-list.wds-is-linked>li {
     white-space:normal
    }
+   .fandom-community-header__local-navigation .more-menu.more-menu-visible>.wds-dropdown__content {
+    display:inline-block
+   }
+   .fandom-community-header__local-navigation .more-menu.more-menu-visible:after {
+    display:block
+   }
    .fandom-community-header__local-navigation .wds-dropdown__content {
     max-width:181px;
-    padding:12px 0;
+    padding:9px 0;
     width:max-content
    }
    .fandom-community-header__local-navigation .wds-dropdown__content .wds-list.wds-is-linked>li {
@@ -7273,8 +7490,8 @@
     align-items:center;
     border-radius:3px;
     display:flex;
-    line-height:1.75em;
-    padding:9px 6px
+    line-height:1.75;
+    padding:6px
    }
    .fandom-community-header__local-navigation .wds-dropdown__content .wds-list.wds-is-linked>li>a>span {
     -webkit-line-clamp:2;
@@ -7292,15 +7509,15 @@
    .fandom-community-header__local-navigation .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2:not(.wds-is-touch-device):hover>.wds-dropdown-level-2__content {
     display:block
    }
-   .fandom-community-header__local-navigation .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2:not(.wds-is-sticked-to-parent) .wds-dropdown-level-2__content {
-    top:-13px
+   .fandom-community-header__local-navigation .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2:not(.wds-is-sticked-to-parent)>.wds-dropdown-level-2__content {
+    top:-10px
    }
-   .fandom-community-header__local-navigation .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2.wds-is-sticked-to-parent .wds-dropdown-level-2__content {
-    bottom:-13px
+   .fandom-community-header__local-navigation .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2.wds-is-sticked-to-parent>.wds-dropdown-level-2__content {
+    bottom:-10px
    }
    .fandom-community-header__local-navigation .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2 .wds-dropdown-level-2__content {
     max-width:181px;
-    padding:12px 0;
+    padding:9px 0;
     width:max-content
    }
    .fandom-community-header__local-navigation .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2 .wds-dropdown-level-2__content .wds-list.wds-is-linked>li>a {
@@ -7346,9 +7563,6 @@
      display:flex
     }
    }
-   .fandom-community-header__local-navigation .fandom-community-header__local-navigation .wds-dropdown__content {
-    padding:9px 0
-   }
    .fandom-community-header__local-navigation .wds-community-bar__level-1 .wds-icon,
    .fandom-community-header__local-navigation .wds-community-bar__level-2 ul .wds-icon {
     margin-left:18px
@@ -7371,9 +7585,6 @@
     color:var(--wds-dropdown-linked-item-color);
     cursor:pointer
    }
-   .wiki-tools {
-    margin-left:auto
-   }
    .wiki-tools .wds-button.wds-is-secondary {
     --wds-secondary-button-label-color:var(--theme-body-text-color);
     --wds-secondary-button-label-color--hover:var(--theme-body-text-color--hover);
@@ -7387,12 +7598,31 @@
    .wiki-tools .wds-dropdown__content {
     z-index:400
    }
+   .fandom-sticky-header .wiki-tools {
+    margin-left:auto
+   }
    .fandom-sticky-header .wiki-tools .wds-button.wds-is-secondary {
     --wds-secondary-button-label-color:var(--theme-sticky-nav-text-color);
     --wds-secondary-button-label-color--hover:var(--theme-sticky-nav-text-color--hover)
    }
    .wiki-tools__theme-switch-spinner .wds-spinner__stroke {
     stroke:var(--wds-secondary-button-label-color)
+   }
+   .page-counter {
+    font-weight:500;
+    line-height:1;
+    margin-left:auto;
+    margin-right:6px;
+    text-align:right;
+    text-transform:uppercase
+   }
+   .page-counter__value {
+    font-size:18px;
+    line-height:17px
+   }
+   .page-counter__label {
+    font-size:14px;
+    line-height:13px
    }
    @keyframes searchModalSlideIn {
     0% {
@@ -7437,6 +7667,166 @@
     position:relative;
     width:800px;
     z-index:1
+   }
+   .rail-module__header,
+   .rail-module h2 {
+    background-image:linear-gradient(to top,var(--wds-midlight-color,rgba(var(--theme-accent-color--rgb),.15)) 54%,transparent 54%,transparent 100%);
+    -webkit-box-decoration-break:clone;
+    box-decoration-break:clone;
+    display:inline;
+    margin-left:-3px;
+    margin-right:-3px;
+    padding-left:3px;
+    padding-right:3px
+   }
+   .right-rail-wrapper {
+    --right-rail-text-color:var(--theme-page-dynamic-color-1);
+    --right-rail-text-color--rgb:var(--theme-page-dynamic-color-1--rgb);
+    color:var(--right-rail-text-color);
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    padding:0 18px
+   }
+   .right-rail-wrapper a {
+    font-weight:500
+   }
+   .right-rail-wrapper>.rail-module:last-child,
+   .right-rail-wrapper>:last-child>.rail-module:last-child {
+    border-bottom:0
+   }
+   @media print {
+    .right-rail-wrapper {
+     display:none
+    }
+   }
+   .sticky-modules-wrapper {
+    position:sticky;
+    top:36px
+   }
+   .rail-module {
+    background-color:var(--right-rail-background-color);
+    border-bottom:1px solid var(--theme-border-color);
+    margin-top:24px;
+    overflow:hidden;
+    padding-bottom:24px;
+    page-break-inside:avoid
+   }
+   .rail-module__header,
+   .rail-module h2 {
+    --wds-midlight-color:rgba(var(--theme-link-color--rgb),0.1);
+    display:inline-block;
+    font-size:16px;
+    font-weight:700;
+    line-height:1.25;
+    margin-bottom:15px
+   }
+   .rail-module__header .wds-icon,
+   .rail-module h2 .wds-icon {
+    margin-right:6px;
+    opacity:.75;
+    vertical-align:middle
+   }
+   .rail-module h2.has-icon {
+    align-items:center;
+    display:inline-flex
+   }
+   .rail-module h2.has-icon svg {
+    fill:rgba(var(--theme-page-text-color--rgb),.75);
+    margin-right:6px
+   }
+   .rail-module__list {
+    grid-gap:12px;
+    display:grid;
+    grid-template-columns:auto;
+    line-height:1.5
+   }
+   .rail-module__list>li {
+    overflow:hidden
+   }
+   .rail-module__list.is-condensed-list {
+    grid-gap:9px
+   }
+   @media only screen and (max-width:1023px) {
+    .rail-module__list {
+     grid-template-columns:50% 50%
+    }
+    .sticky-modules-wrapper {
+     position:unset;
+     top:unset
+    }
+   }
+   #rail-boxad-wrapper>div:not(:empty) {
+    border-bottom:1px solid var(--theme-border-color);
+    margin-bottom:0;
+    margin-top:24px;
+    padding-bottom:24px
+   }
+   .right-rail-toggle {
+    align-items:center;
+    background-color:rgba(var(--theme-page-dynamic-color-1--rgb),.1);
+    border:none;
+    border-bottom-left-radius:18px;
+    border-top-left-radius:18px;
+    color:inherit;
+    cursor:pointer;
+    display:flex;
+    height:36px;
+    justify-content:flex-start;
+    padding:0 0 0 12px;
+    position:absolute;
+    right:0;
+    top:18px;
+    transition:width .3s;
+    width:26px;
+    z-index:1
+   }
+   .right-rail-toggle:hover {
+    width:36px
+   }
+   .right-rail-toggle .wds-icon {
+    transform:rotate(-90deg);
+    transform-origin:center;
+    transition:transform .3s
+   }
+   .is-rail-hidden .right-rail-toggle {
+    background-color:var(--theme-page-background-color--secondary);
+    right:0
+   }
+   .is-rail-hidden .right-rail-toggle .wds-icon {
+    transform:rotate(90deg)
+   }
+   @media only screen and (max-width:1023px) {
+    .right-rail-toggle {
+     display:none
+    }
+   }
+   @charset "UTF-8";
+   .recent-wiki-activity__page-title,.recent-wiki-activity__username {
+    display:block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+   }
+   .recent-wiki-activity__details {
+    display:flex
+   }
+   .recent-wiki-activity__timeago,
+   .recent-wiki-activity__username {
+    color:rgba(var(--right-rail-text-color--rgb),.75);
+    font-size:12px;
+    font-weight:400
+   }
+   .recent-wiki-activity__username {
+    display:inline-block;
+    max-width:150px
+   }
+   .recent-wiki-activity__username:hover {
+    color:inherit
+   }
+   .recent-wiki-activity__timeago:before {
+    content:"•";
+    margin:0 3px
    }
    .popover {
     word-wrap:break-word;
