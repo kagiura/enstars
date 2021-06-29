@@ -1,0 +1,170 @@
+:root {
+    --story-font-size: 16px;
+}
+
+.character-render-full {
+    display: block;;
+    position: relative;
+}
+
+.character-render-full img {
+    display: block;
+}
+
+.character-render-full::after {
+    content: attr(data-char-name);
+    font: 14px Rubik;
+}
+
+.character-render-icon img {
+    width:50px;
+    min-width:30px !important;
+}
+
+.render-maximized .character-render-full{
+    display:block;
+}
+.render-maximized .character-render-icon{
+    display:none;
+}
+
+.render-minimized .character-render-icon{
+    display:block;
+}
+.render-minimized .character-render-full{
+    display:none;
+}
+
+.render-minimized .article-table{
+    border: none;
+}
+
+.article-table tr td p,
+.article-table th
+{
+    font-size: var(--story-font-size);
+    transition: font 0.3s ease;
+}
+
+
+.render-minimized .article-table {
+    max-width: 800px;
+    margin:auto;
+}
+
+
+.render-minimized .article-table tr {
+    display:block;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.render-minimized .article-table tr td {
+    border: none;
+    vertical-align: top;
+    padding: 0px 10px;
+}
+
+.render-minimized .article-table tr td[colspan="2"] {
+    padding-left: 80px;
+}
+
+.render-minimized .article-table tr th {
+    border:none;
+    display: inline-block;
+    padding: 3px 0px;
+    border-radius: 0px;
+    margin-left: 80px;
+    background: none !important;
+    color: var(--theme-page-text-color) !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.render-minimized .article-table.storyNavBar tr:not(.story-options) {
+    display:flex;
+    gap: 10px;
+    margin-left: 80px;
+}
+
+.render-minimized .article-table.storyNavBar tr.story-options {
+    margin-left: 80px;
+}
+
+.render-minimized .article-table.storyNavBar tr:not(.story-options) th {
+    background: var(--theme-infobox-main-light-color) !important;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 0px;
+    transition: all 0.3s ease;
+}
+
+.render-minimized .article-table.storyNavBar tr:not(.story-options) th:first-child:hover {
+    transform: translateX(-3px);
+}
+.render-minimized .article-table.storyNavBar tr:not(.story-options) th:last-child:hover {
+    transform: translateX(3px);
+}
+
+.render-minimized .article-table.storyNavBar tr.story-options th {
+    margin-left: 0px;
+    display:block;
+}
+
+
+.render-minimized .article-table tr td[colspan="2"] img {
+    border-radius: 10px;
+}
+
+.render-minimized .article-table tr td p {
+    background-color: var(--theme-infobox-main-light-color);
+    padding: 10px 15px;
+    display:table;
+    border-collapse: separate; 
+    margin: 0px 0px 5px 0px;
+    border-radius: 2px 10px 10px 2px;
+    transition: 0.15s all ease;
+}
+
+.render-minimized .article-table tr td p:hover {
+    transform: translateX(2px);
+}
+
+.render-minimized .article-table tr td p:first-child {
+    margin-top: 16px;
+}
+
+.render-minimized .article-table tr td p:last-child {
+    border-radius: 2px 10px 10px;
+}
+
+.render-minimized .article-table tr td:first-child div[alt] {
+    position:relative;
+}
+
+.render-minimized .article-table tr td:first-child div[alt]::after {
+    content: attr(alt);
+    position:absolute;
+    left:70px;
+    white-space:nowrap;
+    font: 700 10.5px Rubik;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+.story-resize-img a,
+.story-resize-text a
+{
+    display: inline-block;
+    margin: 3px;
+    padding: 0.2em 1em;
+    background: var(--theme-infobox-main-color);
+    border-radius: 5px;
+    color: var(--theme-infobox-background-color);
+}
+
+
+.story-resize-text a:first-child{
+    margin-left: 10px;
+}

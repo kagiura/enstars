@@ -1,4 +1,4 @@
-  var charArray = [
+var charArray = [
     "Kohaku Oukawa",
     "Aira Shiratori",
     "Tomoya Mashiro",
@@ -58,15 +58,14 @@
 var renderMaximized = true;
 $('body').addClass('render-maximized');
 
-const resizeButton = document.createElement('th');
-resizeButton.setAttribute('class', 'story-resize-img');
-resizeButton.setAttribute('onclick', 'resizeImg();');
-resizeButton.innerHTML = 'Minimize';
-$('.mw-parser-output .storyNavBar:first-child > tbody > tr').append(resizeButton);
+const resizeButton = document.createElement('tr');
+resizeButton.setAttribute('class', 'story-options');
+resizeButton.innerHTML = '<th colspan="2" class="story-resize-img">Reading Mode <a onclick="resizeImg();">Chat Mode</a></th><th colspan="2" class="story-resize-text">Text Size<a href="#small" onclick="storyOptionsSmall();">Small</a><a href="#normal" onclick="storyOptionsNormal();">Normal</a><a href="#large" onclick="storyOptionsLarge();">Large</a><a href="#huge" onclick="storyOptionsHuge();">Huge</a></th>';
+$('.mw-parser-output .storyNavBar:first-child > tbody').append(resizeButton);
 
 const renders = $('img[data-image-name*="Render"]');
 
-console.log("Add name labels");
+console.log("Add name labels - jeaoq");
 renders.each(function() {
     var filename = $(this).attr('alt');
     var name = "";
@@ -96,11 +95,25 @@ function resizeImg(){
     if(renderMaximized){
         $('body').removeClass('render-minimized');
         $('body').addClass('render-maximized');
-        $('.story-resize-img').text('Minimize');
+        $('.story-resize-img a').text('Chat Mode');
     }
     else{
         $('body').removeClass('render-maximized');
         $('body').addClass('render-minimized');
-        $('.story-resize-img').text('Maximize');
+        $('.story-resize-img a').text('Default Mode');
     }
+}
+
+
+function storyOptionsSmall() {
+	document.documentElement.style.setProperty('--story-font-size', "14px");
+}
+function storyOptionsNormal() {
+	document.documentElement.style.setProperty('--story-font-size', "16px");
+}
+function storyOptionsLarge() {
+	document.documentElement.style.setProperty('--story-font-size', "18px");
+}
+function storyOptionsHuge() {
+	document.documentElement.style.setProperty('--story-font-size', "21px");
 }
