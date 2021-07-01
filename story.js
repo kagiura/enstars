@@ -54,40 +54,50 @@ var charArray = [
     "Anzu",
     "Gatekeeper"
 ];
+var renderMaximized = false;
 
-var renderMaximized = true;
-$('body').addClass('render-maximized');
+var imported = document.createElement('script');
+imported.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js';
+document.head.appendChild(imported);
+var icons = document.createElement('link');
+icons.href = 'https://fonts.googleapis.com/icon?family=Material+Icons+Round';
+icons.rel = 'stylesheet';
+document.head.appendChild(icons);
 
-const resizeButton = document.createElement('tr');
-resizeButton.setAttribute('class', 'story-options');
-resizeButton.innerHTML = '<th colspan="2" class="story-resize-img">Reading Mode <a onclick="resizeImg();">Chat Mode</a></th><th colspan="2" class="story-resize-text">Text Size<a href="#small" onclick="storyOptionsSmall();">Small</a><a href="#normal" onclick="storyOptionsNormal();">Normal</a><a href="#large" onclick="storyOptionsLarge();">Large</a><a href="#huge" onclick="storyOptionsHuge();">Huge</a></th>';
-$('.mw-parser-output .storyNavBar:first-child > tbody').append(resizeButton);
+$('.mw-parser-output .storyNavBar:first-child > tbody > tr > *:nth-child(2)').after('<th colspan="2" class="story-resize-img"><a onclick="resizeImg();"><span class="material-icons-round">question_answer</span></a></th><th colspan="2" class="story-resize-text"><a><span class="material-icons-round">text_fields</span></a><ul><li id="sf-14" onclick="storyOptionsFontSize(\'14\');">14px</li><li id="sf-16" onclick="storyOptionsFontSize(\'16\');">16px</li><li id="sf-18" onclick="storyOptionsFontSize(\'18\');">18px</li><li id="sf-21" onclick="storyOptionsFontSize(\'21\');">21px</li></ul></th><th class="story-bookmark"><a href="#bookmark" onclick="bookmark();"><span class="material-icons-round">bookmark_border</span></a></th>');
+$(document.querySelector('.storyNavBar')).addClass('storyTopNav');
+tagRenders();
+storyOptionsFontSize('16');
 
-const renders = $('img[data-image-name*="Render"]');
 
-console.log("Add name labels - jeaoq");
-renders.each(function() {
-    var filename = $(this).attr('alt');
-    var name = "";
-    charArray.forEach(function(chName) {
-        if (filename.includes(chName)) {
-            name = chName;
-        }
+function tagRenders() {
+    $('body').addClass('render-minimized');
+    const renders = $('img[data-image-name*="Render"]');
+    console.log("Add name labels - jeaoq");
+    renders.each(function() {
+        var filename = $(this).attr('alt');
+        var name = "";
+        charArray.forEach(function(chName) {
+            if (filename.includes(chName)) {
+                name = chName;
+            }
+        });
+        console.log(filename + " -> " + name);
+        var circleFileName = "https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/"+name+" Circle.png";
+        $(this)
+        .wrap("<div class='character-render-full'></div>")
+        .parent('.character-render-full')
+        .attr('data-char-name', name)
+        ;
+        const cri = document.createElement('div');
+        cri.setAttribute('class', 'character-render-icon');
+        cri.setAttribute('alt', name);
+        cri.innerHTML = '<img src="'+circleFileName+'">';
+        $(cri).insertBefore( $(this).parent() );
+
     });
-    console.log(filename + " -> " + name);
-    var circleFileName = "https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/"+name+" Circle.png";
-    $(this)
-    .wrap("<div class='character-render-full'></div>")
-    .parent('.character-render-full')
-    .attr('data-char-name', name)
-    ;
-    const cri = document.createElement('div');
-    cri.setAttribute('class', 'character-render-icon');
-    cri.setAttribute('alt', name);
-    cri.innerHTML = '<img src="'+circleFileName+'">';
-    $(cri).insertBefore( $(this).parent() );
 
-});
+}
 
 function resizeImg(){
     renderMaximized = !renderMaximized;
@@ -95,25 +105,22 @@ function resizeImg(){
     if(renderMaximized){
         $('body').removeClass('render-minimized');
         $('body').addClass('render-maximized');
-        $('.story-resize-img a').text('Chat Mode');
+        $('.story-resize-img a').html('<span class="material-icons-round">question_answer</span>');
     }
+    
     else{
         $('body').removeClass('render-maximized');
         $('body').addClass('render-minimized');
-        $('.story-resize-img a').text('Default Mode');
+        $('.story-resize-img a').html('<span class="material-icons-round">menu_book</span>');
     }
 }
 
+function storyOptionsFontSize(val) {
+    document.documentElement.style.setProperty('--story-font-size', val + 'px');
+    $('[id|="sf"]').removeClass("currentFontSize");
+    $('#sf-'+val).addClass("currentFontSize");
+}
 
-function storyOptionsSmall() {
-	document.documentElement.style.setProperty('--story-font-size', "14px");
-}
-function storyOptionsNormal() {
-	document.documentElement.style.setProperty('--story-font-size', "16px");
-}
-function storyOptionsLarge() {
-	document.documentElement.style.setProperty('--story-font-size', "18px");
-}
-function storyOptionsHuge() {
-	document.documentElement.style.setProperty('--story-font-size', "21px");
-}
+
+
+
