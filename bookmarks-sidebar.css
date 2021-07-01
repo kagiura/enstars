@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
+
 :root {
     --theme-neg-color: #d92f2f;
 }
@@ -14,6 +16,26 @@
 #rail-bookmarks{
     position: relative;
 }
+
+#rail-bookmarks ul {
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#rail-bookmarks.scrollable ul {
+    max-height: 18em;
+}
+
+#rail-bookmarks.bookmarks-expanded ul {
+    max-height: unset;
+}
+
+#rail-bookmarks ul li{
+    flex: 1 1 100%;
+    font-size: 14px;
+}
+
 
 #rail-bookmarks ul li:last-child{
     font-size: 0.9em;
@@ -51,15 +73,36 @@
 }
 
 [href="#removeBookmark"]{
-    font-size: 0.8em;
+    font: 900 0.6em Montserrat, sans-serif;
     margin-left: 5px;
-    color: var(--theme-neg-color);
+    display: inline-block;
+    padding: 0px 2px;
+    border-radius: 2px;
+    background: var(--theme-neg-color);
+    color: white;
+    vertical-align: 2px;
 }
 
 [href="#removeBookmark"]:hover{
-    color: var(--theme-neg-color);
+    color: #FFFD;
+    text-decoration: none;
 }
 
-[href="#removeBookmark"]:active{
-    color: var(--theme-neg-color);
+[href="#removeBookmark"]:active,
+[href="#removeBookmark"]:focus{
+    color: #FFFB;
+    text-decoration: none;
+}
+
+
+#rail-bookmarks > a{
+    display: none;
+}
+
+
+#rail-bookmarks.scrollable > a{
+    display: block;
+    text-align: center;
+    padding: 10px 0px 5px;
+    font-size: 0.8em;
 }
