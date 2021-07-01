@@ -42,7 +42,7 @@
     text-align: right;
 }
 
-[href="#bookmark"]{
+#rail-bookmarks [href="#bookmark"]{
     position: absolute;
     font-size: 12px;
     color: var(--theme-link-color);
@@ -56,23 +56,23 @@
     right: 20px;
 }
 
-[href="#bookmark"]:hover{
+#rail-bookmarks [href="#bookmark"]:hover{
     background: var(--theme-link-color);
     color: var(--theme-infobox-background-color);
     text-decoration: none;
 }
 
-[href="#bookmark"]:active{
+#rail-bookmarks [href="#bookmark"]:active{
     background: var(--theme-link-color);
     color: var(--theme-infobox-background-color);
     text-decoration: none;
 }
 
-.bookmarked[href="#bookmark"]{
+#rail-bookmarks .bookmarked[href="#bookmark"]{
     --theme-link-color: var(--theme-neg-color);
 }
 
-[href="#removeBookmark"]{
+#rail-bookmarks [href="#removeBookmark"]{
     font: 900 0.6em Montserrat, sans-serif;
     margin-left: 5px;
     display: inline-block;
@@ -83,13 +83,13 @@
     vertical-align: 2px;
 }
 
-[href="#removeBookmark"]:hover{
+#rail-bookmarks [href="#removeBookmark"]:hover{
     color: #FFFD;
     text-decoration: none;
 }
 
-[href="#removeBookmark"]:active,
-[href="#removeBookmark"]:focus{
+#rail-bookmarks [href="#removeBookmark"]:active,
+#rail-bookmarks [href="#removeBookmark"]:focus{
     color: #FFFB;
     text-decoration: none;
 }
