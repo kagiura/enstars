@@ -1,3 +1,4 @@
+
 var charArray = [
     "Kohaku Oukawa",
     "Aira Shiratori",
@@ -63,10 +64,11 @@ var icons = document.createElement('link');
 icons.href = 'https://fonts.googleapis.com/icon?family=Material+Icons+Round';
 icons.rel = 'stylesheet';
 document.head.appendChild(icons);
+/*
 var cssStyle = document.createElement('link');
 cssStyle.href = 'https://jeaoq.github.io/enstars-wiki/story-options.css';
 cssStyle.rel = 'stylesheet';
-document.head.appendChild(cssStyle);
+document.head.appendChild(cssStyle);*/
 
 $('.mw-parser-output .storyNavBar:first-child > tbody > tr > *:nth-child(2)').after('<th colspan="2" class="story-resize-img"><a onclick="resizeImg();"><span class="material-icons-round">question_answer</span></a></th><th colspan="2" class="story-resize-text"><a><span class="material-icons-round">text_fields</span></a><ul><li id="sf-14" onclick="storyOptionsFontSize(\'14\');">14px</li><li id="sf-16" onclick="storyOptionsFontSize(\'16\');">16px</li><li id="sf-18" onclick="storyOptionsFontSize(\'18\');">18px</li><li id="sf-21" onclick="storyOptionsFontSize(\'21\');">21px</li></ul></th><th class="story-bookmark"><a href="#bookmark" onclick="bookmark();"><span class="material-icons-round">bookmark_border</span></a></th>');
 $(document.querySelector('.storyNavBar')).addClass('storyTopNav');
@@ -88,6 +90,7 @@ function tagRenders() {
         });
         console.log(filename + " -> " + name);
         var circleFileName = "https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/"+name+" Circle.png";
+        var squareFileName = "https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/"+name.substr(0, name.indexOf(" "))+" ES.png";
         $(this)
         .wrap("<div class='character-render-full'></div>")
         .parent('.character-render-full')
@@ -96,9 +99,10 @@ function tagRenders() {
         const cri = document.createElement('div');
         cri.setAttribute('class', 'character-render-icon');
         cri.setAttribute('alt', name);
-        cri.innerHTML = '<img src="'+circleFileName+'">';
+        cri.innerHTML = '<img src="'+squareFileName+'">';
         $(cri).insertBefore( $(this).parent() );
-
+        var colorClass = 'pi-theme-' + name.substr(0, name.indexOf(" ")).toLowerCase() + '-color'
+        $(this).parent().parent().parent().parent().parent().addClass(colorClass);
     });
 
 }
@@ -124,7 +128,3 @@ function storyOptionsFontSize(val) {
     $('[id|="sf"]').removeClass("currentFontSize");
     $('#sf-'+val).addClass("currentFontSize");
 }
-
-
-
-
