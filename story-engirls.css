@@ -1,0 +1,42 @@
+:root {
+    --story-font-size: 16px;
+}
+
+.page__main #content * {
+    font-size: var(--story-font-size) !important;
+    transition: font 0.3s ease;
+}
+
+.page-header__top {
+    flex-wrap: wrap;
+}
+
+.story-resize-text {
+    background: var(--theme-body-background-color);
+    padding: 5px 15px;
+    border-radius: 10px;
+    flex: 1 0 200px;
+    text-align: center;
+    max-width: 250px;
+}
+
+.story-resize-text .material-icons-round {
+    font-size: 18px;
+    line-height: 2px;
+    vertical-align: -4px;
+    margin-right: 8px;
+}
+
+.story-resize-text ul{
+    list-style-type: none;
+    display: inline-flex;
+    margin: 0px;
+    gap:5px;
+    font-weight: 500;
+    user-select: none;
+}
+
+.currentFontSize {
+    font-weight: 700;
+    color: var(--theme-link-color);
+}
