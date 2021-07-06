@@ -1,5 +1,3 @@
-
-
 var jQ = document.createElement('script');
 jQ.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js';
 document.head.appendChild(jQ);
@@ -8,9 +6,6 @@ tumblrifyCssStyle.href = 'https://jeaoq.github.io/enstars-wiki/tumblrify.css';
 tumblrifyCssStyle.rel = 'stylesheet';
 document.head.appendChild(tumblrifyCssStyle);
 
-document.addEventListener("DOMContentLoaded", function(event) { 
-    document.getElementById("content").innerHTML = "<button type=\"button\" onclick=\"addTumblrButton();\">Run Tumblrify</button>" + document.getElementById("content").innerHTML;
-});
 function addTumblrButton(){
     $('table').each(function(i) {
         $(this).attr('id', 'id'+(i+1));
