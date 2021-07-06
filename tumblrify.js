@@ -7,6 +7,7 @@ tumblrifyCssStyle.rel = 'stylesheet';
 document.head.appendChild(tumblrifyCssStyle);
 
 function addTumblrButton(){
+    $('body').addClass('tumblrify-page');
     $('table').each(function(i) {
         $(this).attr('id', 'id'+(i+1));
         $(this).children().prepend("<tr><th style=\"padding: 0px;\"><button type=\"button\" onclick=\"tumblrify('id" + (i+1) + "');\">Tumblrify this table</button></th></tr>");
