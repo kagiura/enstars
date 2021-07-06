@@ -1,18 +1,24 @@
 
+
 var jQ = document.createElement('script');
 jQ.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js';
 document.head.appendChild(jQ);
 var tumblrifyCssStyle = document.createElement('link');
-tumblrifyCssStyle.href = 'https://jeaoq.github.io/enstars-wiki/story-tumblr.css';
+tumblrifyCssStyle.href = 'https://jeaoq.github.io/enstars-wiki/tumblrify.css';
 tumblrifyCssStyle.rel = 'stylesheet';
 document.head.appendChild(tumblrifyCssStyle);
 
 document.addEventListener("DOMContentLoaded", function(event) { 
-    document.getElementById("content").innerHTML = "<button type=\"button\" onclick=\"tumblrify();\">Tumblrify</button>" + document.getElementById("content").innerHTML;
+    document.getElementById("content").innerHTML = "<button type=\"button\" onclick=\"addTumblrButton();\">Run Tumblrify</button>" + document.getElementById("content").innerHTML;
 });
+function addTumblrButton(){
+    $('table').each(function(i) {
+        $(this).attr('id', 'id'+(i+1));
+        $(this).children().prepend("<tr><th style=\"padding: 0px;\"><button type=\"button\" onclick=\"tumblrify('id" + (i+1) + "');\">Tumblrify this table</button></th></tr>");
+    });
+}
 
-
-function tumblrify() {
+function tumblrify(thisTable) {
 
 var charArray = [
     "Kohaku Oukawa",
@@ -70,8 +76,8 @@ var charArray = [
     "Anzu",
     "Gatekeeper"
 ];
-    $('body').addClass('tumblrify');
-    var renders = $('img[data-image-name*="Render"]');
+    $('#'+thisTable).addClass('tumblrify');
+    var renders = $('#'+ thisTable +' img[data-image-name*="Render"]');
     console.log("Tumblrify - github/jeaoq/enstars-wiki");
     renders.each(function() {
         var filename = $(this).attr('alt');
