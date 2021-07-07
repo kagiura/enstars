@@ -92,8 +92,8 @@ $('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child >
 
 $('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child > tbody').append(`
 <tr class="story-options-wrapper">
-<div class="story-options">
-<th class="story-format">
+<th class="story-options">
+<div class="story-format">
     <a href="#resize" onclick="resizeImg();">
         <span class="material-icons-round">question_answer</span>
     </a>
@@ -106,8 +106,8 @@ $('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child >
     <a href="#colorShadow" onclick="colorShadow();">
         <span class="material-icons-round">copy_all</span>
     </a>
-</th>
-<th class="story-resize-text">
+</div>
+<div class="story-resize-text">
     <a href="#options" onclick="showOptions();">
         <span class="material-icons-round">format_size</span>
     </a>
@@ -117,8 +117,8 @@ $('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child >
         <li id="sf-18" onclick="storyOptionsFontSize('18');">18px</li>
         <li id="sf-21" onclick="storyOptionsFontSize('21');">21px</li>
     </ul>
-</th>
 </div>
+</th>
 </tr>
 `);
 tagRenders();
