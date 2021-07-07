@@ -8,10 +8,43 @@ icons.rel = 'stylesheet';
 document.head.appendChild(icons);
 
 $('.page-header__top').append('<div class="story-resize-text"><a><span class="material-icons-round">text_fields</span></a><ul><li id="sf-14" onclick="storyOptionsFontSize(\'14\');">14px</li><li id="sf-16" onclick="storyOptionsFontSize(\'16\');">16px</li><li id="sf-18" onclick="storyOptionsFontSize(\'18\');">18px</li><li id="sf-21" onclick="storyOptionsFontSize(\'21\');">21px</li></ul></div>');
-storyOptionsFontSize('16');
+initialFontSize();
 
 function storyOptionsFontSize(val) {
     document.documentElement.style.setProperty('--story-font-size', val + 'px');
     $('[id|="sf"]').removeClass("currentFontSize");
     $('#sf-'+val).addClass("currentFontSize");
+    setPreference('fontSize', val);
+}
+
+function setPreference(param, val){
+    var params = {
+            action: 'options',
+	        optionname: 'userjs-'+param,
+            optionvalue: val,
+            format: 'json'
+        },
+        api = new mw.Api();
+    api.postWithToken( 'csrf', params ).done( function ( data ) {
+        console.log(data);
+    } );
+}
+
+function initialFontSize(){
+    var params = {
+            action: 'query',
+            meta: 'userinfo',
+            uiprop: 'options',
+            format: 'json'
+        },
+        api = new mw.Api();
+    api.get( params ).done( function ( data ) {
+    	var pref = data.query.userinfo.options['userjs-fontSize'];
+        console.log( pref );
+        if(pref === undefined){
+        	setPreference('fontSize', '16');
+        	storyOptionsFontSize('16')
+        }
+        storyOptionsFontSize(pref);
+    } );
 }
