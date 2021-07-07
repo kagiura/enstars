@@ -21,6 +21,16 @@
     flex: 1 0 200px;
     text-align: center;
     max-width: 250px;
+    transition: all 0.2s ease;
+    opacity: 0.5;
+}
+
+.story-resize-text:hover {
+    opacity: 0.75;
+}
+
+.setFontSize .story-resize-text {
+    opacity: 1;
 }
 
 .story-resize-text .material-icons-round {
