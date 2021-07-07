@@ -12,7 +12,7 @@
 }
 
 .story-resize-text {
-    background: var(--theme-body-background-color);
+    background: var(--theme-page-background-color--secondary);
     padding: 5px 15px;
     border-radius: 10px;
     flex: 1 0 200px;
