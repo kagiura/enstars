@@ -60,10 +60,10 @@ var charArray = [
 var renderMaximized = true;
 
 mw.loader.using('mediawiki.api', function() {
-/*
+
 var imported = document.createElement('script');
 imported.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js';
-document.head.appendChild(imported);*/
+document.head.appendChild(imported);
 var icons = document.createElement('link');
 icons.href = 'https://fonts.googleapis.com/icon?family=Material+Icons+Round';
 icons.rel = 'stylesheet';
