@@ -10,7 +10,7 @@ icons.href = 'https://fonts.googleapis.com/icon?family=Material+Icons+Round';
 icons.rel = 'stylesheet';
 document.head.appendChild(icons);
 
-$('.page-header__top').append('<div class="story-resize-text"><a><span class="material-icons-round">text_fields</span></a><ul><li id="sf-14" onclick="storyOptionsFontSize(\'14\');">14px</li><li id="sf-16" onclick="storyOptionsFontSize(\'16\');">16px</li><li id="sf-18" onclick="storyOptionsFontSize(\'18\');">18px</li><li id="sf-21" onclick="storyOptionsFontSize(\'21\');">21px</li></ul></div>');
+$('.page-header__top').append('<div class="story-resize-text"><a><span class="material-icons-round" onClick="setFontSize();">text_fields</span></a><ul><li id="sf-14" onclick="storyOptionsFontSize(\'14\');">14px</li><li id="sf-16" onclick="storyOptionsFontSize(\'16\');">16px</li><li id="sf-18" onclick="storyOptionsFontSize(\'18\');">18px</li><li id="sf-21" onclick="storyOptionsFontSize(\'21\');">21px</li></ul></div>');
 initialFontSize();
 
 function storyOptionsFontSize(val) {
@@ -31,6 +31,10 @@ function setPreference(param, val){
     api.postWithToken( 'csrf', params ).done( function ( data ) {
         console.log(data);
     } );
+}
+
+function setFontSize(){
+    $('body').toggleClass('setFontSize');
 }
 
 function initialFontSize(){

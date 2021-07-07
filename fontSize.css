@@ -3,8 +3,11 @@
 }
 
 .page__main #content * {
-    font-size: var(--story-font-size) !important;
     transition: font 0.3s ease;
+}
+
+.setFontSize.page__main #content * {
+    font-size: var(--story-font-size) !important;
 }
 
 .page-header__top {
