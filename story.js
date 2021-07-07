@@ -92,7 +92,7 @@ $('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child >
 
 $('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child > tbody').append(`
 <tr class="story-options-wrapper">
-<th class="story-options">
+<th class="story-options storyOptions">
 <div class="story-format">
     <a href="#resize" onclick="resizeImg();">
         <span class="material-icons-round">question_answer</span>
@@ -108,7 +108,7 @@ $('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child >
     </a>
 </div>
 <div class="story-resize-text">
-    <a href="#options" onclick="showOptions();">
+    <a>
         <span class="material-icons-round">format_size</span>
     </a>
     <ul>
