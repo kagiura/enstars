@@ -74,14 +74,45 @@ cssStyle.href = 'https://jeaoq.github.io/enstars-wiki/story-options.css';
 cssStyle.rel = 'stylesheet';
 document.head.appendChild(cssStyle);*/
 
+
+$(document.querySelector('.storyNavBar')).addClass('storyTopNav');
 $('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child > tbody > tr > *:nth-child(2)').after(`
-<th colspan="2" class="story-resize-img">hi
-    <a onclick="resizeImg();">
+
+<th class="story-show-options">
+    <a href="#options" onclick="showOptions();">
+        <span class="material-icons-round">text_fields</span>
+    </a>
+</th>
+<th class="story-bookmark">
+    <a href="#bookmark" onclick="bookmark();">
+        <span class="material-icons-round">bookmark_border</span>
+    </a>
+</th>
+`);
+
+$('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child > tbody').append(`
+<tr class="story-options">
+<th class="story-format">
+    <a href="#resize" onclick="resizeImg();">
         <span class="material-icons-round">question_answer</span>
     </a>
-</th><th colspan="2" class="story-resize-text"><a><span class="material-icons-round">text_fields</span></a><ul><li id="sf-14" onclick="storyOptionsFontSize(\'14\');">14px</li><li id="sf-16" onclick="storyOptionsFontSize(\'16\');">16px</li><li id="sf-18" onclick="storyOptionsFontSize(\'18\');">18px</li><li id="sf-21" onclick="storyOptionsFontSize(\'21\');">21px</li></ul></th><th class="story-bookmark"><a href="#bookmark" onclick="bookmark();"><span class="material-icons-round">bookmark_border</span></a></th>`);
-$(document.querySelector('.storyNavBar')).addClass('storyTopNav');
-
+    <a href="#color" onclick="colorize();">
+        <span class="material-icons-round">palette</span>
+    </a>
+</th>
+<th class="story-resize-text">
+    <a href="#options" onclick="showOptions();">
+        <span class="material-icons-round">format_size</span>
+    </a>
+    <ul>
+        <li id="sf-14" onclick="storyOptionsFontSize('14');">14px</li>
+        <li id="sf-16" onclick="storyOptionsFontSize('16');">16px</li>
+        <li id="sf-18" onclick="storyOptionsFontSize('18');">18px</li>
+        <li id="sf-21" onclick="storyOptionsFontSize('21');">21px</li>
+    </ul>
+</th>
+</tr>
+`);
 tagRenders();
 initialFontSize();
 });
@@ -124,20 +155,17 @@ function tagRenders() {
 
 }
 
+
+function showOptions() {
+    $('.storyTopNav').toggleClass('storyOptions');
+}
+
 function resizeImg(){
-    renderMaximized = !renderMaximized;
-    console.log("Maximize Story " + renderMaximized);
-    if(renderMaximized){
-        $('body').removeClass('render-minimized');
-        $('body').addClass('render-maximized');
-        $('.story-resize-img a').html('<span class="material-icons-round">question_answer</span>');
-    }
-    
-    else{
-        $('body').removeClass('render-maximized');
-        $('body').addClass('render-minimized');
-        $('.story-resize-img a').html('<span class="material-icons-round">menu_book</span>');
-    }
+    $('body').toggleClass('story-minimized');
+}
+
+function colorize(){
+    $('body').toggleClass('story-colorized');
 }
 
 function storyOptionsFontSize(val) {
