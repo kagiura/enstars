@@ -1,7 +1,10 @@
+var fontSizeCSS = document.createElement('link');
+fontSizeCSS.href = 'https://jeaoq.github.io/enstars-wiki/fontSize.css';
+fontSizeCSS.rel = 'stylesheet';
+document.head.appendChild(fontSizeCSS);
 var imported = document.createElement('script');
 imported.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js';
 document.head.appendChild(imported);
-
 var icons = document.createElement('link');
 icons.href = 'https://fonts.googleapis.com/icon?family=Material+Icons+Round';
 icons.rel = 'stylesheet';
