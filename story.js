@@ -96,8 +96,14 @@ $('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child >
     <a href="#resize" onclick="resizeImg();">
         <span class="material-icons-round">question_answer</span>
     </a>
-    <a href="#color" onclick="colorize();">
+    <a href="#color" onclick="color();">
         <span class="material-icons-round">palette</span>
+    </a>
+    <a href="#colorFill" onclick="colorFill();">
+        <span class="material-icons-round">format_color_fill</span>
+    </a>
+    <a href="#colorShadow" onclick="colorShadow();">
+        <span class="material-icons-round">copy_all</span>
     </a>
 </th>
 <th class="story-resize-text">
@@ -164,8 +170,16 @@ function resizeImg(){
     $('body').toggleClass('story-minimized');
 }
 
-function colorize(){
-    $('body').toggleClass('story-colorized');
+function color(){
+    $('body').toggleClass('story-color');
+}
+
+function colorFill(){
+    $('body').toggleClass('story-colorFill');
+}
+
+function colorShadow(){
+    $('body').toggleClass('story-colorShadow');
 }
 
 function storyOptionsFontSize(val) {
