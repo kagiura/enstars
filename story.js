@@ -167,18 +167,22 @@ function showOptions() {
 
 function resizeImg(){
     $('body').toggleClass('story-minimized');
+    setPreference('format', $('body').hasClass('story-minimized'));
 }
 
 function color(){
     $('body').toggleClass('story-color');
+    setPreference('color', $('body').hasClass('story-color'));
 }
 
 function colorFill(){
     $('body').toggleClass('story-colorFill');
+    setPreference('colorFill', $('body').hasClass('story-colorFill'));
 }
 
 function colorShadow(){
     $('body').toggleClass('story-colorShadow');
+    setPreference('colorShadow', $('body').hasClass('story-colorShadow'));
 }
 
 function storyOptionsFontSize(val) {
