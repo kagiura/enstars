@@ -67,10 +67,10 @@ function bookmarkInitial() {
 			if (bookmarks.indexOf('[[' + mw.config.get("wgPageName") + ']]') > -1){
 				$('[href="#bookmark"]').addClass('bookmarked');
 	        	$('[href="#bookmark"]').text('Remove Bookmark');
-	        	$('.story-bookmark [href="#bookmark"]').html('<span class="material-icons-round">bookmark</span>');
+	        	$('body').addClass('pageBookmarked');
 			} else {
 				$('[href="#bookmark"]').text('Bookmark this page');
-				$('.story-bookmark [href="#bookmark"]').html('<span class="material-icons-round">bookmark_border</span>');
+	        	$('body').removeClass('pageBookmarked');
 			}
 			
 			if( $('#rail-bookmarks ul li').length >= 12 ){
@@ -111,7 +111,21 @@ function toggleBM (page){
 		    } );
 	});
 }
-
+{
+	mw.loader.using('mediawiki.api', function () {
+		new mw.Api().edit('User:Jeaoq/SandboxJS', function (revision) {
+			return {
+			text: 'hello',
+			summary:
+			'Replace "foo" with "bar".',
+			assert: 'bot',
+			minor: !0
+			};
+		}).then(function () {
+			console.log('Saved!');
+		});
+	});
+}
 function removeBookmark(page){
 	console.log('removeBookmark');
 	if (confirm("Remove " + page + "?")) {
