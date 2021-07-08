@@ -139,7 +139,7 @@ function stickyInitial(){
 
 
 function tagRenders() {
-    const renders = $('img[data-image-name*="Render"]');
+    const renders = $('[class*="_-_Story"]:not([class*="_-_Story_Index"]) img[data-image-name*="Render"]');
     renders.each(function() {
         var filename = $(this).attr('alt');
         var name = "";
