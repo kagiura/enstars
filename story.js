@@ -220,33 +220,33 @@ function initialConfig(){
     api.get( params ).done( function ( data ) {
     	var pref = data.query.userinfo;
         console.log( pref );
-        if(pref.options['userjs-fontSize'] === undefined){
+        if(pref.options['userjs-fontSize'] === "undefined"){
         	setPreference('fontSize', '16');
         }
         storyOptionsFontSize(pref.options['userjs-fontSize']);
 
-        if(pref.options['userjs-format'] === undefined){
+        if(pref.options['userjs-format'] === "undefined"){
         	setPreference('format', false);
         }
         else if(pref.options['userjs-format']){
         	$('body').addClass('story-minimized');
         }
 
-        if(pref.options['userjs-color'] === undefined){
+        if(pref.options['userjs-color'] === "undefined"){
         	setPreference('color', false);
         }
         else if(pref.options['userjs-color']){
         	$('body').addClass('story-color');
         }
 
-        if(pref.options['userjs-colorFill'] === undefined){
+        if(pref.options['userjs-colorFill'] === "undefined"){
         	setPreference('colorFill', false);
         }
         else if(pref.options['userjs-colorFill']){
         	$('body').addClass('story-colorFill');
         }
 
-        if(pref.options['userjs-colorShadow'] === undefined){
+        if(pref.options['userjs-colorShadow'] === "undefined"){
         	setPreference('colorShadow', false);
         }
         else if(pref.options['userjs-colorShadow']){
