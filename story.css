@@ -180,8 +180,6 @@
 
 
 
-
-
 body[class*="_-_Story"]:not([class*="_-_Story_Index"]) .article-table:not(.storyNavBar) * {
     font-size: var(--story-font-size);
     transition: font 0.25s ease;
@@ -199,13 +197,19 @@ body[class*="_-_Story"]:not([class*="_-_Story_Index"]) .article-table:not(.story
 .article-table tr td::after {
     content: attr(alt);
     font: 14px Rubik;
+    display: block;
+    text-align: center;
+}
+
+body:not(.story-minimized) .article-table tr td::after {
+    margin-top: 5px;
+    
 }
 
 .character-render-icon img {
     width:50px;
     min-width:50px !important;
     border-radius: 50px;
-    margin-bottom: 10px;
 }
 
 .character-render-full{
@@ -257,6 +261,12 @@ body[class*="_-_Story"]:not([class*="_-_Story_Index"]).story-minimized center {
 body[class*="_-_Story"]:not([class*="_-_Story_Index"]).story-minimized .center * {
     margin: 0px;
 }
+
+body[class*="_-_Story"]:not([class*="_-_Story_Index"]).story-minimized .center .character-render-icon img{
+    margin-bottom: 5px;
+
+}
+
 
 body[class*="_-_Story"]:not([class*="_-_Story_Index"]).story-minimized .article-table:not(.storyNavBar) {
     max-width: 800px;
@@ -529,6 +539,9 @@ storyNavBar-wrapper{
     white-space: nowrap;
 }
 
+.storyNavBar tr td#chapterList{
+    white-space: normal;
+}
 
 
 .storyNavBar tr td{
@@ -724,7 +737,7 @@ storyNavBar-wrapper{
 .storyTopNav:not(.storyOptions) .story-show-options a,
 .pageBookmarked .story-bookmark a{
     background: rgba(var(--theme-link-color--rgb), 1);
-    color: white;
+    color: var(--theme-page-background-color--secondary);
     border-radius: 5px;
 }
 
