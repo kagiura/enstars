@@ -68,8 +68,11 @@ document.head.appendChild(cssStyle);
 // A $( document ).ready() block.
 $( document ).ready(function() {
     mw.loader.using('mediawiki.api', function() {
+        console.log("DEBUG - Adds CategoryClasses Manually");
+        addCategories();
 
-        console.log("%cSTORY SCRIPT - jeaoq / 0.2.0", "color:blue");
+        console.log("%cSTORY SCRIPT - jeaoq / 0.2.0", "color:white; background:#3434eb; padding: 50px;");
+
 
         $(document.querySelector('.storyNavBar')).addClass('storyTopNav');
         $(document.querySelector('.storyNavBar')).addClass('storyOptions');
@@ -124,6 +127,28 @@ $( document ).ready(function() {
 
     });
 });
+
+
+function addCategories(){
+    (function($, mw) {
+    var fn = function() {
+        var cats = mw.config.get('wgCategories'), newClasses;
+        if (cats) {
+        newClasses = $.map(cats, function(el) {
+            return 'cat-' + encodeURIComponent(el.replace(/[ .]/g, '_')).replace(/%/g, '_');
+        }).join(' ');
+        $(document.body).addClass(newClasses);
+        console.log(newClasses);
+        }
+    };
+    if (document.body) {
+        fn();
+    } else {
+        $(fn);
+    }
+    })(jQuery, mw);
+
+}
 
 function stickyInitial(){
     const stickyElm = document.querySelector('.storyTopNav');
