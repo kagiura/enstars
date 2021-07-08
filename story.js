@@ -119,6 +119,14 @@ document.head.appendChild(cssStyle);*/
         tagRenders();
         initialConfig();
     });
+    const stickyElm = document.querySelector('.storyNavBar');
+    
+    const observer = new IntersectionObserver( 
+      ([e]) => e.target.classList.toggle('isSticky', e.intersectionRatio < 1),
+      {threshold: [1]}
+    );
+    
+    observer.observe(stickyElm);
 
 
 });
@@ -272,12 +280,3 @@ function getPreference(param){
 }
 
 
-
-const stickyElm = document.querySelector('.storyNavBar');
-
-const observer = new IntersectionObserver( 
-  ([e]) => e.target.classList.toggle('isSticky', e.intersectionRatio < 1),
-  {threshold: [1]}
-);
-
-observer.observe(stickyElm);
