@@ -256,8 +256,7 @@ function initialConfig(){
 }
 
 
-function getPreference(param, def){
-	var ret = '16';
+function getPreference(param){
     var params = {
             action: 'query',
             meta: 'userinfo',
@@ -269,13 +268,7 @@ function getPreference(param, def){
     api.get( params ).done( function ( data ) {
     	var pref = data.query.userinfo.options['userjs-'+param];
         console.log( pref );
-        if(pref === undefined){
-        	setPreference(param, def);
-        	ret = def;
-        }
-        ret = pref;
     } );
-    return ret;
 }
 
 
