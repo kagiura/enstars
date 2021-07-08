@@ -1,4 +1,4 @@
-console.log("STORY SCRIPT - jeaoq");
+console.log("STORY SCRIPT - jeaoq / 0.1");
 
 
 var charArray = [
@@ -57,7 +57,6 @@ var charArray = [
     "Anzu",
     "Gatekeeper"
 ];
-var renderMaximized = true;
 
 mw.loader.using('mediawiki.api', function() {
 
@@ -122,11 +121,10 @@ $('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child >
 </tr>
 `);
 tagRenders();
-initialFontSize();
+initialConfig();
 });
 
 function tagRenders() {
-    $('body').addClass('render-minimized');
     const renders = $('img[data-image-name*="Render"]');
     renders.each(function() {
         var filename = $(this).attr('alt');
@@ -203,11 +201,12 @@ function setPreference(param, val){
         },
         api = new mw.Api();
     api.postWithToken( 'csrf', params ).done( function ( data ) {
+        console.log(param + ' ' + val);
         console.log(data);
     } );
 }
 
-function initialFontSize(){
+function initialConfig(){
     var params = {
             action: 'query',
             meta: 'userinfo',
@@ -216,13 +215,40 @@ function initialFontSize(){
         },
         api = new mw.Api();
     api.get( params ).done( function ( data ) {
-    	var pref = data.query.userinfo.options['userjs-fontSize'];
+    	var pref = data.query.userinfo;
         console.log( pref );
-        if(pref === undefined){
+        if(pref.options['userjs-fontSize'] === undefined){
         	setPreference('fontSize', '16');
-        	storyOptionsFontSize('16')
         }
-        storyOptionsFontSize(pref);
+        storyOptionsFontSize(pref.options['userjs-fontSize']);
+
+        if(pref.options['userjs-format'] === undefined){
+        	setPreference('format', false);
+        }
+        if(pref.options['userjs-format']){
+        	$('body').addClass('story-minimized');
+        }
+
+        if(pref.options['userjs-color'] === undefined){
+        	setPreference('color', false);
+        }
+        if(pref.options['userjs-color']){
+        	$('body').addClass('story-color');
+        }
+
+        if(pref.options['userjs-colorFill'] === undefined){
+        	setPreference('colorFill', false);
+        }
+        if(pref.options['userjs-colorFill']){
+        	$('body').addClass('story-colorFill');
+        }
+
+        if(pref.options['userjs-colorShadow'] === undefined){
+        	setPreference('colorShadow', false);
+        }
+        if(pref.options['userjs-colorShadow']){
+        	$('body').addClass('story-colorShadow');
+        }
     } );
 }
 
