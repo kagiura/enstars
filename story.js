@@ -71,7 +71,7 @@ $( document ).ready(function() {
         console.log("DEBUG - Adds CategoryClasses Manually");
         addCategories();
 
-        console.log("%cSTORY SCRIPT - jeaoq / 0.2.0", "color:white; background:#3434eb; padding: 50px;");
+        console.log("%cSTORY SCRIPT - jeaoq / 0.3.0", "display: inline-block; color:#3434eb; background:white; padding: 10px 40px; margin: 0px 5px 5px 0px; border-radius: 15px 5px; border: solid 2px #3434eb; box-shadow: 5px 5px 0px 0px #3434eb; font-weight: 700; font-size: 1.2em;");
 
 
         $(document.querySelector('.storyNavBar')).addClass('storyTopNav');
@@ -175,7 +175,7 @@ function tagRenders() {
         });
         // console.log(filename + " -> " + name);
         var circleFileName = "https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/"+name+" Circle.png";
-        var squareFileName = "https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/"+name.substr(0, name.indexOf(" "))+" ES.png";
+        var squareFileName = "https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/"+name.replace(/ .*/,'')+" ES.png";
         $(this)
         .wrap("<div class='character-render-full'></div>")
         .parent('.character-render-full')
@@ -194,7 +194,7 @@ function tagRenders() {
             cell.attr('alt', name);
         }
         
-        var colorClass = 'pi-theme-' + name.substr(0, name.indexOf(" ")).toLowerCase() + '-color'
+        var colorClass = 'pi-theme-' + name.replace(/ .*/,'').toLowerCase() + '-color'
         cell.parent().addClass(colorClass);
     });
 
