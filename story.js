@@ -71,7 +71,7 @@ $( document ).ready(function() {
         // console.log("DEBUG - Adds CategoryClasses Manually");
         addCategories();
 
-        console.log("%cSTORY SCRIPT - jeaoq / 0.3.0", "display: inline-block; color:#3434eb; background:white; padding: 10px 40px; margin: 0px 5px 5px 0px; border-radius: 15px 5px; border: solid 2px #3434eb; box-shadow: 5px 5px 0px 0px #3434eb; font-weight: 700; font-size: 1.2em;");
+        console.log("%cSTORY.JS - github/jeaoq/enstars-wiki - v0.3.0", "display: inline-block; color:#3434eb; background:white; padding: 10px 40px; margin: 0px 5px 5px 0px; border-radius: 15px 5px; border: solid 2px #3434eb; box-shadow: 5px 5px 0px 0px #3434eb; font-weight: 700; font-size: 1.2em;");
         console.log("Changelog: Included CategoryClasses in story.js / Fixed HiMERU & Gatekeeper from disappearing / Adjusted colors in fill mode to be more readable");
 
         $(document.querySelector('.storyNavBar')).addClass('storyTopNav');
