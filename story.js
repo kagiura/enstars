@@ -79,7 +79,7 @@ document.head.appendChild(cssStyle);*/
             </a>
         </th>
         <th class="story-bookmark">
-            <a href="#bookmark" onclick="bookmark();">
+            <a href="#bookmarkToolbar" onclick="bookmark();">
                 <span class="material-icons-round">bookmark_border</span>
             </a>
         </th>
