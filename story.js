@@ -1,4 +1,4 @@
-console.log("STORY SCRIPT - jeaoq / 0.1");
+
 
 
 var charArray = [
@@ -60,68 +60,67 @@ var charArray = [
 
 mw.loader.using('mediawiki.api', function() {
 
-var imported = document.createElement('script');
-imported.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js';
-document.head.appendChild(imported);
-var icons = document.createElement('link');
-icons.href = 'https://fonts.googleapis.com/icon?family=Material+Icons+Round';
-icons.rel = 'stylesheet';
-document.head.appendChild(icons);
 /*
 var cssStyle = document.createElement('link');
 cssStyle.href = 'https://jeaoq.github.io/enstars-wiki/story-options.css';
 cssStyle.rel = 'stylesheet';
 document.head.appendChild(cssStyle);*/
 
+// A $( document ).ready() block.
+    $( document ).ready(function() {
+        console.log("STORY SCRIPT - jeaoq / 0.1");
 
-$(document.querySelector('.storyNavBar')).addClass('storyTopNav');
-$('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child > tbody > tr > *:nth-child(2)').after(`
+        $(document.querySelector('.storyNavBar')).addClass('storyTopNav');
+        $('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child > tbody > tr > *:nth-child(2)').after(`
 
-<th class="story-show-options">
-    <a href="#options" onclick="showOptions();">
-        <span class="material-icons-round">text_fields</span>
-    </a>
-</th>
-<th class="story-bookmark">
-    <a href="#bookmark" onclick="bookmark();">
-        <span class="material-icons-round">bookmark_border</span>
-    </a>
-</th>
-`);
+        <th class="story-show-options">
+            <a href="#options" onclick="showOptions();">
+                <span class="material-icons-round">text_fields</span>
+            </a>
+        </th>
+        <th class="story-bookmark">
+            <a href="#bookmark" onclick="bookmark();">
+                <span class="material-icons-round">bookmark_border</span>
+            </a>
+        </th>
+        `);
 
-$('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child > tbody').append(`
-<tr class="story-options-wrapper">
-<th class="story-options storyOptions">
-<div class="story-format">
-    <a href="#resize" onclick="resizeImg();">
-        <span class="material-icons-round">question_answer</span>
-    </a>
-    <a href="#color" onclick="color();">
-        <span class="material-icons-round">palette</span>
-    </a>
-    <a href="#colorFill" onclick="colorFill();">
-        <span class="material-icons-round">format_color_fill</span>
-    </a>
-    <a href="#colorShadow" onclick="colorShadow();">
-        <span class="material-icons-round">copy_all</span>
-    </a>
-</div>
-<div class="story-resize-text">
-    <a>
-        <span class="material-icons-round">format_size</span>
-    </a>
-    <ul>
-        <li id="sf-14" onclick="storyOptionsFontSize('14');">14px</li>
-        <li id="sf-16" onclick="storyOptionsFontSize('16');">16px</li>
-        <li id="sf-18" onclick="storyOptionsFontSize('18');">18px</li>
-        <li id="sf-21" onclick="storyOptionsFontSize('21');">21px</li>
-    </ul>
-</div>
-</th>
-</tr>
-`);
-tagRenders();
-initialConfig();
+        $('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child > tbody').append(`
+        <tr class="story-options-wrapper">
+        <th class="story-options storyOptions">
+        <div class="story-format">
+            <a href="#resize" onclick="resizeImg();">
+                <span class="material-icons-round">question_answer</span>
+            </a>
+            <a href="#color" onclick="color();">
+                <span class="material-icons-round">palette</span>
+            </a>
+            <a href="#colorFill" onclick="colorFill();">
+                <span class="material-icons-round">format_color_fill</span>
+            </a>
+            <a href="#colorShadow" onclick="colorShadow();">
+                <span class="material-icons-round">copy_all</span>
+            </a>
+        </div>
+        <div class="story-resize-text">
+            <a>
+                <span class="material-icons-round">format_size</span>
+            </a>
+            <ul>
+                <li id="sf-14" onclick="storyOptionsFontSize('14');">14px</li>
+                <li id="sf-16" onclick="storyOptionsFontSize('16');">16px</li>
+                <li id="sf-18" onclick="storyOptionsFontSize('18');">18px</li>
+                <li id="sf-21" onclick="storyOptionsFontSize('21');">21px</li>
+            </ul>
+        </div>
+        </th>
+        </tr>
+        `);
+        tagRenders();
+        initialConfig();
+    });
+
+
 });
 
 function tagRenders() {
@@ -225,28 +224,28 @@ function initialConfig(){
         if(pref.options['userjs-format'] === undefined){
         	setPreference('format', false);
         }
-        if(pref.options['userjs-format']){
+        else if(pref.options['userjs-format']){
         	$('body').addClass('story-minimized');
         }
 
         if(pref.options['userjs-color'] === undefined){
         	setPreference('color', false);
         }
-        if(pref.options['userjs-color']){
+        else if(pref.options['userjs-color']){
         	$('body').addClass('story-color');
         }
 
         if(pref.options['userjs-colorFill'] === undefined){
         	setPreference('colorFill', false);
         }
-        if(pref.options['userjs-colorFill']){
+        else if(pref.options['userjs-colorFill']){
         	$('body').addClass('story-colorFill');
         }
 
         if(pref.options['userjs-colorShadow'] === undefined){
         	setPreference('colorShadow', false);
         }
-        if(pref.options['userjs-colorShadow']){
+        else if(pref.options['userjs-colorShadow']){
         	$('body').addClass('story-colorShadow');
         }
     } );
