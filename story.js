@@ -71,7 +71,7 @@ document.head.appendChild(cssStyle);*/
         console.log("STORY SCRIPT - jeaoq / 0.1");
 
         $(document.querySelector('.storyNavBar')).addClass('storyTopNav');
-        $('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child > tbody > tr > *:nth-child(2)').after(`
+        $(':not([class*="_-_Story_Index"]) .storyNavBar:first-child > tbody > tr > *:nth-child(2)').after(`
 
         <th class="story-show-options">
             <a href="#options" onclick="showOptions();">
@@ -85,7 +85,7 @@ document.head.appendChild(cssStyle);*/
         </th>
         `);
 
-        $('[class*="_-_Story"]:not([class*="_-_Story_Index"]) .storyNavBar:first-child > tbody').append(`
+        $(':not([class*="_-_Story_Index"]) .storyNavBar:first-child > tbody').append(`
         <tr class="story-options-wrapper">
         <th class="story-options storyOptions">
         <div class="story-format">
