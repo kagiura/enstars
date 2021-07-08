@@ -119,7 +119,8 @@ document.head.appendChild(cssStyle);*/
         tagRenders();
         initialConfig();
     });
-    const stickyElm = document.querySelector('.storyNavBar');
+
+    const stickyElm = document.querySelector('.storyTopNav');
     
     const observer = new IntersectionObserver( 
       ([e]) => e.target.classList.toggle('isSticky', e.intersectionRatio < 1),
