@@ -59,17 +59,17 @@ var charArray = [
 ];
 
 
-/*
+
 var cssStyle = document.createElement('link');
-cssStyle.href = 'https://jeaoq.github.io/enstars-wiki/story-options.css';
+cssStyle.href = 'https://jeaoq.github.io/enstars-wiki/story.css';
 cssStyle.rel = 'stylesheet';
-document.head.appendChild(cssStyle);*/
+document.head.appendChild(cssStyle);
 
 // A $( document ).ready() block.
 $( document ).ready(function() {
     mw.loader.using('mediawiki.api', function() {
 
-        console.log("STORY SCRIPT - jeaoq / 0.1");
+        console.log("%cSTORY SCRIPT - jeaoq / 0.2.0", "color:blue");
 
         $(document.querySelector('.storyNavBar')).addClass('storyTopNav');
         $(':not([class*="_-_Story_Index"]) .storyNavBar:first-child > tbody > tr > *:nth-child(2)').after(`
@@ -147,7 +147,7 @@ function tagRenders() {
                 name = chName;
             }
         });
-        console.log(filename + " -> " + name);
+        // console.log(filename + " -> " + name);
         var circleFileName = "https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/"+name+" Circle.png";
         var squareFileName = "https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/"+name.substr(0, name.indexOf(" "))+" ES.png";
         $(this)
@@ -218,8 +218,8 @@ function setPreference(param, val){
         },
         api = new mw.Api();
     api.postWithToken( 'csrf', params ).done( function ( data ) {
-        console.log(param + ' ' + val);
-        console.log(data);
+        // console.log(param + ' ' + val);
+        // console.log(data);
     } );
 }
 
@@ -233,7 +233,7 @@ function initialConfig(){
         api = new mw.Api();
     api.get( params ).done( function ( data ) {
     	var pref = data.query.userinfo;
-        console.log( pref );
+        // console.log( pref );
         if(pref.options['userjs-fontSize'] === "undefined"){
         	setPreference('fontSize', '16');
         }
@@ -281,7 +281,7 @@ function getPreference(param){
 
     api.get( params ).done( function ( data ) {
     	var pref = data.query.userinfo.options['userjs-'+param];
-        console.log( pref );
+        // console.log( pref );
     } );
 }
 

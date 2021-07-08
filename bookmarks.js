@@ -6,7 +6,7 @@ stylesheet.setAttribute('href', 'https://jeaoq.github.io/enstars-wiki/bookmarks-
 document.head.appendChild(stylesheet);
 
 const username = mw.config.get("wgUserName");
-console.log("Logged in as "+username);
+// console.log("Logged in as "+username);
 if(username !== null){
 	mw.loader.using('mediawiki.api', function() {
 		checkUserBookmarks();
@@ -15,7 +15,7 @@ if(username !== null){
 }
 
 function checkUserBookmarks() {
-	console.log("checking BM");
+	// console.log("checking BM");
 	new mw.Api().get( {
 	    action: "query",
 	    titles: [ 'User:' + username + '/Bookmarks'],
@@ -24,8 +24,8 @@ function checkUserBookmarks() {
 	        if ( this.missing !== "" ) {
 	        	
 	        } else {
-	        	console.log("Creating BM");
-	          new mw.Api().create( 'User:' + username + '/Bookmarks',
+	        	// console.log("Creating BM");
+	          	new mw.Api().create( 'User:' + username + '/Bookmarks',
 				    { summary: 'Auto-create user\'s bookmarks page' },
 				    ''
 				);
@@ -37,7 +37,7 @@ function checkUserBookmarks() {
 
 
 function bookmarkInitial() {
-	console.log('bookmarkInitial');
+	// console.log('bookmarkInitial');
 	mw.loader.using('mediawiki.api', function() {
 		const params = {
 			action: 'parse',
@@ -48,11 +48,11 @@ function bookmarkInitial() {
 		const api = new mw.Api();
 		
 		api.get(params).done(function (data) {
-			console.log(data.parse.wikitext['*']);
+			// console.log(data.parse.wikitext['*']);
 			var str = data.parse.wikitext['*'];
 			var bookmarks = str.substring(str.indexOf("* ") + 2).split('\n* ');
-			console.log("bookmarks:");
-			console.log(bookmarks);
+			// console.log("bookmarks:");
+			// console.log(bookmarks);
 			//    /\*\s*\n/g
 			var latestBookmarks;
 			if(bookmarks.length > 1){
@@ -61,7 +61,7 @@ function bookmarkInitial() {
 				latestBookmarks = "Start bookmarking pages by clicking the \"Bookmark this page\" button!";
 			}
 			
-			console.log(latestBookmarks);
+			// console.log(latestBookmarks);
 			$("#rail-bookmarks").remove();
 			$("#WikiaRail").append('<section id="rail-bookmarks" class="rail-module bookmarks"><h2 class="rail-module__header has-icon">Bookmarks</h2><ul class="rail-module__list is-condensed-list"><li><a href="#bookmark" onclick="bookmark();">Bookmark this page</a></li>' + latestBookmarks + '</ul><a onclick="expandBookmarks();">Expand</div></section>');
 			if (bookmarks.indexOf('[[' + mw.config.get("wgPageName") + ']]') > -1){
@@ -83,7 +83,7 @@ function bookmarkInitial() {
 
 
 function bookmark(){
-	console.log('bookmark');
+	// console.log('bookmark');
 	mw.loader.using('mediawiki.api', function() {
 		toggleBM('[[' + mw.config.get("wgPageName") + ']]')
 	});
@@ -91,7 +91,7 @@ function bookmark(){
 }
 
 function toggleBM (page){
-	console.log('toggleBM');
+	// console.log('toggleBM');
 	mw.loader.using('mediawiki.api', function() {
 		new mw.Api()
 		    .edit( 'User:'+ username + '/Bookmarks', function ( revision ) {
@@ -102,11 +102,11 @@ function toggleBM (page){
 			    } else {
 			        bookmarks.splice(bookmarks.indexOf(page), 1);
 			    }
-		    	console.log(bookmarks);
+		    	// console.log(bookmarks);
 		        return '* ' + bookmarks.join('\n* ');
 		    } )
 		    .then( function () {
-		        console.log( 'Saved!' );
+		        // console.log( 'Saved!' );
 		        bookmarkInitial();
 		    } );
 	});
@@ -122,12 +122,12 @@ function toggleBM (page){
 			minor: !0
 			};
 		}).then(function () {
-			console.log('Saved!');
+			// console.log('Saved!');
 		});
 	});
 }
 function removeBookmark(page){
-	console.log('removeBookmark');
+	// console.log('removeBookmark');
 	if (confirm("Remove " + page + "?")) {
 		toggleBM('[[' + page + ']]');
 	}
