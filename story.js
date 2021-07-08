@@ -58,7 +58,6 @@ var charArray = [
     "Gatekeeper"
 ];
 
-mw.loader.using('mediawiki.api', function() {
 
 /*
 var cssStyle = document.createElement('link');
@@ -67,7 +66,9 @@ cssStyle.rel = 'stylesheet';
 document.head.appendChild(cssStyle);*/
 
 // A $( document ).ready() block.
-    $( document ).ready(function() {
+$( document ).ready(function() {
+    mw.loader.using('mediawiki.api', function() {
+
         console.log("STORY SCRIPT - jeaoq / 0.1");
 
         $(document.querySelector('.storyNavBar')).addClass('storyTopNav');
@@ -118,8 +119,12 @@ document.head.appendChild(cssStyle);*/
         `);
         tagRenders();
         initialConfig();
-    });
+        stickyInitial();
 
+    });
+});
+
+function stickyInitial(){
     const stickyElm = document.querySelector('.storyTopNav');
     
     const observer = new IntersectionObserver( 
@@ -128,9 +133,9 @@ document.head.appendChild(cssStyle);*/
     );
     
     observer.observe(stickyElm);
+}
 
 
-});
 
 function tagRenders() {
     const renders = $('img[data-image-name*="Render"]');
