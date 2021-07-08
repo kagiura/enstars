@@ -72,6 +72,7 @@ $( document ).ready(function() {
         console.log("%cSTORY SCRIPT - jeaoq / 0.2.0", "color:blue");
 
         $(document.querySelector('.storyNavBar')).addClass('storyTopNav');
+        $(document.querySelector('.storyNavBar')).addClass('storyOptions');
         $(':not([class*="_-_Story_Index"]) .storyNavBar:first-child > tbody > tr > *:nth-child(2)').after(`
 
         <th class="story-show-options">
