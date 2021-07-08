@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
 
-
 :root   { --theme-color-character-color: inherit; }
 :root   { --theme-color-character-color: #FCF000; }
 :root .pi-theme-eichi-color  { --theme-color-character-color: #FFF3B7; }
@@ -61,8 +60,8 @@
 
 
 
-:root   { --theme-color-character-color--rgb: inherit; }
 :root   { --theme-color-character-color--rgb: 252, 240, 0 }
+:root   { --theme-color-character-color--rgb: inherit; }
 :root .pi-theme-eichi-color  { --theme-color-character-color--rgb: 255, 243, 183 }
 :root .pi-theme-wataru-color { --theme-color-character-color--rgb: 160, 215, 226 }
 :root .pi-theme-tori-color   { --theme-color-character-color--rgb: 244, 178, 178 }
@@ -121,62 +120,64 @@
 
 
 
-:root   { --theme-color-character-strong-color: inherit; }
 :root   { --theme-color-character-strong-color: #1d3dc0; }
-:root .pi-theme-eichi-color  { --theme-color-character-strong-color: #ffeb85; }
-:root .pi-theme-wataru-color { --theme-color-character-strong-color: #3abdd8; }
-:root .pi-theme-tori-color   { --theme-color-character-strong-color: #f2839d; }
+:root   { --theme-color-character-strong-color: inherit; }
+:root .pi-theme-eichi-color  { --theme-color-character-strong-color: #7c7448; }
+:root .pi-theme-wataru-color { --theme-color-character-strong-color: #0e96b2; }
+:root .pi-theme-tori-color   { --theme-color-character-strong-color: #d63e62; }
 :root .pi-theme-yuzuru-color { --theme-color-character-strong-color: #3E62AC; }
 :root .pi-theme-hokuto-color { --theme-color-character-strong-color: #0067B6; }
-:root .pi-theme-subaru-color { --theme-color-character-strong-color: #F4981C; }
-:root .pi-theme-makoto-color { --theme-color-character-strong-color: #65AB31; }
+:root .pi-theme-subaru-color { --theme-color-character-strong-color: #de7300; }
+:root .pi-theme-makoto-color { --theme-color-character-strong-color: #4a8f17; }
 :root .pi-theme-mao-color    { --theme-color-character-strong-color: #951E56; }
-:root .pi-theme-chiaki-color { --theme-color-character-strong-color: #E70032; }
+:root .pi-theme-chiaki-color { --theme-color-character-strong-color: #d10330; }
 :root .pi-theme-kanata-color { --theme-color-character-strong-color: #008DB6; }
 :root .pi-theme-tetora-color { --theme-color-character-strong-color: #312834; }
 :root .pi-theme-midori-color { --theme-color-character-strong-color: #005340; }
-:root .pi-theme-shinobu-color{ --theme-color-character-strong-color: #FEDC00; }
+:root .pi-theme-shinobu-color{ --theme-color-character-strong-color: #886d12; }
 :root .pi-theme-hiiro-color  { --theme-color-character-strong-color: #BA2634; }
-:root .pi-theme-aira-color   { --theme-color-character-strong-color: #f5cc65; }
+:root .pi-theme-aira-color   { --theme-color-character-strong-color: #ba973f; }
 :root .pi-theme-mayoi-color  { --theme-color-character-strong-color: #522F5F; }
-:root .pi-theme-tatsumi-color{ --theme-color-character-strong-color: #5bb896; }
+:root .pi-theme-tatsumi-color{ --theme-color-character-strong-color: #0f8e60; }
 :root .pi-theme-nagisa-color { --theme-color-character-strong-color: #A83638; }
-:root .pi-theme-hiyori-color { --theme-color-character-strong-color: #B7D201; }
+:root .pi-theme-hiyori-color { --theme-color-character-strong-color: #818f21; }
 :root .pi-theme-ibara-color  { --theme-color-character-strong-color: #74325D; }
 :root .pi-theme-jun-color    { --theme-color-character-strong-color: #1A2F61; }
-:root .pi-theme-shu-color    { --theme-color-character-strong-color: #e36d75; }
+:root .pi-theme-shu-color    { --theme-color-character-strong-color: #a06266; }
 :root .pi-theme-mika-color   { --theme-color-character-strong-color: #006A6D; }
-:root .pi-theme-hinata-color { --theme-color-character-strong-color: #EB6FA2; }
-:root .pi-theme-yuta-color   { --theme-color-character-strong-color: #00A1E8; }
-:root .pi-theme-rinne-color  { --theme-color-character-strong-color: #BA2636; }
-:root .pi-theme-himeru-color { --theme-color-character-strong-color: #4faef0; }
-:root .pi-theme-kohaku-color { --theme-color-character-strong-color: #eb6b89; }
+:root .pi-theme-hinata-color { --theme-color-character-strong-color: #e4156a; }
+:root .pi-theme-yuta-color   { --theme-color-character-strong-color: #008bc8; }
+:root .pi-theme-rinne-color  { --theme-color-character-strong-color: #8c1421; }
+:root .pi-theme-himeru-color { --theme-color-character-strong-color: #33556d; }
+:root .pi-theme-kohaku-color { --theme-color-character-strong-color: #8f4355; }
 :root .pi-theme-niki-color   { --theme-color-character-strong-color: #4179a9; }
-:root .pi-theme-rei-color    { --theme-color-character-strong-color: #46266E; }
-:root .pi-theme-kaoru-color  { --theme-color-character-strong-color: #f4be2a; }
-:root .pi-theme-koga-color   { --theme-color-character-strong-color: #6b6666; }
+:root .pi-theme-rei-color    { --theme-color-character-strong-color: #321e4b; }
+:root .pi-theme-kaoru-color  { --theme-color-character-strong-color: #605a42; }
+:root .pi-theme-koga-color   { --theme-color-character-strong-color: #3d3b3b; }
 :root .pi-theme-adonis-color { --theme-color-character-strong-color: #643475; }
-:root .pi-theme-tomoya-color { --theme-color-character-strong-color: #ebc45e; }
-:root .pi-theme-nazuna-color { --theme-color-character-strong-color: #ffe100; }
-:root .pi-theme-mitsuru-color{ --theme-color-character-strong-color: #ED6D34; }
-:root .pi-theme-hajime-color { --theme-color-character-strong-color: #bf95df; }
+:root .pi-theme-tomoya-color { --theme-color-character-strong-color: #99844e; }
+:root .pi-theme-nazuna-color { --theme-color-character-strong-color: #867f1d; }
+:root .pi-theme-mitsuru-color{ --theme-color-character-strong-color: #e05315; }
+:root .pi-theme-hajime-color { --theme-color-character-strong-color: #812cc2; }
 :root .pi-theme-keito-color  { --theme-color-character-strong-color: #316645; }
 :root .pi-theme-kuro-color   { --theme-color-character-strong-color: #E83929; }
-:root .pi-theme-souma-color  { --theme-color-character-strong-color: #5554A2; }
+:root .pi-theme-souma-color  { --theme-color-character-strong-color: #3a3a77; }
 :root .pi-theme-tsukasa-color{ --theme-color-character-strong-color: #952242; }
-:root .pi-theme-leo-color    { --theme-color-character-strong-color: #ED6D52; }
+:root .pi-theme-leo-color    { --theme-color-character-strong-color: #e4583a; }
 :root .pi-theme-izumi-color  { --theme-color-character-strong-color: #4e86ac; }
 :root .pi-theme-ritsu-color  { --theme-color-character-strong-color: #001E44; }
-:root .pi-theme-arashi-color { --theme-color-character-strong-color: #e0cc35; }
+:root .pi-theme-arashi-color { --theme-color-character-strong-color: #7c7439; }
 :root .pi-theme-natsume-color{ --theme-color-character-strong-color: #D60132; }
 :root .pi-theme-tsumugi-color{ --theme-color-character-strong-color: #00608D; }
-:root .pi-theme-sora-color   { --theme-color-character-strong-color: #ffef19; }
+:root .pi-theme-sora-color   { --theme-color-character-strong-color: #8aa511; }
 :root .pi-theme-madara-color { --theme-color-character-strong-color: #622D18; }
-:root .pi-theme-jin-color    { --theme-color-character-strong-color: #8DA0B6; }
-:root .pi-theme-akiomi-color { --theme-color-character-strong-color: #915C8B; }
-:root .pi-theme-anzu-color   { --theme-color-character-strong-color: #ea63a6; }
+:root .pi-theme-jin-color    { --theme-color-character-strong-color: #324b68; }
+:root .pi-theme-akiomi-color { --theme-color-character-strong-color: #70406a; }
+:root .pi-theme-anzu-color   { --theme-color-character-strong-color: #af3b74; }
 :root .pi-theme-seiya-color  { --theme-color-character-strong-color: #292b3c; }
 :root .pi-theme-gatekeeper-color { --theme-color-character-strong-color: #5f2222; }
+
+
 
 
 
