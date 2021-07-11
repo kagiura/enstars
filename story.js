@@ -1,6 +1,8 @@
 
-
-
+var narrowLimit = 812;
+var titleBarPos = $('.card-pair-wrapper').offset().top + $('.card-pair-wrapper').outerHeight() - 91;
+var cardStickyHeight = $('.card-pair-stick').outerHeight() + 20;
+var playerName = 'Anzu';
 var charArray = [
     "Kohaku Oukawa",
     "Aira Shiratori",
@@ -59,11 +61,12 @@ var charArray = [
 ];
 
 
-
+/*
 var cssStyle = document.createElement('link');
 cssStyle.href = 'https://jeaoq.github.io/enstars-wiki/story.css';
 cssStyle.rel = 'stylesheet';
 document.head.appendChild(cssStyle);
+*/
 
 // A $( document ).ready() block.
 $( document ).ready(function() {
@@ -71,8 +74,14 @@ $( document ).ready(function() {
         // console.log("DEBUG - Adds CategoryClasses Manually");
         addCategories();
 
-        console.log("%cSTORY.JS - github/jeaoq/enstars-wiki - v0.3.0", "display: inline-block; color:#3434eb; background:white; padding: 10px 40px; margin: 0px 5px 5px 0px; border-radius: 15px 5px; border: solid 2px #3434eb; box-shadow: 5px 5px 0px 0px #3434eb; font-weight: 700; font-size: 1.2em;");
-        console.log("Changelog: Included CategoryClasses in story.js / Fixed HiMERU & Gatekeeper from disappearing / Adjusted colors in fill mode to be more readable");
+        console.log("%cSTORY.JS v0.4.0 — github/jeaoq/enstars-wiki", "display: inline-block; color:#3434eb; background:white; padding: 10px 40px; margin: 0px 5px 5px 0px; border-radius: 15px 5px; border: solid 2px #3434eb; box-shadow: 5px 5px 0px 0px #3434eb; font-weight: 700; font-size: 1.2em;");
+        console.log(`Changelog: 
+        0.3.0   Included CategoryClasses in story.js
+                Fixed HiMERU & Gatekeeper from disappearing
+                Adjusted colors in fill mode to be more readable
+        0.4.0   Includes js required for updated card pages [BETA]
+                Added player name customization option [BETA]
+                Fixed unreadable InLinks in stories`);
 
         $(document.querySelector('.storyNavBar')).addClass('storyTopNav');
         $(document.querySelector('.storyNavBar')).addClass('storyOptions');
@@ -118,16 +127,103 @@ $( document ).ready(function() {
                 <li id="sf-21" onclick="storyOptionsFontSize('21');">21px</li>
             </ul>
         </div>
+        <div class="story-name">
+            <a>
+                <span class="material-icons-round">badge</span>
+            </a>
+            <input type="text" id="playerName" name="playerName">
+            
+        </div>
         </th>
         </tr>
         `);
-        tagRenders();
+        $('body[class*="_-_Story"]:not([class*="_-_Story_Index"]) .article-table:not(.storyNavBar)').addClass('story-table');
         initialConfig();
         stickyInitial();
-
+        updatePageWidth();
+        $( "#playerName" ).change(function() {
+            // console.log('pNC');
+            adjustWidthOfInput();
+            playerName = $('#playerName').val();
+            setPreference('playerName', playerName);
+        });
+        $('#playerName').focus(function() {
+            $('body').addClass('writing');
+        }).
+        blur(function() {
+            $('body').removeClass('writing');
+        });
     });
 });
 
+
+$("*").on('transitionend', function() {
+    updatePageWidth();
+});
+
+$(window).resize(function(){
+    updatePageWidth();
+});
+
+$('*').click(function(){
+    updatePageWidth();
+});
+
+$('.card-pair-wrapper').click(function(){
+    $('.card-pair-wrapper').toggleClass('bloomed');
+});
+
+$(window).scroll(function(){
+    cardSpaceDown();
+});
+
+function cardSpaceDown() {
+    if( $('body').hasClass('isPageNarrow') ){
+        if($(window).scrollTop() > ( titleBarPos )){
+            $(".isPageNarrow [data-item-name=\"card-images\"]").css("height", cardStickyHeight);
+            $(".card-infobox-wrapper").addClass("isScrolledPast");
+        }
+        else{
+            //
+            $(".card-infobox-wrapper").removeClass("isScrolledPast");
+            $(".isPageNarrow [data-item-name=\"card-images\"]").css("height", '');
+        }
+    }
+    else {
+        $("[data-item-name=\"card-images\"]").css("height", '');
+        if($(window).scrollTop() > ( $('.wds-is-current [data-item-name|="card-stats"]').offset().top - 91 - $('.wds-is-current [data-item-name="title_name"]').outerHeight()  )){
+            $(".card-infobox-wrapper").addClass("isScrolledPast");
+        }
+        else{
+            //
+            $(".card-infobox-wrapper").removeClass("isScrolledPast");
+        }
+    }
+    // console.log($('[data-item-name="title_name"]').offset().top);
+    //console.log($(window).scrollTop());
+}
+
+function updatePageWidth() {
+    var currentContentWidth = $('.resizable-container').width();
+    if( !$('aside.page__right-rail').hasClass('is-rail-hidden') ) {
+        currentContentWidth = currentContentWidth - 336;
+    }
+    document.documentElement.style.setProperty('--content-width', currentContentWidth + 'px');
+    
+    if(currentContentWidth < narrowLimit){
+        $('body').addClass("isPageNarrow")
+    } else {
+        $('body').removeClass("isPageNarrow")
+    }
+    
+    if( !$('.card-infobox-wrapper').hasClass('isScrolledPast') ){
+        titleBarPos = $('.wds-is-current .card-pair-wrapper').offset().top + $('.wds-is-current .card-pair-wrapper').outerHeight() - 91;
+        cardStickyHeight = $('.wds-is-current .card-pair-stick').outerHeight() + 20;
+    }
+    
+    cardSpaceDown();
+    
+}
 
 function addCategories(){
     (function($, mw) {
@@ -164,18 +260,29 @@ function stickyInitial(){
 
 
 function tagRenders() {
-    const renders = $('[class*="_-_Story"]:not([class*="_-_Story_Index"]) img[data-image-name*="Render"]');
+    adjustWidthOfInput();
+    const renders = $('.story-table img[data-image-name*="Render"]');
     renders.each(function() {
         var filename = $(this).attr('alt');
         var name = "";
-        charArray.forEach(function(chName) {
-            if (filename.includes(chName)) {
-                name = chName;
-            }
-        });
-        // console.log(filename + " -> " + name);
-        var circleFileName = "https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/"+name+" Circle.png";
-        var squareFileName = "https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/"+name.replace(/ .*/,'')+" ES.png";
+        var firstName = "";
+        var squareFileName = "";
+        if(filename.charAt(0) === "!"){
+            // console.log(filename.split("!"));
+            name = filename.split("!")[1];
+            squareFileName = 'https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/' + filename.split("!")[2];
+            firstName = filename.split("!")[3];
+        } else {
+            charArray.forEach(function(chName) {
+                if (filename.includes(chName)) {
+                    name = chName;
+                    firstName = chName.replace(/ .*/,'');
+                }
+            });
+            squareFileName = "https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/"+firstName+" ES.png";
+        
+        }
+        // console.log(filename + " -> " + name + " / " + firstName);
         $(this)
         .wrap("<div class='character-render-full'></div>")
         .parent('.character-render-full')
@@ -186,18 +293,22 @@ function tagRenders() {
         cri.setAttribute('alt', name);
         cri.innerHTML = '<img src="'+squareFileName+'">';
         $(cri).insertBefore( $(this).parent() );
-        var cell = $(this).parent().parent().parent().parent();
+        var cell = $(this).closest('td');
         var attr = cell.attr('alt');
+        // console.log(attr);
         if(typeof attr !== 'undefined' && attr !== false){
             cell.attr('alt', attr + ' & ' + name);
         } else {
             cell.attr('alt', name);
         }
         
-        var colorClass = 'pi-theme-' + name.replace(/ .*/,'').toLowerCase() + '-color'
+        var colorClass = 'pi-theme-' + firstName.toLowerCase() + '-color'
         cell.parent().addClass(colorClass);
     });
-
+    
+    $('.story-table p').each(function() {
+        $(this).html( $(this).html().replace('Anzu', playerName ) );
+    });
 }
 
 
@@ -234,6 +345,24 @@ function storyOptionsFontSize(val) {
 }
 
 
+//var inputEl = document.getElementById("playerName");
+
+function getWidthOfInput() {
+    var tmp = document.createElement("span");
+    tmp.className = "playerNameTemp";
+    tmp.innerHTML = $('#playerName').val().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    document.body.appendChild(tmp);
+    var theWidth = $('.playerNameTemp').outerWidth();
+    document.body.removeChild(tmp);
+    return theWidth;
+}
+
+function adjustWidthOfInput() {
+    // inputEl.style.width = getWidthOfInput() + "px";
+    $('#playerName').width( getWidthOfInput() );
+}
+
+
 
 function setPreference(param, val){
     var params = {
@@ -250,6 +379,7 @@ function setPreference(param, val){
 }
 
 function initialConfig(){
+    document.documentElement.style.setProperty('--content-width', $('#content').width() + 'px');
     var params = {
             action: 'query',
             meta: 'userinfo',
@@ -292,6 +422,14 @@ function initialConfig(){
         else if(pref.options['userjs-colorShadow']){
         	$('body').addClass('story-colorShadow');
         }
+
+        if(pref.options['userjs-playerName'] === "undefined"){
+        	setPreference('playerName', 'Anzu');
+        } else {
+            playerName = pref.options['userjs-playerName'];
+        }
+        $('#playerName').val(playerName);
+        tagRenders();
     } );
 }
 
@@ -303,12 +441,13 @@ function getPreference(param){
             uiprop: 'options',
             format: 'json'
         },
-        api = new mw.Api();
+        api = new mw.Api(), pref;
 
     api.get( params ).done( function ( data ) {
-    	var pref = data.query.userinfo.options['userjs-'+param];
+    	pref = data.query.userinfo.options['userjs-'+param];
         // console.log( pref );
     } );
+    
 }
 
 
