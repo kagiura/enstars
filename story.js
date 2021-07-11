@@ -61,14 +61,13 @@ var charArray = [
 ];
 
 
-/*
+
 var cssStyle = document.createElement('link');
 cssStyle.href = 'https://jeaoq.github.io/enstars-wiki/story.css';
 cssStyle.rel = 'stylesheet';
 document.head.appendChild(cssStyle);
-*/
 
-// A $( document ).ready() block.
+
 $( document ).ready(function() {
     mw.loader.using('mediawiki.api', function() {
         // console.log("DEBUG - Adds CategoryClasses Manually");
