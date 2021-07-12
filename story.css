@@ -459,21 +459,19 @@ body:not(.story-minimized) .article-table tr td::after {
 }
 
 
-
 .story-table [style="color:white"],
-.story-table [style="color:#FFFFFF"],
-.story-table [style="color:#FFF"]
+.story-table [style="color: #FFFFFF"],
+.story-table [style="color: #FFF"]
 {
     color: var(--theme-link-color) !important;
 }
 
 .story-table [style="color:white"]:hover,
-.story-table [style="color:#FFFFFF"]:hover,
-.story-table [style="color:#FFF"]:hover,
+.story-table [style="color: #FFFFFF"]:hover,
+.story-table [style="color: #FFF"]:hover
 {
     color: var(--theme-link-color-hover) !important;
 }
-
 
 storyNavBar-wrapper{
     overflow:visible;
