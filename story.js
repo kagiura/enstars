@@ -61,7 +61,6 @@ var charArray = [
 ];
 
 
-
 var cssStyle = document.createElement('link');
 cssStyle.href = 'https://jeaoq.github.io/enstars-wiki/story.css';
 cssStyle.rel = 'stylesheet';
@@ -73,14 +72,15 @@ $( document ).ready(function() {
         // console.log("DEBUG - Adds CategoryClasses Manually");
         addCategories();
 
-        console.log("%cSTORY.JS v0.4.0 — github/jeaoq/enstars-wiki", "display: inline-block; color:#3434eb; background:white; padding: 10px 40px; margin: 0px 5px 5px 0px; border-radius: 15px 5px; border: solid 2px #3434eb; box-shadow: 5px 5px 0px 0px #3434eb; font-weight: 700; font-size: 1.2em;");
+        console.log("%cSTORY.JS v0.4.1 — github/jeaoq/enstars-wiki", "display: inline-block; color:#3434eb; background:white; padding: 10px 40px; margin: 0px 5px 5px 0px; border-radius: 15px 5px; border: solid 2px #3434eb; box-shadow: 5px 5px 0px 0px #3434eb; font-weight: 700; font-size: 1.2em;");
         console.log(`Changelog: 
         0.3.0   Included CategoryClasses in story.js
                 Fixed HiMERU & Gatekeeper from disappearing
                 Adjusted colors in fill mode to be more readable
         0.4.0   Includes js required for updated card pages [BETA]
                 Added player name customization option [BETA]
-                Fixed unreadable InLinks in stories`);
+                Fixed unreadable InLinks in stories
+        0.4.1   Removes undefined-san`);
 
         $(document.querySelector('.storyNavBar')).addClass('storyTopNav');
         $(document.querySelector('.storyNavBar')).addClass('storyOptions');
@@ -424,6 +424,7 @@ function initialConfig(){
 
         if(pref.options['userjs-playerName'] === "undefined"){
         	setPreference('playerName', 'Anzu');
+            playerName = Anzu;
         } else {
             playerName = pref.options['userjs-playerName'];
         }
