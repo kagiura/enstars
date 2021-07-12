@@ -61,12 +61,14 @@ var charArray = [
 ];
 
 
+
 var cssStyle = document.createElement('link');
 cssStyle.href = 'https://jeaoq.github.io/enstars-wiki/story.css';
 cssStyle.rel = 'stylesheet';
 document.head.appendChild(cssStyle);
 
 
+// A $( document ).ready() block.
 $( document ).ready(function() {
     mw.loader.using('mediawiki.api', function() {
         // console.log("DEBUG - Adds CategoryClasses Manually");
@@ -80,7 +82,12 @@ $( document ).ready(function() {
         0.4.0   Includes js required for updated card pages [BETA]
                 Added player name customization option [BETA]
                 Fixed unreadable InLinks in stories
-        0.4.1   Removes undefined-san`);
+        0.4.1   Fixed lag when running script
+                Added ability to disable Natsume's font
+                Added dyslexic friendly font option [BETA]`);
+        console.log(`Credits: 
+        -       https://github.com/yaycupcake/enstars-wiki-js 
+                (Render detection, Character List, and a lot more! by @mizuhanome_tl)`);
 
         $(document.querySelector('.storyNavBar')).addClass('storyTopNav');
         $(document.querySelector('.storyNavBar')).addClass('storyOptions');
@@ -133,6 +140,13 @@ $( document ).ready(function() {
             <input type="text" id="playerName" name="playerName">
             
         </div>
+        <div class="story-natsume">
+            <a onclick="notsume();">
+                <img src="https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/Natsume ES Head.png" alt="Disable Natsume Spell Font"></img>
+            </a>
+            
+            
+        </div>
         </th>
         </tr>
         `);
@@ -156,7 +170,7 @@ $( document ).ready(function() {
 });
 
 
-$("*").on('transitionend', function() {
+$(".page__right-rail").on('transitionend', function() {
     updatePageWidth();
 });
 
@@ -164,9 +178,6 @@ $(window).resize(function(){
     updatePageWidth();
 });
 
-$('*').click(function(){
-    updatePageWidth();
-});
 
 $('.card-pair-wrapper').click(function(){
     $('.card-pair-wrapper').toggleClass('bloomed');
@@ -335,6 +346,16 @@ function colorShadow(){
     setPreference('colorShadow', $('body').hasClass('story-colorShadow'));
 }
 
+function notsume(){
+    $('body').toggleClass('notsume');
+    setPreference('notsume', $('body').hasClass('notsume'));
+}
+
+function opendyslexic(){
+    $('body').toggleClass('opendyslexic');
+    setPreference('opendyslexic', $('body').hasClass('opendyslexic'));
+}
+
 function storyOptionsFontSize(val) {
 	console.log('Font size = ' + val);
     document.documentElement.style.setProperty('--story-font-size', val + 'px');
@@ -422,13 +443,28 @@ function initialConfig(){
         	$('body').addClass('story-colorShadow');
         }
 
+        if(pref.options['userjs-notsume'] === "undefined"){
+        	setPreference('notsume', false);
+        }
+        else if(pref.options['userjs-notsume']){
+        	$('body').addClass('notsume');
+        }
+
+        if(pref.options['userjs-opendyslexic'] === "undefined"){
+        	setPreference('opendyslexic', false);
+        }
+        else if(pref.options['userjs-opendyslexic']){
+        	$('body').addClass('opendyslexic');
+        }
+
         if(pref.options['userjs-playerName'] === "undefined"){
         	setPreference('playerName', 'Anzu');
             playerName = Anzu;
+            $('#playerName').val( 'Anzu' );
         } else {
             playerName = pref.options['userjs-playerName'];
+            $('#playerName').val( pref.options['userjs-playerName'] );
         }
-        $('#playerName').val(playerName);
         tagRenders();
     } );
 }

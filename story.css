@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
 
+@font-face {
+ font-family:OpenDyslexic;
+ src:url(https://static.wikia.nocookie.net/ensemble-stars/images/f/f1/OpenDyslexic-Regular.woff2/revision/latest?cb=20210712090649&format=original) format('woff2')
+}
+@font-face {
+ font-family:OpenDyslexic;
+ src:url(https://static.wikia.nocookie.net/ensemble-stars/images/5/56/OpenDyslexic-Bold.woff2/revision/latest?cb=20210712091943&format=original) format('woff2');
+     font-weight: bold;
+}
+
+
+
+/*
+
+:root * {
+    font-family: 'Comic Sans MS' !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important; 
+}
+
+*/
 :root   { --theme-color-character-color: inherit; }
 :root   { --theme-color-character-color: #FCF000; }
 :root .pi-theme-eichi-color  { --theme-color-character-color: #FFF3B7; }
@@ -177,8 +200,6 @@
 :root .pi-theme-seiya-color  { --theme-color-character-strong-color: #292b3c; }
 :root .pi-theme-gatekeeper-color { --theme-color-character-strong-color: #5f2222; }
 
-
-
 .story-table * {
     font-size: var(--story-font-size);
     transition: font 0.25s ease;
@@ -342,7 +363,7 @@ body:not(.story-minimized) .article-table tr td::after {
 
 
 
-.story-minimized .story-table tr td p {
+.story-minimized .story-table tr td:not([colspan="2"]) p {
     background:
         linear-gradient(var(--theme-infobox-main-light-color), var(--theme-infobox-main-light-color)),
         linear-gradient(var(--theme-page-background-color), var(--theme-page-background-color));
@@ -374,7 +395,7 @@ body:not(.story-minimized) .article-table tr td::after {
 }
 
 
-.story-minimized.story-color .story-table tr td p {
+.story-minimized.story-color .story-table tr td:not([colspan="2"]) p {
     background:
         linear-gradient(rgba(var(--theme-color-character-color--rgb), 0.075), rgba(var(--theme-color-character-color--rgb), 0.075)),
         linear-gradient(var(--theme-page-background-color), var(--theme-page-background-color));
@@ -385,11 +406,11 @@ body:not(.story-minimized) .article-table tr td::after {
     filter: drop-shadow(0px 0px 10px rgba(var(--theme-color-character-color--rgb), 0.2))
 }
 
-.story-minimized.story-color.story-colorShadow .story-table tr td p {
+.story-minimized.story-color.story-colorShadow .story-table tr td:not([colspan="2"]) p {
     background: var(--theme-page-background-color);
 }
 
-.story-minimized.story-color.story-colorFill .story-table tr td p {
+.story-minimized.story-color.story-colorFill .story-table tr td:not([colspan="2"]) p {
     background: var(--theme-color-character-strong-color); color: #f2f2f2;
 }
 
@@ -402,15 +423,15 @@ body:not(.story-minimized) .article-table tr td::after {
 
 
 
-.story-minimized .story-table tr td p:hover {
+.story-minimized .story-table tr td:not([colspan="2"]) p:hover {
     transform: translateX(2px);
 }
 
-.story-minimized .story-table tr td p:first-child {
+.story-minimized .story-table tr td:not([colspan="2"]) p:first-child {
     margin-top: 16px;
 }
 
-.story-minimized .story-table tr td p:last-child {
+.story-minimized .story-table tr td:not([colspan="2"]) p:last-child {
     border-radius: 2px 10px 10px;
 }
 
@@ -857,4 +878,49 @@ storyNavBar-wrapper{
     top: 0px;
     left: 0px;
     z-index: 9999999;
+}
+
+.story-natsume img {
+    height: 20px;
+    transition: transform 0.2s ease,
+        filter 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.notsume .story-natsume img {
+    transform: rotate(180deg);
+    filter: grayscale(100%);
+    
+    opacity: 0.4;
+}
+
+
+.natsume-font{
+    font-family: 'Almendra', serif;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    font-style: italic;
+    transition: font-size 0s;
+}
+
+.notsume .natsume-font{
+    font-family: 'Domine', serif;
+    font-size: 1em;
+    letter-spacing: 0px;
+    /*font-style: italic;*/
+}
+
+
+
+.opendyslexic .story-table * {
+    font-family: 'OpenDyslexic' !important;
+}
+
+.opendyslexic .story-table .natsume-font {
+    font-weight: bold;
+}
+
+.opendyslexic.notsume .story-table .natsume-font {
+    font-weight: normal;
 }
