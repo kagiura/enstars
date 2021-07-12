@@ -84,7 +84,8 @@ $( document ).ready(function() {
                 Fixed unreadable InLinks in stories
         0.4.1   Fixed lag when running script
                 Added ability to disable Natsume's font
-                Added dyslexic friendly font option [BETA]`);
+                Added dyslexic friendly font option [BETA]
+        0.4.2   Fixed unreadable Links in stories`);
         console.log(`Credits: 
         -       https://github.com/yaycupcake/enstars-wiki-js 
                 (Render detection, Character List, and a lot more! by @mizuhanome_tl)`);
