@@ -93,4 +93,8 @@ div[style="border-left-color:#e33824;background-color:#FFFFFF"]{
     display: none;
 }
 
+.char-extra img{
+    width: 500px;
+}
+
 /* github @jeaoq/enstars-wiki */
