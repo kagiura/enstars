@@ -1,4 +1,5 @@
 var bookmarkLimit = 100;
+var bookmarkFullLimit = 12;
 var stylesheet = this.document.createElement('link');
 stylesheet.setAttribute('rel', 'stylesheet');
 stylesheet.setAttribute('type', 'text/css');
@@ -73,7 +74,7 @@ function bookmarkInitial() {
 	        	$('body').removeClass('pageBookmarked');
 			}
 			
-			if( $('#rail-bookmarks ul li').length >= 12 ){
+			if( $('#rail-bookmarks ul li').length >= bookmarkFullLimit ){
 				$('#rail-bookmarks').addClass('scrollable');
 			}
 		});
