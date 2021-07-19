@@ -1,4 +1,7 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="github.css">
+    </head>
     <body>
         <script>
         (async () => {
@@ -6,7 +9,7 @@
             const data = await response.json();
             let htmlString = '<h1>Wiki CSS Files</h1><ul>';
             for (let file of data) {
-                if( (file.name.includes('.css') || file.name.includes('.js')) && !(file.name.includes('.jsbeautifyrc')) ){
+                if( (file.name.includes('.css') || file.name.includes('.js')) && !(file.name.includes('.jsbeautifyrc') || file.name.includes('github.css')) ){
                     htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
                 }
             }
