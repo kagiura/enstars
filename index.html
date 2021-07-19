@@ -5,13 +5,51 @@
     </head>
     <body>
         <script>
+            function fallbackCopyTextToClipboard(text) {
+            var textArea = document.createElement("textarea");
+            textArea.value = text;
+            
+            // Avoid scrolling to bottom
+            textArea.style.top = "0";
+            textArea.style.left = "0";
+            textArea.style.position = "fixed";
+
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                var successful = document.execCommand('copy');
+                var msg = successful ? 'successful' : 'unsuccessful';
+                console.log('Fallback: Copying text command was ' + msg);
+            } catch (err) {
+                console.error('Fallback: Oops, unable to copy', err);
+            }
+
+            document.body.removeChild(textArea);
+            }
+            function copyTextToClipboard(text) {
+            if (!navigator.clipboard) {
+                fallbackCopyTextToClipboard(text);
+                return;
+            }
+            navigator.clipboard.writeText(text).then(function() {
+                console.log('Async: Copying to clipboard was successful!');
+            }, function(err) {
+                console.error('Async: Could not copy text: ', err);
+            });
+            }
+        </script>
+        <script>
         (async () => {
             const response = await fetch('https://api.github.com/repos/jeaoq/enstars-wiki/contents/');
             const data = await response.json();
             let htmlString = '<h1>jeaoq/enstars-wiki</h1><h2>CSS files for the <a href="https://ensemble-stars.fandom.com/">Ensemble Stars! English Wiki</a></h2><p>For more info, check out <a href="https://ensemble-stars.fandom.com/wiki/User:Jeaoq/Contributions">this page</a></p><ul>';
             for (let file of data) {
                 if( (file.name.includes('.css') || file.name.includes('.js')) && !(file.name.includes('.jsbeautifyrc') || file.name.includes('github.css')) ){
-                    htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
+                    htmlString += `<li><a href="${file.path}">${file.name}</a>`;
+                    htmlString += `<a onclick="copyTextToClipboard('` + file.name + `');">Copy</a>`;
+                    htmlString += `</li>`;
                 }
             }
             htmlString += '</ul>';
