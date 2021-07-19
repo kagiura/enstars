@@ -6,7 +6,7 @@
             const data = await response.json();
             let htmlString = '<h1>Wiki CSS Files</h1><ul>';
             for (let file of data) {
-                if(file.name.includes('.css') || file.name.includes('.js')){
+                if( (file.name.includes('.css') || file.name.includes('.js')) && !(file.name.includes('.jsbeautifyrc')) ){
                     htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
                 }
             }
