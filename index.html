@@ -48,7 +48,11 @@
             for (let file of data) {
                 if( (file.name.includes('.css') || file.name.includes('.js')) && !(file.name.includes('.jsbeautifyrc') || file.name.includes('github.css')) ){
                     htmlString += `<li><a href="${file.path}">${file.name}</a>`;
-                    htmlString += `<a onclick="copyTextToClipboard('` + file.name + `');">Copy</a>`;
+                    if( file.name.includes('.css') ){
+                        htmlString += `<a onclick="copyTextToClipboard('` + file.content + `');">Copy Content</a>`;
+                    } else if( file.name.includes('.js') ){
+                        htmlString += `<a onclick="copyTextToClipboard('` + file.name + `');">Copy</a>`;
+                    }
                     htmlString += `</li>`;
                 }
             }
