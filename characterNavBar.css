@@ -82,7 +82,7 @@
     align-items: flex-start;
     align-content: flex-start;
     gap: 0.2em;
-    max-height:160px;
+    max-height: 135px;
 }
 
 .characterNavBar center {
@@ -162,11 +162,11 @@
 }
 
 /*****     special cases      *****/
-.characterNavBar-wrapper.characterNavBarOldn {
+.characterNavBar-wrapper.characterNavBarNewy {
     height: 160px;
 }
 
-.characterNavBar-wrapper.characterNavBarOldn th img {
+.characterNavBar-wrapper.characterNavBarNewy th img {
     transform: translate(10px, -10px) scale(1.15);
 }
 
