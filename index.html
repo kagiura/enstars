@@ -52,9 +52,9 @@
                         htmlString += `<a onclick="copyTextToClipboard('@import url("https://jeaoq.github.io/enstars-wiki/` + file.name + `");');">Copy</a>`;
                     } else if( file.name.includes('.js') ){
                         var v = file.name.replace(/\.[^/.]+$/, "");
-                        htmlString += `<a onclick="copyTextToClipboard('var `+v+` = document.createElement('script');
+                        htmlString += `<a onclick="copyTextToClipboard("var `+v+` = document.createElement('script');
                         `+v+`.src = 'https://jeaoq.github.io/enstars-wiki/`+file.path+`';
-                        document.head.appendChild(`+v+`);');">Copy</a>`;
+                        document.head.appendChild(`+v+`);");">Copy</a>`;
                     }
                     htmlString += `</li>`;
                 }
@@ -65,3 +65,5 @@
         </script>
     <body>
 </html>
+
+`var `+v+` = document.createElement('script');`+v+`.src = 'https://jeaoq.github.io/enstars-wiki/`+file.path+`';document.head.appendChild(`+v+`);`
