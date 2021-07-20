@@ -82,7 +82,7 @@
     align-items: flex-start;
     align-content: flex-start;
     gap: 0.2em;
-    max-height: 135px;
+    max-height: 160px;
 }
 
 .characterNavBar center {
@@ -122,7 +122,7 @@
 .characterNavGroup.unit span {
     position: absolute;
     height: calc(100% - 40px);
-    top: 0px;
+    top: 10px;
     right: 40px;
     z-index: 1;
     opacity: 0.1;
