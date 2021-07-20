@@ -54,15 +54,15 @@
                     if( (file.name.includes('.css') || file.name.includes('.js')) && !(file.name.includes('.jsbeautifyrc') || file.name.includes('github.css')) ){
                         htmlString += `<li><a href="${file.path}">${file.name}</a>`;
                         if( file.name.includes('.css') ){
-                            htmlString += `<a onclick="copyTextToClipboard('@import url(\\"https://jeaoq.github.io/enstars-wiki/` + file.name + `\\");');">Copy</a>`;
+                            clip[clipNo] = `@import url("https://jeaoq.github.io/enstars-wiki/` + file.name + `");'`;
                         } else if( file.name.includes('.js') ){
                             var v = file.name.replace(/\.[^/.]+$/, "");
                             clip[clipNo] = `var ` + v + ` = document.createElement('script');
 ` + v + `.src = 'https://jeaoq.github.io/enstars-wiki/` + file.path + `';
 document.head.appendChild(` + v + `);`;
-                            htmlString += `<a onclick="copyJS('` + clipNo + `');">Copy</a>`;
-                            clipNo++;
                         }
+                        htmlString += `<a onclick="copyJS('` + clipNo + `');">Copy</a>`;
+                        clipNo++;
                         htmlString += `</li>`;
                     }
                 }
