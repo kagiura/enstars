@@ -53,12 +53,9 @@
                     } else if( file.name.includes('.js') ){
                         var v = file.name.replace(/\.[^/.]+$/, "");
                         console.log(v);
-                        htmlString += `<a onclick="copyTextToClipboard("var ` + v + ` = document.createElement('script');
-                        ` + v + `.src = 'https://jeaoq.github.io/enstars-wiki/` + file.path + `';
-                        document.head.appendChild(` + v + `);");">Copy</a>`;
-                        console.log(`<a onclick="copyTextToClipboard("var ` + v + ` = document.createElement('script');
-                        ` + v + `.src = 'https://jeaoq.github.io/enstars-wiki/` + file.path + `';
-                        document.head.appendChild(` + v + `);");">Copy</a>`);
+                        htmlString += `<a onclick="copyTextToClipboard('var ` + v + ` = document.createElement(\\'script\\');
+` + v + `.src = \\'https://jeaoq.github.io/enstars-wiki/` + file.path + `\\';
+document.head.appendChild(` + v + `);');">Copy</a>`;
                     }
                     htmlString += `</li>`;
                 }
