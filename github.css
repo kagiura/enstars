@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
+
+body {
+    background: #282b2f;
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 40px 30px 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    font: 400 14px 'DM Sans';
+}
+
+ul {
+    padding: 0px;
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 5px;
+    display: flex;
+    gap: 5px;
+}
+
+a {
+    color: #ffffff;
+}
+
+a:hover {
+    color: #bec6d1;
+}
+
+li a {
+    background: #383e47;
+    padding:10px 20px;
+    border-radius: 5px;
+    flex: 0 100%;
+    display: block;
+    text-decoration: none;
+}
+
+li a:hover {
+    background: #444b56;
+    text-decoration: underline;
+    
+}
+
+li a:nth-child(2) {
+    font-family: 'Material Icons Round';
+    flex: 0 10px;
+    padding: 10px 15px;
+}
+
