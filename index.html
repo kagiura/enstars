@@ -49,7 +49,7 @@
                 if( (file.name.includes('.css') || file.name.includes('.js')) && !(file.name.includes('.jsbeautifyrc') || file.name.includes('github.css')) ){
                     htmlString += `<li><a href="${file.path}">${file.name}</a>`;
                     if( file.name.includes('.css') ){
-                        htmlString += `<a onclick="copyTextToClipboard('@import url("https://jeaoq.github.io/enstars-wiki/` + file.name + `");');">Copy</a>`;
+                        htmlString += `<a onclick="copyTextToClipboard('@import url(\\"https://jeaoq.github.io/enstars-wiki/` + file.name + `\\");');">Copy</a>`;
                     } else if( file.name.includes('.js') ){
                         var v = file.name.replace(/\.[^/.]+$/, "");
                         console.log(v);
