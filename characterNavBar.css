@@ -5,12 +5,12 @@
     padding: 20px 110px 20px 0px;
     width: 100%;
     max-width: 100%;
-    margin-left: 0%;
     transform: translateX(0%);
     display: block;
-    height: 185px;
+    height: 190px;
     overflow: visible;
     transition: height 0.2s 0.2s ease, margin 0.2s ease, transform 0.2s ease, max-width 0.2s 0.2s ease;
+    margin: auto;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -82,7 +82,6 @@
     align-items: flex-start;
     align-content: flex-start;
     gap: 0.2em;
-    max-height: 160px;
 }
 
 .characterNavBar center {
@@ -90,12 +89,18 @@
     display: flex;
     flex-direction: row;
     overflow: auto;
+    -webkit-mask-image: linear-gradient(to left, transparent 0, black 50px);
     mask-image: linear-gradient(to left, transparent 0, black 50px);
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
     gap: 0.2em;
     height: auto;
+}
+
+.characterNavBar center > div:not(.subpage) {
+    transition: transform 0.3s 0.4s cubic-bezier(.32, 1.13, .5, 1.16), opacity 0.3s 0.4s ease, margin-left 0s ease;
+    opacity: 1;
 }
 
 .characterNavGroupTitle {
@@ -186,8 +191,6 @@
 .characterNavBar-wrapper.mw-collapsed {
     height: 100px;
     max-width: 800px;
-    margin-left: 50%;
-    transform: translateX(-50%);
     transition: height 0.2s 0.2s ease, margin 0.2s 0.2s ease, transform 0.2s 0.2s ease, max-width 0.2s 0.4s ease;
 }
 
@@ -196,7 +199,7 @@
 }
 
 .characterNavBar-wrapper.mw-collapsed .characterNavBar center {
-    transition: height 0.2s 0.22s ease;
+    transition: height 0.2s 0.2s ease;
 }
 
 .characterNavBar-wrapper.mw-collapsed tbody th img {
@@ -213,14 +216,9 @@
     display: flex !important;
 }
 
-.characterNavBar-wrapper .characterNavBar center > div:not(.subpage) {
-    transition: margin-top 0.3s 0.4s cubic-bezier(.32, 1.13, .5, 1.16), opacity 0.3s 0.4s ease, margin-left 0s ease;
-    opacity: 1;
-}
-
 .characterNavBar-wrapper.mw-collapsed .characterNavBar center > div:not(.subpage) {
-    transition: margin-top 0.2s ease, opacity 0.2s ease, margin-left 0s 0.4s ease;
-    margin-top: 10px;
+    transition: transform 0.2s ease, opacity 0.2s ease, margin-left 0s 0.4s ease;
+    transform: translateY(10px);
     opacity: 0;
     margin-left: -500%;
 }
@@ -234,11 +232,10 @@
 .characterNavBarNotice-wrapper {
     width: 100%;
     max-width: 100%;
-    margin-left: 0%;
-    transform: translateX(0%);
-    transition: height 0.2s 0.2s ease, margin 0.2s ease, transform 0.2s ease, max-width 0.2s 0.2s ease;
+    transition: all 0.2s 0.2s ease;
     display: flex;
     gap: 5px;
+    margin: auto;
     margin-top: 0px;
     margin-bottom: 25px;
     flex-wrap: wrap;
@@ -280,7 +277,5 @@
 
 .characterNavBar-wrapper.mw-collapsed ~ .characterNavBarNotice-wrapper {
     max-width: 800px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    transition: height 0.2s 0.2s ease, margin 0.2s 0.2s ease, transform 0.2s 0.2s ease, max-width 0.2s 0.4s ease, padding-left 0.2s 0.4s ease;
+    transition: all 0.2s 0.4s ease;
 }
