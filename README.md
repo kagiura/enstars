@@ -1,3 +1,5 @@
+# **This is now an old branch, update your links to tsukina.ga/leo for the latest updates!
+
 # enstars-wiki
 My css contributions to the enstars wiki! 
 
