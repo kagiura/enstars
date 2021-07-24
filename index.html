@@ -1,74 +1,9 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>jeaoq/enstars-wiki</title>
-        <link rel="stylesheet" href="github.css">
-    </head>
-    <body>
-        <script>
-            function fallbackCopyTextToClipboard(text) {
-            var textArea = document.createElement("textarea");
-            textArea.value = text;
-
-            // Avoid scrolling to bottom
-            textArea.style.top = "0";
-            textArea.style.left = "0";
-            textArea.style.position = "fixed";
-
-            document.body.appendChild(textArea);
-            textArea.focus();
-            textArea.select();
-
-            try {
-                var successful = document.execCommand('copy');
-                var msg = successful ? 'successful' : 'unsuccessful';
-                console.log('Fallback: Copying text command was ' + msg);
-            } catch (err) {
-                console.error('Fallback: Oops, unable to copy', err);
-            }
-
-            document.body.removeChild(textArea);
-            }
-            function copyTextToClipboard(text) {
-            if (!navigator.clipboard) {
-                fallbackCopyTextToClipboard(text);
-                return;
-            }
-            navigator.clipboard.writeText(text).then(function() {
-                console.log('Async: Copying to clipboard was successful!');
-            }, function(err) {
-                console.error('Async: Could not copy text: ', err);
-            });
-            }
-        </script>
-        <script>
-            var clip = [];
-            var clipNo = 1;
-            function copyJS(x){
-                copyTextToClipboard(clip[x]);
-            }
-            (async () => {
-                const response = await fetch('https://api.github.com/repos/jeaoq/enstars-wiki/contents/leo?ref=test');
-                const data = await response.json();
-                let htmlString = '<h1>jeaoq/enstars-wiki</h1><h2>CSS files for the <a href="https://ensemble-stars.fandom.com/">Ensemble Stars! English Wiki</a></h2><p>For more info, check out <a href="https://ensemble-stars.fandom.com/wiki/User:Jeaoq/Contributions">this page</a></p><p>Use the copy button to copy snippets of code to put in <a href="https://ensemble-stars.fandom.com/wiki/Special:MyPage/common.css">common.css</a> and <a href="https://ensemble-stars.fandom.com/wiki/Special:MyPage/common.js">common.js</a></p><ul>';
-                for (let file of data) {
-                    if( (file.name.includes('.css') || file.name.includes('.js')) && !(file.name.includes('.jsbeautifyrc') || file.name.includes('github.css')) ){
-                        htmlString += `<li><a href="${file.path}">${file.name}</a>`;
-                        if( file.name.includes('.css') ){
-                            clip[clipNo] = `@import url("https://jeaoq.github.io/enstars-wiki/` + file.name + `");`;
-                        } else if( file.name.includes('.js') ){
-                            var v = file.name.replace(/\.[^/.]+$/, "");
-                            clip[clipNo] = `var ` + v + ` = document.createElement('script');
-` + v + `.src = 'https://jeaoq.github.io/enstars-wiki/` + file.path + `';
-document.head.appendChild(` + v + `);`;
-                        }
-                        htmlString += `<a onclick="copyJS('` + clipNo + `');">file_copy</a>`;
-                        clipNo++;
-                        htmlString += `</li>`;
-                    }
-                }
-                htmlString += '</ul>';
-                document.getElementsByTagName('body')[0].innerHTML = htmlString;
-            })()
-        </script>
-    <body>
+  <head>
+    <meta http-equiv="refresh" content="0; url='leo'" />
+  </head>
+  <body>
+    <p>Moved to <a href="leo">leo</a></p>
+  </body>
 </html>
