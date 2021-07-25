@@ -1,19 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
 
+:root {
+    --leo: #ED6D52;
+}
+
 body {
     background: #282b2f;
-    margin: 20px auto;
-    max-width: 500px;
-    padding: 40px 30px 20px;
-    border-radius: 10px;
     color: #ffffff;
     font: 400 14px 'DM Sans';
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    max-width: 900px;
+    gap: 30px;
+    flex-grow: 1;
+}
+
+.side {
+    background: 60% 100%/cover no-repeat url('github/background.png');
+    width: 50%;
+    border-radius: 10px;
+    flex-grow: 1;
+    height: calc(100vh - 40px);
+    max-height: 800px;
+    box-shadow: 0px 0px 40px 0px #0007;
+}
+
+.content {
+    flex-grow: 1;
+    max-width: 300px;
+    height: calc(100vh - 40px);
+    max-height: min(800px, calc(100vh - 40px));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1, h2{
+    margin: 0px 0px 10px;
+
+}
+
+
+h1 {
+    background: linear-gradient(#ED6D5288, #ED6D5288) left bottom no-repeat;
+    padding: 10px;
+}
+
+
+
+p {
+    margin: 0px 0px 5px;
+}
+
+p.links {
+    display: flex;
+    gap: 10px;
+    margin: 5px 0px 5px;
+}
+
+p.links a {
+    padding: 5px 10px;
+    background: linear-gradient(#ED6D5288 50%, #ED6D52 50%) left top/100% 210% no-repeat;
+    border-radius: 5px;
+}
+
+p.links a:hover {
+    background-position: bottom;
+}
+
+p.notice {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin: 5px 0px 05px;
+    padding-left: 50px;
+    position: relative;
+}
+
+p.notice::before {
+    content: 'help';
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    font: 18px 'Material Icons Round';
 }
 
 ul {
     padding: 0px;
     list-style-type: none;
+    margin: 5px 0px 0px;
+    overflow: auto;
+    border-radius: 5px;
 }
 
 li {
@@ -23,11 +112,16 @@ li {
 }
 
 a {
-    color: #ffffff;
+    color: white;
+    background: linear-gradient(#ED6D5288, #ED6D5288) left bottom no-repeat;
+    background-position: 100% 1em;
+    padding: 0px 5px;
+    transition: background 0.2s ease;
+    text-decoration: none;
 }
 
 a:hover {
-    color: #bec6d1;
+    background-position: 100% 0em;
 }
 
 li a {
@@ -42,7 +136,7 @@ li a {
 li a:hover {
     background: #444b56;
     text-decoration: underline;
-    
+
 }
 
 li a:nth-child(2) {
@@ -51,3 +145,53 @@ li a:nth-child(2) {
     padding: 10px 15px;
 }
 
+li a[href]::before {
+    content: '';
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+    vertical-align: 0px;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+li a[href*="css"]::before {
+    background: #c78af4;
+}
+
+li a[href*="js"]::before {
+    background: #ede48d;
+}
+
+@media only screen and (max-width: 500px) {
+
+
+    body {
+        height: unset;
+    }
+
+    .wrapper {
+        flex-wrap: wrap;
+    }
+
+    .side {
+        height: 200px;
+        flex: 1 1 100%;
+        max-width: unset;
+    }
+
+    .content {
+        flex: 1 1 100%;
+        max-width: unset;
+        height: auto;
+        max-height: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    ul {
+        overflow: unset;
+    }
+
+}
