@@ -9,6 +9,7 @@
 
 .character-render-icon {
     mask: top/100% auto no-repeat url('https://raw.githubusercontent.com/jeaoq/enstars-wiki/main/leo/images/tsukasus_image.png');
+    -webkit-mask: top/100% auto no-repeat url('https://raw.githubusercontent.com/jeaoq/enstars-wiki/main/leo/images/tsukasus_image.png');
     background: #94C9DB;
     width: 100px;
 }
