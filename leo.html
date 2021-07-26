@@ -90,11 +90,11 @@
                     if( (file.name.includes('.css') || file.name.includes('.js')) && !(file.name.includes('.jsbeautifyrc') || file.name.includes('github.css')) ){
                         htmlString += `<li><a href="${file.path}">${file.name}</a>`;
                         if( file.name.includes('.css') ){
-                            clip[clipNo] = `@import url("https://tsukina.ga/leo/` + file.name + `");`;
+                            clip[clipNo] = `@import url("https://tsukina.ga/` + file.path + `");`;
                         } else if( file.name.includes('.js') ){
                             var v = file.name.replace(/\.[^/.]+$/, "");
                             clip[clipNo] = `var ` + v + ` = document.createElement('script');
-` + v + `.src = 'https://tsukina.ga/leo/` + file.path + `';
+` + v + `.src = 'https://tsukina.ga/` + file.path + `';
 document.head.appendChild(` + v + `);`;
                         }
                         htmlString += `<a onclick="copyJS('` + clipNo + `');">file_copy</a>`;
