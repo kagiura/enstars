@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,700&display=swap');
+
+.theme-fandomdesktop-light {
+    --theme-infobox-main-color: #0C195C;
+    --theme-infobox-main-light-color: #0C195C11;
+    --theme-infobox-accent-color: #FCF000;
+    --theme-infobox-background-color: #FFFFFF;
+}
+
+.theme-fandomdesktop-dark {
+    --theme-infobox-main-color: #FFFFFF;
+    --theme-infobox-main-light-color: #FFFFFF11;
+    --theme-infobox-accent-color: #1d3dc0;
+    --theme-infobox-background-color: #101010;
+}
+
+.portable-infobox  { --theme-color-character-color: #FCF000; }
+.portable-infobox.pi-theme-eichi-color  { --theme-color-character-color: #FFF3B7; }
+.portable-infobox.pi-theme-wataru-color { --theme-color-character-color: #A0D7E2; }
+.portable-infobox.pi-theme-tori-color   { --theme-color-character-color: #F4B2B2; }
+.portable-infobox.pi-theme-yuzuru-color { --theme-color-character-color: #3E62AC; }
+.portable-infobox.pi-theme-hokuto-color { --theme-color-character-color: #0067B6; }
+.portable-infobox.pi-theme-subaru-color { --theme-color-character-color: #F4981C; }
+.portable-infobox.pi-theme-makoto-color { --theme-color-character-color: #65AB31; }
+.portable-infobox.pi-theme-mao-color    { --theme-color-character-color: #951E56; }
+.portable-infobox.pi-theme-chiaki-color { --theme-color-character-color: #E70032; }
+.portable-infobox.pi-theme-kanata-color { --theme-color-character-color: #008DB6; }
+.portable-infobox.pi-theme-tetora-color { --theme-color-character-color: #312834; }
+.portable-infobox.pi-theme-midori-color { --theme-color-character-color: #005340; }
+.portable-infobox.pi-theme-shinobu-color{ --theme-color-character-color: #FEDC00; }
+.portable-infobox.pi-theme-hiiro-color  { --theme-color-character-color: #BA2634; }
+.portable-infobox.pi-theme-aira-color   { --theme-color-character-color: #F1D796; }
+.portable-infobox.pi-theme-mayoi-color  { --theme-color-character-color: #522F5F; }
+.portable-infobox.pi-theme-tatsumi-color{ --theme-color-character-color: #7EBDA6; }
+.portable-infobox.pi-theme-nagisa-color { --theme-color-character-color: #A83638; }
+.portable-infobox.pi-theme-hiyori-color { --theme-color-character-color: #B7D201; }
+.portable-infobox.pi-theme-ibara-color  { --theme-color-character-color: #74325D; }
+.portable-infobox.pi-theme-jun-color    { --theme-color-character-color: #1A2F61; }
+.portable-infobox.pi-theme-shu-color    { --theme-color-character-color: #E5ABAF; }
+.portable-infobox.pi-theme-mika-color   { --theme-color-character-color: #006A6D; }
+.portable-infobox.pi-theme-hinata-color { --theme-color-character-color: #EB6FA2; }
+.portable-infobox.pi-theme-yuta-color   { --theme-color-character-color: #00A1E8; }
+.portable-infobox.pi-theme-rinne-color  { --theme-color-character-color: #BA2636; }
+.portable-infobox.pi-theme-himeru-color { --theme-color-character-color: #8AC3EB; }
+.portable-infobox.pi-theme-kohaku-color { --theme-color-character-color: #F3B3C2; }
+.portable-infobox.pi-theme-niki-color   { --theme-color-character-color: #507EA5; }
+.portable-infobox.pi-theme-rei-color    { --theme-color-character-color: #46266E; }
+.portable-infobox.pi-theme-kaoru-color  { --theme-color-character-color: #FDD25D; }
+.portable-infobox.pi-theme-koga-color   { --theme-color-character-color: #C9C9C9; }
+.portable-infobox.pi-theme-adonis-color { --theme-color-character-color: #915DA3; }
+.portable-infobox.pi-theme-tomoya-color { --theme-color-character-color: #EDDDB3; }
+.portable-infobox.pi-theme-nazuna-color { --theme-color-character-color: #FFED48; }
+.portable-infobox.pi-theme-mitsuru-color{ --theme-color-character-color: #ED6D34; }
+.portable-infobox.pi-theme-hajime-color { --theme-color-character-color: #CBB8D9; }
+.portable-infobox.pi-theme-keito-color  { --theme-color-character-color: #316645; }
+.portable-infobox.pi-theme-kuro-color   { --theme-color-character-color: #E83929; }
+.portable-infobox.pi-theme-souma-color  { --theme-color-character-color: #5554A2; }
+.portable-infobox.pi-theme-tsukasa-color{ --theme-color-character-color: #952242; }
+.portable-infobox.pi-theme-leo-color    { --theme-color-character-color: #ED6D52; }
+.portable-infobox.pi-theme-izumi-color  { --theme-color-character-color: #BADBF2; }
+.portable-infobox.pi-theme-ritsu-color  { --theme-color-character-color: #001E44; }
+.portable-infobox.pi-theme-arashi-color { --theme-color-character-color: #ECDF7B; }
+.portable-infobox.pi-theme-natsume-color{ --theme-color-character-color: #D60132; }
+.portable-infobox.pi-theme-tsumugi-color{ --theme-color-character-color: #00608D; }
+.portable-infobox.pi-theme-sora-color   { --theme-color-character-color: #FFF353; }
+.portable-infobox.pi-theme-madara-color { --theme-color-character-color: #622D18; }
+.portable-infobox.pi-theme-jin-color    { --theme-color-character-color: #8DA0B6; }
+.portable-infobox.pi-theme-akiomi-color { --theme-color-character-color: #915C8B; }
+.portable-infobox.pi-theme-anzu-color   { --theme-color-character-color: #FFB6DA; }
+.portable-infobox.pi-theme-seiya-color  { --theme-color-character-color: #292b3c; }
+.portable-infobox.pi-theme-gatekeeper-color { --theme-color-character-color: #5f2222; }
+
+/* Infobox */
+.portable-infobox.pi-background:not(.pi-theme-lyrics) {
+    border-radius: 15px 5px;
+    margin-right: 8px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 10px;
+    padding-top: 5px;
+    background: var(--theme-infobox-background-color);
+    border: solid 2px var(--theme-infobox-main-color);
+}
+
+.portable-infobox.pi-background:not(.pi-theme-lyrics)::before {
+    clip-path: inset(0px 0px 0px 0px round 13px 3px);
+    border-left: solid 10px var(--theme-color-character-color);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    pointer-events: none;
+}
+
+.portable-infobox.pi-background:not(.pi-theme-lyrics)::after {
+    border-radius: 15px 5px;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    pointer-events: none;
+    opacity: 0.2;
+    box-shadow: 8px 8px 0px 0px var(--theme-infobox-main-color);
+}
+
+/* Spacing */
+.portable-infobox .pi-item-spacing {
+    padding: 6px 15px;
+}
+
+.portable-infobox .wds-tabs__wrapper {
+    padding: 0px 15px;
+}
+
+/* Title */
+.portable-infobox .pi-title {
+    background: none !important;
+    font: 900 italic 20px/130% Montserrat, 'Noto Sans JP', sans-serif;
+    color: var(--theme-infobox-main-color);
+    padding: 12px 15px 6px;
+    position: relative;
+    text-align: left !important;
+}
+
+.portable-infobox .pi-title .infobox-char-name {
+    position: relative;
+    text-decoration: none;
+    background: linear-gradient(var(--theme-infobox-accent-color), var(--theme-infobox-accent-color)) left bottom no-repeat;
+    background-size: 100% 0.45em;
+}
+
+/* Data */
+.portable-infobox .pi-border-color {
+    border-color: var(--theme-infobox-main-light-color);
+}
+
+/* Image */
+.portable-infobox .pi-image {
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+/* Group */
+.portable-infobox .pi-horizontal-group-item {
+    padding: 4px;
+    border: solid 1px #0C195C11;
+}
+
+.portable-infobox .pi-horizontal-group {
+    border-bottom: solid 1px #0C195C11 !important;
+}
+
+/* Header */
+.portable-infobox .pi-header {
+    padding: 10px 15px;
+    font: 700 14px/130% Montserrat, 'Noto Sans JP', sans-serif;
+    text-align: left;
+    background-color: var(--theme-infobox-main-light-color);
+    color: var(--theme-infobox-main-color);
+    border: none;
+}
+
+/* Navigation */
+.portable-infobox .pi-navigation {
+    background-color: unset;
+    color: unset;
+}
+
+/* Panel */
+.wds-tabs__tab.wds-is-current {
+    box-shadow: inset 0 -5px 0 0 var(--theme-infobox-accent-color);
+}
+
+
+/*** start of Template:Infobox Character ***/
+.portable-infobox[data-item-name|="Infobox Character"] {
+    width: 300px;
+}
+
+.portable-infobox [data-item-name="character-era-select"] .wds-tab__content h2:nth-child(2),
+.portable-infobox [data-item-name="character-era-select"] .wds-tab__content h2:nth-child(4) {
+    background: transparent;
+}
+
+.portable-infobox [data-item-name="character-era-select"] .wds-tab__content .pi-horizontal-group img {
+    max-width: 100%;
+    height: auto;
+}
+
+.portable-infobox[data-item-name="Infobox Character !!"] h2:nth-child(2),
+.portable-infobox[data-item-name="Infobox Character !!"] h2:nth-child(4) {
+    background: transparent;
+}
+
+.portable-infobox[data-item-name="Infobox Character !!"] .pi-horizontal-group img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.portable-infobox [data-item-name="character-era-select"] > .wds-tabs__wrapper .wds-tabs__tab.wds-is-current {
+    background-color: var(--theme-infobox-main-color);
+    color: var(--theme-infobox-background-color);
+}
+
+.portable-infobox [data-item-name="character-era-select"] > .wds-tabs__wrapper .wds-tabs__tab .wds-tabs__tab-label {
+    font: 900 italic 17px Montserrat, 'Noto Sans JP', sans-serif;
+    margin: 0px;
+    display: block;
+}
+
+.portable-infobox [data-item-name="character-era-select"] > .wds-tabs__wrapper {
+    margin: 5px 0px 0px;
+    text-align: right;
+}
+
+.portable-infobox [data-item-name="character-era-select"] > .wds-tabs__wrapper .wds-tabs {
+    display: inline-flex;
+    align-items: center;
+}
+
+.portable-infobox [data-item-name="character-era-select"] > .wds-tabs__wrapper .wds-tabs__tab {
+    width: 30px;
+    height: 25px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: transparent;
+    border: solid 2px var(--theme-infobox-main-color);
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.portable-infobox [data-item-name="character-era-select"] > .wds-tabs__wrapper .wds-tabs .wds-tabs__tab:first-child {
+    margin-right: 0.4em;
+}
+
+.portable-infobox [data-item-name="character-era-select"] > .wds-tabs__wrapper .wds-tabs::before {
+    content: 'View profile from ';
+    font: 700 italic 12px/12px Montserrat, 'Noto Sans JP', sans-serif;
+    margin-right: 6px;
+    color: var(--theme-infobox-main-color);
+    vertical-align: middle;
+}
+
+
+/*** end of Template:Infobox Character ***/
+/*** start of Template:Infobox Card ***/
+.theme-fandomdesktop-light {
+    --theme-infobox-main-color: #0C195C;
+    --theme-infobox-main-light-color: #0C195C11;
+    --theme-infobox-accent-color: #FCF000;
+    --theme-infobox-background-color: #FFFFFF;
+}
+
+.theme-fandomdesktop-dark {
+    --theme-infobox-main-color: #FFFFFF;
+    --theme-infobox-main-light-color: #FFFFFF11;
+    --theme-infobox-accent-color: #1d3dc0;
+    --theme-infobox-background-color: #101010;
+}
+
+:root {
+    --theme-card-type-da: #fa3c38;
+    --theme-card-type-vo: #41aaef;
+    --theme-card-type-pf: #f9e33b;
+    --theme-card-type-sp: #fc124a;
+    --theme-card-type-br: #2b6cef;
+    --theme-card-type-gl: #95ea50;
+    --theme-card-type-fl: #fee339;
+}
+
+/* Infobox, Title, Gallery */
+.card-infobox-wrapper {
+    min-height: calc(35vw * 1.32);
+    direction: rtl;
+}
+
+.card-infobox-wrapper [data-item-name="card-infobox"] {
+    width: auto;
+    min-width: 350px;
+    display: block;
+    margin: 0px 6px 6px 35vw;
+    float: none;
+    direction: ltr;
+}
+
+.card-infobox-wrapper [data-item-name="card-infobox"] > section > div.wds-tab__content.wds-is-current::before {
+    clip-path: inset(0px 0px 0px 0px round 13px 3px);
+    background: none;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    pointer-events: none;
+    border-left-style: solid;
+    border-left-width: 10px;
+}
+
+.card-infobox-wrapper [class*="da"] .wds-tab__content.wds-is-current[data-item-name="card-basic"]::before{ border-left-color: var(--theme-card-type-da); }
+.card-infobox-wrapper [class*="vo"] .wds-tab__content.wds-is-current[data-item-name="card-basic"]::before{ border-left-color: var(--theme-card-type-vo); }
+.card-infobox-wrapper [class*="pf"] .wds-tab__content.wds-is-current[data-item-name="card-basic"]::before{ border-left-color: var(--theme-card-type-pf); }
+
+.card-infobox-wrapper [class*="sp"]  .wds-tab__content.wds-is-current[data-item-name="card-music"]::before{ border-left-color: var(--theme-card-type-sp); }
+.card-infobox-wrapper [class*="br"]  .wds-tab__content.wds-is-current[data-item-name="card-music"]::before{ border-left-color: var(--theme-card-type-br); }
+.card-infobox-wrapper [class*="gl"]  .wds-tab__content.wds-is-current[data-item-name="card-music"]::before{ border-left-color: var(--theme-card-type-gl); }
+.card-infobox-wrapper [class*="fl"]  .wds-tab__content.wds-is-current[data-item-name="card-music"]::before{ border-left-color: var(--theme-card-type-fl); }
+
+.card-infobox-wrapper .portable-infobox[data-item-name="card-infobox"] > .wds-tabber > .wds-tabs__wrapper {
+    margin-top: 5px;
+    text-align: right;
+}
+
+.card-infobox-wrapper .portable-infobox[data-item-name="card-infobox"] > .wds-tabber > .wds-tabs__wrapper .wds-tabs {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.card-infobox-wrapper .portable-infobox[data-item-name="card-infobox"] > .wds-tabber > .wds-tabs__wrapper .wds-tabs__tab {
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 0px;
+    box-shadow: none !important;
+    background-color: var(--theme-infobox-main-light-color);
+    color: var(--theme-infobox-main-color);
+}
+
+.card-infobox-wrapper .portable-infobox[data-item-name="card-infobox"] > .wds-tabber > .wds-tabs__wrapper .wds-tabs__tab.wds-is-current {
+    background-color: var(--theme-infobox-main-color);
+    color: var(--theme-infobox-background-color);
+}
+
+.card-infobox-wrapper .portable-infobox[data-item-name="card-infobox"] > .wds-tabber > .wds-tabs__wrapper .wds-tabs__tab-label {
+    font: 700 12px Rubik, sans-serif;
+    display: inline-block;
+    height: 10px;
+    margin: 0px;
+}
+
+.card-infobox-wrapper [data-item-name="card-title-wrapper"] {
+    overflow: hidden;
+    position: relative;
+}
+
+.card-infobox-wrapper [data-item-name="card-rarity"] {
+    position: absolute;
+    bottom: -30px;
+    font: 700 italic max(60px, min(6vw, 80px)) 'Noto Sans', sans-serif !important;
+    padding: 0 !important;
+    letter-spacing: -10px;
+    right: 0px;
+    z-index: 1;
+    color: #FCF00050 !important;
+    background: none !important;
+    border-top: none !important;
+}
+
+.card-infobox-wrapper [data-item-name|="card-gallery"] h2:not(:first-child) {
+    opacity: 0.4;
+    text-align: center;
+    font: 700 12px Montserrat, 'Noto Sans JP', sans-serif;
+}
+
+/* Cards */
+.page-content,
+.mw-parser-output {
+    overflow: visible;
+}
+
+.card-infobox-wrapper .card-pair-stick {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 60px;
+    text-align: center;
+    width: 30vw;
+}
+
+.card-infobox-wrapper .card-quote-wrapper {
+    position: relative;
+    text-align: center;
+    height: 60px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.card-infobox-wrapper .card-quote-pair {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.card-infobox-wrapper .card-pair-wrapper:hover .card-quote-pair {
+    top: -60px;
+}
+
+.card-infobox-wrapper .card-quote {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.card-infobox-wrapper .card-pair-wrapper {
+    white-space: nowrap;
+    display: inline-block;
+    margin: 10px;
+    overflow: visible;
+    position: absolute;
+    left: -35vw;
+    top: -10px;
+    height: 100%;
+}
+
+.card-infobox-wrapper .card-pair-wrapper div {
+    transition: all 0.2s ease;
+}
+
+.card-infobox-wrapper .card-single {
+    position: relative;
+    display: inline-block;
+    /*
+    box-shadow: 0px 0px 8px 0px #00000099;
+    border-radius: 1vw;*/
+    filter: drop-shadow(0px 0px 4px #00000099);
+}
+
+.card-infobox-wrapper .card-single img {
+    object-fit: contain;
+    width: 30vw;
+    height: auto;
+    max-height: calc(100vh - 220px);
+    pointer-events: none;
+}
+
+.card-infobox-wrapper .card-unbloomed {
+    z-index: 2;
+    transform: scale(1.0);
+    ;
+}
+
+.card-infobox-wrapper .card-bloomed {
+    z-index: 1;
+    transform: translateX(-100%) translateX(20px) scale(0.9) rotate(2deg);
+    filter: brightness(70%) drop-shadow(0px 0px 4px #00000099);
+}
+
+.card-infobox-wrapper .card-pair-wrapper:hover .card-bloomed {
+    z-index: 2;
+    transform: translateX(-100%) translateX(0px) scale(1.0);
+    filter: brightness(100%) drop-shadow(0px 0px 4px #00000099);
+}
+
+.card-infobox-wrapper .card-pair-wrapper:hover .card-unbloomed {
+    z-index: 1;
+    transform: translateX(-20px) scale(0.9) rotate(-2deg);
+    filter: brightness(70%) drop-shadow(0px 0px 4px #00000099);
+}
+
+.card-infobox-wrapper .card-hover-text {
+    text-align: right;
+    letter-spacing: 2px;
+    font: 700 italic 12px Montserrat, sans-serif;
+    text-transform: uppercase;
+    margin: 20px 0px;
+    opacity: 0.4;
+}
+
+.card-infobox-wrapper h2[data-item-name="card-images"] {
+    height: 0px;
+    margin: 0px !important;
+    padding: 0px !important;
+    overflow: visible;
+}
+
+/* Stats */
+.card-infobox-wrapper [data-item-name|="card-stats"] .pi-horizontal-group-item {
+    text-align: left;
+    padding: 2px 15px;
+}
+
+.card-infobox-wrapper [data-item-name|="card-stats"] td:nth-child(1) {
+    width: 60px;
+    font: 700 12px Rubik, sans-serif;
+}
+
+.card-infobox-wrapper [data-item-name|="card-stats"] td {
+    border-width: 0px !important;
+}
+
+.card-infobox-wrapper [data-item-name|="card-stat"]::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    padding: 0px 0px;
+    font: 800 12px 'Montserrat', sans-serif;
+    color: white;
+    margin-right: 5px;
+    text-align: center;
+    background-color: #0C195C;
+}
+
+.card-infobox-wrapper [data-item-name|="card-stat"][data-source*="St"]::before {
+    content: 'All';
+    background-color: #0C195C;
+}
+
+.card-infobox-wrapper [data-item-name|="card-stat"][data-source*="Da"]::before {
+    content: 'Da';
+    background-color: #EA4362;
+}
+
+.card-infobox-wrapper [data-item-name|="card-stat"][data-source*="Vo"]::before {
+    content: 'Vo';
+    background-color: #59C7F8;
+}
+
+.card-infobox-wrapper [data-item-name|="card-stat"][data-source*="Pf"]::before {
+    content: 'Pf';
+    background-color: #F9D548;
+}
+
+/* Skills */
+.card-infobox-wrapper [data-item-name|="card-skills"] h3 {
+    padding-left: 80px;
+    overflow: visible;
+}
+
+.card-infobox-wrapper [data-item-name|="card-skills"] h3::before {
+    text-align: center;
+    content: "SKILL";
+    display: block;
+    position: relative;
+    top: 25px;
+    left: -80px;
+    width: 70px;
+    pointer-events: none;
+    margin-top: -20px;
+    color: white;
+    background-color: #0C195C;
+    font: 700 7pt Montserrat, sans-serif;
+    letter-spacing: 1px;
+    padding: 4px 0px;
+}
+
+.card-infobox-wrapper [data-item-name|="card-skills-basic"] > div > div,
+.card-infobox-wrapper [data-item-name|="card-skills-music"] > div > div {
+    padding-left: 80px !important;
+}
+
+/* BASIC */
+.card-infobox-wrapper [data-item-name="card-skills-basic"] {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-infobox-wrapper [data-item-name="card-skills-basic"] h2 {
+    flex: 1 0 100%;
+}
+
+.card-infobox-wrapper [data-item-name="card-skills-basic"] div {
+    flex: 1 1 50%;
+    min-width: 200px;
+}
+
+.card-infobox-wrapper [data-item-name="card-skills-basic"] > div {
+    border-top: solid 2px #0C195C11 !important;
+}
+
+.card-infobox-wrapper [data-item-name="card-skills-basic"] > div:nth-child(2) > h3::before {
+    content: "LESSON";
+    border-bottom: solid 4px #4dab3d;
+}
+
+.card-infobox-wrapper [data-item-name="card-skills-basic"] > div:nth-child(3) > h3::before {
+    content: "LIVE";
+    border-bottom: solid 4px #3476d8;
+}
+
+.card-infobox-wrapper [data-item-name="card-skills-basic"] > h2:nth-child(4) {
+    opacity: 0.4;
+    text-align: center;
+    font: 700 12px Montserrat, sans-serif;
+}
+
+.card-infobox-wrapper [data-item-name="card-skills-basic"] > div:nth-child(5) > h3::before {
+    content: "LESSON";
+    border-bottom: solid 4px #4dab3d;
+}
+
+.card-infobox-wrapper [data-item-name="card-skills-basic"] > div:nth-child(6) > h3::before {
+    content: "LIVE";
+    border-bottom: solid 4px #3476d8;
+}
+
+/* MUSIC */
+.card-infobox-wrapper [data-item-name="card-skills-music"] [data-item-name="card-skills-live"] .wds-tabs__wrapper .wds-tabs {
+    overflow-y: hidden;
+}
+
+.card-infobox-wrapper [data-item-name="card-skills-music"] > div:nth-child(2) > h3::before {
+    content: "CENTER";
+    padding: 6px 0px;
+}
+
+.card-infobox-wrapper [data-item-name="card-skills-music"] > div:nth-child(3) > h3::before {
+    content: "LIVE";
+    border-bottom: solid 4px #3476d8;
+}
+
+.card-infobox-wrapper [data-item-name="card-skills-live"] {
+    padding-left: 80px !important;
+}
+
+.card-infobox-wrapper [data-item-name="card-skills-live"] .wds-tabs__tab-label {
+    font: 8pt Montserrat, sans-serif;
+    height: auto;
+    padding: 0px 0px 6px 0px;
+    margin: 0px 8px -5px 8px;
+}
+
+.card-infobox-wrapper [data-item-name="card-skills-live"] .wds-tab__content div {
+    border-top: none;
+}
+
+.card-infobox-wrapper [data-item-name="card-skills-music"] > div:nth-child(5) > h3::before {
+    content: "SUPPORT";
+    border-bottom: solid 4px #4dab3d;
+}
+
+.card-infobox-wrapper [data-item-name="card-skills-music"] > div:nth-child(6) > h3::before {
+    content: "SPP";
+    border-bottom: solid 4px #f9a148;
+}
+
+/*** end of Template:Infobox Card ***/
+/*** start of Template:Lyrics ***/
+.pi-theme-lyrics.portable-infobox {
+    width: auto;
+    float: none;
+    background: transparent;
+    border: none;
+}
+
+.pi-theme-lyrics .pi-data {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.pi-theme-lyrics .pi-section-navigation {
+    margin-bottom: 1em;
+}
+
+.pi-theme-lyrics .pi-section-label {
+    font-size: 16px;
+}
+
+.pi-theme-lyrics.portable-infobox .pi-header {
+    display: none;
+}
+
+.pi-theme-lyrics .pi-data-value {
+    font-size: 16px;
+    line-height: 1.5;
+    width: 100%;
+    text-align: center;
+}
+
+/*** end of Template:Lyrics ***/
+/*** start of Template:Dorm Room ***/
+
+
+aside[data-item-name="dorm-room"] {
+ float:none;
+ width:100%;
+ margin:0px 0px 0px;
+ display:flex;
+ flex-wrap:wrap;
+ justify-content:center
+}
+section[data-item-name="dorm-room-image-wrapper"] {
+ flex:0 1 300px;
+ position:relative;
+ height:138px;
+ margin:10px !important;
+ border-radius:5px;
+ overflow:hidden
+}
+div[data-item-name="dorm-room-image"] {
+ padding:0px !important;
+ border-top:none
+}
+section[data-item-name="dorm-room-info"] {
+ flex:1 1 300px
+}
+nav[data-item-name="dorm-room-chibis"] {
+ position:absolute;
+ bottom:0px;
+ right:0px;
+ background-color:unset !important;
+ text-align:right
+}
+div[data-item-name="dorm-room-gallery"] > div > ul > li:before {
+ content:'';
+ padding:0px
+}
+div[data-item-name="dorm-room-gallery"] img {
+ border-radius:5px
+}
+
+/*** end of Template:Dorm Room ***/

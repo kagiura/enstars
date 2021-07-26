@@ -5,7 +5,7 @@ description: Create short URLs that can be easily shared, tweeted, or emailed to
 
 version: v0.2
 
-baseurl: "/leo/x"
+baseurl: ""
 permalink: /:slug/
 logo: /assets/logo.png
 
