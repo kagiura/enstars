@@ -1,0 +1,64 @@
+.character-render-icon {
+    display: block;
+}
+
+.character-render-full {
+    display: none;
+}
+
+.character-render-icon {
+    mask: top/100% auto no-repeat url('https://raw.githubusercontent.com/jeaoq/enstars-wiki/main/leo/images/tsukasus_image.png');
+    background: #94C9DB;
+    width: 100px;
+}
+
+.character-render-icon img[src*='ES'] {
+    position: absolute;
+    z-index: 1;
+    left: 40px;
+    top: 10px;
+    width: 70px;
+}
+
+.character-render-icon [src*='top.png'],
+.character-render-icon svg {
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+
+}
+
+.character-render-icon [src*='top'] {
+    position: absolute;
+    z-index: 3;
+
+}
+
+
+.character-render-icon svg {
+    z-index: 2;
+
+}
+
+.character-render-icon svg path {
+    fill: var(--theme-color-character-color);
+
+}
+
+.article-table tr td::before {
+    content: attr(alt);
+    font:  22px Rubik;
+    margin-bottom: 8px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    display: block;
+    text-align: center;
+}
+
+
+.article-table tr td::after {
+    display: none;
+}
