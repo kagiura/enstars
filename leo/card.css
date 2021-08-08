@@ -147,6 +147,11 @@
     flex-wrap: wrap;
 }
 
+.card-infobox-wrapper [data-item-name|="card-gallery"] img {
+    border: none;
+    margin: 3px;
+}
+
 .card-infobox-wrapper [data-item-name|="card-gallery"] > div {
     flex: 1 1 auto;
 }
