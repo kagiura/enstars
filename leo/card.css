@@ -104,7 +104,7 @@
     background: var(--theme-infobox-background-color);
     z-index: 20;
     border-bottom: solid 2px var(--theme-infobox-main-light-color);
-    
+
     transition: padding 0.2s ease;
 }
 
@@ -229,7 +229,7 @@
     left: max(calc(-0.4 * var(--content-width)), -500px);
     top: -10px;
     height: 100%;
-    
+
 }
 
 .card-infobox-wrapper .card-pair-wrapper .card-single {
@@ -473,7 +473,7 @@ body:not(.isPageNarrow) .card-infobox-wrapper .card-pair-wrapper:hover .card-unb
     flex: 0 auto;
     padding: 0px;
     line-height: 1.4;
-    
+
 }
 
 
@@ -523,7 +523,7 @@ body:not(.isPageNarrow) .card-infobox-wrapper .card-pair-wrapper:hover .card-unb
     margin-bottom: 5px;
     letter-spacing: 1px;
     opacity: 0.4;
-    
+
 }
 
 .card-infobox-wrapper [data-item-name="card-related-wrapper"] div[data-source="Campaign"]::before{
@@ -546,7 +546,6 @@ body:not(.isPageNarrow) .card-infobox-wrapper .card-pair-wrapper:hover .card-unb
     transform: translateX(3px);
 }
 
-/*EXTRA JS STUFF*/
 /*CARD isScrolledPast*/
 
 .isPageNarrow .card-infobox-wrapper.isScrolledPast .card-quote-wrapper{
@@ -571,7 +570,7 @@ body:not(.isPageNarrow) .card-infobox-wrapper .card-pair-wrapper:hover .card-unb
     width: auto;
     position: sticky;
     top: 56px;
-    
+
 }
 
 .isPageNarrow .card-infobox-wrapper.isScrolledPast .card-single {
@@ -623,7 +622,7 @@ body:not(.isPageNarrow) .card-infobox-wrapper .card-pair-wrapper:hover .card-unb
 .isPageNarrow .card-infobox-wrapper .card-quote-wrapper {
     flex: 1 1 100%;
 }
-    
+
 
 .isPageNarrow .card-infobox-wrapper h2[data-item-name="card-images"] {
     height: unset;
@@ -674,11 +673,11 @@ body:not(.isPageNarrow) .card-infobox-wrapper .card-pair-wrapper:hover .card-unb
     .isPageNarrow .card-infobox-wrapper .card-quote-pair .card-quote {
         flex: 1 1 50%;
     }
-    
+
 }
 
 @media only screen and ( max-width: 550px ){
-    
+
 
     .isPageNarrow .card-infobox-wrapper .card-single a {
         pointer-events: none;
@@ -715,13 +714,13 @@ body:not(.isPageNarrow) .card-infobox-wrapper .card-pair-wrapper:hover .card-unb
         transform: translateX(-20px) scale(0.9) rotate(-2deg);
         filter: brightness(70%) drop-shadow(0px 0px 4px #00000099);
     }
-    
+
 
     .isPageNarrow .card-infobox-wrapper .card-pair-wrapper.bloomed .card-quote-pair {
         top: -60px;
     }
-    
-    
+
+
     .isPageNarrow .card-infobox-wrapper.isScrolledPast [data-item-name="card-title-wrapper"] {
         padding-left: 80px;
     }
@@ -751,8 +750,8 @@ body:not(.isPageNarrow) .card-infobox-wrapper .card-pair-wrapper:hover .card-unb
         transform: translateX(-2px) scale(0.9) rotate(-2deg);
         filter: brightness(70%) drop-shadow(0px 0px 1px #00000099);
     }
-    
-    
+
+
 }
 
 
@@ -762,15 +761,15 @@ body:not(.isPageNarrow) .card-infobox-wrapper .card-pair-wrapper:hover .card-unb
     height: auto;
     pointer-events: none;
 }
-    
+
 .isPageNarrow .card-infobox-wrapper .card-quote {
     font-size: 16px;
     white-space: normal;
     word-wrap: normal;
-    
+
 }
 
-.isPageNarrow .card-hover-text { 
+.isPageNarrow .card-hover-text {
     display: none;
 }
 
@@ -778,25 +777,16 @@ body:not(.isPageNarrow) .card-infobox-wrapper .card-pair-wrapper:hover .card-unb
     text-align: left;
     padding: 2px 8px;
 }
-    
+
 .isPageNarrow .card-infobox-wrapper [data-item-name|="card-stat"]::before {
     position: relative;
     width: 5px;
     height:12px;
     top:2px;
 }
-.isPageNarrow .card-infobox-wrapper [data-item-name|="card-stat"][data-source*="St"]::before {
-    content: '';
-}
-
-.isPageNarrow .card-infobox-wrapper [data-item-name|="card-stat"][data-source*="Da"]::before {
-    content: '';
-}
-
-.isPageNarrow .card-infobox-wrapper [data-item-name|="card-stat"][data-source*="Vo"]::before {
-    content: '';
-}
-
-.isPageNarrow .card-infobox-wrapper [data-item-name|="card-stat"][data-source*="Pf"]::before {
+.isPageNarrow .card-infobox-wrapper [data-item-name|="card-stat"][data-source*="St"]::before,
+.isPageNarrow .card-infobox-wrapper [data-item-name|="card-stat"][data-source*="Da"]::before,
+.isPageNarrow .card-infobox-wrapper [data-item-name|="card-stat"][data-source*="Vo"]::before,
+.isPageNarrow .card-infobox-wrapper [data-item-name|="card-stat"][data-source*="Pf"]::before  {
     content: '';
 }
