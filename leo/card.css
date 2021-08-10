@@ -184,6 +184,7 @@
 .card-infobox-wrapper [data-item-name="card-images"]{
     border: none;
     padding: 0px;
+    overflow: visible;
 }
 
 .card-infobox-wrapper .card-pair-stick {
@@ -288,13 +289,6 @@ body:not(.isPageNarrow) .card-infobox-wrapper .card-pair-wrapper:hover .card-unb
     margin: 20px 0px;
     opacity: 0.4;
 }
-.card-infobox-wrapper [data-item-name="card-images"] {
-    height: 0px;
-    margin: 0px !important;
-    padding: 0px !important;
-    overflow: visible;
-}
-
 /* Stats */
 
 .card-infobox-wrapper [data-item-name|="card-stats"] table {
@@ -628,13 +622,6 @@ body:not(.isPageNarrow) .card-infobox-wrapper .card-pair-wrapper:hover .card-unb
     flex: 1 1 100%;
 }
 
-
-.isPageNarrow .card-infobox-wrapper h2[data-item-name="card-images"] {
-    height: unset;
-    margin: unset;
-    padding: unset;
-    background: none;
-}
 
 .isPageNarrow .card-infobox-wrapper .card-single {
     transform: none;
