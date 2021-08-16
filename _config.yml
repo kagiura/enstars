@@ -1,18 +1,36 @@
-name: URL Shortener
+name: tsukina.ga/leo
 
-title: URL Shortener
-description: Create short URLs that can be easily shared, tweeted, or emailed to friends.
+title: tsukina.ga/leo
+description: "&quot;In this transient world, as agonizing as the third circle of hell, what binds us together is music! Music is the shared language of the world!&quot;"
 
 version: v0.2
 
 baseurl: ""
-permalink: /:slug/
+permalink: /leo/
 logo: /assets/logo.png
 
 theme: minima
 
+minima:
+  skin: dark
+  date_format: "%b %-d, %Y"
+
+  # generate social links in footer
+  social_links:
+    twitter: junsweats
+    github:  jeaoq
+
+header_pages:
+    - about.md
+
+
+show_excerpts: true # set to true to show excerpts on the homepage
+
+
 plugins:
-  - jekyll-redirect-from
+ - jekyll-redirect-from
+ - jekyll-feed
+ - jekyll-seo-tag
 
 collections:
   urls:
@@ -27,6 +45,7 @@ redirect_from:
 
 include:
   - _urls
+  - _posts
 
 exclude:
   - Gemfile
@@ -34,3 +53,10 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+disqus:
+    # Leave shortname blank to disable comments site-wide.
+    # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+    shortname: tsukinagaleo
+
+url: https://tsukina.ga
