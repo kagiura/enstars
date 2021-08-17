@@ -1,0 +1,14 @@
+{
+    "name": "Tsukina.ga",
+    "short_name": "Tsukina.ga",
+    "icons": [
+        {
+            "src": "/android-chrome-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ed6d52",
+    "background_color": "#ed6d52",
+    "display": "standalone"
+}

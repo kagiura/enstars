@@ -1,0 +1,100 @@
+@media only screen and (max-width: 812px) {
+    /*** FANDOM SIDE ***/
+    img {
+        max-width: calc(100vw - 96px);
+        height: auto;
+    }
+    .global-navigation {
+        height: 100vh;
+    }
+
+    .WikiaBar {
+        display: none;
+    }
+    .main-container {
+        margin-left: 66px;
+        width: calc(100% - 66px);
+    }
+
+    .is-content-expanded .resizable-container {
+        margin: 0px;
+        width: 100%;
+    }
+
+    .page__main {
+        padding: 20px 15px;
+    }
+
+    .search-modal, .search-modal::before {
+        left: 66px;
+        width: calc(100vw - 66px);
+    }
+
+    .fandom-community-header {
+        padding: 10px;
+        grid-template-columns: 100%;
+    }
+
+    .fandom-community-header__local-navigation {
+        grid-column: unset;;
+    }
+
+    .fandom-community-header__image{
+        display: none;
+    }
+
+    .fandom-community-header__top-container{
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 5px;
+        column-gap: 10px;
+    }
+    .fandom-community-header__community-name-wrapper{
+        flex: 0 0 100%;
+        text-align: center;
+        justify-content: center;
+
+    }
+    .fandom-community-header__community-name{
+        margin: 0px;
+    }
+    .page-counter{
+        margin: 0px;
+    }
+
+    .fandom-community-header .wds-tabs.medium-navigation{
+        display: none;
+    }
+    .fandom-community-header .wds-tabs.small-navigation{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 3px 0px 0px;
+    }
+    .fandom-community-header .wds-tabs.small-navigation .wds-tabs__tab-label{
+        margin: 0px;
+        height: 10px;
+    }
+    .page{
+        margin-top: 0px;
+    }
+
+    html:not(.ve-activated) .page.has-right-rail .page__right-rail.is-rail-hidden{
+        padding: 0px;
+    }
+
+    .rail-module__list{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .page-side-tools__wrapper{
+        display: none;
+    }
+
+    /*** WIKI SIDE ***/
+
+    .portable-infobox{
+        width: calc(100% - 8px) !important;
+    }
+
+}

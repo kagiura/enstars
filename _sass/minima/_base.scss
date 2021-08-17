@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@font-face {
+  font-family: "FC Iconic Text";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/assets/fonts/fcitextRegular.ttf");
+}
+@font-face {
+  font-family: "FC Iconic Text";
+  font-weight: 400;
+  font-style: italic;
+  src: url("/assets/fonts/fcitextItalic.ttf");
+}
 
 html {
   font-size: $base-font-size;
@@ -34,6 +46,7 @@ body {
   min-height: 100vh;
   flex-direction: column;
   overflow-wrap: break-word;
+  letter-spacing: 0.5px;
 }
 
 
