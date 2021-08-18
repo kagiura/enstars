@@ -63,7 +63,7 @@ var charArray = [
 
 
 var cssStyle = document.createElement('link');
-cssStyle.href = 'https://jeaoq.github.io/enstars-wiki/story.css';
+cssStyle.href = 'https://tsukina.ga/leo/story.css';
 cssStyle.rel = 'stylesheet';
 document.head.appendChild(cssStyle);
 
@@ -75,7 +75,7 @@ $( document ).ready(function() {
         addCategories();
 
         console.log("%cSTORY.JS v0.4.1 — github/jeaoq/enstars-wiki", "display: inline-block; color:#3434eb; background:white; padding: 10px 40px; margin: 0px 5px 5px 0px; border-radius: 15px 5px; border: solid 2px #3434eb; box-shadow: 5px 5px 0px 0px #3434eb; font-weight: 700; font-size: 1.2em;");
-        console.log(`Changelog: 
+        console.log(`Changelog:
         0.3.0   Included CategoryClasses in story.js
                 Fixed HiMERU & Gatekeeper from disappearing
                 Adjusted colors in fill mode to be more readable
@@ -86,8 +86,8 @@ $( document ).ready(function() {
                 Added ability to disable Natsume's font
                 Added dyslexic friendly font option [BETA]
         0.4.2   Fixed unreadable Links in stories`);
-        console.log(`Credits: 
-        -       https://github.com/yaycupcake/enstars-wiki-js 
+        console.log(`Credits:
+        -       https://github.com/yaycupcake/enstars-wiki-js
                 (Render detection, Character List, and a lot more! by @mizuhanome_tl)`);
 
         $(document.querySelector('.storyNavBar')).addClass('storyTopNav');
@@ -139,14 +139,14 @@ $( document ).ready(function() {
                 <span class="material-icons-round">badge</span>
             </a>
             <input type="text" id="playerName" name="playerName">
-            
+
         </div>
         <div class="story-natsume">
             <a onclick="notsume();">
                 <img src="https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/Natsume ES Head.png" alt="Disable Natsume Spell Font"></img>
             </a>
-            
-            
+
+
         </div>
         </th>
         </tr>
@@ -220,20 +220,20 @@ function updatePageWidth() {
         currentContentWidth = currentContentWidth - 336;
     }
     document.documentElement.style.setProperty('--content-width', currentContentWidth + 'px');
-    
+
     if(currentContentWidth < narrowLimit){
         $('body').addClass("isPageNarrow")
     } else {
         $('body').removeClass("isPageNarrow")
     }
-    
+
     if( !$('.card-infobox-wrapper').hasClass('isScrolledPast') ){
         titleBarPos = $('.wds-is-current .card-pair-wrapper').offset().top + $('.wds-is-current .card-pair-wrapper').outerHeight() - 91;
         cardStickyHeight = $('.wds-is-current .card-pair-stick').outerHeight() + 20;
     }
-    
+
     cardSpaceDown();
-    
+
 }
 
 function addCategories(){
@@ -259,12 +259,12 @@ function addCategories(){
 
 function stickyInitial(){
     const stickyElm = document.querySelector('.storyTopNav');
-    
-    const observer = new IntersectionObserver( 
+
+    const observer = new IntersectionObserver(
       ([e]) => e.target.classList.toggle('isSticky', e.intersectionRatio < 1),
       {threshold: [1]}
     );
-    
+
     observer.observe(stickyElm);
 }
 
@@ -291,7 +291,7 @@ function tagRenders() {
                 }
             });
             squareFileName = "https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/"+firstName+" ES.png";
-        
+
         }
         // console.log(filename + " -> " + name + " / " + firstName);
         $(this)
@@ -312,11 +312,11 @@ function tagRenders() {
         } else {
             cell.attr('alt', name);
         }
-        
+
         var colorClass = 'pi-theme-' + firstName.toLowerCase() + '-color'
         cell.parent().addClass(colorClass);
     });
-    
+
     $('.story-table p').each(function() {
         $(this).html( $(this).html().replace('Anzu', playerName ) );
     });
@@ -484,7 +484,5 @@ function getPreference(param){
     	pref = data.query.userinfo.options['userjs-'+param];
         // console.log( pref );
     } );
-    
+
 }
-
-
