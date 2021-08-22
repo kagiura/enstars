@@ -1,0 +1,23 @@
+.notice {
+  background: rgba(153,153,153,0.094);
+  padding: 20px;
+  font-size: 0.8em;
+  border-radius: 3px;
+  border-left: 5px solid #585858;
+  margin: 10px auto;
+}
+.notice p {
+  margin: 0px 0px 5px;
+}
+.post .hidden {
+  display: none;
+}
+hr {
+  margin: 30px auto;
+  max-width: 300px;
+  border: 2px solid;
+  margin: 30px auto;
+  border-radius: 10px;
+  height: 0px;
+  background: none;
+}
