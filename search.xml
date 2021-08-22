@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/leo/hello-world/</url>
+    <url>/enstars-wiki/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start">Quick Start</h2>
 <h3 id="Create-a-new-post">Create a new post</h3>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <title>lionheart</title>
-    <url>/leo/lionheart/</url>
+    <url>/enstars-wiki/lionheart/</url>
     <content><![CDATA[<p class="hidden">
 ผมเคยถามอยู่นะว่าทำไมเจ้านั่นถึงไม่ชอบโมทซาร์ท
 </p>
@@ -32,7 +32,7 @@
 </blockquote>
 <blockquote class="notice">
 <p><strong>This translation is unproofed</strong> <br> I know no one please help if you’re interested (contact me on my twitter, link on <a href="/leo/tl/about">about page</a>)</p>
-<p><strong>การแปลนีไม่ได้พิสูจน์อักษร</strong> <br> อาจมีข้อผิดพลาดในการแปลหรือภาษาไม่ลื่นไหลมาก <a href="/leo/tl/about">ถ้าสนใจช่วยพิสูจน์อักษร ติดต่อมาหน่อยนะครับ ;v;</a></p>
+<p><strong>การแปลนีไม่ได้พิสูจน์อักษร</strong> <br> อาจมีข้อผิดพลาดในการแปลหรือภาษาไม่ลื่นไหลมาก <a href="/leo/tl/about">ถ้าสนใจช่วยพิสูจน์อักษร ติดต่อมาหน่อยนะครับ</a></p>
 </blockquote>
 <p>ผมเคยถามอยู่นะว่าทำไมเจ้านั่นถึงไม่ชอบโมทซาร์ท</p>
 <p>ก็ไม่ได้ว่าสนใจขนาด<em>นั้น</em>หรอก</p>
