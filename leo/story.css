@@ -308,6 +308,7 @@ body:not(.story-minimized) .article-table tr td::after {
 
 .story-minimized .story-table tr td[colspan="2"] {
     padding-left: 80px;
+    flex: 1 1 50px;
 }
 
 .story-minimized .story-table tr th {

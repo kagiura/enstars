@@ -2,6 +2,7 @@
 var narrowLimit = 812;
 var titleBarPos = $('.card-pair-wrapper').offset().top + $('.card-pair-wrapper').outerHeight() - 91;
 var cardStickyHeight = $('.card-pair-stick').outerHeight() + 20;
+var playerName = 'Anzu';
 var charArray = [
     "Kohaku Oukawa",
     "Aira Shiratori",
@@ -60,14 +61,14 @@ var charArray = [
 ];
 
 
-
+/*
 var cssStyle = document.createElement('link');
-cssStyle.href = 'https://tsukina.ga/leo/story.css';
+cssStyle.href = 'https://jeaoq.github.io/enstars-wiki/story.css';
 cssStyle.rel = 'stylesheet';
 document.head.appendChild(cssStyle);
+*/
 
-
-
+// A $( document ).ready() block.
 $( document ).ready(function() {
     mw.loader.using('mediawiki.api', function() {
         // console.log("DEBUG - Adds CategoryClasses Manually");
@@ -84,12 +85,10 @@ $( document ).ready(function() {
         0.4.1   Fixed lag when running script
                 Added ability to disable Natsume's font
                 Added dyslexic friendly font option [BETA]
-        0.4.2   Fixed unreadable Links in stories
-        0.4.3   Bye story.js! Fixed final bugs - 22082021`);
+        0.4.2   Fixed unreadable Links in stories`);
         console.log(`Credits:
         -       https://github.com/yaycupcake/enstars-wiki-js
                 (Render detection, Character List, and a lot more! by @mizuhanome_tl)`);
-        console.log(`Thank you so much for the support!`);
 
         $(document.querySelector('.storyNavBar')).addClass('storyTopNav');
         $(document.querySelector('.storyNavBar')).addClass('storyOptions');
@@ -135,6 +134,13 @@ $( document ).ready(function() {
                 <li id="sf-21" onclick="storyOptionsFontSize('21');">21px</li>
             </ul>
         </div>
+        <div class="story-name">
+            <a>
+                <span class="material-icons-round">badge</span>
+            </a>
+            <input type="text" id="playerName" name="playerName">
+
+        </div>
         <div class="story-natsume">
             <a onclick="notsume();">
                 <img src="https://ensemble-stars.fandom.com/wiki/Special:Redirect/file/Natsume ES Head.png" alt="Disable Natsume Spell Font"></img>
@@ -146,6 +152,49 @@ $( document ).ready(function() {
         </tr>
         `);
 
+        $('.storyCover > tbody').append(`
+        <tr>
+        <th colspan="3">Reading Options</th>
+        </tr>
+        <tr class="story-options-wrapper">
+        <td colspan="3" class="story-options storyOptions">
+        <div class="story-format">
+            <h3><span class="material-icons-round">menu_book</span>Reading Settings</h3>
+            <div>
+                <a href="#resize" onclick="resizeImg();">
+                    <span class="material-icons-round">question_answer</span> Chat Mode
+                </a>
+                <a href="#color" onclick="color();">
+                    <span class="material-icons-round">palette</span> Colored
+                </a>
+                <a href="#colorFill" onclick="colorFill();">
+                    <span class="material-icons-round">format_color_fill</span> Full
+                </a>
+                <a href="#colorShadow" onclick="colorShadow();">
+                    <span class="material-icons-round">copy_all</span> Shadow
+                </a>
+            </div>
+        </div>
+        <div class="story-resize-text">
+            <h3><span class="material-icons-round">format_size</span>Font Size</h3>
+            <div>
+                <span class="story-options-fontSize">
+                    <input type="number" id="fontSize" name="fontSize">
+                    <span>px</span>
+                </span>
+            </div>
+        </div>
+        <div class="story-name">
+            <h3><span class="material-icons-round">badge</span> Player Name</h3>
+            <div>
+                <input type="text" id="playerName" name="playerName">
+            </div>
+        </div>
+        </td>
+        </tr>
+        `);
+
+
 
         $('body[class*="_-_Story"]:not([class*="_-_Story_Index"]) .article-table:not(.storyNavBar)').addClass('story-table');
         initialConfig();
@@ -153,6 +202,22 @@ $( document ).ready(function() {
             stickyInitial();
         }
         updatePageWidth();
+        $( "#playerName" ).change(function() {
+            // console.log('pNC');
+
+            if($('#playerName').length > 0){
+                adjustWidthOfInput();
+                try{
+                    playerName = $('#playerName').val();
+                }catch(e){
+
+                }
+            }
+            setPreference('playerName', playerName);
+        });
+        $('#playerName').focus(function() {
+            $('body').addClass('writing');
+        }).
         blur(function() {
             $('body').removeClass('writing');
         });
@@ -260,6 +325,9 @@ function stickyInitial(){
 
 
 function tagRenders() {
+    if($('#playerName').length > 0){
+        adjustWidthOfInput();
+    }
     const renders = $('.story-table img[data-image-name*="Render"]');
     renders.each(function() {
         var filename = $(this).attr('data-image-name');
@@ -312,6 +380,10 @@ function tagRenders() {
         var colorClass = 'pi-theme-' + firstName.toLowerCase() + '-color'
         cell.parent().addClass(colorClass);
     });
+
+    $('.story-table p').each(function() {
+        $(this).html( $(this).html().replace('Anzu', playerName ) );
+    });
 }
 
 
@@ -357,6 +429,28 @@ function storyOptionsFontSize(val) {
     setPreference('fontSize', val);
 }
 
+
+//var inputEl = document.getElementById("playerName");
+
+function getWidthOfInput() {
+    var tmp = document.createElement("span");
+    tmp.className = "playerNameTemp";
+    try{
+        tmp.innerHTML = $('#playerName').val().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+    }catch(e){
+
+    }
+    document.body.appendChild(tmp);
+    var theWidth = $('.playerNameTemp').outerWidth();
+    document.body.removeChild(tmp);
+    return theWidth;
+}
+
+function adjustWidthOfInput() {
+    // inputEl.style.width = getWidthOfInput() + "px";
+    $('#playerName').width( getWidthOfInput() );
+}
 
 
 
@@ -431,6 +525,31 @@ function initialConfig(){
         }
         else if(pref.options['userjs-opendyslexic']){
         	$('body').addClass('opendyslexic');
+        }
+
+        if(pref.options['userjs-playerName'] === "undefined"){
+        	setPreference('playerName', 'Anzu');
+            playerName = Anzu;
+            if($('#playerName').length > 0){
+                try{
+                    $('#playerName').val( 'Anzu' );
+
+                }catch(e){
+
+                }
+            }
+        } else {
+            playerName = pref.options['userjs-playerName'];
+            if($('#playerName').length > 0){
+
+                try{
+                    $('#playerName').val( pref.options['userjs-playerName'] );
+
+                }catch(e){
+
+                }
+
+            }
         }
         tagRenders();
     } );
