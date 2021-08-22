@@ -148,7 +148,7 @@ $( document ).ready(function() {
 
 
         $('body[class*="_-_Story"]:not([class*="_-_Story_Index"]) .article-table:not(.storyNavBar)').addClass('story-table');
-        initialConfig();
+        initialConfigStory();
         if($('.storyTopNav').length){
             stickyInitial();
         }
@@ -374,7 +374,7 @@ function setPreference(param, val){
     } );
 }
 
-function initialConfig(){
+function initialConfigStory(){
     document.documentElement.style.setProperty('--content-width', $('#content').width() + 'px');
     var params = {
             action: 'query',
