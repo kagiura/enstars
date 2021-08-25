@@ -37,6 +37,268 @@
     padding: 12px 0 18px
 }
 
+.no-featured-video .featured-video__wrapper {
+    display: none
+}
+
+body.skin-fandomdesktop .featured-video.is-collapsed .featured-video__close {
+    height: 24px;
+    min-width: 24px;
+    width: 24px
+}
+
+.featured-video {
+    padding-top: 56.25%;
+    position: relative;
+    width: 100%
+}
+
+.featured-video__player-container {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 2
+}
+
+.featured-video.is-collapsed-ready .featured-video__player-container {
+    left: auto;
+    position: fixed;
+    top: auto
+}
+
+.featured-video.is-collapsed .featured-video__player-container {
+    bottom: 18px !important;
+    left: auto;
+    position: fixed;
+    right: 18px !important;
+    top: auto;
+    -webkit-transition: right .4s, bottom .4s, width .4s;
+    transition: right .4s, bottom .4s, width .4s;
+    width: 300px !important;
+    z-index: 200
+}
+
+.skin-oasis .featured-video.is-collapsed .featured-video.is-collapsed .featured-video__player-container {
+    bottom: 45px !important;
+    right: 20px !important
+}
+
+.featured-video.is-collapsed .featured-video__details {
+    display: block
+}
+
+.featured-video.is-collapsed .featured-video__close {
+    cursor: pointer;
+    display: block
+}
+
+.featured-video.is-collapsed .jw-related-close {
+    display: none
+}
+
+.featured-video__details {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background-color: #000;
+    display: none;
+    font-weight: 700;
+    padding: 10px 12px
+}
+
+.featured-video__details > div {
+    max-width: 276px
+}
+
+.featured-video__title {
+    color: #ccc;
+    font-size: 14px
+}
+
+.featured-video__label {
+    color: #999;
+    font-size: 12px;
+    opacity: .5;
+    text-transform: uppercase
+}
+
+.featured-video__time:before {
+    content: "\2022";
+    padding: 0 2px
+}
+
+.featured-video__close {
+    fill: #fff;
+    display: none;
+    padding: 7px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1
+}
+
+.featured-video__wrapper {
+    margin-bottom: 18px
+}
+
+.featured-video__wrapper.is-removed {
+    display: none
+}
+
+body.skin-fandomdesktop .featured-video__wrapper {
+    max-width: 858px
+}
+
+.featured-video.is-collapsed .jw-state-idle .jw-title,
+.featured-video.is-collapsed .jw-title {
+    display: none
+}
+
+.featured-video.is-collapsed .wikia-jw--button,
+.featured-video.is-collapsed .wikia-jw__plugin {
+    display: none !important
+}
+
+.featured-video.is-collapsed.is-collapsed-ready .jw-controls > div {
+    display: none
+}
+
+.featured-video__attribution-container {
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    align-items: center;
+    display: -webkit-box;
+    display: flex;
+    justify-content: center;
+    padding: 6px
+}
+
+.featured-video__attribution-avatar {
+    height: 20px;
+    margin-right: 6px;
+    width: 20px
+}
+
+.featured-video__attribution-icon {
+    line-height: 0;
+    margin-left: 6px
+}
+
+.featured-video-wrapper .is-collapsed .featured-video__attribution-container {
+    -webkit-box-pack: start;
+    border-bottom: 0;
+    justify-content: flex-start;
+    padding: 2px 0 0
+}
+
+.featured-video-wrapper .is-collapsed .featured-video__attribution-avatar {
+    display: none
+}
+
+.featured-video-wrapper .is-collapsed .featured-video__attribution-icon,
+.featured-video-wrapper .is-collapsed .featured-video__attribution-username {
+    color: #f5f3f5
+}
+
+.featured-video .video-feedback {
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, .9);
+    border-radius: 2px;
+    color: #39424d;
+    cursor: default;
+    display: none;
+    font-size: 14px;
+    max-width: 90%;
+    padding: 5px 8px;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    z-index: 199
+}
+
+.featured-video .video-feedback.visible {
+    display: -webkit-box;
+    display: flex
+}
+
+.featured-video .video-feedback .video-feedback-close {
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 10px;
+    margin-right: 10px;
+    min-width: 10px;
+    width: 10px
+}
+
+.featured-video .video-feedback .video-thumb {
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    display: -webkit-box;
+    display: flex;
+    flex-shrink: 0;
+    height: 22px;
+    justify-content: center;
+    margin-left: 12px;
+    width: 22px
+}
+
+.featured-video .video-feedback .video-thumb-up {
+    background-color: #0c742f
+}
+
+.featured-video .video-feedback .video-thumb-up svg {
+    position: relative;
+    top: -1px
+}
+
+.featured-video .video-feedback .video-thumb-down {
+    background-color: #bf0017
+}
+
+.featured-video.is-collapsed .video-feedback {
+    display: none
+}
+
+.featured-video .video-unmute {
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, .9);
+    border-radius: 2px;
+    color: #39424d;
+    cursor: pointer;
+    display: none;
+    font-size: 12px;
+    font-weight: 700;
+    left: 6px;
+    max-width: 90%;
+    padding: 5px 8px;
+    position: absolute;
+    top: 6px;
+    z-index: 199
+}
+
+.featured-video .video-unmute.visible {
+    display: -webkit-box;
+    display: flex
+}
+
+.featured-video .video-sound-off {
+    fill: #39424d;
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 14px;
+    margin-right: 6px;
+    min-width: 14px;
+    width: 14px
+}
+
 .create-page-dialog.wds-dialog__curtain {
     z-index: 500
 }
@@ -67,14 +329,14 @@
 }
 
 :root {
-    --fandom-global-nav-background-color: #f5f3f5;
+    --fandom-global-nav-background-color: #ffc500;
     --fandom-global-nav-text-color: #1e0c1b;
     --fandom-global-nav-link-color: #520044;
     --fandom-global-nav-link-color--hover: #b80099;
-    --fandom-global-nav-icon-color: #1e0c1b;
-    --fandom-global-nav-icon-background-color: hsla(0, 0%, 78%, 0.5);
-    --fandom-global-nav-icon-background-color--hover: #d6d0d5;
-    --fandom-global-nav-icon-background-color--active: #a9a9a9;
+    --fandom-global-nav-icon-color: #fa005a;
+    --fandom-global-nav-icon-background-color: #f9edd8;
+    --fandom-global-nav-icon-background-color--hover: #f9edd8;
+    --fandom-global-nav-icon-background-color--active: #fff;
     --fandom-global-nav-icon-border-color: #520044;
     --fandom-global-nav-icon-border-color--hover: rgba(82, 0, 68, 0.5);
     --fandom-global-nav-icon-border-color--active: #520044;
@@ -82,13 +344,12 @@
     --fandom-global-nav-counter-background-color: #520044;
     --fandom-global-nav-counter-label-color: #fff;
     --fandom-global-nav-mobile-logo: url(https://ensemble-stars.fandom.com/resources-ucp/dist/svg/wds-brand-fandom-logo.svg);
-    --fandom-global-nav-search-active-link-background-color: #d6d0d5;
-    --fandom-global-nav-search-active-link-border-color: #595358;
+    --fandom-global-nav-search-active-link-background-color: #fff;
+    --fandom-global-nav-search-active-link-border-color: #520044;
     --fandom-global-nav-logo-separator-color: #520044;
     --fandom-global-nav-search-separator-color: rgba(30, 12, 27, 0.25);
-    --fandom-global-nav-bottom-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.25);
-    --fandom-global-nav-gp-legacy-logo: url(https://ensemble-stars.fandom.com/resources-ucp/dist/svg/wds-brand-gamepedia-badge-black.svg);
-    --fandom-global-nav-border-top-width: 0
+    --fandom-global-nav-bottom-shadow: none;
+    --fandom-global-nav-gp-legacy-logo: url(https://ensemble-stars.fandom.com/resources-ucp/dist/svg/wds-brand-gamepedia-badge-orange.svg)
 }
 
 :root {
@@ -201,54 +462,15 @@
 }
 
 .search-modal__content .instant-suggestion a:hover span {
-    color: var(--fandom-text-color);
+    color: #fff;
     text-decoration: underline
 }
 
 .search-modal__content .instant-suggestion a span {
-    color: var(--fandom-text-color)
+    color: #fff
 }
 
-.page-content .portable-infobox ul {
-    margin: 0;
-    text-align: initial
-}
-
-.page-content .portable-infobox ul ul {
-    margin-top: 6px;
-    padding-left: 9px
-}
-
-.page-content .portable-infobox p,
-.page-content .portable-infobox section {
-    margin-bottom: 0
-}
-
-.page-content .portable-infobox h2,
-.page-content .portable-infobox h3 {
-    border-bottom: 0;
-    font-family: inherit;
-    font-weight: 700;
-    margin: 0
-}
-
-.page-content .portable-infobox .pi-title {
-    font-size: 18px;
-    line-height: 1.25;
-    padding: 12px 9px
-}
-
-.page-content .portable-infobox .pi-header {
-    font-size: 14px;
-    line-height: 1.25;
-    padding: 9px
-}
-
-.page-content .portable-infobox .pi-data-label {
-    font-size: 12px;
-    line-height: 1.5
-}
-
+@charset "UTF-8";
 .portable-infobox {
     --pi-background: var(--theme-page-background-color);
     --pi-secondary-background: var(--theme-accent-color);
@@ -261,6 +483,18 @@
     float: right;
     margin: 0 0 18px 18px;
     width: 270px
+}
+
+.mw-content-ltr .portable-infobox ul,
+.mw-content-rtl .portable-infobox ul {
+    margin: 0;
+    text-align: initial
+}
+
+.mw-content-ltr .portable-infobox ul ul,
+.mw-content-rtl .portable-infobox ul ul {
+    margin-top: 6px;
+    padding-left: 9px
 }
 
 .pi-item-spacing {
@@ -319,6 +553,13 @@
     text-align: center
 }
 
+.pi-title {
+    font-size: 18px;
+    line-height: 1.25;
+    padding-bottom: 12px;
+    padding-top: 12px
+}
+
 .pi-data {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -345,9 +586,13 @@
 }
 
 .pi-data-label {
+    word-wrap: break-word;
     flex-basis: 90px;
+    font-size: 12px;
+    font-weight: 700;
     -webkit-hyphens: auto;
     hyphens: auto;
+    line-height: 1.5;
     margin: 0;
     overflow: hidden
 }
@@ -360,7 +605,7 @@
     -webkit-hyphens: auto;
     hyphens: auto;
     line-height: 1.5;
-    overflow-wrap: break-word
+    word-break: break-word
 }
 
 .pi-data-value > * {
@@ -371,9 +616,16 @@
     flex-basis: 180px
 }
 
-.pi-data-value ol,
-.pi-data-value ul {
+.pi-data-value ol {
     list-style-position: inside
+}
+
+.pi-data-value ul li:before {
+    color: var(--theme-link-color);
+    content: "•";
+    font-size: 1.1em;
+    line-height: 1;
+    padding-right: 6px
 }
 
 .pi-image {
@@ -443,8 +695,8 @@
     padding-bottom: 0
 }
 
-.pi-smart-group .pi-smart-data-value,
-.pi-smart-group h3.pi-smart-data-label {
+.pi-smart-group .pi-smart-data-label,
+.pi-smart-group .pi-smart-data-value {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     flex-basis: auto;
@@ -452,19 +704,19 @@
     padding: 6px 9px
 }
 
-.pi-smart-group .pi-smart-data-value:not(:first-child),
-.pi-smart-group h3.pi-smart-data-label:not(:first-child) {
+.pi-smart-group .pi-smart-data-label:not(:first-child),
+.pi-smart-group .pi-smart-data-value:not(:first-child) {
     border-left-style: solid;
     border-left-width: 1px
 }
 
-.pi-smart-group .pi-smart-data-value:first-child,
-.pi-smart-group h3.pi-smart-data-label:first-child {
+.pi-smart-group .pi-smart-data-label:first-child,
+.pi-smart-group .pi-smart-data-value:first-child {
     padding-left: 9px
 }
 
-.pi-smart-group .pi-smart-data-value:last-child,
-.pi-smart-group h3.pi-smart-data-label:last-child {
+.pi-smart-group .pi-smart-data-label:last-child,
+.pi-smart-group .pi-smart-data-value:last-child {
     padding-right: 9px
 }
 
@@ -494,7 +746,7 @@
 
 .pi-collapse.pi-collapse-closed .pi-horizontal-group tbody,
 .pi-collapse.pi-collapse-closed .pi-horizontal-group thead,
-.pi-collapse.pi-collapse-closed > :nth-child(n+2) {
+.pi-collapse.pi-collapse-closed > :nth-child(n + 2) {
     display: none
 }
 
@@ -542,7 +794,7 @@
 .WikiaArticle .pi-debug {
     background-color: var(--theme-page-background-color--secondary);
     font-family: monospace;
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     width: 100%
 }
@@ -714,7 +966,7 @@ img.lazyloaded {
 }
 
 #preferences #mw-htmlform-fandomdesktop > .oo-ui-fieldLayout.mw-htmlform-hide-if {
-    display: block!important;
+    display: block !important;
     margin-top: 12px
 }
 
@@ -812,7 +1064,7 @@ img.lazyloaded {
 }
 
 .WikiaBarWrapper ~ .popover {
-    left: -4px!important
+    left: -4px !important
 }
 
 .WikiaBarWrapper.hidden {
@@ -1751,7 +2003,7 @@ ul.mw-collapsible:not(.mw-made-collapsible):before {
         margin-bottom: 1em;
         display: inline-block;
         zoom: 1;
-        *display: inline
+        * display: inline
     }
 
     .errorbox h2,
@@ -2213,8 +2465,7 @@ h1.mcf-header {
     display: -webkit-box;
     display: flex;
     flex-basis: 32%;
-    flex-direction: column;
-    width: 32%
+    flex-direction: column
 }
 
 .mcf-column > div {
@@ -2260,7 +2511,7 @@ h1.mcf-header {
     }
 }
 
-@media only screen and (min-width: 1024px) and (max-width:1279px) {
+@media only screen and (min-width: 1024px) and(max-width: 1279px) {
     .mcf-card {
         height: 265.77246px
     }
@@ -2282,7 +2533,7 @@ h1.mcf-header {
     }
 }
 
-@media only screen and (min-width: 1024px) and (max-width:1279px) {
+@media only screen and (min-width: 1024px) and(max-width: 1279px) {
     .mcf-card-tall {
         height: 304px
     }
@@ -2304,7 +2555,7 @@ h1.mcf-header {
     }
 }
 
-@media only screen and (min-width: 1024px) and (max-width:1279px) {
+@media only screen and (min-width: 1024px) and(max-width: 1279px) {
     .mcf-en .mcf-card-related-wikis {
         height: 342.22754px
     }
@@ -2699,7 +2950,7 @@ h1.mcf-header {
     }
 }
 
-@media only screen and (min-width: 1024px) and (max-width:1279px) {
+@media only screen and (min-width: 1024px) and(max-width: 1279px) {
     .mcf-card-discussions {
         height: 543.54491px
     }
@@ -2987,7 +3238,6 @@ h1.mcf-header {
     -webkit-box-direction: normal;
     -webkit-box-pack: justify;
     background-color: var(--fandom-global-nav-background-color);
-    border-top: var(--fandom-global-nav-border-top-width) solid var(--fandom-global-nav-link-color);
     bottom: 0;
     -webkit-box-shadow: 0 3px 12px 0 rgba(0, 0, 0, .3);
     box-shadow: 0 3px 12px 0 rgba(0, 0, 0, .3);
@@ -3047,16 +3297,6 @@ h1.mcf-header {
 .global-navigation__logo:hover,
 .global-navigation__logo:visited {
     color: var(--fandom-global-nav-link-color)
-}
-
-.global-navigation.is-wikia-org .global-navigation__logo .wds-icon {
-    border-bottom: 1px solid var(--fandom-global-nav-logo-separator-color);
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    height: 31px;
-    margin-bottom: 0;
-    padding-bottom: 6px;
-    width: 54px
 }
 
 .global-navigation__links {
@@ -4582,7 +4822,7 @@ button.wds-button {
 }
 
 .wds-is-hidden {
-    display: none!important
+    display: none !important
 }
 
 .wds-list {
@@ -5329,6 +5569,219 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     left: calc(50% - 6px)
 }
 
+.wds-global-navigation.wds-is-wikia-org {
+    background-color: #fff;
+    border-bottom: 1px solid #c7c7c7;
+    border-top: 6px solid #092344
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-global-navigation__logo {
+    height: 27px;
+    -webkit-transform: none;
+    transform: none;
+    width: 126px
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-avatar {
+    --wds-avatar-border-color: #656e78;
+    --wds-avatar-border-color--hover: #1a5eb8;
+    --wds-avatar-background-color: transparent
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-global-navigation__user-menu:hover .wds-avatar__image {
+    fill: #1a5eb8;
+    border-color: #1a5eb8
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-global-navigation__modal-control-user .wds-avatar {
+    --wds-avatar-size: 30px;
+    --wds-avatar-badge-size: 16px;
+    --wds-avatar-border-width: 2px;
+    --wds-avatar-badge-left: -4px;
+    --wds-avatar-badge-top: -6px;
+    --wds-avatar-border-color: #656e78;
+    --wds-avatar-border-color--hover: #1a5eb8;
+    --wds-avatar-background-color: #fff
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-global-navigation__modal-control-close svg,
+.wds-global-navigation.wds-is-wikia-org .wds-global-navigation__modal-control-search svg {
+    fill: #656e78
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-global-navigation__community-bar {
+    height: 49px
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-community-bar__sitename a {
+    color: #656e78
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-community-bar__separator {
+    display: none
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-global-navigation__notifications-dropdown .wds-global-navigation__dropdown-toggle .wds-icon {
+    fill: #656e78
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-global-navigation__notifications-dropdown-content,
+.wds-global-navigation.wds-is-wikia-org .wds-global-navigation__notifications-dropdown-content:hover {
+    color: #1a5eb8
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-dropdown .wds-dropdown__toggle-chevron {
+    fill: #656e78
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-dropdown .wds-dropdown__toggle .wds-icon:hover,
+.wds-global-navigation.wds-is-wikia-org .wds-dropdown:hover .wds-dropdown__toggle .wds-icon {
+    fill: #1a5eb8
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-notification-card__icon-wrapper .wds-icon {
+    fill: #656e78
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-is-unread .wds-notification-card__icon-wrapper .wds-icon {
+    fill: #1a5eb8
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-global-navigation__avatar-notifications-counter,
+.wds-global-navigation.wds-is-wikia-org .wds-global-navigation__notifications-counter {
+    background-color: #1a5eb8;
+    color: #fff
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-avatar .wds-avatar__image:hover {
+    fill: #1a5eb8
+}
+
+.wds-global-navigation.wds-is-wikia-org > * {
+    margin: -3px 0
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-avatar img.wds-avatar__image:hover {
+    border-color: #1a5eb8
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-global-navigation__search-dropdown:hover .wds-dropdown__toggle .wds-global-navigation__search-submit-icon,
+.wds-global-navigation.wds-is-wikia-org .wds-global-navigation__search-dropdown:hover .wds-dropdown__toggle .wds-global-navigation__search-submit-icon:hover {
+    fill: #fff
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-sign-out__button {
+    color: inherit
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-sign-out__button:hover {
+    color: #088488
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-user-modal__sign-out-container .wds-sign-out__button {
+    color: var(--theme-link-color)
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-button:not(.wds-is-text) {
+    --wds-primary-button-background-color: #1a5eb8;
+    --wds-primary-button-background-color--hover: #0d305f;
+    --wds-primary-button-label-color: #fff;
+    --wds-secondary-button-label-color: #1a5eb8;
+    --wds-secondary-button-label-color--hover: #656e78
+}
+
+.wds-global-navigation.wds-is-wikia-org .wds-button:not(.wds-is-text).wds-is-secondary {
+    background: #fff
+}
+
+.wds-is-wikia-org.wds-search-is-active .wds-global-navigation__search-input-wrapper {
+    border-bottom: 2px solid #c5ced9
+}
+
+.wds-is-wikia-org .wds-search-modal__form-and-links-wrapper {
+    background-color: #fff
+}
+
+.wds-is-wikia-org .wds-search-modal__search-icon {
+    fill: #656e78
+}
+
+.wds-is-wikia-org__link:active,
+.wds-is-wikia-org__link:focus,
+.wds-is-wikia-org__link:hover,
+.wds-is-wikia-org__start-a-wiki:active,
+.wds-is-wikia-org__start-a-wiki:focus,
+.wds-is-wikia-org__start-a-wiki:hover {
+    color: #00d6d6 !important
+}
+
+.wds-is-wikia-org .wds-global-navigation__search {
+    color: #656e78
+}
+
+.wds-is-wikia-org .wds-global-navigation__search-toggle:hover {
+    color: #1a5eb8
+}
+
+.wds-is-wikia-org .wds-global-navigation__search-input {
+    color: #656e78
+}
+
+.wds-is-wikia-org .wds-global-navigation__search-input::-webkit-input-placeholder {
+    color: #656e78
+}
+
+.wds-is-wikia-org .wds-global-navigation__search-input::-moz-placeholder {
+    color: #656e78
+}
+
+.wds-is-wikia-org .wds-global-navigation__search-input::placeholder {
+    color: #656e78
+}
+
+.wds-is-wikia-org .wds-global-navigation__search-input-wrapper {
+    border-bottom: 2px solid #c5ced9
+}
+
+.wds-is-wikia-org .wds-global-navigation__search-submit {
+    --wds-primary-button-background-color: #656e78;
+    --wds-primary-button-background-color--hover: #363b41;
+    --wds-primary-button-label-color: #fff;
+    border-radius: 3px;
+    padding: 4px 10px
+}
+
+.wds-is-wikia-org .wds-global-navigation__search-submit-icon {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.wds-is-wikia-org .wds-global-navigation__search-clear svg {
+    fill: #656e78
+}
+
+.wds-is-wikia-org .wds-global-navigation__search-clear-icon {
+    fill: #c5ced9
+}
+
+.wds-is-wikia-org .wds-global-navigation__search-close.wds-button.wds-is-text {
+    color: #656e78
+}
+
+.wds-is-wikia-org .wds-global-navigation__search-close.wds-button.wds-is-text:hover,
+.wds-is-wikia-org .wds-global-navigation__search-suggestions.wds-dropdown__content .wds-list.wds-is-linked > li > a:not(.wds-button) {
+    color: #1a5eb8
+}
+
+.wds-is-wikia-org .wds-global-navigation__search-suggestions.wds-dropdown__content .wds-list.wds-is-linked > li:hover:not(.wds-is-selected) > a {
+    background-color: transparent;
+    color: #1a5eb8
+}
+
+.wds-is-wikia-org .wds-global-navigation__search-suggestions.wds-dropdown__content .wds-list.wds-is-linked > li.wds-is-selected > a:not(.wds-button) {
+    background-color: rgba(26, 94, 184, .1)
+}
+
 .wds-global-footer {
     --global-footer-column-count: 2;
     word-wrap: break-word;
@@ -5521,7 +5974,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     margin-top: 0
 }
 
-@media only screen and (min-width: 768px) and (max-width:1023px) {
+@media only screen and (min-width: 768px) and(max-width: 1023px) {
     .wds-global-footer {
         --global-footer-column-count: 3
     }
@@ -5597,36 +6050,16 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
 }
 
 .wds-global-footer-wikia-org__links {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     color: #39424d;
-    flex-direction: column;
-    font-size: 14px;
-    padding: 18px 12px 24px
-}
-
-.wds-global-footer-wikia-org__links ul {
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-    align-items: center;
-    display: -webkit-box;
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    font-size: 14px;
     list-style: none;
-    margin: 0 0 3px;
-    padding: 0
+    margin-left: 0;
+    padding: 19px 13px 24px
 }
 
 .wds-global-footer-wikia-org__links a {
     color: #39424d
-}
-
-.wds-global-footer-wikia-org__links a:active,
-.wds-global-footer-wikia-org__links a:focus,
-.wds-global-footer-wikia-org__links a:hover,
-.wds-global-footer-wikia-org__links a:visited {
-    color: #092344
 }
 
 .wds-global-footer-wikia-org__link {
@@ -5687,236 +6120,12 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     color: inherit
 }
 
-.wds-community-bar {
-    position: relative
-}
-
-.wds-community-bar .wds-dropdown {
-    --wds-dropdown-background-color: var(--fandom-dropdown-background-color);
-    --wds-dropdown-border-color: var(--fandom-border-color);
-    --wds-dropdown-text-color: var(--fandom-text-color);
-    --wds-dropdown-linked-item-color: var(--fandom-link-color);
-    --wds-dropdown-linked-item-background-color: var(--fandom-link-color--fadeout);
-    --wds-dropdown-scrollable-shadow-color: rgba(30, 12, 27, 0.1)
-}
-
-.wds-community-bar__content {
-    -webkit-box-align: center;
-    align-items: center;
-    border-bottom: 1px solid var(--fandom-border-color);
-    display: -webkit-box;
-    display: flex;
-    height: 50px;
-    margin: 0 12px
-}
-
-.wds-community-bar__sitename {
-    -webkit-box-flex: 1;
-    flex: 1;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: .5px;
-    line-height: 1;
-    max-height: 50px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-transform: uppercase;
-    white-space: nowrap
-}
-
-@supports (-webkit-line-clamp: 2) {
-    .wds-community-bar__sitename {
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        display: -webkit-box;
-        white-space: normal
-    }
-}
-
-.wds-community-bar__discussions,
-.wds-community-bar__navigation {
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-    align-items: center;
-    display: -webkit-box;
-    display: flex;
-    justify-content: center;
-    width: 44px
-}
-
-.wds-community-bar__discussions,
-.wds-community-bar__navigation .wds-dropdown__toggle,
-.wds-community-bar__sitename a {
-    color: var(--fandom-text-color);
-    -webkit-transition: color .3s;
-    transition: color .3s
-}
-
-.wds-community-bar__discussions:hover,
-.wds-community-bar__navigation .wds-dropdown__toggle:hover,
-.wds-community-bar__sitename a:hover {
-    color: var(--fandom-text-color--hover)
-}
-
-.wds-global-navigation .wds-community-bar__discussions,
-.wds-global-navigation .wds-community-bar__navigation .wds-dropdown__toggle,
-.wds-global-navigation .wds-community-bar__sitename a {
-    color: var(--fandom-global-nav-link-color)
-}
-
-.wds-global-navigation .wds-community-bar__discussions:hover,
-.wds-global-navigation .wds-community-bar__navigation .wds-dropdown__toggle:hover,
-.wds-global-navigation .wds-community-bar__sitename a:hover {
-    color: var(--fandom-global-nav-link-color--hover)
-}
-
-.wds-community-bar__navigation {
-    font-size: 16px;
-    line-height: 1.5;
-    -webkit-transition: color .3s;
-    transition: color .3s
-}
-
-.wds-community-bar__navigation .wds-dropdown__toggle-chevron {
-    margin-left: 3px;
-    opacity: .5
-}
-
-.wds-community-bar__navigation.wds-is-active .wds-dropdown__toggle {
-    color: var(--fandom-link-color)
-}
-
-.wds-community-bar__navigation .wds-dropdown {
-    display: block;
-    position: static
-}
-
-.wds-community-bar__navigation .wds-dropdown:after,
-.wds-community-bar__navigation .wds-dropdown:before {
-    bottom: -2px;
-    left: auto
-}
-
-.wds-community-bar__navigation .wds-dropdown:before {
-    margin-left: auto
-}
-
-.wds-community-bar__navigation .wds-dropdown:after {
-    margin-left: 1px
-}
-
-.wds-community-bar__navigation .wds-dropdown:hover:not(.wds-is-active) .wds-dropdown__content,
-.wds-community-bar__navigation .wds-dropdown:hover:not(.wds-is-active):after,
-.wds-community-bar__navigation .wds-dropdown:hover:not(.wds-is-active):before {
-    display: none
-}
-
-.wds-community-bar__navigation .wds-dropdown__toggle {
-    -webkit-box-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: flex
-}
-
-.wds-community-bar__navigation .wds-dropdown__content {
-    border-radius: 0 0 3px 3px;
-    left: 12px;
-    margin-top: -1px;
-    right: 12px
-}
-
-.wds-global-navigation .wds-community-bar__navigation .wds-dropdown__content {
-    margin-top: 0
-}
-
-.wds-community-bar__navigation-back {
-    -webkit-box-align: center;
-    align-items: center;
-    border-bottom: 1px solid var(--fandom-border-color);
-    color: var(--fandom-text-color);
-    display: -webkit-box;
-    display: flex;
-    font-weight: 700;
-    margin-bottom: 6px;
-    padding: 3px 8px 10px
-}
-
-.wds-community-bar__navigation-back .wds-icon {
-    margin-right: 6px;
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg)
-}
-
-.wds-community-bar__navigation-header {
-    color: var(--fandom-text-color);
-    display: block;
-    font-weight: 700;
-    margin: 0 9px;
-    padding: 3px 8px 6px
-}
-
-.wds-community-bar__item-icon {
-    margin-right: 6px;
-    -webkit-transform: none;
-    transform: none
-}
-
-.wds-community-bar__item-content {
-    -webkit-box-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: flex
-}
-
-.wds-community-bar__item-content .wds-avatar {
-    height: 18px;
-    margin-right: 6px;
-    min-width: 18px;
-    width: 18px
-}
-
-.wds-community-bar__level-1.wds-list.wds-is-linked > li > a,
-.wds-community-bar__level-2 ul.wds-list.wds-is-linked > li > a {
-    -webkit-box-align: center;
-    -webkit-box-pack: justify;
-    align-items: center;
-    display: -webkit-box;
-    display: flex;
-    justify-content: space-between
-}
-
-.wds-community-bar__level-1 .wds-icon:not(.wds-community-bar__item-icon),
-.wds-community-bar__level-2 ul .wds-icon:not(.wds-community-bar__item-icon) {
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg)
-}
-
-.wds-community-bar__level-2,
-.wds-community-bar__level-3 {
-    display: none
-}
-
-.wds-community-bar__level-2.wds-is-active,
-.wds-community-bar__level-3.wds-is-active {
-    display: block
-}
-
-.wds-community-bar__gamepedia-badge {
-    background-image: var(--fandom-global-nav-gp-legacy-logo);
-    background-size: cover;
-    display: inline-block;
-    height: 18px;
-    margin-bottom: 2px;
-    vertical-align: middle;
-    width: 18px
-}
-
 @font-face {
     font-family: Rubik;
     font-style: italic;
     font-weight: 300;
     src: local("Rubik Light Italic"), local("Rubik-LightItalic"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWBBXyIfDnIV7nEldWYwWb-6aJ8x8utUQ.woff2) format("woff2");
-    unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, u+2116
+    unicode-range: u + 0400-045f, u + 0490-0491, u + 04b0-04b1, u + 2116
 }
 
 @font-face {
@@ -5924,7 +6133,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: italic;
     font-weight: 300;
     src: local("Rubik Light Italic"), local("Rubik-LightItalic"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWBBXyIfDnIV7nEldWYwWD-6aJ8x8utUQ.woff2) format("woff2");
-    unicode-range: u+0590-05ff, u+20aa, u+25cc, u+fb1d-fb4f
+    unicode-range: u + 0590-05ff, u + 20aa, u + 25cc, u + fb1d-fb4f
 }
 
 @font-face {
@@ -5932,7 +6141,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: italic;
     font-weight: 300;
     src: local("Rubik Light Italic"), local("Rubik-LightItalic"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWBBXyIfDnIV7nEldWYwWz-6aJ8x8utUQ.woff2) format("woff2");
-    unicode-range: u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f, u+a720-a7ff
+    unicode-range: u + 0100-024f, u + 0259, u + 1e??, u + 2020, u + 20a0-20ab, u + 20ad-20cf, u + 2113, u + 2c60-2c7f, u + a720-a7ff
 }
 
 @font-face {
@@ -5940,7 +6149,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: italic;
     font-weight: 300;
     src: local("Rubik Light Italic"), local("Rubik-LightItalic"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWBBXyIfDnIV7nEldWYwWL-6aJ8x8s.woff2) format("woff2");
-    unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd
+    unicode-range: u + 00??, u + 0131, u + 0152-0153, u + 02bb-02bc, u + 02c6, u + 02da, u + 02dc, u + 2000-206f, u + 2074, u + 20ac, u + 2122, u + 2191, u + 2193, u + 2212, u + 2215, u + feff, u + fffd
 }
 
 @font-face {
@@ -5948,7 +6157,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: italic;
     font-weight: 400;
     src: local("Rubik Italic"), local("Rubik-Italic"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWEBXyIfDnIV7nEnXq61E_c5IhGzg.woff2) format("woff2");
-    unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, u+2116
+    unicode-range: u + 0400-045f, u + 0490-0491, u + 04b0-04b1, u + 2116
 }
 
 @font-face {
@@ -5956,7 +6165,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: italic;
     font-weight: 400;
     src: local("Rubik Italic"), local("Rubik-Italic"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWEBXyIfDnIV7nEnXy61E_c5IhGzg.woff2) format("woff2");
-    unicode-range: u+0590-05ff, u+20aa, u+25cc, u+fb1d-fb4f
+    unicode-range: u + 0590-05ff, u + 20aa, u + 25cc, u + fb1d-fb4f
 }
 
 @font-face {
@@ -5964,7 +6173,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: italic;
     font-weight: 400;
     src: local("Rubik Italic"), local("Rubik-Italic"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWEBXyIfDnIV7nEnXC61E_c5IhGzg.woff2) format("woff2");
-    unicode-range: u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f, u+a720-a7ff
+    unicode-range: u + 0100-024f, u + 0259, u + 1e??, u + 2020, u + 20a0-20ab, u + 20ad-20cf, u + 2113, u + 2c60-2c7f, u + a720-a7ff
 }
 
 @font-face {
@@ -5972,7 +6181,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: italic;
     font-weight: 400;
     src: local("Rubik Italic"), local("Rubik-Italic"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWEBXyIfDnIV7nEnX661E_c5Ig.woff2) format("woff2");
-    unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd
+    unicode-range: u + 00??, u + 0131, u + 0152-0153, u + 02bb-02bc, u + 02c6, u + 02da, u + 02dc, u + 2000-206f, u + 2074, u + 20ac, u + 2122, u + 2191, u + 2193, u + 2212, u + 2215, u + feff, u + fffd
 }
 
 @font-face {
@@ -5980,7 +6189,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: italic;
     font-weight: 500;
     src: local("Rubik Medium Italic"), local("Rubik-MediumItalic"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWBBXyIfDnIV7nElY2ZwWb-6aJ8x8utUQ.woff2) format("woff2");
-    unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, u+2116
+    unicode-range: u + 0400-045f, u + 0490-0491, u + 04b0-04b1, u + 2116
 }
 
 @font-face {
@@ -5988,7 +6197,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: italic;
     font-weight: 500;
     src: local("Rubik Medium Italic"), local("Rubik-MediumItalic"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWBBXyIfDnIV7nElY2ZwWD-6aJ8x8utUQ.woff2) format("woff2");
-    unicode-range: u+0590-05ff, u+20aa, u+25cc, u+fb1d-fb4f
+    unicode-range: u + 0590-05ff, u + 20aa, u + 25cc, u + fb1d-fb4f
 }
 
 @font-face {
@@ -5996,7 +6205,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: italic;
     font-weight: 500;
     src: local("Rubik Medium Italic"), local("Rubik-MediumItalic"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWBBXyIfDnIV7nElY2ZwWz-6aJ8x8utUQ.woff2) format("woff2");
-    unicode-range: u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f, u+a720-a7ff
+    unicode-range: u + 0100-024f, u + 0259, u + 1e??, u + 2020, u + 20a0-20ab, u + 20ad-20cf, u + 2113, u + 2c60-2c7f, u + a720-a7ff
 }
 
 @font-face {
@@ -6004,7 +6213,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: italic;
     font-weight: 500;
     src: local("Rubik Medium Italic"), local("Rubik-MediumItalic"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWBBXyIfDnIV7nElY2ZwWL-6aJ8x8s.woff2) format("woff2");
-    unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd
+    unicode-range: u + 00??, u + 0131, u + 0152-0153, u + 02bb-02bc, u + 02c6, u + 02da, u + 02dc, u + 2000-206f, u + 2074, u + 20ac, u + 2122, u + 2191, u + 2193, u + 2212, u + 2215, u + feff, u + fffd
 }
 
 @font-face {
@@ -6012,7 +6221,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: italic;
     font-weight: 700;
     src: local("Rubik Bold Italic"), local("Rubik-BoldItalic"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWBBXyIfDnIV7nElcWfwWb-6aJ8x8utUQ.woff2) format("woff2");
-    unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, u+2116
+    unicode-range: u + 0400-045f, u + 0490-0491, u + 04b0-04b1, u + 2116
 }
 
 @font-face {
@@ -6020,7 +6229,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: italic;
     font-weight: 700;
     src: local("Rubik Bold Italic"), local("Rubik-BoldItalic"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWBBXyIfDnIV7nElcWfwWD-6aJ8x8utUQ.woff2) format("woff2");
-    unicode-range: u+0590-05ff, u+20aa, u+25cc, u+fb1d-fb4f
+    unicode-range: u + 0590-05ff, u + 20aa, u + 25cc, u + fb1d-fb4f
 }
 
 @font-face {
@@ -6028,7 +6237,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: italic;
     font-weight: 700;
     src: local("Rubik Bold Italic"), local("Rubik-BoldItalic"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWBBXyIfDnIV7nElcWfwWz-6aJ8x8utUQ.woff2) format("woff2");
-    unicode-range: u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f, u+a720-a7ff
+    unicode-range: u + 0100-024f, u + 0259, u + 1e??, u + 2020, u + 20a0-20ab, u + 20ad-20cf, u + 2113, u + 2c60-2c7f, u + a720-a7ff
 }
 
 @font-face {
@@ -6036,7 +6245,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: italic;
     font-weight: 700;
     src: local("Rubik Bold Italic"), local("Rubik-BoldItalic"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWBBXyIfDnIV7nElcWfwWL-6aJ8x8s.woff2) format("woff2");
-    unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd
+    unicode-range: u + 00??, u + 0131, u + 0152-0153, u + 02bb-02bc, u + 02c6, u + 02da, u + 02dc, u + 2000-206f, u + 2074, u + 20ac, u + 2122, u + 2191, u + 2193, u + 2212, u + 2215, u + feff, u + fffd
 }
 
 @font-face {
@@ -6044,7 +6253,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: normal;
     font-weight: 300;
     src: local("Rubik Light"), local("Rubik-Light"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWHBXyIfDnIV7Fqj2mZ8WD07oB-98o.woff2) format("woff2");
-    unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, u+2116
+    unicode-range: u + 0400-045f, u + 0490-0491, u + 04b0-04b1, u + 2116
 }
 
 @font-face {
@@ -6052,7 +6261,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: normal;
     font-weight: 300;
     src: local("Rubik Light"), local("Rubik-Light"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWHBXyIfDnIV7Fqj2mf8WD07oB-98o.woff2) format("woff2");
-    unicode-range: u+0590-05ff, u+20aa, u+25cc, u+fb1d-fb4f
+    unicode-range: u + 0590-05ff, u + 20aa, u + 25cc, u + fb1d-fb4f
 }
 
 @font-face {
@@ -6060,7 +6269,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: normal;
     font-weight: 300;
     src: local("Rubik Light"), local("Rubik-Light"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWHBXyIfDnIV7Fqj2mT8WD07oB-98o.woff2) format("woff2");
-    unicode-range: u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f, u+a720-a7ff
+    unicode-range: u + 0100-024f, u + 0259, u + 1e??, u + 2020, u + 20a0-20ab, u + 20ad-20cf, u + 2113, u + 2c60-2c7f, u + a720-a7ff
 }
 
 @font-face {
@@ -6068,7 +6277,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: normal;
     font-weight: 300;
     src: local("Rubik Light"), local("Rubik-Light"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWHBXyIfDnIV7Fqj2md8WD07oB-.woff2) format("woff2");
-    unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd
+    unicode-range: u + 00??, u + 0131, u + 0152-0153, u + 02bb-02bc, u + 02c6, u + 02da, u + 02dc, u + 2000-206f, u + 2074, u + 20ac, u + 2122, u + 2191, u + 2193, u + 2212, u + 2215, u + feff, u + fffd
 }
 
 @font-face {
@@ -6076,7 +6285,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: normal;
     font-weight: 400;
     src: local("Rubik"), local("Rubik-Regular"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWKBXyIfDnIV7nFrXyw023e1Ik.woff2) format("woff2");
-    unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, u+2116
+    unicode-range: u + 0400-045f, u + 0490-0491, u + 04b0-04b1, u + 2116
 }
 
 @font-face {
@@ -6084,7 +6293,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: normal;
     font-weight: 400;
     src: local("Rubik"), local("Rubik-Regular"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWKBXyIfDnIV7nDrXyw023e1Ik.woff2) format("woff2");
-    unicode-range: u+0590-05ff, u+20aa, u+25cc, u+fb1d-fb4f
+    unicode-range: u + 0590-05ff, u + 20aa, u + 25cc, u + fb1d-fb4f
 }
 
 @font-face {
@@ -6092,7 +6301,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: normal;
     font-weight: 400;
     src: local("Rubik"), local("Rubik-Regular"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWKBXyIfDnIV7nPrXyw023e1Ik.woff2) format("woff2");
-    unicode-range: u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f, u+a720-a7ff
+    unicode-range: u + 0100-024f, u + 0259, u + 1e??, u + 2020, u + 20a0-20ab, u + 20ad-20cf, u + 2113, u + 2c60-2c7f, u + a720-a7ff
 }
 
 @font-face {
@@ -6100,7 +6309,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: normal;
     font-weight: 400;
     src: local("Rubik"), local("Rubik-Regular"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWKBXyIfDnIV7nBrXyw023e.woff2) format("woff2");
-    unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd
+    unicode-range: u + 00??, u + 0131, u + 0152-0153, u + 02bb-02bc, u + 02c6, u + 02da, u + 02dc, u + 2000-206f, u + 2074, u + 20ac, u + 2122, u + 2191, u + 2193, u + 2212, u + 2215, u + feff, u + fffd
 }
 
 @font-face {
@@ -6108,7 +6317,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: normal;
     font-weight: 500;
     src: local("Rubik Medium"), local("Rubik-Medium"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWHBXyIfDnIV7EyjmmZ8WD07oB-98o.woff2) format("woff2");
-    unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, u+2116
+    unicode-range: u + 0400-045f, u + 0490-0491, u + 04b0-04b1, u + 2116
 }
 
 @font-face {
@@ -6116,7 +6325,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: normal;
     font-weight: 500;
     src: local("Rubik Medium"), local("Rubik-Medium"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWHBXyIfDnIV7Eyjmmf8WD07oB-98o.woff2) format("woff2");
-    unicode-range: u+0590-05ff, u+20aa, u+25cc, u+fb1d-fb4f
+    unicode-range: u + 0590-05ff, u + 20aa, u + 25cc, u + fb1d-fb4f
 }
 
 @font-face {
@@ -6124,7 +6333,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: normal;
     font-weight: 500;
     src: local("Rubik Medium"), local("Rubik-Medium"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWHBXyIfDnIV7EyjmmT8WD07oB-98o.woff2) format("woff2");
-    unicode-range: u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f, u+a720-a7ff
+    unicode-range: u + 0100-024f, u + 0259, u + 1e??, u + 2020, u + 20a0-20ab, u + 20ad-20cf, u + 2113, u + 2c60-2c7f, u + a720-a7ff
 }
 
 @font-face {
@@ -6132,7 +6341,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: normal;
     font-weight: 500;
     src: local("Rubik Medium"), local("Rubik-Medium"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWHBXyIfDnIV7Eyjmmd8WD07oB-.woff2) format("woff2");
-    unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd
+    unicode-range: u + 00??, u + 0131, u + 0152-0153, u + 02bb-02bc, u + 02c6, u + 02da, u + 02dc, u + 2000-206f, u + 2074, u + 20ac, u + 2122, u + 2191, u + 2193, u + 2212, u + 2215, u + feff, u + fffd
 }
 
 @font-face {
@@ -6140,7 +6349,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: normal;
     font-weight: 700;
     src: local("Rubik Bold"), local("Rubik-Bold"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWHBXyIfDnIV7F6iGmZ8WD07oB-98o.woff2) format("woff2");
-    unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, u+2116
+    unicode-range: u + 0400-045f, u + 0490-0491, u + 04b0-04b1, u + 2116
 }
 
 @font-face {
@@ -6148,7 +6357,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: normal;
     font-weight: 700;
     src: local("Rubik Bold"), local("Rubik-Bold"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWHBXyIfDnIV7F6iGmf8WD07oB-98o.woff2) format("woff2");
-    unicode-range: u+0590-05ff, u+20aa, u+25cc, u+fb1d-fb4f
+    unicode-range: u + 0590-05ff, u + 20aa, u + 25cc, u + fb1d-fb4f
 }
 
 @font-face {
@@ -6156,7 +6365,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: normal;
     font-weight: 700;
     src: local("Rubik Bold"), local("Rubik-Bold"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWHBXyIfDnIV7F6iGmT8WD07oB-98o.woff2) format("woff2");
-    unicode-range: u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f, u+a720-a7ff
+    unicode-range: u + 0100-024f, u + 0259, u + 1e??, u + 2020, u + 20a0-20ab, u + 20ad-20cf, u + 2113, u + 2c60-2c7f, u + a720-a7ff
 }
 
 @font-face {
@@ -6164,7 +6373,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     font-style: normal;
     font-weight: 700;
     src: local("Rubik Bold"), local("Rubik-Bold"), url(https://static.wikia.nocookie.net/fandom-ae-assets/fonts/rubik/v7/iJWHBXyIfDnIV7F6iGmd8WD07oB-.woff2) format("woff2");
-    unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd
+    unicode-range: u + 00??, u + 0131, u + 0152-0153, u + 02bb-02bc, u + 02c6, u + 02da, u + 02dc, u + 2000-206f, u + 2074, u + 20ac, u + 2122, u + 2191, u + 2193, u + 2212, u + 2215, u + feff, u + fffd
 }
 
 .ooui-theme-fandomooui .article-table.jquery-tablesorter .headerSort,
@@ -6292,11 +6501,11 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
 }
 
 .mw-widget-dateInputWidget .mw-widget-dateInputWidget-handle:hover {
-    border-bottom: 1px solid var(--theme-link-color)!important
+    border-bottom: 1px solid var(--theme-link-color) !important
 }
 
 .mw-widget-dateInputWidget-calendar {
-    background-color: var(--theme-page-background-color--secondary)!important
+    background-color: var(--theme-page-background-color--secondary) !important
 }
 
 .mw-widget-dateInputWidget-calendar .mw-widget-calendarWidget-day,
@@ -6493,6 +6702,16 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
     z-index: 10000
 }
 
+div.flaggedrevs_diffnotice,
+div.flaggedrevs_preview,
+div.flaggedrevs_short,
+div.flaggedrevs_short_basic,
+div.flaggedrevs_short_details {
+    background-color: var(--theme-page-background-color);
+    border: 1px solid var(--theme-border-color);
+    color: var(--theme-page-text-color)
+}
+
 .oo-ui-windowManager-modal {
     z-index: 800
 }
@@ -6524,63 +6743,6 @@ ul.gallery.mw-gallery-slideshow li.gallerybox .gallerytext a:hover {
 
 table.mw-interwikitable.body td.mw-interwikitable-local-yes {
     background: var(--theme-success-color)
-}
-
-table.cargoTable {
-    color: var(--theme-page-text-color)
-}
-
-table.cargoTable tbody td,
-table.cargoTable thead th {
-    border: 1px solid var(--theme-border-color)
-}
-
-table.cargoTable tr:hover {
-    background-color: rgba(var(--theme-accent-color--rgb), .25)
-}
-
-table.cargoTable.noMerge thead tr:nth-child(odd),
-table.cargoTable thead tr:nth-child(odd) {
-    background-color: var(--theme-accent-color)
-}
-
-table.cargoTable.noMerge tbody tr:nth-child(2n),
-table.cargoTable tbody tr:nth-child(2n) {
-    background-color: var(--theme-page-background-color)
-}
-
-table.cargoTable.noMerge tbody tr:nth-child(odd),
-table.cargoTable tbody tr:nth-child(odd) {
-    background-color: var(--theme-page-background-color--secondary)
-}
-
-table.cargoTable th.headerSort {
-    color: var(--theme-link-color);
-    -webkit-transition: .3s;
-    transition: .3s
-}
-
-table.cargoTable th.headerSort:hover {
-    color: var(--theme-link-color--hover)
-}
-
-div.flaggedrevs_diffnotice,
-div.flaggedrevs_preview,
-div.flaggedrevs_short,
-div.flaggedrevs_short_basic,
-div.flaggedrevs_short_details {
-    background-color: var(--theme-page-background-color);
-    border: 1px solid var(--theme-border-color);
-    color: var(--theme-page-text-color)
-}
-
-.mwe-math-fallback-image-inline {
-    padding: 2px
-}
-
-.theme-fandomdesktop-dark .mwe-math-fallback-image-inline {
-    -webkit-filter: invert(1);
-    filter: invert(1)
 }
 
 div.autocomplete-suggestions {
@@ -6658,21 +6820,9 @@ a.new {
 a.new:active,
 a.new:focus,
 a.new:hover {
+    color: var(--theme-alert-color--hover);
     -webkit-text-decoration-style: dashed;
     text-decoration-style: dashed
-}
-
-a.new:active,
-a.new:focus,
-a.new:hover,
-a.stub {
-    color: var(--theme-alert-color--hover)
-}
-
-a.stub:active,
-a.stub:focus,
-a.stub:hover {
-    color: var(--theme-alert-color)
 }
 
 .main-container {
@@ -6924,12 +7074,6 @@ fieldset:not(.oo-ui-fieldsetLayout) legend {
     border-bottom: none
 }
 
-.mw-content-ltr .toc ul,
-.mw-content-rtl .mw-content-ltr .toc ul {
-    list-style: none;
-    margin: 0
-}
-
 .mw-content-ltr .toc ul ul,
 .mw-content-rtl .mw-content-ltr .toc ul ul {
     margin: 0
@@ -6990,17 +7134,17 @@ ul.gallery.mw-gallery-slideshow li.gallerybox {
     display: block;
     margin: 12px;
     padding: 3px;
-    width: 158px!important
+    width: 158px !important
 }
 
 ul.gallery.mw-gallery-slideshow li.gallerybox > div {
-    width: 152px!important
+    width: 152px !important
 }
 
 ul.gallery.mw-gallery-slideshow li.gallerybox > div div.thumb {
     margin: 0;
     padding: 16px;
-    width: 152px!important
+    width: 152px !important
 }
 
 ul.gallery.mw-gallery-slideshow li.gallerybox > div div.thumb > div {
@@ -7011,7 +7155,7 @@ ul.gallery.mw-gallery-slideshow li.gallerybox > div div.thumb > div {
     display: flex;
     height: 120px;
     justify-content: center;
-    margin: 0!important;
+    margin: 0 !important;
     width: 120px
 }
 
@@ -7097,8 +7241,8 @@ ul.mw-gallery-traditional li.gallerybox div.gallerytext p {
 
 ul.mw-gallery-packed-hover li.gallerybox div.gallerytextwrapper,
 ul.mw-gallery-packed-overlay li.gallerybox div.gallerytextwrapper {
-    margin: 0!important;
-    width: 100%!important
+    margin: 0 !important;
+    width: 100% !important
 }
 
 ul.mw-gallery-packed-hover li.gallerybox div.gallerytextwrapper:hover,
@@ -7492,7 +7636,7 @@ div.smw-factbox .rdflink a {
 }
 
 #options-toggle:not(:checked) + #options-list .options-parameter-list:after {
-    background-image: none!important
+    background-image: none !important
 }
 
 .smwb-datasheet.smwb-theme-light .smwb-actions,
@@ -7945,172 +8089,15 @@ html:not(.ve-activated) .page.has-right-rail .page__main {
     }
 }
 
-.page-content {
+.lcs-container,
+.mw-parser-output,
+.rcs-container {
     overflow-x: hidden
 }
 
-.page-content h1,
-.page-content h2,
-.page-content h3,
-.page-content h4,
-.page-content h5,
-.page-content h6 {
-    font-family: var(--theme-page-headings-font), rubik, helvetica, arial, sans-serif;
-    line-height: 1.25;
-    margin: 18px 0 9px;
-    overflow-wrap: break-word
-}
-
-.page-content h1 {
-    font-size: 36px;
-    font-weight: 300
-}
-
-.page-content h2 {
-    border-bottom: 1px solid var(--theme-border-color);
-    font-size: 24px;
-    font-weight: 500;
-    overflow: hidden;
-    padding: 6px 0
-}
-
-.page-content h3 {
-    font-size: 18px;
-    font-weight: 500;
-    margin: 24px 0 12px
-}
-
-.page-content h4 {
-    font-size: 16px;
-    font-weight: 500
-}
-
-.page-content h5,
-.page-content h6 {
-    font-size: inherit;
-    font-weight: 500
-}
-
-.page-content img {
-    vertical-align: middle
-}
-
-.page-content p,
-.page-content section {
-    font-size: inherit;
-    font-weight: 400;
-    line-height: 1.75;
-    margin: 0 0 24px;
-    overflow-wrap: break-word
-}
-
-.page-content p + ol,
-.page-content p + ul,
-.page-content section + ol,
-.page-content section + ul {
-    margin-top: -18px
-}
-
-.page-content ol,
-.page-content ul {
-    margin: 6px 0 18px 36px
-}
-
-.page-content ul {
-    list-style-type: disc
-}
-
-.page-content ul.wds-tabs {
-    list-style-type: none;
-    margin: 0;
-    padding: 0
-}
-
-.page-content ol {
-    list-style-type: decimal
-}
-
-.page-content dl {
-    margin: 12px 0 24px
-}
-
-.page-content dt {
-    font-weight: 700
-}
-
-.page-content dd {
-    margin-left: 24px
-}
-
-.page-content pre {
-    word-wrap: normal;
-    background-color: var(--theme-page-background-color--secondary);
-    border: 1px solid var(--theme-border-color);
-    color: var(--theme-page-text-color);
-    line-height: 1;
-    overflow: auto;
-    padding: 12px
-}
-
-.page-content sup {
-    font-size: 10px;
-    line-height: 0;
-    vertical-align: super
-}
-
-.page-content blockquote {
-    margin: 12px 36px
-}
-
-.page-content .tleft {
-    clear: left;
-    float: left;
-    margin: 0 20px 16px 0
-}
-
-.page-content .tright {
-    clear: right;
-    float: right;
-    margin: 0 0 16px 20px
-}
-
-.page-content .center {
-    text-align: center;
-    width: 100%
-}
-
-.page-content .center * {
-    margin-left: auto;
-    margin-right: auto
-}
-
-.page-content .floatleft {
-    margin: 0 20px 10px 0
-}
-
-.page-content .floatright {
-    margin: 0 0 10px 20px
-}
-
-.page-content .thumbcaption {
-    color: var(--theme-page-text-color);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 6px 3px 3px;
-    position: relative
-}
-
-.page-content .thumbborder {
-    border: 1px solid var(--theme-border-color);
-    border-radius: 3px
-}
-
-.page-content .mobileonly {
-    display: none
-}
-
-.infobox {
+.lcs-container .infobox,
+.mw-parser-output .infobox,
+.rcs-container .infobox {
     background-color: var(--theme-page-text-mix-color-95);
     border: 1px solid var(--theme-border-color);
     clear: right;
@@ -8122,33 +8109,65 @@ html:not(.ve-activated) .page.has-right-rail .page__main {
     position: relative
 }
 
-.infobox .infoboximage {
+.lcs-container .infobox .infoboximage,
+.mw-parser-output .infobox .infoboximage,
+.rcs-container .infobox .infoboximage {
     line-height: 0
 }
 
-#infoboxinternal.infoboxtable {
+.lcs-container #infoboxinternal.infoboxtable,
+.mw-parser-output #infoboxinternal.infoboxtable,
+.rcs-container #infoboxinternal.infoboxtable {
     table-layout: fixed;
     width: 250px
 }
 
-.infobox-table .thumb,
-.infobox-table .thumb.tleft,
-.infobox-table .thumb.tright,
-.infobox .thumb,
-.infobox .thumb.tleft,
-.infobox .thumb.tright,
-.wikia-infobox .thumb,
-.wikia-infobox .thumb.tleft,
-.wikia-infobox .thumb.tright {
+.lcs-container .infobox-table .thumb,
+.lcs-container .infobox-table .thumb.tleft,
+.lcs-container .infobox-table .thumb.tright,
+.lcs-container .infobox .thumb,
+.lcs-container .infobox .thumb.tleft,
+.lcs-container .infobox .thumb.tright,
+.lcs-container .wikia-infobox .thumb,
+.lcs-container .wikia-infobox .thumb.tleft,
+.lcs-container .wikia-infobox .thumb.tright,
+.mw-parser-output .infobox-table .thumb,
+.mw-parser-output .infobox-table .thumb.tleft,
+.mw-parser-output .infobox-table .thumb.tright,
+.mw-parser-output .infobox .thumb,
+.mw-parser-output .infobox .thumb.tleft,
+.mw-parser-output .infobox .thumb.tright,
+.mw-parser-output .wikia-infobox .thumb,
+.mw-parser-output .wikia-infobox .thumb.tleft,
+.mw-parser-output .wikia-infobox .thumb.tright,
+.rcs-container .infobox-table .thumb,
+.rcs-container .infobox-table .thumb.tleft,
+.rcs-container .infobox-table .thumb.tright,
+.rcs-container .infobox .thumb,
+.rcs-container .infobox .thumb.tleft,
+.rcs-container .infobox .thumb.tright,
+.rcs-container .wikia-infobox .thumb,
+.rcs-container .wikia-infobox .thumb.tleft,
+.rcs-container .wikia-infobox .thumb.tright {
     float: none;
     margin: 0 auto
 }
 
-.bodySearch .mw-ui-input.mw-ui-input-inline,
-.commentbox .mw-ui-input.mw-ui-input-inline,
-.createbox .mw-ui-input.mw-ui-input-inline,
-.mw-movebox .mw-ui-input.mw-ui-input-inline,
-.searchbox .mw-ui-input.mw-ui-input-inline {
+.lcs-container .bodySearch .mw-ui-input.mw-ui-input-inline,
+.lcs-container .commentbox .mw-ui-input.mw-ui-input-inline,
+.lcs-container .createbox .mw-ui-input.mw-ui-input-inline,
+.lcs-container .mw-movebox .mw-ui-input.mw-ui-input-inline,
+.lcs-container .searchbox .mw-ui-input.mw-ui-input-inline,
+.mw-parser-output .bodySearch .mw-ui-input.mw-ui-input-inline,
+.mw-parser-output .commentbox .mw-ui-input.mw-ui-input-inline,
+.mw-parser-output .createbox .mw-ui-input.mw-ui-input-inline,
+.mw-parser-output .mw-movebox .mw-ui-input.mw-ui-input-inline,
+.mw-parser-output .searchbox .mw-ui-input.mw-ui-input-inline,
+.rcs-container .bodySearch .mw-ui-input.mw-ui-input-inline,
+.rcs-container .commentbox .mw-ui-input.mw-ui-input-inline,
+.rcs-container .createbox .mw-ui-input.mw-ui-input-inline,
+.rcs-container .mw-movebox .mw-ui-input.mw-ui-input-inline,
+.rcs-container .searchbox .mw-ui-input.mw-ui-input-inline {
     background-color: transparent;
     border-color: var(--theme-border-color);
     -webkit-box-shadow: inset 0 0 0 .1em var(--theme-border-color);
@@ -8156,49 +8175,99 @@ html:not(.ve-activated) .page.has-right-rail .page__main {
     color: var(--theme-page-text-color)
 }
 
-.bodySearch .mw-ui-input.mw-ui-input-inline:focus,
-.commentbox .mw-ui-input.mw-ui-input-inline:focus,
-.createbox .mw-ui-input.mw-ui-input-inline:focus,
-.mw-movebox .mw-ui-input.mw-ui-input-inline:focus,
-.searchbox .mw-ui-input.mw-ui-input-inline:focus {
+.lcs-container .bodySearch .mw-ui-input.mw-ui-input-inline:focus,
+.lcs-container .commentbox .mw-ui-input.mw-ui-input-inline:focus,
+.lcs-container .createbox .mw-ui-input.mw-ui-input-inline:focus,
+.lcs-container .mw-movebox .mw-ui-input.mw-ui-input-inline:focus,
+.lcs-container .searchbox .mw-ui-input.mw-ui-input-inline:focus,
+.mw-parser-output .bodySearch .mw-ui-input.mw-ui-input-inline:focus,
+.mw-parser-output .commentbox .mw-ui-input.mw-ui-input-inline:focus,
+.mw-parser-output .createbox .mw-ui-input.mw-ui-input-inline:focus,
+.mw-parser-output .mw-movebox .mw-ui-input.mw-ui-input-inline:focus,
+.mw-parser-output .searchbox .mw-ui-input.mw-ui-input-inline:focus,
+.rcs-container .bodySearch .mw-ui-input.mw-ui-input-inline:focus,
+.rcs-container .commentbox .mw-ui-input.mw-ui-input-inline:focus,
+.rcs-container .createbox .mw-ui-input.mw-ui-input-inline:focus,
+.rcs-container .mw-movebox .mw-ui-input.mw-ui-input-inline:focus,
+.rcs-container .searchbox .mw-ui-input.mw-ui-input-inline:focus {
     border-color: var(--theme-link-color);
     -webkit-box-shadow: inset 0 0 0 .1em var(--theme-link-color);
     box-shadow: inset 0 0 0 .1em var(--theme-link-color)
 }
 
-.bodySearch .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
-.commentbox .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
-.createbox .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
-.mw-movebox .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
-.searchbox .mw-ui-input.mw-ui-input-inline:-webkit-autofill {
+.lcs-container .bodySearch .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
+.lcs-container .commentbox .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
+.lcs-container .createbox .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
+.lcs-container .mw-movebox .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
+.lcs-container .searchbox .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
+.mw-parser-output .bodySearch .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
+.mw-parser-output .commentbox .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
+.mw-parser-output .createbox .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
+.mw-parser-output .mw-movebox .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
+.mw-parser-output .searchbox .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
+.rcs-container .bodySearch .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
+.rcs-container .commentbox .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
+.rcs-container .createbox .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
+.rcs-container .mw-movebox .mw-ui-input.mw-ui-input-inline:-webkit-autofill,
+.rcs-container .searchbox .mw-ui-input.mw-ui-input-inline:-webkit-autofill {
     -webkit-text-fill-color: var(--theme-page-text-color);
     -webkit-background-clip: text
 }
 
-.bodySearch .mw-ui-button,
-.commentbox .mw-ui-button,
-.createbox .mw-ui-button,
-.mw-movebox .mw-ui-button,
-.searchbox .mw-ui-button {
+.lcs-container .bodySearch .mw-ui-button,
+.lcs-container .commentbox .mw-ui-button,
+.lcs-container .createbox .mw-ui-button,
+.lcs-container .mw-movebox .mw-ui-button,
+.lcs-container .searchbox .mw-ui-button,
+.mw-parser-output .bodySearch .mw-ui-button,
+.mw-parser-output .commentbox .mw-ui-button,
+.mw-parser-output .createbox .mw-ui-button,
+.mw-parser-output .mw-movebox .mw-ui-button,
+.mw-parser-output .searchbox .mw-ui-button,
+.rcs-container .bodySearch .mw-ui-button,
+.rcs-container .commentbox .mw-ui-button,
+.rcs-container .createbox .mw-ui-button,
+.rcs-container .mw-movebox .mw-ui-button,
+.rcs-container .searchbox .mw-ui-button {
     background-color: var(--theme-accent-color);
     border-color: var(--theme-accent-color);
     color: var(--theme-accent-label-color)
 }
 
-.bodySearch .mw-ui-button:hover,
-.commentbox .mw-ui-button:hover,
-.createbox .mw-ui-button:hover,
-.mw-movebox .mw-ui-button:hover,
-.searchbox .mw-ui-button:hover {
+.lcs-container .bodySearch .mw-ui-button:hover,
+.lcs-container .commentbox .mw-ui-button:hover,
+.lcs-container .createbox .mw-ui-button:hover,
+.lcs-container .mw-movebox .mw-ui-button:hover,
+.lcs-container .searchbox .mw-ui-button:hover,
+.mw-parser-output .bodySearch .mw-ui-button:hover,
+.mw-parser-output .commentbox .mw-ui-button:hover,
+.mw-parser-output .createbox .mw-ui-button:hover,
+.mw-parser-output .mw-movebox .mw-ui-button:hover,
+.mw-parser-output .searchbox .mw-ui-button:hover,
+.rcs-container .bodySearch .mw-ui-button:hover,
+.rcs-container .commentbox .mw-ui-button:hover,
+.rcs-container .createbox .mw-ui-button:hover,
+.rcs-container .mw-movebox .mw-ui-button:hover,
+.rcs-container .searchbox .mw-ui-button:hover {
     background-color: var(--theme-accent-color--hover);
     border-color: var(--theme-accent-color--hover)
 }
 
-.bodySearch .mw-ui-button:disabled,
-.commentbox .mw-ui-button:disabled,
-.createbox .mw-ui-button:disabled,
-.mw-movebox .mw-ui-button:disabled,
-.searchbox .mw-ui-button:disabled {
+.lcs-container .bodySearch .mw-ui-button:disabled,
+.lcs-container .commentbox .mw-ui-button:disabled,
+.lcs-container .createbox .mw-ui-button:disabled,
+.lcs-container .mw-movebox .mw-ui-button:disabled,
+.lcs-container .searchbox .mw-ui-button:disabled,
+.mw-parser-output .bodySearch .mw-ui-button:disabled,
+.mw-parser-output .commentbox .mw-ui-button:disabled,
+.mw-parser-output .createbox .mw-ui-button:disabled,
+.mw-parser-output .mw-movebox .mw-ui-button:disabled,
+.mw-parser-output .searchbox .mw-ui-button:disabled,
+.rcs-container .bodySearch .mw-ui-button:disabled,
+.rcs-container .commentbox .mw-ui-button:disabled,
+.rcs-container .createbox .mw-ui-button:disabled,
+.rcs-container .mw-movebox .mw-ui-button:disabled,
+.rcs-container .searchbox .mw-ui-button:disabled {
     background-color: var(--theme-accent-color);
     border-color: var(--theme-accent-color);
     color: var(--theme-accent-label-color);
@@ -8206,11 +8275,21 @@ html:not(.ve-activated) .page.has-right-rail .page__main {
     pointer-events: none
 }
 
-.bodySearch .mw-ui-button:focus,
-.commentbox .mw-ui-button:focus,
-.createbox .mw-ui-button:focus,
-.mw-movebox .mw-ui-button:focus,
-.searchbox .mw-ui-button:focus {
+.lcs-container .bodySearch .mw-ui-button:focus,
+.lcs-container .commentbox .mw-ui-button:focus,
+.lcs-container .createbox .mw-ui-button:focus,
+.lcs-container .mw-movebox .mw-ui-button:focus,
+.lcs-container .searchbox .mw-ui-button:focus,
+.mw-parser-output .bodySearch .mw-ui-button:focus,
+.mw-parser-output .commentbox .mw-ui-button:focus,
+.mw-parser-output .createbox .mw-ui-button:focus,
+.mw-parser-output .mw-movebox .mw-ui-button:focus,
+.mw-parser-output .searchbox .mw-ui-button:focus,
+.rcs-container .bodySearch .mw-ui-button:focus,
+.rcs-container .commentbox .mw-ui-button:focus,
+.rcs-container .createbox .mw-ui-button:focus,
+.rcs-container .mw-movebox .mw-ui-button:focus,
+.rcs-container .searchbox .mw-ui-button:focus {
     background-color: var(--theme-accent-color);
     border-color: var(--theme-accent-color);
     -webkit-box-shadow: inset 0 0 0 .1em var(--theme-border-color);
@@ -8218,13 +8297,17 @@ html:not(.ve-activated) .page.has-right-rail .page__main {
     color: var(--theme-accent-label-color)
 }
 
-.pull-quote {
+.lcs-container .pull-quote,
+.mw-parser-output .pull-quote,
+.rcs-container .pull-quote {
     font-style: italic;
     margin: 0;
     padding: 0 30px
 }
 
-.pull-quote:before {
+.lcs-container .pull-quote:before,
+.mw-parser-output .pull-quote:before,
+.rcs-container .pull-quote:before {
     color: var(--theme-link-color);
     content: "“";
     display: block;
@@ -8234,18 +8317,267 @@ html:not(.ve-activated) .page.has-right-rail .page__main {
     margin: 40px 0 -60px -5px
 }
 
-.pull-quote__text {
+.lcs-container .pull-quote__text,
+.mw-parser-output .pull-quote__text,
+.rcs-container .pull-quote__text {
     font-size: 16px;
     margin-bottom: 0
 }
 
-.pull-quote__text:after,
-.pull-quote__text:before {
+.lcs-container .pull-quote__text:after,
+.lcs-container .pull-quote__text:before,
+.mw-parser-output .pull-quote__text:after,
+.mw-parser-output .pull-quote__text:before,
+.rcs-container .pull-quote__text:after,
+.rcs-container .pull-quote__text:before {
     display: none
 }
 
-.pull-quote__text__source {
+.lcs-container .pull-quote__text__source,
+.mw-parser-output .pull-quote__text__source,
+.rcs-container .pull-quote__text__source {
     font-size: 12px;
+    font-weight: 500
+}
+
+.lcs-container img,
+.mw-parser-output img,
+.rcs-container img {
+    vertical-align: middle
+}
+
+.lcs-container p,
+.lcs-container section,
+.mw-parser-output p,
+.mw-parser-output section,
+.rcs-container p,
+.rcs-container section {
+    font-size: inherit;
+    font-weight: 400;
+    line-height: 1.75;
+    overflow-wrap: break-word
+}
+
+.lcs-container ul.wds-tabs,
+.mw-parser-output ul.wds-tabs,
+.rcs-container ul.wds-tabs {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.lcs-container pre,
+.mw-parser-output pre,
+.rcs-container pre {
+    word-wrap: normal;
+    background-color: var(--theme-page-background-color--secondary);
+    border: 1px solid var(--theme-border-color);
+    color: var(--theme-page-text-color);
+    line-height: 1;
+    overflow: auto;
+    padding: 12px
+}
+
+.lcs-container sup,
+.mw-parser-output sup,
+.rcs-container sup {
+    font-size: 10px;
+    line-height: 0;
+    vertical-align: super
+}
+
+.lcs-container .tleft,
+.mw-parser-output .tleft,
+.rcs-container .tleft {
+    clear: left;
+    float: left;
+    margin: 0 20px 16px 0
+}
+
+.lcs-container .tright,
+.mw-parser-output .tright,
+.rcs-container .tright {
+    clear: right;
+    float: right;
+    margin: 0 0 16px 20px
+}
+
+.lcs-container .center,
+.mw-parser-output .center,
+.rcs-container .center {
+    text-align: center;
+    width: 100%
+}
+
+.lcs-container .center *,
+.mw-parser-output .center *,
+.rcs-container .center * {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.lcs-container .floatleft,
+.mw-parser-output .floatleft,
+.rcs-container .floatleft {
+    margin: 0 20px 10px 0
+}
+
+.lcs-container .floatright,
+.mw-parser-output .floatright,
+.rcs-container .floatright {
+    margin: 0 0 10px 20px
+}
+
+.lcs-container .thumbcaption,
+.mw-parser-output .thumbcaption,
+.rcs-container .thumbcaption {
+    color: var(--theme-page-text-color);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 6px 3px 3px;
+    position: relative
+}
+
+.lcs-container .thumbborder,
+.mw-parser-output .thumbborder,
+.rcs-container .thumbborder {
+    border: 1px solid var(--theme-border-color);
+    border-radius: 3px
+}
+
+.lcs-container .mobileonly,
+.mw-parser-output .mobileonly,
+.rcs-container .mobileonly {
+    display: none
+}
+
+.lcs-container > ol,
+.lcs-container > ul,
+.mw-parser-output > ol,
+.mw-parser-output > ul,
+.rcs-container > ol,
+.rcs-container > ul {
+    margin: 6px 0 6px 30px
+}
+
+.lcs-container > ul,
+.mw-parser-output > ul,
+.rcs-container > ul {
+    list-style: disc
+}
+
+.lcs-container > ol,
+.mw-parser-output > ol,
+.rcs-container > ol {
+    list-style: decimal
+}
+
+.lcs-container > dl,
+.mw-parser-output > dl,
+.rcs-container > dl {
+    margin: 12px 0 24px
+}
+
+.lcs-container > dt,
+.mw-parser-output > dt,
+.rcs-container > dt {
+    font-weight: 700
+}
+
+.lcs-container > dd,
+.mw-parser-output > dd,
+.rcs-container > dd {
+    margin-left: 24px
+}
+
+.lcs-container > p,
+.lcs-container > section,
+.mw-parser-output > p,
+.mw-parser-output > section,
+.rcs-container > p,
+.rcs-container > section {
+    margin: 0 0 24px
+}
+
+.lcs-container > p + ol,
+.lcs-container > p + ul,
+.lcs-container > section + ol,
+.lcs-container > section + ul,
+.mw-parser-output > p + ol,
+.mw-parser-output > p + ul,
+.mw-parser-output > section + ol,
+.mw-parser-output > section + ul,
+.rcs-container > p + ol,
+.rcs-container > p + ul,
+.rcs-container > section + ol,
+.rcs-container > section + ul {
+    margin-top: -18px
+}
+
+.lcs-container > h1,
+.lcs-container > h2,
+.lcs-container > h3,
+.lcs-container > h4,
+.lcs-container > h5,
+.lcs-container > h6,
+.mw-parser-output > h1,
+.mw-parser-output > h2,
+.mw-parser-output > h3,
+.mw-parser-output > h4,
+.mw-parser-output > h5,
+.mw-parser-output > h6,
+.rcs-container > h1,
+.rcs-container > h2,
+.rcs-container > h3,
+.rcs-container > h4,
+.rcs-container > h5,
+.rcs-container > h6 {
+    font-family: var(--theme-page-headings-font), rubik, helvetica, arial, sans-serif;
+    line-height: 1.25;
+    margin: 18px 0 9px;
+    overflow-wrap: break-word
+}
+
+.lcs-container > h1,
+.mw-parser-output > h1,
+.rcs-container > h1 {
+    font-size: 36px;
+    font-weight: 300
+}
+
+.lcs-container > h2,
+.mw-parser-output > h2,
+.rcs-container > h2 {
+    border-bottom: 1px solid var(--theme-border-color);
+    font-size: 24px;
+    font-weight: 500;
+    overflow: hidden;
+    padding: 6px 0
+}
+
+.lcs-container > h3,
+.mw-parser-output > h3,
+.rcs-container > h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 24px 0 12px
+}
+
+.lcs-container > h4,
+.mw-parser-output > h4,
+.rcs-container > h4 {
+    font-size: 16px;
+    font-weight: 500
+}
+
+.lcs-container > h5,
+.lcs-container > h6,
+.mw-parser-output > h5,
+.mw-parser-output > h6,
+.rcs-container > h5,
+.rcs-container > h6 {
+    font-size: inherit;
     font-weight: 500
 }
 
@@ -8261,7 +8593,7 @@ html:not(.ve-activated) .page.has-right-rail .page__main {
 }
 
 .fandom-community-header {
-    color: var(--theme-community-header-color);
+    color: var(--theme-body-text-color);
     display: grid;
     grid-template-columns: -webkit-min-content 1fr;
     grid-template-columns: min-content 1fr;
@@ -8275,13 +8607,13 @@ html:not(.ve-activated) .page.has-right-rail .page__main {
 }
 
 .fandom-community-header a {
-    color: var(--theme-community-header-color)
+    color: var(--theme-body-text-color)
 }
 
 .fandom-community-header a:active,
 .fandom-community-header a:focus,
 .fandom-community-header a:hover {
-    color: var(--theme-community-header-color--hover)
+    color: var(--theme-body-text-color--hover)
 }
 
 .fandom-community-header__image {
@@ -8375,10 +8707,7 @@ html:not(.ve-activated) .page.has-right-rail .page__main {
 .fandom-community-header__background {
     background: var(--theme-body-background-image) no-repeat;
     height: 160px;
-    margin-bottom: -160px;
-    opacity: var(--theme-background-image-opacity);
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: -2
@@ -8387,11 +8716,11 @@ html:not(.ve-activated) .page.has-right-rail .page__main {
 .fandom-community-header__background:before {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(var(--theme-body-background-color--rgb), 0)), to(var(--theme-body-background-color)));
     background-image: linear-gradient(to bottom, rgba(var(--theme-body-background-color--rgb), 0) 25%, var(--theme-body-background-color));
-    bottom: 0;
     content: "";
     display: block;
     height: 160px;
     position: absolute;
+    top: 0;
     width: 100%;
     z-index: -1
 }
@@ -8426,31 +8755,6 @@ html:not(.ve-activated) .page.has-right-rail .page__main {
 .fandom-community-header__background.fitCenter {
     background-position: 50%;
     background-size: contain
-}
-
-.fandom-community-header__background.fullScreen {
-    margin-bottom: auto;
-    position: fixed
-}
-
-.fandom-community-header__background.fullScreen.cover,
-.fandom-community-header__background.fullScreen.tileBoth,
-.fandom-community-header__background.fullScreen.tileHorizontally,
-.fandom-community-header__background.fullScreen.tileVertically {
-    height: 100%
-}
-
-.fandom-community-header__background.fullScreen.tileBoth:before,
-.fandom-community-header__background.fullScreen.tileHorizontally:before,
-.fandom-community-header__background.fullScreen.tileVertically:before {
-    display: none
-}
-
-.fandom-community-header__background.fullScreen.fitCenter,
-.fandom-community-header__background.fullScreen.fitTopLeft,
-.fandom-community-header__background.fullScreen.fitTopRight {
-    height: auto;
-    padding-top: calc(var(--image-ratio)*100%)
 }
 
 .fandom-sticky-header {
@@ -8643,7 +8947,7 @@ html:not(.ve-activated) .page.has-right-rail .page__main {
     }
 }
 
-@media only screen and (min-width: 1024px) and (max-width:1279px) {
+@media only screen and (min-width: 1024px) and(max-width: 1279px) {
     .fandom-community-header .fandom-community-header__local-navigation .large-navigation {
         display: -webkit-box;
         display: flex
@@ -8670,7 +8974,7 @@ html:not(.ve-activated) .page.has-right-rail .page__main {
     }
 }
 
-@media only screen and (min-width: 1024px) and (max-width:1279px) {
+@media only screen and (min-width: 1024px) and(max-width: 1279px) {
     .fandom-sticky-header .fandom-community-header__local-navigation .medium-navigation {
         display: -webkit-box;
         display: flex
@@ -8712,8 +9016,8 @@ html:not(.ve-activated) .page.has-right-rail .page__main {
 }
 
 .wiki-tools .wds-button.wds-is-secondary {
-    --wds-secondary-button-label-color: var(--theme-community-header-color);
-    --wds-secondary-button-label-color--hover: var(--theme-community-header-color--hover);
+    --wds-secondary-button-label-color: var(--theme-body-text-color);
+    --wds-secondary-button-label-color--hover: var(--theme-body-text-color--hover);
     padding: 5px 6px
 }
 
@@ -8999,39 +9303,52 @@ html:not(.ve-activated) .page.has-right-rail .page__main {
     }
 }
 
-@charset "UTF-8";
-.recent-wiki-activity__page-title,
-.recent-wiki-activity__username {
-    display: block;
+.popular-pages__item {
+    overflow: hidden
+}
+
+.popular-pages__item > a {
+    -webkit-box-align: center;
+    grid-column-gap: 12px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 55px 1fr
+}
+
+.popular-pages__image,
+.popular-pages__placeholder {
+    -webkit-box-align: center;
+    align-items: center;
+    background: var(--theme-border-color);
+    border: 1px solid var(--theme-border-color);
+    border-radius: 3px;
+    display: grid;
+    height: 55px;
+    justify-items: center;
+    min-width: 55px;
+    width: 55px
+}
+
+.popular-pages__image .wds-icon,
+.popular-pages__placeholder .wds-icon {
+    color: var(--right-rail-text-color);
+    opacity: .5
+}
+
+.popular-pages .sponsored-content__details {
+    overflow: hidden
+}
+
+.popular-pages .sponsored-content__title {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
 }
 
-.recent-wiki-activity__details {
-    display: -webkit-box;
-    display: flex
-}
-
-.recent-wiki-activity__timeago,
-.recent-wiki-activity__username {
-    color: rgba(var(--right-rail-text-color--rgb), .75);
-    font-size: 12px;
-    font-weight: 400
-}
-
-.recent-wiki-activity__username {
-    display: inline-block;
-    max-width: 150px
-}
-
-.recent-wiki-activity__username:hover {
-    color: inherit
-}
-
-.recent-wiki-activity__timeago:before {
-    content: "•";
-    margin: 0 3px
+.popular-pages .sponsored-content__attribution {
+    font-size: 14px;
+    font-style: italic;
+    opacity: .6
 }
 
 .popover {
