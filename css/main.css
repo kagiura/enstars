@@ -39,12 +39,6 @@
     --btn-default-hover-color: #ccc;
     --btn-default-hover-border-color: #666;
   }
-  img {
-    opacity: 0.75;
-  }
-  img:hover {
-    opacity: 0.9;
-  }
 }
 html {
   line-height: 1.15; /* 1 */
@@ -1005,7 +999,7 @@ pre .javascript .function {
   border-bottom: none;
   color: var(--brand-color);
   display: inline-block;
-  line-height: 0.9em;
+  line-height: 1.375em;
   padding: 0 40px;
   position: relative;
 }
@@ -1014,7 +1008,7 @@ pre .javascript .function {
 }
 .site-title {
   font-family: 'Work Sans', 'IBM Plex Sans Thai Looped', 'Karla', 'IBM Plex Sans Thai Looped', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 0.9em;
+  font-size: 1.375em;
   font-weight: normal;
   margin: 0;
 }
@@ -1188,11 +1182,11 @@ pre .javascript .function {
   display: inline-block;
 }
 .site-author-image {
-  border: 1px solid #eee;
+/*border: $site-author-image-border-width solid $site-author-image-border-color;*/
   display: block;
   margin: 0 auto;
   max-width: 120px;
-  padding: 2px;
+/*padding: 2px;*/
 }
 .site-author-name {
   color: var(--text-color);
@@ -1220,7 +1214,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #af79f6;
+  background: #f0ffde;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
