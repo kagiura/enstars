@@ -1,10 +1,13 @@
 /* ==UserStyle==
-@name         FHE
+@name         Example UserCSS style
 @namespace    github.com/openstyles/stylus
 @version      1.0.0
 @license      unlicense
 @preprocessor default
 ==/UserStyle== */
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
+
 
 
 :root {
@@ -211,6 +214,7 @@
 
 .q-dialogue-warning {
     background: #cb0f0f;
+    color: white;
     margin: 10px 0px;
     padding: 15px 15px;
     border-radius: 10px;
@@ -260,11 +264,11 @@
 .q-dialogue-warning-hidden .q-dialogue-warning {
     position: absolute;
     z-index: 2;
-    transform: translateY( calc(300px - 100%) ) scale(1.02);
+    transform: translateY( calc(290px - 100%) ) scale(1.02);
 }
 
 .q-dialogue-warning-hidden .q-dialogue-warning.hidden {
-    transform: translateY( calc(300px - 100%) ) scale(0.95);
+    transform: translateY( calc(290px - 100%) ) scale(0.95);
     opacity: 0;
 }
 
