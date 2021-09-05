@@ -1,0 +1,378 @@
+/* ==UserStyle==
+@name         FHE
+@namespace    github.com/openstyles/stylus
+@version      1.0.0
+@license      unlicense
+@preprocessor default
+==/UserStyle== */
+
+
+:root {
+    --qd-message-box-color: hsla(229, 51%, 77%, 0.25);
+    --qd-message-text-color:  inherit;
+    --qd-message-text-font: 16px 'Karla';
+    --qd-identifier-color: #6880f9;
+    --qd-identifier-width: 80px;
+    --qd-identifier-width-expanded: 45px;
+    --qd-identifier-radius: 10px;
+    --qd-animation-duration: 0.2s;
+    --qd-toolbar-color: hsla(229, 50%, 76%, 0.25);
+    --qd-toolbar-color__hsl: 229, 50%, 76%;
+}
+
+.q-dialogue {
+    margin: 10px 0px 10px;
+    position: relative;
+    transition: opacity var(--qd-animation-duration) ease;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.q-dialogue > p {
+    margin: 0px 0px 0.3em calc( var(--qd-identifier-width) + 10px );
+    overflow: visible;
+    border-radius: 0px 10px 10px 0px;
+    transition: transform var(--qd-animation-duration) ease,
+        margin var(--qd-animation-duration) ease,
+        padding var(--qd-animation-duration) ease,
+        background var(--qd-animation-duration) ease,
+        color var(--qd-animation-duration) ease;
+    align-self: flex-start;
+    font: var(--qd-message-text-font);
+    letter-spacing: 0px;
+}
+
+.q-dialogue > .endmsg {
+    margin-bottom: 1em;
+    border-radius: 0px 10px 10px 10px;
+}
+
+.q-dialogue > p .identifier__wrapper{
+    position:absolute;
+    transform: translate( calc( ( var(--qd-identifier-width) * -1 ) - 10px) , 0px);
+    display: block;
+    width: var(--qd-identifier-width);
+    transition: width var(--qd-animation-duration) ease,
+        transform var(--qd-animation-duration) ease;
+    color: var(--qd-identifier-color);
+}
+
+.q-dialogue > div {
+    border-radius: 5px;
+    margin: 0px 0px 5px calc( var(--qd-identifier-width) + 10px );
+    overflow: hidden;
+    transition: transform var(--qd-animation-duration) ease,
+        margin-left var(--qd-animation-duration) ease;
+    flex: 0 0 auto;
+}
+
+.q-dialogue > p:hover,
+.q-dialogue > div:hover{
+    transform: translate(1.5px, 0px);
+}
+
+.q-dialogue > p:hover .identifier.icon,
+.q-dialogue > p:hover .identifier.name {
+    transform: translate(-1.5px, 0px);
+}
+
+.q-dialogue sup {
+    display: inline-block;
+    vertical-align:baseline;
+    opacity: 0.5;
+    margin: 0 2.5px;
+    line-height: 1;
+    transition: opacity var(--qd-animation-duration) ease;
+    font: 800 0.7em 'Karla', sans-serif;
+    background: hsla(var(--qd-toolbar-color__hsl), 0.3);
+    border-radius: 2px;
+    padding: 1px 3px 1px 2px;
+}
+
+.q-dialogue sup:hover {
+    opacity: 1;
+}
+
+.q-dialogue sup .material-icons-round {
+    margin-right: 1px;
+    vertical-align: -1.5px;
+    font-size: 1em;
+}
+
+
+.q-dialogue__background.fullscreen {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999999999;
+}
+
+.q-dialogue__wrapper.fullscreen {
+    overflow: scroll;
+    margin: auto;
+    height: calc(100% - 40px);
+    padding: 20px 10px;
+    scrollbar-color: rgba(255, 255, 255, .1) #f000;
+}
+
+.q-dialogue__wrapper.fullscreen .q-toolbar {
+    max-width: 600px;
+    margin: 10px auto 10px;
+}
+
+.q-dialogue__wrapper.fullscreen::-webkit-scrollbar-track {
+    display: none;
+}
+
+.q-dialogue__wrapper.fullscreen::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, .1) #f000;
+    border-radius: 50%;
+}
+
+.q-dialogue.fullscreen {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.q-dialogue-expanded .q-dialogue:not(.fullscreen) {
+    opacity: 0.2;
+}
+.q-dialogue-expanded {
+    overflow: hidden;
+
+}
+
+.q-dialogue.q-dialogue-loading {
+    height: 250px;
+    -webkit-mask-image: linear-gradient(black 50%, #0002 80%, transparent 100%);
+    mask-image: linear-gradient(black 50%, #0002 80%, transparent 100%);
+    -webkit-mask-size: 100% 200%;
+    mask-size: 100% 200%;
+    -webkit-mask-position: 0% 100%;
+    mask-position: 0% 100%;
+    -webkit-mask-position-y: 100%;
+}
+
+.q-toolbar{
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    border: solid 2px hsla(var(--qd-toolbar-color__hsl), 0.3);
+    margin: 10px 0px;
+    padding: 5px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.q-toolbar .material-icons-round{
+    font-size: 18px;
+    vertical-align: -2px;
+}
+
+.q-toolbar .q-toolbar__section {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.q-toolbar a {
+    border-radius: 5px;
+    background: hsla(var(--qd-toolbar-color__hsl), 0.3);
+    color: currentColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 700 16px 'Karla', sans-serif;
+    letter-spacing: 0px;
+    padding: 5px;
+    height: 25px;
+    box-sizing:border-box;
+    transition: all var(--qd-animation-duration) ease;
+}
+
+.q-toolbar a:hover {
+    background: hsla(var(--qd-toolbar-color__hsl), 0.5);
+    transform: scale(1.05);
+}
+
+.q-toolbar .q-toolbar__section.tools a {
+    width: 25px;
+}
+
+.q-toolbar .q-toolbar__section.nav a {
+    padding: 5px 10px;
+}
+
+.q-dialogue-warning {
+    background: #cb0f0f;
+    margin: 10px 0px;
+    padding: 15px 15px;
+    border-radius: 10px;
+    font: 1em 'Karla', sans-serif;
+    letter-spacing: 0px;
+    transition: all var(--qd-animation-duration) ease;
+}
+
+.q-dialogue-warning .q-dialogue-warning__header {
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.q-dialogue-warning .q-dialogue-warning__header .material-icons-round{
+    margin-left: 3px;
+    font-size: 14px;
+    vertical-align: -2px;
+}
+
+.q-dialogue-warning .q-dialogue-warning__text {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+.q-dialogue-warning .q-dialogue-warning__confirm {
+    text-align: right;
+}
+
+.q-dialogue-warning .q-dialogue-warning__confirm button {
+    color: white;
+    background: hsla(0, 0%, 100%, 0.3);
+    border: none;
+    font: inherit;
+    font-size: 0.8em;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all var(--qd-animation-duration) ease;
+}
+
+.q-dialogue-warning .q-dialogue-warning__confirm button:hover {
+    background: hsla(0, 0%, 100%, 1);
+    color: #cb0f0f;
+    transform: scale(1.05);
+}
+
+.q-dialogue-warning-hidden .q-dialogue-warning {
+    position: absolute;
+    z-index: 2;
+    transform: translateY( calc(300px - 100%) ) scale(1.02);
+}
+
+.q-dialogue-warning-hidden .q-dialogue-warning.hidden {
+    transform: translateY( calc(300px - 100%) ) scale(0.95);
+    opacity: 0;
+}
+
+/*----------------------------------------------------------------------------*/
+
+
+q.dialogue-start,
+q.dialogue-end {
+    display: none;
+}
+
+q[data-icon-pack],
+q[data-icon-override],
+q[data-prev-title],
+q[data-prev-link],
+q[data-next-title],
+q[data-next-link],
+q[data-directory-title],
+q[data-directory-link],
+q[data-directory-link],
+q[data-icon-pack],
+q[data-icon-override],
+q[data-content-warning-type],
+q[data-content-warning] {
+    display: none;
+
+}
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+.identifier.name{
+    position: absolute;
+    transition: line-height var(--qd-animation-duration) ease,
+        transform var(--qd-animation-duration) ease,
+        font var(--qd-animation-duration) ease;
+}
+
+.identifier.icon{
+    opacity: 0;
+    transition: opacity var(--qd-animation-duration) ease,
+        transform var(--qd-animation-duration) ease;
+    display: block;
+    width: var(--qd-identifier-width-expanded);
+    border-radius: var(--qd-identifier-radius);
+    overflow: hidden;
+    background: var(--q-character-color);
+
+}
+
+body.q-dialogue-maximized {
+    --qd-identifier-width: var(--qd-identifier-width-expanded);
+}
+
+
+body.q-dialogue-maximized .q-dialogue p {
+    background: var(--qd-message-box-color);
+    color: var(--qd-message-text-color);
+    padding: 10px 15px;
+}
+
+body.q-dialogue-maximized .q-dialogue p.startmsg{
+    margin-top: 15px;
+}
+
+body.q-dialogue-maximized .q-dialogue .endmsg {
+    margin-bottom: 1em;
+}
+
+body.q-dialogue-maximized .q-dialogue > p .identifier__wrapper{
+    transform: translate( calc( ( var(--qd-identifier-width) * -1 ) - 10px - 15px) , -25px);
+}
+
+body.q-dialogue-maximized .q-dialogue .identifier.name{
+    position: absolute;
+    transform: translateX( calc( var(--qd-identifier-width) + 10px ) );
+    line-height: 1em;
+    font-size: 0.75em;
+}
+
+body.q-dialogue-maximized .q-dialogue .identifier.icon{
+    opacity: 1;
+}
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+.tippy-box[data-theme~='q-button'] {
+  background-color: #222;
+  color: white;
+  font: 500 0.8em 'Karla', sans-serif;
+  letter-spacing: 0px;
+}
+
+.tippy-box[data-theme~='q-note'] {
+  background-color: #222;
+  color: white;
+  font: 500 0.8em 'Karla', sans-serif;
+  letter-spacing: 0px;
+  padding: 5px;
+}
+.tippy-box[data-theme~='q-note'][data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: #222;
+}
+.tippy-box[data-theme~='q-note'][data-placement^='bottom'] > .tippy-arrow::before {
+  border-bottom-color: #222;
+}
