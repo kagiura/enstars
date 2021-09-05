@@ -117,6 +117,7 @@
 }
 
 .q-dialogue__wrapper.fullscreen {
+    color: white;
     overflow: scroll;
     margin: auto;
     height: calc(100% - 40px);
