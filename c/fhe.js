@@ -7,7 +7,7 @@ var contentWarningType = $('[data-content-warning-type]').last().attr('data-cont
 function initializeContentWarnings(){
     contentWarning = $('[data-content-warning]').last().attr('data-content-warning');
     contentWarningType = $('[data-content-warning-type]').last().attr('data-content-warning-type');
-    if( $('[data-content-warning]').length ){
+    if( $('[data-content-warning]').length > 0 ){
         switch(contentWarningType) {
             case 'popup':
                 break;
@@ -42,19 +42,20 @@ function initializeToolbar(){
     $('.q-dialogue')
     .before(`<div class="q-toolbar top">` + toolbar + `</div>`)
     .after(`<div class="q-toolbar bottom">` + toolbar + `</div>`);
-    cw = `<div class="q-dialogue-warning">
-    <div class="q-dialogue-warning__header">Content Warning!<span class="material-icons-round">help</span></div>
-    <div class="q-dialogue-warning__text">` + contentWarning + `</div>`;
-    if(contentWarningType === "popup"){
+    if( $('[data-content-warning]').length > 0 ){
+        cw = `<div class="q-dialogue-warning">
+        <div class="q-dialogue-warning__header">Content Warning!<span class="material-icons-round">help</span></div>
+        <div class="q-dialogue-warning__text">` + contentWarning + `</div>`;
+        if(contentWarningType === "popup"){
 
+        }
+        else if(contentWarningType === "hidden"){
+            cw = cw + `<div class="q-dialogue-warning__confirm"><button class="unhide" type="button">I understand</button></div>`
+            $('body').addClass('q-dialogue-warning-hidden');
+        }
+        cw = cw + `</div>`;
+        $('.q-toolbar.top').before(cw);
     }
-    else if(contentWarningType === "hidden"){
-        cw = cw + `<div class="q-dialogue-warning__confirm"><button class="unhide" type="button">I understand</button></div>`
-        $('body').addClass('q-dialogue-warning-hidden');
-    }
-    cw = cw + `</div>`;
-    $('.q-toolbar.top').before(cw);
-
     $('.unhide').click(function () {
         unhideDialogue();
         $('.q-dialogue-warning').addClass('hidden');
@@ -124,9 +125,14 @@ function initializeSiteConfig(callback){
                 console.log(customicons);
                 callback();
             });
+
         }
         loopArray();
     }
+
+    setTimeout(function () {
+                callback();
+    }, 2000);
 }
 
 function unhideDialogue(){
@@ -146,6 +152,7 @@ function unhideDialogue(){
         '-webkit-mask-position-y': '0%'
     }, 200, function(){
         $('.q-dialogue').removeClass('q-dialogue-loading');
+        $('.q-dialogue').css('height','');
     });
 
 }
@@ -176,7 +183,11 @@ function tagDialogue(){
             .wrap('<span class="identifier name"></span>');
             $(this).children().first().append('<span class="identifier icon"></span>');
             iconElement = $(this).children().first().children('.identifier.icon').first();
-            iconElement.append('<img src="' + icons.find(x => x.commonname === commonname).filename + '">');
+            try{
+                iconElement.append('<img src="' + icons.find(x => x.commonname === commonname).filename + '">');
+            }catch(e){
+                console.log(e);
+            }
         }
     });
     chat.last().addClass('endmsg');
