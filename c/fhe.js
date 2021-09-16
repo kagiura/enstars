@@ -4,6 +4,15 @@ var toolbar = "";
 var contentWarning = $('[data-content-warning]').last().attr('data-content-warning');
 var contentWarningType = $('[data-content-warning-type]').last().attr('data-content-warning-type');
 
+var scrollReveal = document.createElement('script');
+scrollReveal.src = 'https://unpkg.com/scrollreveal';
+document.head.appendChild(scrollReveal);
+var modernContext = document.createElement('script');
+modernContext.src = 'http://localhost:4000/js/context.js';
+document.head.appendChild(modernContext);
+
+
+
 function initializeContentWarnings(){
     contentWarning = $('[data-content-warning]').last().attr('data-content-warning');
     contentWarningType = $('[data-content-warning-type]').last().attr('data-content-warning-type');
@@ -22,7 +31,7 @@ function initializeContentWarnings(){
 function initializeToolbar(){
     toolbar = toolbar + `
     <div class="q-toolbar__section tools">
-    <a class="tippy" data-tippy-content="Chat Format" href="#maximize" onclick="maximizeToggle();"><span class="material-icons-round">question_answer</span></a>
+    <a class="tippy qd-t-chat" data-tippy-content="Chat Format" onclick="chatToggle();"><span class="material-icons-round">question_answer</span></a>
     <a class="tippy" data-tippy-content="Fullscreen" href="#fullscreen" onclick="fullscreenToggle();"><span class="material-icons-round">fullscreen</span></a>
     </div>`;
     if( $('[data-prev-link]').length + $('[data-next-link]').length + $('[data-directory-link]').length > 0 ){
@@ -64,6 +73,29 @@ function initializeToolbar(){
         }, 5000);
     });
 
+    const context = new Context(".qd-t-chat", [
+        {
+            type: "item",
+            label: "Custom Options",
+        },
+        {
+            type: "item",
+            label: "Display Images",
+            callback: () => {
+                imageToggle();
+                $('body').toggleClass('q-dialogue-custom');
+            }
+        },
+        {
+            type: "item",
+            label: "Bubble Format",
+            callback: () => {
+                bubbleToggle();
+                $('body').toggleClass('q-dialogue-custom');
+            }
+        },
+    ]);
+
 
 
 }
@@ -94,7 +126,7 @@ function initializeTooltips() {
 
 }
 
-function initializeSiteConfig(callback){
+function initializeSiteConfig(mainCallback){
 
     customicons = [];
 
@@ -113,7 +145,7 @@ function initializeSiteConfig(callback){
                 }
                 else{
                     icons = [...customicons, ...icons];
-                    callback();
+                    mainCallback();
                 }
             });
         }
@@ -129,10 +161,9 @@ function initializeSiteConfig(callback){
         }
         loopArray();
     }
-
-    setTimeout(function () {
-                callback();
-    }, 2000);
+    else{
+        mainCallback();
+    }
 }
 
 function unhideDialogue(){
@@ -157,11 +188,11 @@ function unhideDialogue(){
 
 }
 
-function tagDialogue(){
+function tagDialogueOld(){
 
     chat = $('.q-dialogue').children();
     chat.each(function() {
-            //console.log($(this).html());
+        //console.log($(this).html());
         if(
             $(this).html().startsWith("<b") ||
             $(this).html().startsWith("<strong") ||
@@ -204,6 +235,99 @@ function tagDialogue(){
 
 }
 
+function tagDialogue(){
+    var cache = $(`<div class="qd-exclude"></div>`);
+    var dialogue = $(`<div></div>`);
+    $('.q-dialogue').append(`<div class="end"></div>`);
+    chat = $('.q-dialogue').children();
+    chat.each( function() {
+        console.log($(this).html());
+        var newUnit =
+            $(this).html().startsWith("<b") ||
+            $(this).html().startsWith("<strong") ||
+            $(this).hasClass('end'),
+            rich =
+            $(this).prop('outerHTML').startsWith("<div") ||
+            $(this).prop('outerHTML').startsWith("<blockquote"),
+            block =
+            $(this).prop('outerHTML').startsWith("<blockquote");
+        if( newUnit || rich ){
+            if(newUnit){
+                var name = $(this).children().first().text().replace(":", "");
+                $(this).children().first().remove();
+            }
+            if( !$(cache).hasClass('qd-exclude') ){
+                var unit = $('<div></div>').addClass('qd-unit');
+                if( $(cache).is("[character]") ){
+                    var thisName = $(cache).attr('character');
+                    var iconFile = "";
+                    try{
+                        iconFile = icons.find(x => x.commonname === thisName).filename;
+                    }catch(e){
+                        iconFile = `https://r.tsukina.ga/i/default/Icon.png`;
+                    }
+                    $(unit).append( $('<img></img>').addClass('qd-identifier').attr(`src`, iconFile) );
+                    $(unit).append( $('<span></span>').addClass('qd-identifier').text(thisName) );
+                }
+                $(unit).append(cache);
+                $(dialogue).append(unit);
+            }
+
+            if( newUnit ) {
+                cache = $(`<div></div>`).addClass(`qd-content qd-lines`);
+                $(cache).attr('character', name)
+                $(cache).append(`<p>` + $(this).html() + `</p>`);
+            } else {
+                cache = $(`<div></div>`).addClass(`qd-content qd-rich`);
+                $(cache).append($(this).html());
+                if(block){
+                    $(cache).addClass('qd-block');
+                    $(cache).children().each(function() {
+                        if($(this).text().toLowerCase().startsWith("location")){
+                            $(this).prepend(`<span class="material-icons-round">place</span>`)
+                            .wrap('<div></div>').parent().addClass('qd-location')
+                            .prepend(`<span class="qd-hr left"></span><span class="qd-hr right"></span>`);
+                        }
+                        else if(
+                            $(this).text().toLowerCase().startsWith("season") ||
+                            $(this).text().toLowerCase().startsWith("time")
+                        ){
+                            $(this).addClass('qd-time').prepend(`<span class="material-icons-round">thermostat</span>`);
+                        }
+                        else {
+                            $(this).wrap('<div></div>').parent().addClass('qd-narration');
+
+
+                        }
+                    });
+                }
+                console.log('.');
+            }
+
+        }
+        else {
+            $(cache).append(`<p>` + $(this).html() + `</p>`);
+        }
+        $(this).remove();
+
+    });
+    $('.q-dialogue').append( $(dialogue).html() );
+
+    inlineNotes = $('.q-dialogue sup[data-note]');
+    inlineNotes.each(function() {
+        $(this)
+        .html( $(this).html().replace(/[\[\]']+/g,'') )
+        .attr( 'data-tippy-content', $('q[data-note="' + $(this).attr('data-note') + '"]').html() );
+
+    });
+    if(contentWarningType !== "hidden"){
+        unhideDialogue();
+    }
+    //ScrollReveal().reveal('.qd-unit');
+
+}
+
+
 
 
 function fullscreenInitial(){
@@ -211,7 +335,14 @@ function fullscreenInitial(){
     $('body').prepend(`<div class="q-dialogue__background fullscreen">
     <div class="q-dialogue__wrapper fullscreen">
     <div class="q-dialogue fullscreen">` + maindialogue +
-    `</div></div></div>`)
+    `</div></div></div>`);
+    $('.q-dialogue__background.fullscreen').click(function() {
+        $('.q-dialogue__background').fadeOut(200);
+        $('body').removeClass('q-dialogue-expanded');
+
+    }).children().click(function(e) {
+        return false;
+    });
 }
 
 function fullscreenToggle(){
@@ -219,8 +350,25 @@ function fullscreenToggle(){
     $('body').toggleClass('q-dialogue-expanded');
 }
 
-function maximizeToggle(){
-    $('body').toggleClass('q-dialogue-maximized');
+function bubbleToggle(){
+    $('body').toggleClass('q-dialogue-bubble');
+}
+
+function imageToggle(){
+    $('body').toggleClass('q-dialogue-image');
+}
+
+function chatToggle(){
+    if( $('body').hasClass('q-dialogue-custom') ){
+        $('body').removeClass('q-dialogue-image');
+        $('body').removeClass('q-dialogue-bubble');
+        $('body').removeClass('q-dialogue-custom');
+    }
+    else {
+        $('body').toggleClass('q-dialogue-image');
+        $('body').toggleClass('q-dialogue-bubble');
+
+    }
 }
 
 function loadScript(scriptUrl) {
