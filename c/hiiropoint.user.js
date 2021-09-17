@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HiiroPoint
 // @namespace    https://tsukina.ga/leo
-// @version      1.0
+// @version      1.0.1
 // @description  :HiiroPoint:
 // @author       twitter.com/junsweats
 // @match        https://twitter.com/*
@@ -24,10 +24,10 @@ function DOMModificationHandler(){
             pageUpdate();
         }
         console.log('update!');
-        $('body').bind('DOMSubtreeModified.event1', DOMModificationHandler);
-    },10);
+        $('main').bind('DOMSubtreeModified.event1', DOMModificationHandler);
+    },3000);
 }
-$('body').bind('DOMSubtreeModified.event1', DOMModificationHandler);
+$('main').bind('DOMSubtreeModified.event1', DOMModificationHandler);
 
 $(function() {
     $('head').append(`<style>@import url("https://r.tsukina.ga/hp/emotes.css");</style>`)
@@ -46,7 +46,6 @@ function pageUpdate(){
         };
     });
 
-    var page = $('body').html();
     for (const val of emotes) {
         console.log(`span:contains("${val}")`);
         $(`span:contains("${val}")`).each(function() {

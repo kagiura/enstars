@@ -6,6 +6,7 @@ i.hp-icon::before {
     vertical-align: -0.15em;
     margin: 0em 0.1em;
     background-size: 100%;
+    user-select: none;
 }
 
 i.hp-hiiropoint::before {
