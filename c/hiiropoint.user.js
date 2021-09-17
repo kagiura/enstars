@@ -14,7 +14,7 @@ var jQ = document.createElement('script');
 jQ.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
 document.head.appendChild(jQ);
 
-const emotes = [];
+var emotes = [];
 var emotesLoaded = false;
 
 function DOMModificationHandler(){
