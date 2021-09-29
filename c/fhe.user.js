@@ -13,4 +13,6 @@
 
 (function() {
     $('<script />', { type : 'text/javascript', src : 'https://r.tsukina.ga/c/fhe.js'}).appendTo('head');
+    // $('<script />', { type : 'text/javascript', src : 'http://localhost:4000/js/fhe.js'}).appendTo('head');
+
 })();
