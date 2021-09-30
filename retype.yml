@@ -1,6 +1,6 @@
 input: ./src
 output: .
-url: http://localhost:8080/
+url: http://oissu.tsukina.ga/
 branding:
     title: oi~ssu♪
     label: Docs
