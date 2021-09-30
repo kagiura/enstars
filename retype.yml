@@ -15,6 +15,10 @@ links:
   - text: About
     link: /about
     icon: question
+  - text: Sample
+    link: https://stars-ensemble.tumblr.com/oissu
+    icon: rocket
+    target: blank
 footer:
     copyright: "&copy; Copyright {{ year }}. All rights reserved."
 server:
