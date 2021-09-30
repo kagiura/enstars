@@ -1,0 +1,21 @@
+input: ./src
+output: .
+url: http://localhost:8080/
+branding:
+    title: oi~ssu♪
+    label: Docs
+    logo: sources/img/logo-color.svg
+    logoDark: sources/img/logo.svg
+
+links:
+  - text: GitHub
+    link: https://github.com/enstars/oi-ssu
+    icon: mark-github
+    target: blank
+  - text: About
+    link: /about
+    icon: question
+footer:
+    copyright: "&copy; Copyright {{ year }}. All rights reserved."
+server:
+    host: 127.0.0.1:8080
