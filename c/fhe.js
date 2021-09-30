@@ -18,9 +18,6 @@ var logo = `<svg width="1093" height="421" viewBox="0 0 1093 421" fill="none" xm
 var scrollReveal = document.createElement('script');
 scrollReveal.src = 'https://unpkg.com/scrollreveal';
 document.head.appendChild(scrollReveal);
-var modernContext = document.createElement('script');
-modernContext.src = 'http://localhost:4000/js/context.js';
-document.head.appendChild(modernContext);
 var featherIcons = document.createElement('script');
 featherIcons.src = 'https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js';
 document.head.appendChild(featherIcons);
