@@ -1,0 +1,216 @@
+{
+    "name":"Yumenosaki Winter Outfit",
+    "author":"Oi~ssu♪",
+    "icons":[
+        {
+            "commonname":"Tomoya",
+            "fullname":"Tomoya Mashiro",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Tomoya.png"
+        },
+        {
+            "commonname":"Yuta",
+            "fullname":"Yuta Aoi",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Yuta.png"
+        },
+        {
+            "commonname":"Yuuta",
+            "fullname":"Yuuta Aoi",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Yuta.png"
+        },
+        {
+            "commonname":"Hinata",
+            "fullname":"Hinata Aoi",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Hinata.png"
+        },
+        {
+            "commonname":"Tori",
+            "fullname":"Tori Himemiya",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Tori.png"
+        },
+        {
+            "commonname":"Touri",
+            "fullname":"Touri Himemiya",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Tori.png"
+        },
+        {
+            "commonname":"Mitsuru",
+            "fullname":"Mitsuru Tenma",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Mitsuru.png"
+        },
+        {
+            "commonname":"Midori",
+            "fullname":"Midori Takamine",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Midori.png"
+        },
+        {
+            "commonname":"Hajime",
+            "fullname":"Hajime Shino",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Hajime.png"
+        },
+        {
+            "commonname":"Sora",
+            "fullname":"Sora Harukawa",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Sora.png"
+        },
+        {
+            "commonname":"Tetora",
+            "fullname":"Tetora Nagumo",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Tetora.png"
+        },
+        {
+            "commonname":"Shinobu",
+            "fullname":"Shinobu Sengoku",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Shinobu.png"
+        },
+        {
+            "commonname":"Tsukasa",
+            "fullname":"Tsukasa Suou",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Tsukasa.png"
+        },
+        {
+            "commonname":"Mao",
+            "fullname":"Mao Isara",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Mao.png"
+        },
+        {
+            "commonname":"Arashi",
+            "fullname":"Arashi Narukami",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Arashi.png"
+        },
+        {
+            "commonname":"Natsume",
+            "fullname":"Natsume Sakasaki",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Natsume.png"
+        },
+        {
+            "commonname":"Mika",
+            "fullname":"Mika Kagehira",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Mika.png"
+        },
+        {
+            "commonname":"Hokuto",
+            "fullname":"Hokuto Hidaka",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Hokuto.png"
+        },
+        {
+            "commonname":"Yuzuru",
+            "fullname":"Yuzuru Fushimi",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Yuzuru.png"
+        },
+        {
+            "commonname":"Adonis",
+            "fullname":"Adonis Otogari",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Adonis.png"
+        },
+        {
+            "commonname":"Koga",
+            "fullname":"Koga Oogami",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Koga.png"
+        },
+        {
+            "commonname":"Kouga",
+            "fullname":"Kouga Oogami",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Koga.png"
+        },
+        {
+            "commonname":"Subaru",
+            "fullname":"Subaru Akehoshi",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Subaru.png"
+        },
+        {
+            "commonname":"Makoto",
+            "fullname":"Makoto Yuuki",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Makoto.png"
+        },
+        {
+            "commonname":"Souma",
+            "fullname":"Souma Kanzaki",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Souma.png"
+        },
+        {
+            "commonname":"Wataru",
+            "fullname":"Wataru Hibiki",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Wataru.png"
+        },
+        {
+            "commonname":"Kuro",
+            "fullname":"Kuro Kiryu",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Kuro.png"
+        },
+        {
+            "commonname":"Kurou",
+            "fullname":"Kurou Kiryuu",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Kuro.png"
+        },
+        {
+            "commonname":"Eichi",
+            "fullname":"Eichi Tenshouin",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Eichi.png"
+        },
+        {
+            "commonname":"Kaoru",
+            "fullname":"Kaoru Hakaze",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Kaoru.png"
+        },
+        {
+            "commonname":"Izumi",
+            "fullname":"Izumi Sena",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Izumi.png"
+        },
+        {
+            "commonname":"Shu",
+            "fullname":"Shu Itsuki",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Shu.png"
+        },
+        {
+            "commonname":"Shuu",
+            "fullname":"Shuu Itsuki",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Shu.png"
+        },
+        {
+            "commonname":"Ritsu",
+            "fullname":"Ritsu Sakuma",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Ritsu.png"
+        },
+        {
+            "commonname":"Chiaki",
+            "fullname":"Chiaki Morisawa",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Chiaki.png"
+        },
+        {
+            "commonname":"Keito",
+            "fullname":"Keito Hasumi",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Keito.png"
+        },
+        {
+            "commonname":"Kanata",
+            "fullname":"Kanata Shinkai",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Kanata.png"
+        },
+        {
+            "commonname":"Tsumugi",
+            "fullname":"Tsumugi Aoba",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Tsumugi.png"
+        },
+        {
+            "commonname":"Madara",
+            "fullname":"Madara Mikejima",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Madara.png"
+        },
+        {
+            "commonname":"Leo",
+            "fullname":"Leo Tsukinaga",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Leo.png"
+        },
+        {
+            "commonname":"Nazuna",
+            "fullname":"Nazuna Nito",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Nazuna.png"
+        },
+        {
+            "commonname":"Rei",
+            "fullname":"Rei Sakuma",
+            "filename":"https://r.tsukina.ga/i/ymnsk-winter/Rei.png"
+        }
+    ]
+}
