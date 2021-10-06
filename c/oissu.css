@@ -1,5 +1,7 @@
 @import url("npm.css");
 
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
 /*
 :root {
     --os-bubble-color: #e9ecf0;
@@ -80,6 +82,12 @@ body.night {
     transition: all var(--os-animation-duration) ease;
     box-shadow: var(--os-shadow-1);
     min-height: 370px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
