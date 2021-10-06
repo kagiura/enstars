@@ -607,7 +607,7 @@ body.oissu-bubble .os-content.os-lines p:first-child::before {
     position: absolute;
     top: 0px;
     left: -6px;
-    mask: url("http://localhost:8080/src/svg/arrow.svg") no-repeat 100% 100%;
+    mask: url("http://r.tsukina.ga/c/arrow.svg") no-repeat 100% 100%;
 }
 
 body.oissu-bubble span.os-identifier {
