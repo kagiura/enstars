@@ -1,6 +1,6 @@
-input: ./src
-output: .
-url: http://oissu.tsukina.ga/
+input: src
+output: docs
+url: http://oissu.tsukina.ga/docs/
 branding:
     title: oi~ssu♪
     label: Docs
@@ -8,18 +8,20 @@ branding:
     logoDark: sources/img/logo.svg
 
 links:
-  - text: GitHub
-    link: https://github.com/enstars/oi-ssu
-    icon: mark-github
-    target: blank
-  - text: About
-    link: /about
-    icon: question
-  - text: Sample
-    link: https://stars-ensemble.tumblr.com/oissu
-    icon: rocket
-    target: blank
+    - text: GitHub
+      link: https://github.com/enstars/oi-ssu
+      icon: mark-github
+      target: blank
+    - text: About
+      link: /about
+      icon: question
+    - text: Sample
+      link: https://stars-ensemble.tumblr.com/oissu
+      icon: rocket
+      target: blank
 footer:
     copyright: "&copy; Copyright {{ year }}. All rights reserved."
 server:
-    host: 127.0.0.1:8080
+    host: 127.0.0.1:9999
+include:
+    - /resources/img/**

@@ -7,21 +7,21 @@
     <meta name="turbo-cache-control" content="no-cache">
 
     <!-- Primary Meta Tags -->
-    <title>Oi~ssu♪</title>
-    <meta name="title" content="Oi~ssu♪">
-    <meta name="description" content="Oissu (stylized as Oi~ssu♪) is a standard for formatting dialogue-based stories on Tumblr, mainly focused on delivering a better experience for game..." />
+    <title>Getting Started</title>
+    <meta name="title" content="Getting Started">
+    <meta name="description" content="So you're interested in Oissu! Oissu can be installed in literally a single line of code, and it's very easy to get started! This page summarizes..." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://oissu.tsukina.ga/docs/">
-    <meta property="og:title" content="Oi~ssu♪">
-    <meta property="og:description" content="Oissu (stylized as Oi~ssu♪) is a standard for formatting dialogue-based stories on Tumblr, mainly focused on delivering a better experience for game...">
+    <meta property="og:url" content="http://oissu.tsukina.ga/docs/tumblr/gettingstarted/">
+    <meta property="og:title" content="Getting Started">
+    <meta property="og:description" content="So you're interested in Oissu! Oissu can be installed in literally a single line of code, and it's very easy to get started! This page summarizes...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="http://oissu.tsukina.ga/docs/">
-    <meta property="twitter:title" content="Oi~ssu♪">
-    <meta property="twitter:description" content="Oissu (stylized as Oi~ssu♪) is a standard for formatting dialogue-based stories on Tumblr, mainly focused on delivering a better experience for game...">
+    <meta property="twitter:url" content="http://oissu.tsukina.ga/docs/tumblr/gettingstarted/">
+    <meta property="twitter:title" content="Getting Started">
+    <meta property="twitter:description" content="So you're interested in Oissu! Oissu can be installed in literally a single line of code, and it's very easy to get started! This page summarizes...">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/docs/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -29,6 +29,7 @@
 
     <script type="text/javascript" src="/docs/resources/js/config.js?v=1.9.687043187698" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/docs/resources/js/retype.js?v=1.9" defer data-turbo-track="reload"></script>
+    <script id="prism-js" type="text/javascript" src="/docs/resources/js/prism.js?v=1.9.687043187698" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -211,47 +212,209 @@
                 <div id="docs-sidebar-right-toggle"></div>
                
                 <!-- Page content  -->
-<doc-anchor-target id="oissu" class="break-words">
+<doc-anchor-target id="getting-started" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#oissu">#</doc-anchor-trigger>
-        <span>Oi~ssu♪</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#getting-started">#</doc-anchor-trigger>
+        <span>Getting Started</span>
     </h1>
 </doc-anchor-target>
-<p>Oissu (stylized as Oi~ssu♪) is a standard for formatting dialogue-based stories on Tumblr, mainly focused on delivering a better experience for game translations. The project consists of 2 parts:</p>
-<ul>
-<li><strong>Oissu Grid</strong> a defined standard for displaying dialogues using CSS grids</li>
-<li><strong>Oissu Tumblr</strong> a script used to format existing Tumblr posts into Oissu Grid format</li>
-</ul>
+<p>So you&#x27;re interested in Oissu! Oissu can be installed in literally a single line of code, and it&#x27;s very easy to get started! This page summarizes everything you need, but if there&#x27;s any part you want more info, check out the sidebar to find more info on each parts.</p>
+<hr />
+<doc-anchor-target id="installation">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#installation">#</doc-anchor-trigger>
+        <span>Installation</span>
+    </h2>
+</doc-anchor-target>
+<p>Head over to your theme editor and access the HTML editor, and insert this line of code right after the <code v-pre>&lt;head&gt;</code> tag.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;script src=&quot;https://r.tsukina.ga/oissu&quot;&gt;&lt;/script&gt;</code></pre>
+</doc-codeblock></div>
+<p>That&#x27;s it! To check if installation has worked, try <a href="https://support.monday.com/hc/en-us/articles/360002197259-How-to-Open-the-Developer-Console">opening your browser&#x27;s console <svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.5 2.25a.75.75 0 01.75-.75h5.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V4.06l-6.22 6.22a.75.75 0 11-1.06-1.06L19.94 3h-3.69a.75.75 0 01-.75-.75z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 010 1.5h-8.5a.25.25 0 00-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 00.25-.25v-8.5a.75.75 0 011.5 0v8.5a1.75 1.75 0 01-1.75 1.75H4.25a1.75 1.75 0 01-1.75-1.75V4.25z"/></g></g></svg></a> and you should see a little secret!</p>
+<hr />
+<doc-anchor-target id="usage">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#usage">#</doc-anchor-trigger>
+        <span>Usage</span>
+    </h2>
+</doc-anchor-target>
 <div class="flex mb-6">
-    <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
                 </g></g>
             </svg>
         </div>
         <div class="pr-5 ml-3">
-<p>If you&#x27;re looking for how to start using Oi~ssu♪ on your blog, head over to the Getting Started page!
+            <h5>Before you start!</h5>
+<p>Oissu utilizes the <strong>HTML editor</strong> to make its markup invisible on platforms that don&#x27;t support it. Make sure to switch to the HTML editor before starting</p>
+        </div>
+    </div>
+</div>
+<p>In your Tumblr posts, start your dialogues with <span style="display: inline-block;"><code v-pre>&lt;div class=&quot;oissu&quot;&gt;</code></span> and end them with <code v-pre>&lt;/div&gt;</code> to let Oissu know all the content between these two tags should be marked as dialogue.</p>
+<p>Now try refreshing your page and see Oissu come to life! You should see your dialogue wrapped up in a box, formatted to make it easier to read. Feel free to play around!</p>
+<hr />
+<doc-anchor-target id="formatting">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#formatting">#</doc-anchor-trigger>
+        <span>Formatting</span>
+    </h3>
+</doc-anchor-target>
+<p>Oissu markup is invisible, meaning on platforms that don&#x27;t support custom HTML (Tumblr app, mobile site etc.), the posts will look like regular posts. Here&#x27;s a short example on how to format dialogues in ways that lets Oissu recognize your dialogue properly.</p>
+<doc-panels>
+   <doc-panel id="example-html" collapsed>
+       <template #title>Example HTML</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!--Smart Narration (Supports Location, Season, and Time)--&gt;
+&lt;blockquote&gt;
+    &lt;p&gt;&lt;b&gt;Season:&lt;/b&gt; Summer&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;Location:&lt;/b&gt; Seisou Hall - First Floor Hallway&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!--Images (any format, that's not a &lt;p&gt;.
+    just uploading on Tumblr also works)--&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;https://tsukina.ga/path/to/image.png&quot;&gt;
+&lt;/figure&gt;
+
+&lt;!--Narration--&gt;
+&lt;blockquote&gt;
+    &lt;p&gt;A few minutes later, Seisou Hallway&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!--Dialogue (make sure the name and the colon (:) is bold)--&gt;
+&lt;p&gt;
+    &lt;b&gt;Tomoya:&lt;/b&gt; W-W-What are we gonna
+    to do now, Sena-senpai!?
+&lt;/p&gt;
+&lt;p&gt;
+    This &lt;em&gt;isn't&lt;/em&gt; how you said things
+    would go! You swore that it'd be too
+    early for anyone to see us!
+&lt;/p&gt;
+&lt;p&gt;
+    But now we've been caught red-handed!
+    And by &lt;em&gt;Nii~chan&lt;/em&gt; of all people!
+&lt;/p&gt;
+&lt;p&gt;
+    &lt;b&gt;Izumi:&lt;/b&gt; Haaa!? Could you watch it
+    with the &quot;Nii~chan&quot; so close to my
+    ear? It's getting me weirdly excited!
+&lt;/p&gt;</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="oissu-desktop" collapsed>
+       <template #title>Oissu (Desktop)</template>
+<p><figure class="content-center">
+    <a href="/resources/img/reloaded_watatomo.png">
+        <img src="/resources/img/reloaded_watatomo.png" alt="" />
+    </a>
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="rich-text-mobile" collapsed>
+       <template #title>Rich Text (Mobile)</template>
+<blockquote>
+<p><strong>Season:</strong> Summer <br>
+<strong>Location:</strong> Seisou Hall - First Floor Hallway</p>
+</blockquote>
+<p><figure class="content-center">
+    <img src="/resources/img/reloaded_cg.webp" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<blockquote>
+<p>A few minutes later, Seisou Hallway</p>
+</blockquote>
+<p><strong>Tomoya:</strong> W-W-What are we gonna
+to do now, Sena-senpai!?</p>
+<p>This <em>isn&#x27;t</em> how you said things
+would go! You swore that it&#x27;d be too
+early for anyone to see us!</p>
+<p>But now we&#x27;ve been caught red-handed!
+And by <em>Nii~chan</em> of all people!</p>
+<p><strong>Izumi:</strong> Haaa!? Could you watch it
+with the &quot;Nii~chan&quot; so close to my
+ear? It&#x27;s getting me weirdly excited!</p>
+   </doc-panel>
+</doc-panels>
+<hr />
+<doc-anchor-target id="customization">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#customization">#</doc-anchor-trigger>
+        <span>Customization</span>
+    </h2>
+</doc-anchor-target>
+<p>Oissu settings can be split into 2 parts: <strong>blog settings</strong> and <strong>post settings</strong></p>
+<doc-panels>
+   <doc-panel id="blog-settings">
+       <template #title>Blog Settings</template>
+<ul>
+<li>Color themes</li>
+<li>Font size and style</li>
+</ul>
+<p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
     <div class="flex items-center text-blue-500 dark:text-blue-400">
         <span class="inline-block mb-px">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
         </span>
-        <span class="inline-block font-medium ml-2">Start using Oi~ssu♪ on your blog!</span>
+        <span class="inline-block font-medium ml-2">Blog Settings</span>
     </div>
     <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>/docs/tumblr/gettingstarted/</span>
+        <span>../customization/blog.md</span>
     </div>
-    <a href="/docs/tumblr/gettingstarted/" class="absolute block inset-0"></a>
+    <a href="../customization/blog.md" class="absolute block inset-0"></a>
 </div>
 </p>
-        </div>
+   </doc-panel>
+   <doc-panel id="story-settings">
+       <template #title>Story Settings</template>
+<ul>
+<li>Icon set for stories</li>
+<li>Navigation links (Previous/Next/Directory)</li>
+<li>Content warnings</li>
+</ul>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Story Settings</span>
     </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../customization/story.md</span>
+    </div>
+    <a href="../customization/story.md" class="absolute block inset-0"></a>
 </div>
+</p>
+   </doc-panel>
+</doc-panels>
+<hr />
+<doc-anchor-target id="extensions">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#extensions">#</doc-anchor-trigger>
+        <span>Extensions</span>
+    </h2>
+</doc-anchor-target>
+<p>Oissu has a lot of extensions that helps improve your reading experience! Extensions are all included in the code, but all of them can be enabled or disabled up to your liking!</p>
+<ul>
+<li><a href="../extensions/display/">Display (Chatfic Mode)</a></li>
+<li><a href="../extensions/fullscreen/">Fullscreen</a></li>
+<li><a href="../extensions/footnotes/">Footnotes (Translator&#x27;s Notes)</a></li>
+<li><a href="../extensions/rich/">Rich Content (Images/CG)</a></li>
+<li><a href="../extensions/narration/">Narration &amp; Smart Narration</a></li>
+<li><a href="../extensions/notice/">Notice (Content Warnings)</a></li>
+<li><a href="../extensions/nav/">Navigation Links</a></li>
+</ul>
+<p>More extensions will be implemented soon!</p>
 
 
 
@@ -263,13 +426,20 @@
             
 <nav class="flex mt-14">
     <div class="w-1/2">
+        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/docs/about/">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+            <span>
+                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                <span class="block mt-1">About</span>
+            </span>
+        </a>
     </div>
 
     <div class="w-1/2">
-        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/docs/about/">
+        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/docs/tumblr/installation/">
             <span>
                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                <span class="block mt-1">About</span>
+                <span class="block mt-1">Installation</span>
             </span>
             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
         </a>
@@ -317,6 +487,6 @@
 
         <div id="docs-overlay-target"></div>
 
-        <script>window.__DOCS__ = { "title": "Welcome!", icon: "file", hasPrism: false, hasMermaid: false }</script>
+        <script>window.__DOCS__ = { "title": "Getting Started", icon: "file", hasPrism: true, hasMermaid: false }</script>
     </body>
 </html>
