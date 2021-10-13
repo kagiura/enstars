@@ -13,5 +13,5 @@ Oissu (stylized as Oi\~ssu♪) is a standard for formatting dialogue-based stori
 
 !!!
 If you're looking for how to start using Oi\~ssu♪ on your blog, head over to the Getting Started page!
-[!ref Start using Oi~ssu♪ on your blog!](/tumblr/gettingstarted.md)
+[!ref Start using Oi~ssu♪ on your blog!](gettingstarted.md)
 !!!
