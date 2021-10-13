@@ -25,11 +25,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/docs/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/docs/resources/css/retype.css?v=1.9.687170778895" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/docs/resources/css/retype.css?v=1.9.687207800231" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/docs/resources/js/config.js?v=1.9.687170778895" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/docs/resources/js/config.js?v=1.9.687207800231" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/docs/resources/js/retype.js?v=1.9" defer data-turbo-track="reload"></script>
-    <script id="prism-js" type="text/javascript" src="/docs/resources/js/prism.js?v=1.9.687170778895" defer></script>
+    <script id="prism-js" type="text/javascript" src="/docs/resources/js/prism.js?v=1.9.687207800231" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -240,7 +240,7 @@
     ...more code down below...</code></pre>
 </doc-codeblock></div>
 </doc-panel>
-<p>That&#x27;s it! To check if installation has worked, try <a href="https://support.monday.com/hc/en-us/articles/360002197259-How-to-Open-the-Developer-Console">opening your browser&#x27;s console <svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.5 2.25a.75.75 0 01.75-.75h5.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V4.06l-6.22 6.22a.75.75 0 11-1.06-1.06L19.94 3h-3.69a.75.75 0 01-.75-.75z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 010 1.5h-8.5a.25.25 0 00-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 00.25-.25v-8.5a.75.75 0 011.5 0v8.5a1.75 1.75 0 01-1.75 1.75H4.25a1.75 1.75 0 01-1.75-1.75V4.25z"/></g></g></svg></a> and you should see a little secret!</p>
+<p>That&#x27;s it! To check if the installation has worked, try <a href="https://support.monday.com/hc/en-us/articles/360002197259-How-to-Open-the-Developer-Console">opening your browser&#x27;s console <svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.5 2.25a.75.75 0 01.75-.75h5.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V4.06l-6.22 6.22a.75.75 0 11-1.06-1.06L19.94 3h-3.69a.75.75 0 01-.75-.75z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 010 1.5h-8.5a.25.25 0 00-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 00.25-.25v-8.5a.75.75 0 011.5 0v8.5a1.75 1.75 0 01-1.75 1.75H4.25a1.75 1.75 0 01-1.75-1.75V4.25z"/></g></g></svg></a> and you should see a little secret!</p>
 <hr />
 <doc-anchor-target id="usage">
     <h2>
@@ -261,7 +261,7 @@
         </div>
         <div class="pr-5 ml-3">
             <h5>Before you start!</h5>
-<p>Oissu utilizes the <strong>HTML editor</strong> to make its markup invisible on platforms that don&#x27;t support it. Make sure to switch to the HTML editor before starting</p>
+<p>Oissu uses the <strong>HTML editor</strong>, which makes its markup invisible on platforms that don&#x27;t support it. Make sure to switch to the HTML editor to before continuing.</p>
         </div>
     </div>
 </div>
@@ -274,9 +274,9 @@
     </h3>
 </doc-anchor-target>
 <p>Oissu markup is invisible, meaning on platforms that don&#x27;t support custom HTML (Tumblr app, mobile site etc.), the posts will look like regular posts. Here&#x27;s a short example on how to format stories in ways that looks good on every platform, and lets Oissu recognize your dialogue properly.</p>
-<doc-panels>
-   <doc-panel id="example-html" collapsed>
-       <template #title>Example HTML</template>
+<doc-tabs>
+<doc-tab id="example-html">
+<template #title>Example HTML</template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-markup"><code v-pre class="language-markup">&lt;div class=&quot;oissu&quot;&gt;
     &lt;!--Smart Narration (Supports Location, Season, and Time)--&gt;
@@ -318,9 +318,9 @@
     &lt;/p&gt;
 &lt;/div&gt;</code></pre>
 </doc-codeblock></div>
-   </doc-panel>
-   <doc-panel id="oissu-desktop" collapsed>
-       <template #title>Oissu (Desktop)</template>
+</doc-tab>
+<doc-tab id="oissu-display-desktop">
+<template #title>Oissu Display (Desktop)</template>
 <p><figure class="content-center">
     <a href="/resources/img/reloaded_watatomo.png">
         <img src="/resources/img/reloaded_watatomo.png" alt="" />
@@ -328,9 +328,9 @@
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-   </doc-panel>
-   <doc-panel id="rich-text-mobile" collapsed>
-       <template #title>Rich Text (Mobile)</template>
+</doc-tab>
+<doc-tab id="rich-text-display-mobile">
+<template #title>Rich Text Display (Mobile)</template>
 <blockquote>
 <p><strong>Season:</strong> Summer <br>
 <strong>Location:</strong> Seisou Hall - First Floor Hallway</p>
@@ -353,8 +353,8 @@ And by <em>Nii~chan</em> of all people!</p>
 <p><strong>Izumi:</strong> Haaa!? Could you watch it
 with the &quot;Nii~chan&quot; so close to my
 ear? It&#x27;s getting me weirdly excited!</p>
-   </doc-panel>
-</doc-panels>
+</doc-tab>
+</doc-tabs>
 <hr />
 <doc-anchor-target id="customization">
     <h2>

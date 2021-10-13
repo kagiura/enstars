@@ -1,7 +1,7 @@
 ---
 icon: home
 label: Welcome!
-order: 9999999
+order: -1
 ---
 
 # Oi\~ssu♪
