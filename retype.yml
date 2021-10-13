@@ -1,11 +1,12 @@
-input: src
-output: docs
+input: ./src
+output: ./docs
 url: http://oissu.tsukina.ga/docs/
+# url: docs
 branding:
   title: oi~ssu♪
   label: Docs
-  logo: resources/img/logo-color.svg
-  logoDark: resources/img/logo.svg
+  logo: src/resources/img/logo-color.svg
+  logoDark: src/resources/img/logo.svg
 
 links:
   - text: GitHub
@@ -23,4 +24,4 @@ footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
 server:
   host: 127.0.0.1:9999
-favicon: resources/img/favicon.svg
+favicon: src/resources/img/favicon.svg
