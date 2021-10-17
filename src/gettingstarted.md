@@ -119,9 +119,9 @@ ear? It's getting me weirdly excited!
 
 Oissu settings can be split into 2 parts: **blog settings** and **story settings**
 - **Blog Settings** are used to customize the look and feel of Oissu on your blog
-[!ref Blog Settings](../customization/blog.md)
+[!ref Blog Settings](customization/blog.md)
 - **Story Settings** are used to customize additional details on specific stories, such as the character icons, navigation links (Previous/Next/Directory)
-[!ref Story Settings](../customization/story.md)
+[!ref Story Settings](customization/story.md)
 
 ---
 
