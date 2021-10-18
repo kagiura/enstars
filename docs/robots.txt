@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: http://oissu.tsukina.ga/docs/sitemap.xml.gz
