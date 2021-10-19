@@ -53,27 +53,6 @@ story="Crossroad / Chaos 1"
 tlerlink="https://reikeip.tumblr.com/"
 tler="reikeip" />
 
-## Story options
-
-You can customize a few options by adding **atributes** to the main `<div>` tag.
-
-```html
-<div class="oissu"
-     data-oissu-display="ymnsk-winter"
-     data-oissu-next="https://fortunebanquet.tumblr.com/post/643595529887137792/cinema-theater-ch2 Chapter 2"
->
-    <p><b>Hinata:</b>
-       To everyone passing by, hello~! ☆</p>
-    <p>I’m Aoi Hinata!</p>
-    <p><b>Yuuta:</b> And I’m Aoi Yuuta!</p>
-</div>
-```
-
-<TLCredits
-storylink="https://fortunebanquet.tumblr.com/post/643505290678009856/cinema-theater-ch1"
-story="Cinema Theater / Chapter 1"
-tlerlink="https://fortunebanquet.tumblr.com/"
-tler="fortunebanquet" />
 
 ## Post formatting
 
@@ -120,6 +99,40 @@ Use `<blockquote>` to denote any part of the story that is not a spoken line by 
     <p>A few minutes later, Seisou Hallway</p>
 </blockquote>
 ```
+
+## Story options
+
+You can customize a few options by adding **attributes** to the main `<div>` tag.
+
+```html
+<div class="oissu"
+     data-oissu-display="ymnsk-winter"
+     data-oissu-next="https://fortunebanquet.tumblr.com/post/643595529887137792/cinema-theater-ch2 Chapter 2"
+>
+    <p><b>Hinata:</b>
+       To everyone passing by, hello~! ☆</p>
+    <p>I’m Aoi Hinata!</p>
+    <p><b>Yuuta:</b> And I’m Aoi Yuuta!</p>
+</div>
+```
+
+<TLCredits
+storylink="https://fortunebanquet.tumblr.com/post/643505290678009856/cinema-theater-ch1"
+story="Cinema Theater / Chapter 1"
+tlerlink="https://fortunebanquet.tumblr.com/"
+tler="fortunebanquet" />
+
+### `no-selection`
+
+Disables highlighting to select text, if you want to stop people from copying text from your stories.
+
+Default: **true**
+
+### `chat-format`
+
+Enables readers
+
+Default: **false**
 
 ## Example
 
