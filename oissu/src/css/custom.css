@@ -80,12 +80,11 @@ aside {
     border-right: solid 1px var(--os-docs-border-color) !important;
 }
 
-.sidebar_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocSidebar-styles-module {
+aside > div {
     padding-top: 5.25rem !important;
 }
 
-.docMainContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module
-    > .container {
+main > .container {
     padding: 2.5rem 2rem !important;
 }
 
@@ -166,9 +165,6 @@ html[data-theme="dark"] .menu__link--active:not(.menu__link--sublist) {
     font-weight: 700;
 }
 
-.toggleFocused_node_modules-\@docusaurus-theme-classic-lib-next-theme-Toggle-styles-module
-    .toggleTrackThumb_node_modules-\@docusaurus-theme-classic-lib-next-theme-Toggle-styles-module,
-.toggle_node_modules-\@docusaurus-theme-classic-lib-next-theme-Toggle-styles-module:hover
-    .toggleTrackThumb_node_modules-\@docusaurus-theme-classic-lib-next-theme-Toggle-styles-module {
+.navbar__items.navbar__items--right div {
     box-shadow: 0px 0px 2px 3px transparent !important;
 }
