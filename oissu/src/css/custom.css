@@ -1,0 +1,174 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Round");
+
+:root {
+    --ifm-color-primary: #ff8d99;
+    --ifm-color-primary-dark: hsla(354, 100%, 67%, 1);
+    --ifm-color-primary-darker: hsla(354, 100%, 72%, 1);
+    --ifm-color-primary-darkest: hsla(354, 100%, 74%, 1);
+    --ifm-color-primary-light: hsla(354, 100%, 83%, 1);
+    --ifm-color-primary-lighter: hsla(354, 100%, 87%, 1);
+    --ifm-color-primary-lightest: hsla(354, 100%, 92%, 1);
+    --ifm-code-font-size: 80%;
+    --ifm-font-family-base: "Karla", sans-serif;
+    --ifm-font-size-base: 110%;
+    --ifm-menu-color-background-hover: transparent;
+    --ifm-background-color: #fff;
+    --ifm-background-surface-color: #fafafa;
+    --os-docs-border-color: #ece7e7;
+    --ifm-font-weight-normal: 400;
+    --ifm-font-weight-bold: 700;
+}
+
+html {
+    font-weight: var(--ifm-font-weight-normal);
+}
+
+body {
+    --doc-sidebar-width: 250px;
+}
+
+.docusaurus-highlight-code-line {
+    background-color: rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 calc(-1 * var(--ifm-pre-padding));
+    padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme="dark"] {
+    --os-docs-border-color: #3f4041;
+}
+
+html[data-theme="dark"] .docusaurus-highlight-code-line {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*oissu docs' custom css*/
+
+.main-wrapper,
+.navbar__inner {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+    background: var(--ifm-background-color);
+}
+
+html.docs-version-current #__docusaurus {
+    background: linear-gradient(
+        to right,
+        var(--ifm-background-surface-color) 50%,
+        var(--ifm-background-color) 50%
+    );
+}
+
+.navbar {
+    background: var(--ifm-background-color);
+    border-bottom: solid 1px var(--os-docs-border-color);
+    box-shadow: none;
+}
+
+aside {
+    background: var(--ifm-background-surface-color);
+    border-right: solid 1px var(--os-docs-border-color) !important;
+}
+
+.sidebar_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocSidebar-styles-module {
+    padding-top: 5.25rem !important;
+}
+
+.docMainContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module
+    > .container {
+    padding: 2.5rem 2rem !important;
+}
+
+nav.menu {
+    padding: 0 !important;
+}
+
+.markdown h1:first-child {
+    --ifm-h1-font-size: 2rem;
+
+    /* margin: 0 0 var(--ifm-paragraph-margin-bottom); */
+}
+
+.markdown > h2 {
+    --ifm-h2-font-size: 1.5rem;
+
+    /* margin: calc(var(--ifm-h2-vertical-rhythm-top) * var(--ifm-leading)) 0
+        var(--ifm-paragraph-margin-bottom); */
+}
+
+.markdown > h3 {
+    --ifm-h3-font-size: 1.3rem;
+
+    /* margin: calc(var(--ifm-h3-vertical-rhythm-top) * var(--ifm-leading)) 0
+        var(--ifm-paragraph-margin-bottom); */
+}
+
+ul.menu__list {
+    transition: 0.2s ease !important;
+}
+
+.menu__list-item:not(:first-child) {
+    margin-top: 0rem;
+}
+
+.menu__link--sublist::after {
+    transition: 0.2s ease !important;
+    background: var(--ifm-menu-link-sublist-icon) 50% / 1.5rem 1.5rem;
+}
+
+.menu__link:hover {
+    color: var(--ifm-menu-color-active);
+}
+
+a.menu__link {
+    transition: 0.2s ease !important;
+    border-radius: 0rem;
+    padding: 0.4rem 1rem;
+    border-left: solid 0px var(--ifm-menu-color-active);
+}
+
+a.menu__link--active:not(.menu__link--sublist) {
+    background: hsla(353, 92%, 94%, 0.3);
+    border-left: solid 5px var(--ifm-menu-color-active);
+}
+
+.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-2.menu__list-item
+    > a {
+    border-left: 2px solid var(--ifm-toc-border-color);
+    border-radius: 0px;
+    transition: 0.2s ease;
+}
+
+.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-2.menu__list-item
+    > a.menu__link--active:not(.menu__link--sublist) {
+    background: hsla(353, 92%, 94%, 0.1);
+    border-left: solid 5px var(--ifm-menu-color-active);
+
+    /* border-radius: 0 0.25rem 0.25rem 0; */
+}
+
+html[data-theme="dark"] .menu__link--active:not(.menu__link--sublist) {
+    background: hsla(353, 92%, 94%, 0.05);
+}
+
+.menu__link--active {
+    color: var(--ifm-menu-color-active);
+    font-weight: 700;
+}
+
+.toggleFocused_node_modules-\@docusaurus-theme-classic-lib-next-theme-Toggle-styles-module
+    .toggleTrackThumb_node_modules-\@docusaurus-theme-classic-lib-next-theme-Toggle-styles-module,
+.toggle_node_modules-\@docusaurus-theme-classic-lib-next-theme-Toggle-styles-module:hover
+    .toggleTrackThumb_node_modules-\@docusaurus-theme-classic-lib-next-theme-Toggle-styles-module {
+    box-shadow: 0px 0px 2px 3px transparent !important;
+}
