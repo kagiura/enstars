@@ -12,24 +12,18 @@ export const H = ({children}) => (
   <span
     style={{
       backgroundColor: '#FF8D991A',
-      borderRadius: '2px',
-      padding: '0.2rem',
+      border: 'solid 2px  #FF8D995A',
+      borderRadius: '5px',
+      padding: '0.1rem 0.4rem',
       fontWeight: 700
     }}>
     {children}
   </span>
 );
 
-export const TLCredits = ({story, storylink, tler, tlerlink}) => (
-    <p style={{
-        textAlign: 'right',
-        fontSize: '0.9em',
-        paddingRight: '0.5em',
-        borderRight: '2px solid var(--ifm-toc-border-color)'
-        }}>
-        <a href="{storylink}">{story}</a> translation by <a href="{tlerlink}">{tler}</a>
-    </p>
-);
+<!--
+<p class="TLCredits"><a href="storylink">story</a> translation by <a href="tlerlink">tler</a></p>
+-->
 
 
 :::warning Before you start!
@@ -47,11 +41,10 @@ Start your stories with `<div class="oissu">` and end them with `</div>`
     ...
 </div>
 ```
-<TLCredits
-storylink="https://reikeip.tumblr.com/post/660986731112349696/crossroad-chaos-1"
-story="Crossroad / Chaos 1"
-tlerlink="https://reikeip.tumblr.com/"
-tler="reikeip" />
+
+<p class="TLCredits">
+    <a href="https://reikeip.tumblr.com/post/660986731112349696/crossroad-chaos-1">Crossroad / Chaos 1</a> translation by <a href="https://reikeip.tumblr.com/">reikeip</a>
+</p>
 
 
 ## Post formatting
@@ -77,6 +70,11 @@ Put each line in a seperate paragraph (`<p>`) tag. Bold (`<b>` or `<strong>`) th
 Both `<img>` and `<figure>` tags work. You can just add an image to your post normally.
 
 ```html
+<img src="https://tsukina.ga/path/to/image.png"></img>
+```
+
+```html
+<!-- Tumblr likes to add <figure>, it works too! -->
 <figure>
     <img src="https://tsukina.ga/path/to/image.png"></img>
 </figure>
@@ -102,7 +100,7 @@ Use `<blockquote>` to denote any part of the story that is not a spoken line by 
 
 ## Story options
 
-You can customize a few options by adding **attributes** to the main `<div>` tag.
+You can customize a few options by adding **attributes** to the main `<div>` tag. All options are prefixed with `data-oissu-`.
 
 ```html
 <div class="oissu"
@@ -116,34 +114,19 @@ You can customize a few options by adding **attributes** to the main `<div>` tag
 </div>
 ```
 
-<TLCredits
-storylink="https://fortunebanquet.tumblr.com/post/643505290678009856/cinema-theater-ch1"
-story="Cinema Theater / Chapter 1"
-tlerlink="https://fortunebanquet.tumblr.com/"
-tler="fortunebanquet" />
+<p class="TLCredits"><a href="https://fortunebanquet.tumblr.com/post/643505290678009856/cinema-theater-ch1">Cinema Theater / Chapter 1</a> translation by <a href="https://fortunebanquet.tumblr.com/">fortunebanquet</a></p>
 
-### `no-selection`
-
-Disables highlighting to select text, if you want to stop people from copying text from your stories.
-
-Default: **true**
-
-### `chat-format`
-
-Enables readers
-
-Default: **false**
+For a list of configurable options, see [Story Options](/story_options)
 
 ## Example
 
-[![](/img/reloaded_watatomo.png)](/img/reloaded_watatomo.png)
+![](/img/reloaded_watatomo.png)
+
 
 <details><summary>Final Results (HTML)</summary>
 
 ```html
-<div class="oissu"
-
->
+<div class="oissu">
     <!--Smart Narration (Supports Location, Season, and Time)-->
     <blockquote>
         <p><b>Season:</b> Summer</p>
@@ -208,3 +191,5 @@ And by *Nii~chan* of all people!
 with the "Nii~chan" so close to my
 ear? It's getting me weirdly excited!
 </details>
+
+<p class="TLCredits"><a href="https://watatomo.github.io/tl/post/reloaded/2/">RELOADED / Idol of the Dead 2</a> translation by <a href="https://watatomo.github.io/tl/">Ren</a></p>

