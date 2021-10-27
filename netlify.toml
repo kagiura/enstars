@@ -11,3 +11,11 @@
     # root directory if a base has not been set. This sample publishes the
     # directory located at the absolute path "root/project/build-output"
     publish = "build"
+
+[[redirects]]
+  from = "/"
+  to = "/docs"
+  status = 301
+  force = false
+  # query = {path = ":path"}
+  # conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
