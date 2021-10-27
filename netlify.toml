@@ -13,7 +13,7 @@
     publish = "build"
 
 [[redirects]]
-  from = ""
+  from = "/"
   to = "/docs"
   status = 301
   force = false
