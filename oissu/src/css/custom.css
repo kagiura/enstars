@@ -75,6 +75,10 @@ html.docs-version-current #__docusaurus {
     box-shadow: none;
 }
 
+.navbar__brand {
+    pointer-events: none;
+}
+
 aside {
     background: var(--ifm-background-surface-color);
     border-right: solid 1px var(--os-docs-border-color) !important;
