@@ -95,6 +95,11 @@ const config = {
         {
             src: "https://r.tsukina.ga/oissu",
             async: true
+        },
+        {
+            src: "https://static.cloudflareinsights.com/beacon.min.js",
+            defer: true,
+            "data-cf-beacon": '{"token": "a5087641643d4694bd3742d86656891a"}'
         }
     ]
 };
